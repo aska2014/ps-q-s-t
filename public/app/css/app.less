@@ -1,0 +1,73 @@
+@import "../lib/bootstrap/less/bootstrap.less";
+
+@images: "../img";
+
+@special-font-color:#CE374A;
+@main-bg-color:#FFF;
+
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none !important;
+}
+
+
+.secondary-btn{background:url('@{images}/gradients/black-gradient.jpg'); background:#333; color:#FFF; margin-bottom:5px;}
+.secondary-btn:hover{color:#FFF; background:#666;}
+
+ul{ margin: 0px; padding: 0px;}
+
+body {
+//  background: #d0a28a;
+//  background: url('@{images}/large-bg.jpg') #FFF;
+  background:#f0f0f0;
+  color: #333;
+  font-family: Arial;
+}
+
+/* Customize container */
+@media (min-width: @screen-md) {
+  .container {
+    max-width: 1021px;
+    .center-block();
+  }
+}
+
+.large-container{
+  width:100%;
+  background: url('@{images}/main-bg.jpg') no-repeat;
+}
+
+
+.body-container {
+//  background:#f5f5f5;
+  background: @main-bg-color;
+  .make-row();
+}
+
+.separator{height:8px; .clearfix();}
+
+.price{
+  .before-price{color:#666; font-size:12px; text-decoration: line-through;}
+  .actual-price{color:@special-font-color; font-size:14px;}
+}
+
+
+.add-to-cart-special{background: url('@{images}/add-to-cart-special.jpg'); .size(209px, 66px); cursor: pointer;}
+
+.main-title{
+   margin-bottom:20px;
+   font-size: 20px;
+   span{color:#EE3d26}
+   color:#333;
+   padding:10px;
+ }
+
+.footer{
+  .make-row();
+  .border-bottom-radius(10px);
+  margin-top:0px; text-align: center; padding:30px;
+  .copyright{font-size:12px; color:#666;}
+}
+
+@import 'header.less';
+@import 'products.less';
+@import 'offers.less';

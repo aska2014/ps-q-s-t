@@ -1,0 +1,113 @@
+.main-offers{
+  .make-row();
+
+  @f1: 3.6;
+  @f2: 2.7;
+  @f3: 12 - (@f1 + @f2) - 0.1; // for margin
+  @separation: 4px;
+
+  .first-column{
+    .make-sm-column(@f1);
+    margin-right:@separation;
+    padding:0px;
+  }
+
+  .second-column{
+    .make-sm-column(@f2);
+    margin-right:@separation;
+    padding:0px;
+  }
+
+  .third-column{
+    .make-sm-column(@f3);
+    padding: 0px;
+  }
+
+  .separator{.clearfix(); height:@separation;}
+}
+
+
+
+
+
+.normal-box-title{
+  padding:13px 15px 10px 15px; font-size:16px; text-transform: uppercase;
+}
+
+
+
+.flying-product{
+  position: relative;
+
+  .box-title{.normal-box-title; background:#CE374A; color: #FFF;}
+  img{margin: 0px auto;}
+  .body{background: #FFF;}
+  .info{
+    position: absolute; bottom: 0px; background: fade(#FFF, 50%); width:100%; padding:10px 15px; font-size:14px;
+    display:inline-block;
+
+    a{ color:#333; font-size:16px; }
+  }
+}
+
+
+.flying-big-product{
+  .box-title{.normal-box-title; background: #642a59; color:#FFF; font-size:20px; }
+
+  .body{background:#FFF; padding: 17px 10px;}
+
+  .image{float:left}
+  .info{float:left; padding-left:25px;}
+  .row{
+    margin-bottom:10px;
+    .key{float:left; font-weight:bold; margin-right:5px;}
+    .value{float:left;}
+  }
+  .add-to-cart-special{float:right;}
+}
+
+
+.offer-timer{
+  .box-title{
+    .normal-box-title;
+    font-size:14px; background:#E63A22; color: #FFF;
+    span{color:#fcac47}
+  }
+
+  .body{background:#FFF;}
+
+  @p: 12px;
+  @c: #E63A22;
+  .time-section{float:left; text-align: center; width:22%; padding:@p 0px;}
+  .time-separator{padding:@p 0px; font-size:22px; color: #AAA; float:left;}
+
+  .value{font-size:22px; color:@c;}
+  .key{font-size:10px; color:#999;}
+}
+
+.authorized-seller{background: url('@{images}/authorized-seller.jpg'); .size(476px, 87px); cursor: pointer}
+
+.carousel-box{
+  margin:10px 0px 20px 0px;
+
+  .main-title{background: url('@{images}/gradients/black-gradient-2.gif'); color:#FFF; span{color:#FFF;}}
+
+  background:#FFF;
+  .make-row();
+  padding-bottom:10px;
+
+  .item{
+    margin: 3px;
+  }
+  .item-info{
+    position: absolute; bottom: 0px; background: fade(#FFF, 80%); width:100%; padding:10px 15px; font-size:14px;
+    display:inline-block;
+
+    a{ color:#333; font-size:16px; }
+  }
+  .item img{
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}

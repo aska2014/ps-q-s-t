@@ -1,0 +1,114 @@
+.products_0{
+
+
+  .make-row();
+  background: #FFF;
+  padding:20px 0px;
+
+  .product {
+    .make-md-column(2.7);
+//    .make-md-column(3.8);
+    padding:0px;
+    position: relative;
+    background:#FFF;
+    margin:0px 12px;
+//    margin:0px 10px;
+
+    margin-bottom:20px;
+  }
+
+  .info{ text-align: center;
+
+    left:0px; position: absolute;
+    bottom: 40px;
+    background: fade(#FFF, 80%);
+    width:100%; padding:10px 15px;
+    display:inline-block;
+    .title a{font-size:16px; color:#333;}
+  }
+
+  img{ margin: 0px auto; /* height:250px; */height:180px; width:350px;}
+
+  .buttons{
+
+    div{
+      .make-md-column(6);
+      text-align: center;
+      padding:10px;
+      // Comment this for big
+      font-size:12px;
+    }
+    .add-to-cart{
+      background:#ee3d26; color:#FFF; cursor: pointer;
+      &:hover{.opacity(0.8);}
+    }
+    .buy-now{
+      background:#333; color:#FFF; cursor: pointer;
+      &:hover{.opacity(0.8);}
+      span{margin-left:4px;}
+    }
+  }
+}
+
+
+
+
+
+
+
+.products_1{
+
+  .make-row();
+  padding:0px;
+
+  .small-product {
+    .make-md-column(2.1);
+    margin-left:15px;
+    .info{bottom: 30px;}
+    .image{height:120px;}
+    .buttons div{font-size:9px;}
+  }
+
+  .big-product{
+    .make-md-column(5);
+    img{height:288px; margin: 0px auto;}
+  }
+
+  .product {
+    padding:0px;
+    position: relative;
+    background:#FFF;
+    .box-shadow(0px 5px 5px #CCC);
+
+    margin-bottom:20px;
+  }
+
+  .info{ text-align: center;
+
+    left:0px; position: absolute;
+    bottom: 40px;
+    background: fade(#FFF, 80%);
+    width:100%; padding:10px 15px;
+    display:inline-block;
+    .title a{color:#333; font-size:18px;}
+  }
+
+  img{ margin: 0px auto;}
+
+  .buttons{
+    div{
+      .make-md-column(6);
+      text-align: center;
+      padding:10px;
+    }
+    .add-to-cart{
+      background:#ee3d26; color:#FFF; cursor: pointer;
+      &:hover{.opacity(0.8);}
+    }
+    .buy-now{
+      background:#333; color:#FFF; cursor: pointer;
+      &:hover{.opacity(0.8);}
+      span{margin-left:4px;}
+    }
+  }
+}
