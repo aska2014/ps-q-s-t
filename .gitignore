@@ -1,12 +1,11 @@
 /bootstrap/compiled.php
-/vendor
 composer.phar
 composer.lock
-.env.local.php
-.env.php
 .DS_Store
 Thumbs.db
+.idea
 
+public/albums
 
 !vendor/
 
@@ -16,6 +15,3 @@ vendor/*
 !vendor/classpreloader/
 !vendor/bin/
 !vendor/autoload.php
-public/albums
-
-.idea
