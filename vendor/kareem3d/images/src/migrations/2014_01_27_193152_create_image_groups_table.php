@@ -14,6 +14,7 @@ class CreateImageGroupsTable extends Migration {
 	{
 		Schema::create('ka_image_groups', function(Blueprint $table)
 		{
+            $table->engine = 'InnoDB';
 			$table->increments('id');
 
             $table->string('name');

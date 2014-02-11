@@ -14,6 +14,7 @@ class CreateCodeTable extends Migration {
 	{
 		Schema::create('ka_codes', function(Blueprint $table)
 		{
+            $table->engine = 'InnoDB';
 			$table->increments('id');
 
             $table->text('code');
