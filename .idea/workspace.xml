@@ -99,7 +99,7 @@
     <file path="/Role.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391875797580" ignored="false" />
     <file path="/RegisterController.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391875859204" ignored="false" />
     <file path="/FreakServiceProvider.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391876042234" ignored="false" />
-    <file path="/index.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392138444393" ignored="false" />
+    <file path="/index.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392143764005" ignored="false" />
     <file path="/global.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391889016966" ignored="false" />
     <file path="/index.html" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391889444169" ignored="false" />
     <file path="/form.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392138049554" ignored="false" />
@@ -142,13 +142,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="artisan.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="artisan.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/artisan.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="29" column="0" selection-start="1004" selection-end="1004" vertical-scroll-proportion="-18.961538">
               <folding>
                 <element signature="e#7#462#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="artisan" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/artisan">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="43" column="40" selection-start="1529" selection-end="1529" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="7" selection-start="155" selection-end="155" vertical-scroll-proportion="0.1271028">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -170,7 +188,6 @@
         <option value="$PROJECT_DIR$/app/freak/views/product/form.php" />
         <option value="$PROJECT_DIR$/test.php" />
         <option value="$PROJECT_DIR$/public/.htaccess" />
-        <option value="$PROJECT_DIR$/public/index.php" />
         <option value="$PROJECT_DIR$/vendor/kareem3d/freak/src/views/login/master.blade.php" />
         <option value="$PROJECT_DIR$/vendor/kareem3d/freak/src/routes.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
@@ -179,6 +196,7 @@
         <option value="$PROJECT_DIR$/app/routes.php" />
         <option value="$PROJECT_DIR$/artisan" />
         <option value="$PROJECT_DIR$/artisan.php" />
+        <option value="$PROJECT_DIR$/public/index.php" />
       </list>
     </option>
   </component>
@@ -230,6 +248,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="new_www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -385,13 +417,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="593" selection-end="593" vertical-scroll-proportion="0.4448598">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/views/login/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="27" selection-start="202" selection-end="202" vertical-scroll-proportion="0.29310346">
@@ -462,19 +487,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/artisan.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="0" selection-start="1004" selection-end="1004" vertical-scroll-proportion="-18.961538">
+          <folding>
+            <element signature="e#7#462#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/artisan">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="2451" vertical-scroll-proportion="0.0">
+        <state line="43" column="40" selection-start="1529" selection-end="1529" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/artisan.php">
+    <entry file="file://$PROJECT_DIR$/public/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#7#462#0" expanded="true" />
-          </folding>
+        <state line="9" column="7" selection-start="155" selection-end="155" vertical-scroll-proportion="0.1271028">
+          <folding />
         </state>
       </provider>
     </entry>
