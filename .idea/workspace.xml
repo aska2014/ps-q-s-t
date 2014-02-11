@@ -102,7 +102,7 @@
     <file path="/index.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392143764005" ignored="false" />
     <file path="/global.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391889016966" ignored="false" />
     <file path="/index.html" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391889444169" ignored="false" />
-    <file path="/form.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392148927250" ignored="false" />
+    <file path="/form.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392149098811" ignored="false" />
     <file path="/FreakPriceController.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391949594898" ignored="false" />
     <file path="/FreakProductOfferControl.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391966644411" ignored="false" />
     <file path="/url.js" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392148044860" ignored="false" />
@@ -157,7 +157,7 @@
       <file leaf-file-name="form.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/freak/views/product/form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="132" column="90" selection-start="6047" selection-end="6047" vertical-scroll-proportion="0.6091954">
+            <state line="133" column="0" selection-start="6066" selection-end="6066" vertical-scroll-proportion="0.64176244">
               <folding />
             </state>
           </provider>
@@ -627,6 +627,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="packages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kareem3d" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="freak" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fr_aa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -886,13 +916,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/helpers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="17" selection-start="264" selection-end="264" vertical-scroll-proportion="0.2542056">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="34" column="3" selection-start="586" selection-end="586" vertical-scroll-proportion="0.8093458">
@@ -991,9 +1014,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/packages/kareem3d/freak/fr_aa/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="116" column="27" selection-start="2872" selection-end="2953" vertical-scroll-proportion="3.59854">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/freak/views/product/form.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="132" column="90" selection-start="6047" selection-end="6047" vertical-scroll-proportion="0.6091954">
+        <state line="133" column="0" selection-start="6066" selection-end="6066" vertical-scroll-proportion="0.64176244">
           <folding />
         </state>
       </provider>
