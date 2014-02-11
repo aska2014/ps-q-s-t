@@ -68,7 +68,7 @@
     <file path="/Location.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391730239696" ignored="false" />
     <file path="/City.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391730223743" ignored="false" />
     <file path="/Country.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391730229754" ignored="false" />
-    <file path="/ProductOffer.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392148628303" ignored="false" />
+    <file path="/ProductOffer.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392148682225" ignored="false" />
     <file path="/MassOffer.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391861632496" ignored="false" />
     <file path="/BaseModel.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392024353858" ignored="false" />
     <file path="/Brand.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391730199436" ignored="false" />
@@ -175,7 +175,7 @@
       <file leaf-file-name="ProductOffer.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/Offers/ProductOffer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="30" selection-start="1188" selection-end="1188" vertical-scroll-proportion="0.82616824">
+            <state line="54" column="24" selection-start="1182" selection-end="1182" vertical-scroll-proportion="0.82616824">
               <folding />
             </state>
           </provider>
@@ -1011,7 +1011,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/Offers/ProductOffer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="30" selection-start="1188" selection-end="1188" vertical-scroll-proportion="0.82616824">
+        <state line="54" column="24" selection-start="1182" selection-end="1182" vertical-scroll-proportion="0.82616824">
           <folding />
         </state>
       </provider>

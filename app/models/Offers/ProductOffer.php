@@ -52,6 +52,8 @@ class ProductOffer extends \BaseModel {
 
         $attributes['product_id'] = $product;
 
+        dd($attributes);
+
         return static::create($attributes);
     }
 
