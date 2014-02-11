@@ -112,7 +112,7 @@
     <file path="/FreakOrderController.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391981575317" ignored="false" />
     <file path="/all.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392051893877" ignored="false" />
     <file path="/ui_comps.js" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392022757214" ignored="false" />
-    <file path="/FreakProductOfferController.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392037989991" ignored="false" />
+    <file path="/FreakProductOfferController.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392148510781" ignored="false" />
     <file path="/all.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392038727089" ignored="false" />
     <file path="/one.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392137638804" ignored="false" />
     <file path="/Model.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392048536480" ignored="false" />
@@ -145,10 +145,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Controller.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Controller.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/Kareem3d/Freak/Core/Controller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="83" column="84" selection-start="1950" selection-end="1950" vertical-scroll-proportion="0.61869156">
+            <state line="83" column="84" selection-start="1950" selection-end="1950" vertical-scroll-proportion="-42.153847">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="form.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/freak/views/product/form.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="125" column="17" selection-start="5725" selection-end="5725" vertical-scroll-proportion="-9.615385">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FreakProductOfferController.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/freak/controllers/FreakProductOfferController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="49" column="16" selection-start="1034" selection-end="1034" vertical-scroll-proportion="0.317757">
               <folding />
             </state>
           </provider>
@@ -164,7 +182,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/config/remote.php" />
         <option value="$PROJECT_DIR$/artisan" />
         <option value="$PROJECT_DIR$/artisan.php" />
         <option value="$PROJECT_DIR$/public/index.php" />
@@ -180,6 +197,7 @@
         <option value="$PROJECT_DIR$/public/packages/kareem3d/freak/url.js" />
         <option value="$PROJECT_DIR$/app/freak/views/product/form.php" />
         <option value="$PROJECT_DIR$/vendor/kareem3d/freak/src/Kareem3d/Freak/Core/Controller.php" />
+        <option value="$PROJECT_DIR$/app/freak/controllers/FreakProductOfferController.php" />
       </list>
     </option>
   </component>
@@ -877,13 +895,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/config/production/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="476" selection-end="476" vertical-scroll-proportion="0.3962617">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/views/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="157" column="45" selection-start="7212" selection-end="7212" vertical-scroll-proportion="0.16858238">
@@ -977,14 +988,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/freak/views/product/form.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="113" column="44" selection-start="5378" selection-end="5378" vertical-scroll-proportion="0.13793103">
+        <state line="125" column="17" selection-start="5725" selection-end="5725" vertical-scroll-proportion="-9.615385">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/Kareem3d/Freak/Core/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="84" selection-start="1950" selection-end="1950" vertical-scroll-proportion="0.61869156">
+        <state line="83" column="84" selection-start="1950" selection-end="1950" vertical-scroll-proportion="-42.153847">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/freak/controllers/FreakProductOfferController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="16" selection-start="1034" selection-end="1034" vertical-scroll-proportion="0.317757">
           <folding />
         </state>
       </provider>
