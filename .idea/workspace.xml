@@ -10,7 +10,7 @@
     <file path="/home.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391678204371" ignored="false" />
     <file path="/dummy.xml" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391695526614" ignored="false" />
     <file path="/angular.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391678265596" ignored="false" />
-    <file path="/Dummy.txt" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392135576830" ignored="false" />
+    <file path="/Dummy.txt" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392139516097" ignored="false" />
     <file path="/composers.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391869143873" ignored="false" />
     <file path="/app.less" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391697279658" ignored="false" />
     <file path="/header.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391704024806" ignored="false" />
@@ -142,10 +142,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="routes.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="routes.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="7" selection-start="297" selection-end="297" vertical-scroll-proportion="0.47663552">
+            <state line="17" column="18" selection-start="395" selection-end="395" vertical-scroll-proportion="-11.115385">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="8" selection-start="124" selection-end="124" vertical-scroll-proportion="0.36363637">
               <folding />
             </state>
           </provider>
@@ -163,7 +172,6 @@
       <list>
         <option value="$PROJECT_DIR$/bootstrap/start.php" />
         <option value="$PROJECT_DIR$/app/config/production/database.php" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/models/ECommerce/Product.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/vendor/kareem3d/images/src/Kareem3d/Images/ImageFacade.php" />
@@ -177,6 +185,7 @@
         <option value="$PROJECT_DIR$/public/index.php" />
         <option value="$PROJECT_DIR$/vendor/kareem3d/freak/src/views/login/master.blade.php" />
         <option value="$PROJECT_DIR$/vendor/kareem3d/freak/src/routes.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -456,11 +465,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="42" selection-start="218" selection-end="218" vertical-scroll-proportion="0.2224299" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak-images/src/Kareem3d/FreakImages/FreakImagesPackageController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="66" column="0" selection-start="1498" selection-end="1498" vertical-scroll-proportion="0.41308412" />
@@ -548,16 +552,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="17" selection-start="121" selection-end="121" vertical-scroll-proportion="0.24242425">
+        <state line="17" column="18" selection-start="395" selection-end="395" vertical-scroll-proportion="-11.115385">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/routes.php">
+    <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="7" selection-start="297" selection-end="297" vertical-scroll-proportion="0.47663552">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="8" selection-start="124" selection-end="124" vertical-scroll-proportion="0.36363637">
           <folding />
         </state>
       </provider>

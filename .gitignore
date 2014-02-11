@@ -6,6 +6,11 @@ composer.lock
 .env.php
 .DS_Store
 Thumbs.db
+
+
+!vendor/
+
+vendor/*
 !vendor/kareem3d/
 !vendor/composer/
 !vendor/classpreloader/
@@ -13,6 +18,4 @@ Thumbs.db
 !vendor/autoload.php
 public/albums
 
-
-vendor.zip
 .idea
