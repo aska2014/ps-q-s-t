@@ -37,17 +37,12 @@ class ResetupCommand extends Command {
 	 */
 	public function fire()
 	{
-        $tasks = array(
-            'cd /d/Projects/QBrando/new_www',
-            'php artisan migrate:reset',
-            'php artisan migrate --package="kareem3d/membership"',
-            'php artisan migrate --package="kareem3d/images"',
-            'php artisan migrate --package="kareem3d/freak"',
-            'php artisan migrate',
-            'php artisan db:seed --class="ImageSeeder"'
-        );
-
-        foreach($tasks as $task) print(exec($task)) . "\n";
+        $this->call('migrate:reset');
+        $this->call('migrate', array('--package' => 'kareem3d/membership'));
+        $this->call('migrate', array('--package' => 'kareem3d/images'));
+        $this->call('migrate', array('--package' => 'kareem3d/freak'));
+        $this->call('migrate');
+        $this->call('db:seed', array('--class' => "ImageSeeder"));
 	}
 
 	/**
