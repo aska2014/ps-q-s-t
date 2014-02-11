@@ -50,12 +50,9 @@ class ProductOffer extends \BaseModel {
             return $offer;
         }
 
-        dd($product);
+        $attributes['product_id'] = $product;
 
-        return static::create(array_merge(
-            $attributes,
-            array('product_id' => $product)
-        ));
+        return static::create($attributes);
     }
 
     /**
