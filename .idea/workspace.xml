@@ -157,7 +157,7 @@
       <file leaf-file-name="form.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/freak/views/product/form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="115" column="32" selection-start="5443" selection-end="5443" vertical-scroll-proportion="0.5440613">
+            <state line="132" column="90" selection-start="6047" selection-end="6047" vertical-scroll-proportion="0.6091954">
               <folding />
             </state>
           </provider>
@@ -993,7 +993,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/freak/views/product/form.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="32" selection-start="5443" selection-end="5443" vertical-scroll-proportion="0.5440613">
+        <state line="132" column="90" selection-start="6047" selection-end="6047" vertical-scroll-proportion="0.6091954">
           <folding />
         </state>
       </provider>

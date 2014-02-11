@@ -130,10 +130,7 @@
 
                 $scope.addOffer = function()
                 {
-                    $http.post(url.element('offer', 'product/' + id, true), $scope.offer).success(function(data)
-                    {
-                        $scope.offer = data;
-                    });
+                    $http.post(url.element('offer', 'product/' + id, true), $scope.offer);
                 }
             }
         });
