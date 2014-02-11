@@ -1,0 +1,5 @@
+NameError: variable @nav-link-padding is undefined in D:\Projects\QBrando\new_www\public\app\lib\bootstrap\less\navs.less on line 22, column 16:
+21       display: block;
+22       padding: @nav-link-padding;
+23       &:hover,
+

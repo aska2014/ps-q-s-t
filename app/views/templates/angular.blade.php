@@ -41,18 +41,17 @@
 </head>
 <body ng-controller="MainController">
 
-
 <div class="large-container">
 
     <div class="container">
 
-        @include('partials.header')
+        @include('partials.static.header')
 
         @yield('body')
 
         <div class="clearfix"></div>
 
-        @include('partials.footer')
+        @include('partials.static.footer')
 
     </div>
 </div>
@@ -65,18 +64,14 @@
 <script src="http://code.angularjs.org/1.2.0rc1/angular.min.js"></script>
 <script src="http://code.angularjs.org/1.2.0rc1/angular-resource.min.js"></script>
 <script src="http://code.angularjs.org/1.2.0rc1/angular-cookies.min.js"></script>
-
-<script src="{{ URL::asset('app/lib/zoom/zoomsl-3.0.min.js') }}"></script>
 @else
 <script src="{{ URL::asset('app/lib/jquery.min.js') }}"></script>
 <script src="{{ URL::asset('app/lib/jquery-ui.min.js') }}"></script>
-<script src="{{ URL::asset('app/lib/bootstrap/js/bootstrap.min.js') }}"></script>
+<script src="{{ URL::asset('app/lib/bootstrap/dist/js/bootstrap.min.js') }}"></script>
 
 <script src="{{ URL::asset('app/lib/angular/angular.js') }}"></script>
 <script src="{{ URL::asset('app/lib/angular/angular-resource.min.js') }}"></script>
 <script src="{{ URL::asset('app/lib/angular/angular-cookies.min.js') }}"></script>
-
-<script src="{{ URL::asset('app/lib/zoom/zoomsl-3.0.min.js') }}"></script>
 @endif
 
 <script src="{{ URL::asset('app/js/app.js') }}"></script>
@@ -84,23 +79,6 @@
 <script src="{{ URL::asset('app/js/controllers.js') }}"></script>
 <script src="{{ URL::asset('app/js/filters.js') }}"></script>
 <script src="{{ URL::asset('app/js/directives.js') }}"></script>
-
-
-<script type="text/javascript">
-
-    $(function(){
-        // Check the initial Poistion of the Sticky Header
-        var mainMenuTop = $('#main-menu').offset().top + 70;
-
-        $(window).scroll(function(){
-            if( $(window).scrollTop() > mainMenuTop ) {
-                $("#sticky-menu").show();
-            } else {
-                $("#sticky-menu").hide();
-            }
-        });
-    });
-</script>
 
 
 @yield('scripts')

@@ -2,8 +2,8 @@
 
 @section('body')
 
-    @include('partials.content.products_0')
+    @include('partials.products.grid')
 
-    @include('partials.top_sales')
+    @include('partials.products.carousel')
 
 @stop

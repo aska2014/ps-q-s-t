@@ -1,0 +1,5 @@
+NameError: variable @font-family-monospace is undefined in D:\Projects\QBrando\new_www\public\app\lib\bootstrap\less\code.less on line 11, column 16:
+10 samp {
+11   font-family: @font-family-monospace;
+12 }
+

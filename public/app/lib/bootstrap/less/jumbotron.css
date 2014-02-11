@@ -1,0 +1,5 @@
+NameError: variable @jumbotron-padding is undefined in D:\Projects\QBrando\new_www\public\app\lib\bootstrap\less\jumbotron.less on line 7, column 12:
+6 .jumbotron {
+7   padding: @jumbotron-padding;
+8   margin-bottom: @jumbotron-padding;
+

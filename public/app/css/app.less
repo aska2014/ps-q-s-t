@@ -50,16 +50,47 @@ body {
   .actual-price{color:@special-font-color; font-size:14px;}
 }
 
+a img{border:0px;}
 
-.add-to-cart-special{background: url('@{images}/add-to-cart-special.jpg'); .size(209px, 66px); cursor: pointer;}
+.add-to-cart-special{
+  background: url('@{images}/add-to-cart-special.jpg'); .size(209px, 66px); cursor: pointer;
+  &:hover{.opacity(0.9);}
+}
+.add-to-cart-yellow {
+  background: url('@{images}/add-to-cart-yellow.jpg'); .size(210px, 50px); cursor: pointer;
+  &:hover{.opacity(0.9);}
+}
+.buy-now-blue {
+  background: url('@{images}/buy-now-blue.jpg'); .size(210px, 50px); cursor: pointer;
+  &:hover{.opacity(0.9);}
+}
+.checkout-green {
+  background: url('@{images}/checkout-green.jpg'); .size(210px, 50px); cursor: pointer;
+  &:hover{.opacity(0.9);}
+}
+.checkout-red {
+  background: url('@{images}/checkout-red.jpg'); .size(210px, 50px); cursor: pointer;
+  &:hover{.opacity(0.9);}
+}
+.continue-shopping-yellow {
+  background: url('@{images}/continue-shopping-yellow.jpg'); .size(210px, 50px); cursor: pointer;
+  &:hover{.opacity(0.9);}
+}
+
 
 .main-title{
-   margin-bottom:20px;
    font-size: 20px;
    span{color:#EE3d26}
    color:#333;
    padding:10px;
  }
+
+.main-title-black{
+  font-size: 20px;
+  padding:10px;
+  background: url('@{images}/gradients/black-gradient-2.gif');
+  color:#FFF;
+}
 
 .footer{
   .make-row();
@@ -69,5 +100,8 @@ body {
 }
 
 @import 'header.less';
+@import 'checkout.less';
 @import 'products.less';
 @import 'offers.less';
+@import 'buttons.less';
+@import 'cart.less';

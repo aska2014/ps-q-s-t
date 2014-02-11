@@ -1,0 +1,5 @@
+NameError: variable @line-height-computed is undefined in D:\Projects\QBrando\new_www\public\app\lib\bootstrap\less\forms.less on line 24, column 18:
+23   padding: 0;
+24   margin-bottom: @line-height-computed;
+25   font-size: (@font-size-base * 1.5);
+

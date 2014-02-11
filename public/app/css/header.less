@@ -17,13 +17,17 @@
   }
 
   // Right header
-  .right-header{.make-md-column(4);}
+  .right-header{
+    .make-md-column(4);
 
-
+    .shopping-cart-btn{float:right; position: relative; top:197px; left:15px; z-index: 1000;}
+  }
 
   // Menu
   .menu{
     .make-md-column(12);
+    position: relative;
+    top:2px;
 
     ul{
       list-style: none;
@@ -31,13 +35,26 @@
 
       li a{
         .make-sm-column(12 / 7); text-align: center; color:#FFF; text-decoration: none; padding:10px 0px;
-        text-transform: uppercase;
         font-family: @font-family-sans-serif;
         font-size:18px;
         top:40px;
+        font-family:Arial;
+        font-size:18px;
+        font-style:normal;
+        line-height:24px;
       }
 
+      li a:hover{top:20px; padding:20px 0px;}
+
       li a.active{top:0px; padding:30px 0px;}
+
+      .simple{
+        background:#E9E9E9;
+        color:#666666;
+        font-size:15px;
+        font-weight:bold;
+        line-height:24px;
+      }
     }
   }
 }
@@ -58,6 +75,16 @@
       width:100 / 7%; text-align: center; color:#FFF; text-decoration: none; padding:15px 0px;
       font-family: @font-family-sans-serif;
       font-size:18px;
+    }
+    .simple{
+      background:#E9E9E9;
+      color:#666666;
+      font-family:Arial;
+      font-size:15px;
+      text-transform: none;
+      font-weight:bold;
+      font-style:normal;
+      line-height:24px;
     }
   }
 }

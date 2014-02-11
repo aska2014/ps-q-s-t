@@ -1,0 +1,5 @@
+NameError: .box-sizing is undefined in D:\Projects\QBrando\new_www\public\app\lib\bootstrap\less\scaffolding.less on line 12, column 3:
+11 * {
+12   .box-sizing(border-box);
+13 }
+

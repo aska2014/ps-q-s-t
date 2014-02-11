@@ -1,0 +1,5 @@
+NameError: .responsive-invisibility is undefined in D:\Projects\QBrando\new_www\public\app\lib\bootstrap\less\responsive-utilities.less on line 27, column 3:
+26 .visible-xs {
+27   .responsive-invisibility();
+28 
+

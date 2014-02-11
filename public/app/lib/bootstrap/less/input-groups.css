@@ -1,0 +1,5 @@
+NameError: .input-lg is undefined in D:\Projects\QBrando\new_www\public\app\lib\bootstrap\less\input-groups.less on line 37, column 45:
+36 .input-group-lg > .input-group-addon,
+37 .input-group-lg > .input-group-btn > .btn { .input-lg(); }
+38 .input-group-sm > .form-control,
+

@@ -1,0 +1,5 @@
+NameError: .transition is undefined in D:\Projects\QBrando\new_www\public\app\lib\bootstrap\less\carousel.less on line 19, column 5:
+18     position: relative;
+19     .transition(.6s ease-in-out left);
+20 
+

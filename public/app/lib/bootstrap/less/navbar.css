@@ -1,0 +1,5 @@
+NameError: variable @navbar-height is undefined in D:\Projects\QBrando\new_www\public\app\lib\bootstrap\less\navbar.less on line 13, column 15:
+12   position: relative;
+13   min-height: @navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
+14   margin-bottom: @navbar-margin-bottom;
+

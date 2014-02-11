@@ -1,0 +1,5 @@
+NameError: variable @state-success-bg is undefined in D:\Projects\QBrando\new_www\public\app\lib\bootstrap\less\list-group.less on line 93, column 35:
+92 
+93 .list-group-item-variant(success; @state-success-bg; @state-success-text);
+94 .list-group-item-variant(info; @state-info-bg; @state-info-text);
+

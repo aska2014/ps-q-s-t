@@ -1,0 +1,5 @@
+NameError: variable @table-bg-active is undefined in D:\Projects\QBrando\new_www\public\app\lib\bootstrap\less\tables.less on line 158, column 28:
+157 // Generate the contextual variants
+158 .table-row-variant(active; @table-bg-active);
+159 .table-row-variant(success; @state-success-bg);
+

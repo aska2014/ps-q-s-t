@@ -5,9 +5,14 @@ View::composer('templates.angular', function($view)
     $view->environment = App::Environment();
 });
 
+View::share('success', Responser::getSuccess());
+View::share('errors', Responser::getErrors());
 
-View::composer('partials.header', function($view)
+
+App::bind('Cart\Cart', function( $app )
 {
-    $view->categories = array();
-    $view->colors = array();
+    return new \Cart\Cart($app->make('Offers\ProductOffer')->makeItems(),
+                          $app->make('Offers\MassOffer')->makeItems(),
+                          $app->make('Cart\ItemFactoryInterface')->makeItems(),
+                          $app->make('Cart\ItemFactoryInterface')->makeGifts());
 });

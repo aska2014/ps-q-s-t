@@ -1,0 +1,5 @@
+NameError: .make-row is undefined in D:\Projects\QBrando\new_www\public\app\css\cart.less on line 2, column 3:
+1 .cart{
+2   .make-row();
+3   background:#FFF;
+

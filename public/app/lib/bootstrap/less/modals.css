@@ -1,0 +1,5 @@
+NameError: variable @zindex-modal is undefined in D:\Projects\QBrando\new_www\public\app\lib\bootstrap\less\modals.less on line 25, column 12:
+24   left: 0;
+25   z-index: @zindex-modal;
+26   -webkit-overflow-scrolling: touch;
+

@@ -11,6 +11,7 @@
         "kareem3d/eloquent": "dev-master",
         "kareem3d/helper": "dev-master",
         "kareem3d/membership": "dev-master",
+        "kareem3d/images": "dev-master",
         "kareem3d/path-manager": "dev-master",
         "kareem3d/responser": "dev-master"
 	},

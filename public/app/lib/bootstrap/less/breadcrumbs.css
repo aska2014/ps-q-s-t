@@ -1,0 +1,5 @@
+NameError: variable @breadcrumb-padding-vertical is undefined in D:\Projects\QBrando\new_www\public\app\lib\bootstrap\less\breadcrumbs.less on line 7, column 12:
+6 .breadcrumb {
+7   padding: @breadcrumb-padding-vertical @breadcrumb-padding-horizontal;
+8   margin-bottom: @line-height-computed;
+

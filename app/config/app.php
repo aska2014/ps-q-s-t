@@ -107,7 +107,15 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 
-	),
+        'Kareem3d\Eloquent\EloquentServiceProvider',
+        'Kareem3d\Freak\FreakServiceProvider',
+        'Kareem3d\FreakImages\FreakImagesServiceProvider',
+        'Kareem3d\Images\ImagesServiceProvider',
+        'Kareem3d\Membership\MembershipServiceProvider',
+        'Kareem3d\PathManager\PathManagerServiceProvider',
+        'Kareem3d\Responser\ResponserServiceProvider',
+
+    ),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -173,6 +181,8 @@ return array(
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
 
-	),
+        'Responser'       => 'Kareem3d\Responser\Responser',
+
+    ),
 
 );

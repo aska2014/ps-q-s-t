@@ -1,0 +1,5 @@
+NameError: variable @line-height-computed is undefined in D:\Projects\QBrando\new_www\public\app\lib\bootstrap\less\pager.less on line 8, column 11:
+7   padding-left: 0;
+8   margin: @line-height-computed 0;
+9   list-style: none;
+

@@ -2,12 +2,10 @@
 
 @section('body')
 
-    @include('partials.offers')
+    @include('partials.products.offers')
 
-    <div class="separator"></div>
+    @include('partials.products.carousel')
 
-    @include('partials.top_sales')
-
-    @include('partials.content.products_1')
+    @include('partials.products.fancy')
 
 @stop
