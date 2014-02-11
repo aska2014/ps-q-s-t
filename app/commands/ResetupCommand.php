@@ -37,7 +37,12 @@ class ResetupCommand extends Command {
 	 */
 	public function fire()
 	{
-        $this->call('migrate:reset');
+        $array = DB::select('SHOW TABLES LIKE "krq_migrations"');
+
+        if(count($array) > 0)
+        {
+            $this->call('migrate:reset');
+        }
         $this->call('migrate', array('--package' => 'kareem3d/membership'));
         $this->call('migrate', array('--package' => 'kareem3d/images'));
         $this->call('migrate', array('--package' => 'kareem3d/freak'));

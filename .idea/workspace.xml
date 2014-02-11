@@ -116,7 +116,7 @@
     <file path="/all.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392038727089" ignored="false" />
     <file path="/one.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392137638804" ignored="false" />
     <file path="/Model.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392048536480" ignored="false" />
-    <file path="/ResetupCommand.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392144637279" ignored="false" />
+    <file path="/ResetupCommand.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392145279661" ignored="false" />
     <file path="/artisan.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392133014017" ignored="false" />
     <file path="/.gitignore" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392136102956" ignored="false" />
     <file path="/FreakImagesPackageController.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392136440669" ignored="false" />
@@ -183,7 +183,7 @@
       <file leaf-file-name="ResetupCommand.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/commands/ResetupCommand.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="42" selection-start="967" selection-end="967" vertical-scroll-proportion="0.5084112">
+            <state line="39" column="57" selection-start="690" selection-end="690" vertical-scroll-proportion="0.42803738">
               <folding />
             </state>
           </provider>
@@ -555,7 +555,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/commands/ResetupCommand.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="42" selection-start="967" selection-end="967" vertical-scroll-proportion="0.5084112">
+        <state line="39" column="57" selection-start="690" selection-end="690" vertical-scroll-proportion="0.42803738">
           <folding />
         </state>
       </provider>
