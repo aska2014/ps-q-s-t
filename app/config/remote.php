@@ -29,8 +29,8 @@ return array(
 	'connections' => array(
 
         'production' => array(
-            'host'      => '',
-            'username'  => '',
+            'host'      => 'speedupb.com',
+            'username'  => 'speedupb',
             'password'  => '',
             'key'       => '',
             'keyphrase' => '',

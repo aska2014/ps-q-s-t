@@ -1,6 +1,9 @@
 <?php
 
+Route::get('/migrate', function()
+{
 
+});
 
 
 Route::get('/', function()
