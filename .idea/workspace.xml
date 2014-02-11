@@ -144,10 +144,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RequestController.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/Kareem3d/Freak/Controllers/RequestController.php">
+      <file leaf-file-name="routes.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="27" selection-start="637" selection-end="637" vertical-scroll-proportion="0.42803738">
+            <state line="0" column="5" selection-start="5" selection-end="5" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -176,9 +176,9 @@
         <option value="$PROJECT_DIR$/vendor/kareem3d/membership/src/migrations/2014_01_03_214313_create_user_contacts_table.php" />
         <option value="$PROJECT_DIR$/vendor/kareem3d/freak/src/views/index.php" />
         <option value="$PROJECT_DIR$/app/config/production/app.php" />
-        <option value="$PROJECT_DIR$/vendor/kareem3d/freak/src/routes.php" />
         <option value="$PROJECT_DIR$/app/routes.php" />
         <option value="$PROJECT_DIR$/vendor/kareem3d/freak/src/Kareem3d/Freak/Controllers/RequestController.php" />
+        <option value="$PROJECT_DIR$/vendor/kareem3d/freak/src/routes.php" />
       </list>
     </option>
   </component>
@@ -866,13 +866,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="1" selection-start="1654" selection-end="1654" vertical-scroll-proportion="1.7943925">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/Kareem3d/Freak/FreakServiceProvider.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="46" column="35" selection-start="1108" selection-end="1108" vertical-scroll-proportion="0.77757007">
@@ -901,13 +894,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/Kareem3d/Freak/Controllers/LoginController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/Kareem3d/Freak/Controllers/RegisterController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.4655173">
@@ -917,7 +903,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/Kareem3d/Freak/Controllers/RequestController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="27" selection-start="637" selection-end="637" vertical-scroll-proportion="0.42803738">
+        <state line="30" column="0" selection-start="610" selection-end="610" vertical-scroll-proportion="0.42803738">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/Kareem3d/Freak/Controllers/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="5" selection-start="554" selection-end="554" vertical-scroll-proportion="0.5719626">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="5" selection-start="5" selection-end="5" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
