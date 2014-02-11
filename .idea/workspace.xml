@@ -102,7 +102,7 @@
     <file path="/index.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392143764005" ignored="false" />
     <file path="/global.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391889016966" ignored="false" />
     <file path="/index.html" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391889444169" ignored="false" />
-    <file path="/form.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392138049554" ignored="false" />
+    <file path="/form.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392148279739" ignored="false" />
     <file path="/FreakPriceController.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391949594898" ignored="false" />
     <file path="/FreakProductOfferControl.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391966644411" ignored="false" />
     <file path="/url.js" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392148044860" ignored="false" />
@@ -125,6 +125,7 @@
     <file path="/master.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392139182319" ignored="false" />
     <file path="/2014_01_27_193125_create_code_table.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392145376120" ignored="false" />
     <file path="/RequestController.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392147676730" ignored="false" />
+    <file path="/Controller.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392148342165" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,19 +145,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="routes.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/routes.php">
+      <file leaf-file-name="Controller.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/Kareem3d/Freak/Core/Controller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="5" selection-start="5" selection-end="1435" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="url.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/packages/kareem3d/freak/url.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="0" selection-start="978" selection-end="978" vertical-scroll-proportion="0.75757575">
+            <state line="83" column="84" selection-start="1950" selection-end="1950" vertical-scroll-proportion="0.69906545">
               <folding />
             </state>
           </provider>
@@ -172,8 +164,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/app/config/production/database.php" />
         <option value="$PROJECT_DIR$/app/config/remote.php" />
         <option value="$PROJECT_DIR$/artisan" />
         <option value="$PROJECT_DIR$/artisan.php" />
@@ -188,6 +178,8 @@
         <option value="$PROJECT_DIR$/vendor/kareem3d/freak/src/Kareem3d/Freak/Controllers/RequestController.php" />
         <option value="$PROJECT_DIR$/vendor/kareem3d/freak/src/routes.php" />
         <option value="$PROJECT_DIR$/public/packages/kareem3d/freak/url.js" />
+        <option value="$PROJECT_DIR$/app/freak/views/product/form.php" />
+        <option value="$PROJECT_DIR$/vendor/kareem3d/freak/src/Kareem3d/Freak/Core/Controller.php" />
       </list>
     </option>
   </component>
@@ -885,20 +877,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak-images/src/views/form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="31" selection-start="5080" selection-end="5080" vertical-scroll-proportion="-0.36635515">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="869" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/production/app.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="0" selection-start="476" selection-end="476" vertical-scroll-proportion="0.3962617">
@@ -909,13 +887,6 @@
     <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/views/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="157" column="45" selection-start="7212" selection-end="7212" vertical-scroll-proportion="0.16858238">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/freak/views/product/form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="38" selection-start="4892" selection-end="4892" vertical-scroll-proportion="0.5862069">
           <folding />
         </state>
       </provider>
@@ -983,16 +954,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/routes.php">
+    <entry file="file://$PROJECT_DIR$/public/packages/kareem3d/freak/url.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="5" selection-start="5" selection-end="1435" vertical-scroll-proportion="0.0">
+        <state line="37" column="0" selection-start="978" selection-end="978" vertical-scroll-proportion="0.75757575">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/packages/kareem3d/freak/url.js">
+    <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="0" selection-start="978" selection-end="978" vertical-scroll-proportion="0.75757575">
+        <state line="17" column="1" selection-start="438" selection-end="438" vertical-scroll-proportion="0.54018694">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/freak/views/product/one.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="0" selection-start="1841" selection-end="1841" vertical-scroll-proportion="0.5766283">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/freak/views/product/form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="113" column="44" selection-start="5378" selection-end="5378" vertical-scroll-proportion="0.13793103">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/Kareem3d/Freak/Core/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="84" selection-start="1950" selection-end="1950" vertical-scroll-proportion="0.69906545">
           <folding />
         </state>
       </provider>
