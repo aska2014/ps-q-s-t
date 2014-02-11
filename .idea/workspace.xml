@@ -6,7 +6,7 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/composer.json" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392136474661" ignored="false" />
     <file path="D:/website/arrabah/app/views/home/index.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391359200696" ignored="false" />
-    <file path="/routes.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392144433633" ignored="false" />
+    <file path="/routes.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392144472832" ignored="false" />
     <file path="/home.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391678204371" ignored="false" />
     <file path="/dummy.xml" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391695526614" ignored="false" />
     <file path="/angular.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391678265596" ignored="false" />
@@ -174,7 +174,7 @@
       <file leaf-file-name="routes.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="17" selection-start="98" selection-end="98" vertical-scroll-proportion="0.0953271">
+            <state line="7" column="27" selection-start="191" selection-end="191" vertical-scroll-proportion="0.1906542">
               <folding />
             </state>
           </provider>
@@ -528,7 +528,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="17" selection-start="98" selection-end="98" vertical-scroll-proportion="0.0953271">
+        <state line="7" column="27" selection-start="191" selection-end="191" vertical-scroll-proportion="0.1906542">
           <folding />
         </state>
       </provider>
