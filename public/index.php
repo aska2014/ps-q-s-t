@@ -18,9 +18,6 @@
 |
 */
 
-
-echo 'test';
-exit();
 require __DIR__.'/../bootstrap/autoload.php';
 
 /*

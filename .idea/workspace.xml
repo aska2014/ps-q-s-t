@@ -144,7 +144,7 @@
       <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="0" selection-start="593" selection-end="615" vertical-scroll-proportion="0.4448598">
+            <state line="19" column="0" selection-start="593" selection-end="593" vertical-scroll-proportion="0.4448598">
               <folding />
             </state>
           </provider>
@@ -174,8 +174,8 @@
         <option value="$PROJECT_DIR$/app/models/Offers/ProductOffer.php" />
         <option value="$PROJECT_DIR$/app/freak/views/product/form.php" />
         <option value="$PROJECT_DIR$/test.php" />
-        <option value="$PROJECT_DIR$/public/index.php" />
         <option value="$PROJECT_DIR$/public/.htaccess" />
+        <option value="$PROJECT_DIR$/public/index.php" />
       </list>
     </option>
   </component>
@@ -466,7 +466,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="593" selection-end="615" vertical-scroll-proportion="0.4448598">
+        <state line="19" column="0" selection-start="593" selection-end="593" vertical-scroll-proportion="0.4448598">
           <folding />
         </state>
       </provider>
