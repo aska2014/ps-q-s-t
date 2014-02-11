@@ -18,7 +18,7 @@ class ProductOffer extends \BaseModel {
     /**
      * @var array
      */
-    protected $fillable = array('discount_percentage', 'from_date', 'to_date');
+    protected $fillable = array('discount_percentage', 'from_date', 'to_date', 'product_id');
 
     /**
      * @return mixed|void
@@ -51,8 +51,6 @@ class ProductOffer extends \BaseModel {
         }
 
         $attributes['product_id'] = $product;
-
-        dd($attributes);
 
         return static::create($attributes);
     }

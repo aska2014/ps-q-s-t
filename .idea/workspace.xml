@@ -175,7 +175,7 @@
       <file leaf-file-name="ProductOffer.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/Offers/ProductOffer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="24" selection-start="1182" selection-end="1182" vertical-scroll-proportion="0.82616824">
+            <state line="52" column="45" selection-start="1170" selection-end="1170" vertical-scroll-proportion="0.2859813">
               <folding />
             </state>
           </provider>
@@ -1011,7 +1011,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/Offers/ProductOffer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="24" selection-start="1182" selection-end="1182" vertical-scroll-proportion="0.82616824">
+        <state line="52" column="45" selection-start="1170" selection-end="1170" vertical-scroll-proportion="0.2859813">
           <folding />
         </state>
       </provider>
