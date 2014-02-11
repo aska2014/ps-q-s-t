@@ -7,7 +7,7 @@ return array(
         'mysql' => array(
             'driver'    => 'mysql',
             'host'      => 'localhost',
-            'database'  => 'master',
+            'database'  => 'speedupb_master',
             'username'  => 'speedupb_kemo',
             'password'  => '*&ADNSKYH$#A',
             'charset'   => 'utf8',
