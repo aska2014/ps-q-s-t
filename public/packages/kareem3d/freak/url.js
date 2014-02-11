@@ -34,7 +34,10 @@ url.prototype.packageView = function(_package, view, server) {
 
 url.prototype.to = function(uri, server) {
 
-    if(server == true) return this.base + '/' + uri;
+    if(server == true) {
+
+        return this.base + '/' + uri.replace(/\/+$/, '');
+    }
 
     return '/' + uri;
 };
