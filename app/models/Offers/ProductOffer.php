@@ -22,8 +22,8 @@ class ProductOffer extends \BaseModel {
     {
         if($this->to_date == '')
         {
-            $this->to_date = null;
-            $this->from_date = null;
+            $this->attributes['from_date'] = '2000-01-01 01:01:01';
+            $this->attributes['to_date'] = '2099-01-01 01:01:01';
         }
     }
 

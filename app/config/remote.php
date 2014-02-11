@@ -13,7 +13,7 @@ return array(
 	|
 	*/
 
-	'default' => 'production',
+	'default' => 'local',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -28,14 +28,23 @@ return array(
 
 	'connections' => array(
 
-		'production' => array(
-			'host'      => '',
-			'username'  => '',
-			'password'  => '',
-			'key'       => '',
-			'keyphrase' => '',
-			'root'      => '/var/www',
-		),
+        'production' => array(
+            'host'      => '',
+            'username'  => '',
+            'password'  => '',
+            'key'       => '',
+            'keyphrase' => '',
+            'root'      => '/var/www',
+        ),
+
+        'local' => array(
+            'host'      => 'Kareem-PC',
+            'username'  => '',
+            'password'  => '',
+            'key'       => '',
+            'keyphrase' => '',
+            'root'      => '/var/www',
+        )
 
 	),
 
