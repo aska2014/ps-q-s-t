@@ -203,9 +203,9 @@
 
 
 <!-- AngularJS Scripts -->
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js') ?>"></script>
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular-resource.min.js') ?>"></script>
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular-route.min.js') ?>"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular-resource.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular-route.min.js"></script>
 
 <script src="<?php echo URL::to('/packages/kareem3d/freak/fr_aa/app.js') ?>"></script>
 <script src="<?php echo URL::to('/packages/kareem3d/freak/fr_aa/controllers.js') ?>"></script>
