@@ -102,7 +102,7 @@
     <file path="/index.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392143764005" ignored="false" />
     <file path="/global.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391889016966" ignored="false" />
     <file path="/index.html" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391889444169" ignored="false" />
-    <file path="/form.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392148279739" ignored="false" />
+    <file path="/form.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392148927250" ignored="false" />
     <file path="/FreakPriceController.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391949594898" ignored="false" />
     <file path="/FreakProductOfferControl.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391966644411" ignored="false" />
     <file path="/url.js" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392148044860" ignored="false" />
@@ -154,28 +154,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="form.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="form.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/freak/views/product/form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="125" column="17" selection-start="5725" selection-end="5725" vertical-scroll-proportion="-9.615385">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FreakProductOfferController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/freak/controllers/FreakProductOfferController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="42" selection-start="1060" selection-end="1060" vertical-scroll-proportion="-6.5384617">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProductOffer.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/models/Offers/ProductOffer.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="45" selection-start="1170" selection-end="1170" vertical-scroll-proportion="0.2859813">
+            <state line="115" column="32" selection-start="5443" selection-end="5443" vertical-scroll-proportion="0.5440613">
               <folding />
             </state>
           </provider>
@@ -203,10 +185,10 @@
         <option value="$PROJECT_DIR$/vendor/kareem3d/freak/src/Kareem3d/Freak/Controllers/RequestController.php" />
         <option value="$PROJECT_DIR$/vendor/kareem3d/freak/src/routes.php" />
         <option value="$PROJECT_DIR$/public/packages/kareem3d/freak/url.js" />
-        <option value="$PROJECT_DIR$/app/freak/views/product/form.php" />
         <option value="$PROJECT_DIR$/vendor/kareem3d/freak/src/Kareem3d/Freak/Core/Controller.php" />
         <option value="$PROJECT_DIR$/app/freak/controllers/FreakProductOfferController.php" />
         <option value="$PROJECT_DIR$/app/models/Offers/ProductOffer.php" />
+        <option value="$PROJECT_DIR$/app/freak/views/product/form.php" />
       </list>
     </option>
   </component>
@@ -988,13 +970,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/freak/views/product/form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="125" column="17" selection-start="5725" selection-end="5725" vertical-scroll-proportion="-9.615385">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/Kareem3d/Freak/Core/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="83" column="84" selection-start="1950" selection-end="1950" vertical-scroll-proportion="-42.153847">
@@ -1002,16 +977,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/freak/controllers/FreakProductOfferController.php">
+    <entry file="file://$PROJECT_DIR$/app/models/Offers/ProductOffer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="42" selection-start="1060" selection-end="1060" vertical-scroll-proportion="-6.5384617">
+        <state line="52" column="45" selection-start="1170" selection-end="1170" vertical-scroll-proportion="0.2859813">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Offers/ProductOffer.php">
+    <entry file="file://$PROJECT_DIR$/app/freak/controllers/FreakProductOfferController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="45" selection-start="1170" selection-end="1170" vertical-scroll-proportion="0.2859813">
+        <state line="49" column="42" selection-start="1060" selection-end="1060" vertical-scroll-proportion="0.317757">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/freak/views/product/form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="115" column="32" selection-start="5443" selection-end="5443" vertical-scroll-proportion="0.5440613">
           <folding />
         </state>
       </provider>
