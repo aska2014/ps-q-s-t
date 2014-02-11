@@ -161,7 +161,7 @@
 
 
 <!-- Core Scripts -->
-<script src="<?php echo URL::to('/packages/kareem3d/freak/assets/js/libs/jquery-1.8.3.min.js') ?>"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="<?php echo URL::to('/packages/kareem3d/freak/bootstrap/js/bootstrap.min.js') ?>"></script>
 <script src="<?php echo URL::to('/packages/kareem3d/freak/assets/js/libs/jquery.placeholder.min.js') ?>"></script>
 <script src="<?php echo URL::to('/packages/kareem3d/freak/assets/js/libs/jquery.mousewheel.min.js') ?>"></script>
