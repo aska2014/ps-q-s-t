@@ -11,6 +11,7 @@ Thumbs.db
 !vendor/classpreloader/
 !vendor/bin/
 !vendor/autoload.php
+public/albums
 
 
 vendor.zip

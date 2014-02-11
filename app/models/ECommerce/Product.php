@@ -7,6 +7,11 @@ use Units\Price;
 class Product extends \BaseModel {
 
     /**
+     * @var array
+     */
+    protected $extensions = array('Images');
+
+    /**
      * @var string
      */
     protected $table = 'products';

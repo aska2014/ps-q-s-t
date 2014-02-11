@@ -38,7 +38,7 @@ class FreakProductController extends \Kareem3d\Freak\Core\ElementController {
      */
     public function show($id)
     {
-        return $this->products->with('category', 'brand')->findOrFail($id);
+        return $this->products->with('category', 'brand', 'price', 'productOffers')->findOrFail($id);
     }
 
     /**

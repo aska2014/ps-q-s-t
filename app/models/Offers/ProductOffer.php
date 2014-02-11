@@ -16,6 +16,11 @@ class ProductOffer extends \BaseModel {
     public $timestamps = false;
 
     /**
+     * @var array
+     */
+    protected $fillable = array('discount_percentage', 'from_date', 'to_date');
+
+    /**
      * @return mixed|void
      */
     public function beforeSave()

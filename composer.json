@@ -5,6 +5,7 @@
 	"license": "MIT",
 	"require": {
 		"laravel/framework": "4.1.*",
+        "intervention/image":"dev-master",
 
         "kareem3d/freak": "dev-master",
         "kareem3d/freak-images": "dev-master",

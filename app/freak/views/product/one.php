@@ -8,16 +8,41 @@
                 <tbody>
                 <tr>
                     <th>Title</th>
-                    <td>{{ model.name }}</td>
+                    <td>{{ model.title }}</td>
                 </tr>
                 <tr>
-                    <th>Products</th>
+                    <th>Model</th>
+                    <td>{{ model.model }}</td>
+                </tr>
+                <tr ng-show="model.description != ''">
+                    <th>Description</th>
+                    <td>{{ model.description }}</td>
+                </tr>
+                <tr>
+                    <th>Gender</th>
+                    <td>{{ model.gender }}</td>
+                </tr>
+                <tr>
+                    <th>Category</th>
+                    <td>{{ model.category.name }}</td>
+                </tr>
+                <tr>
+                    <th>Brand</th>
+                    <td>{{ model.brand.name }}</td>
+                </tr>
+                <tr>
+                    <th>Price</th>
+                    <td>{{ model.price.value }}</td>
+                </tr>
+                <tr>
+                    <th>Offers</th>
                     <td>
                         <ul>
-                            <li ng-repeat="product in products">
-                                <a href="#{{ url.elementView('product', 'one/' + product.id) }}">{{ product.title }}</a>
+                            <li ng-repeat="offer in model.product_offers">
+                                ({{ offer.from_date }} , {{ offer.to_date }}) : <strong>{{ offer.discount_percentage }}% Discount</strong>
                             </li>
                         </ul>
+                        {{ model.offers }}
                     </td>
                 </tr>
                 </tbody>
@@ -28,13 +53,8 @@
 
 
 <script type="text/javascript">
-    function FECategoryCtrl($scope, $http, url)
+    function FECategoryCtrl($scope, $http, url, Packages)
     {
-        $scope.$watch('model.id', function(id) {
-            $http.get(url.element('product', 'category/' + id, true)).success(function(data) {
-                console.log(data);
-                $scope.products = data;
-            });
-        });
+        Packages.setModelType('ECommerce\\Product');
     }
 </script>

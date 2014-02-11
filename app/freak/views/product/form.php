@@ -66,7 +66,8 @@
                     <div class="control-group">
                         <label class="control-label" for="input00">Offer</label>
                         <div class="controls">
-                            <input type="text" id="input00" class="span2" ng-model="offer.discount_percentage"><br />
+                            <input type="text" id="input00" class="span2" ng-model="offer.price"> ,
+                            Discount percentage = <strong>{{ offer.discount_percentage }}%</strong><br />
                             <input fr-datetime-picker type="text" class="span3" ng-model="offer.from_date" placeholder="from date">
                             <input fr-datetime-picker type="text" class="span3" ng-model="offer.to_date" placeholder="to date">
                         </div>
@@ -82,8 +83,17 @@
 
 <script type="text/javascript">
 
-    function FEProductController($scope, $http, url)
+    function FEProductController($scope, $http, url, Packages)
     {
+        Packages.setModelType('ECommerce\\Product');
+
+        Packages.setOptions('images', {
+            maximum: 10,
+            types: [ 'main' ],
+            group: 'Product.Main',
+            image_name: 'product'
+        });
+
         $http.get(url.element('category', '', true)).success(function(data)
         {
             $scope.categories = data;
@@ -95,6 +105,11 @@
         });
 
         $scope.show = {};
+
+        $scope.$watch('offer.price', function(value)
+        {
+            $scope.offer.discount_percentage = (100 - ((value / $scope.model.price.value) * 100)).toFixed(2);
+        });
 
         $scope.$watch('model.id', function(id)
         {
