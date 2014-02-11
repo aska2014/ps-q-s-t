@@ -47,7 +47,6 @@ class FreakProductOfferController extends \Kareem3d\Freak\Core\ElementController
      */
     public function postProduct($id)
     {
-        dd($id);
         return $this->offers->createForProduct($id, Input::all());
     }
 
