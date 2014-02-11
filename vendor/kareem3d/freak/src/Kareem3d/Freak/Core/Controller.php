@@ -82,8 +82,6 @@ abstract class Controller {
         else
         {
             $method = $requestMethod . ucfirst(Str::camel(array_shift($uriPieces)));
-
-            dd($method);
             $parameters = $uriPieces;
         }
 
