@@ -146,7 +146,7 @@
       <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/views/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="211" column="85" selection-start="10050" selection-end="10050" vertical-scroll-proportion="0.62068963">
+            <state line="202" column="0" selection-start="9715" selection-end="9715" vertical-scroll-proportion="0.41379312">
               <folding />
             </state>
           </provider>
@@ -662,7 +662,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/views/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="211" column="85" selection-start="10050" selection-end="10050" vertical-scroll-proportion="0.62068963">
+        <state line="202" column="0" selection-start="9715" selection-end="9715" vertical-scroll-proportion="0.41379312">
           <folding />
         </state>
       </provider>
