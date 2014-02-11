@@ -6,7 +6,7 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/composer.json" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392136474661" ignored="false" />
     <file path="D:/website/arrabah/app/views/home/index.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391359200696" ignored="false" />
-    <file path="/routes.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392144472832" ignored="false" />
+    <file path="/routes.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392147391514" ignored="false" />
     <file path="/home.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391678204371" ignored="false" />
     <file path="/dummy.xml" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391695526614" ignored="false" />
     <file path="/angular.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391678265596" ignored="false" />
@@ -124,6 +124,7 @@
     <file path="/test.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392138435921" ignored="false" />
     <file path="/master.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392139182319" ignored="false" />
     <file path="/2014_01_27_193125_create_code_table.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392145376120" ignored="false" />
+    <file path="/RequestController.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392147676730" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,28 +144,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="form.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/freak/views/product/form.php">
+      <file leaf-file-name="RequestController.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/Kareem3d/Freak/Controllers/RequestController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="96" column="38" selection-start="4892" selection-end="4892" vertical-scroll-proportion="-11.769231">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/views/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="157" column="45" selection-start="7212" selection-end="7212" vertical-scroll-proportion="-3.3846154">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/config/production/app.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="63" selection-start="966" selection-end="966" vertical-scroll-proportion="0.8897196">
+            <state line="30" column="27" selection-start="637" selection-end="637" vertical-scroll-proportion="0.42803738">
               <folding />
             </state>
           </provider>
@@ -180,22 +163,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/public/.htaccess" />
         <option value="$PROJECT_DIR$/vendor/kareem3d/freak/src/views/login/master.blade.php" />
-        <option value="$PROJECT_DIR$/vendor/kareem3d/freak/src/routes.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/config/production/database.php" />
         <option value="$PROJECT_DIR$/app/config/remote.php" />
         <option value="$PROJECT_DIR$/artisan" />
         <option value="$PROJECT_DIR$/artisan.php" />
         <option value="$PROJECT_DIR$/public/index.php" />
-        <option value="$PROJECT_DIR$/app/routes.php" />
         <option value="$PROJECT_DIR$/app/commands/ResetupCommand.php" />
         <option value="$PROJECT_DIR$/vendor/kareem3d/images/src/migrations/2014_01_27_193125_create_code_table.php" />
         <option value="$PROJECT_DIR$/vendor/kareem3d/images/src/migrations/2014_01_27_193152_create_image_groups_table.php" />
         <option value="$PROJECT_DIR$/vendor/kareem3d/membership/src/migrations/2014_01_03_214313_create_user_contacts_table.php" />
         <option value="$PROJECT_DIR$/vendor/kareem3d/freak/src/views/index.php" />
         <option value="$PROJECT_DIR$/app/config/production/app.php" />
+        <option value="$PROJECT_DIR$/vendor/kareem3d/freak/src/routes.php" />
+        <option value="$PROJECT_DIR$/app/routes.php" />
+        <option value="$PROJECT_DIR$/vendor/kareem3d/freak/src/Kareem3d/Freak/Controllers/RequestController.php" />
       </list>
     </option>
   </component>
@@ -516,6 +499,44 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kareem3d" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="freak" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Kareem3d" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Freak" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -789,69 +810,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/kareem3d/images/src/migrations/2014_01_27_193152_create_image_groups_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="38" selection-start="331" selection-end="331" vertical-scroll-proportion="0.47663552">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/kareem3d/images/src/migrations/2014_01_27_193200_create_image_specifications_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="9" selection-start="308" selection-end="308" vertical-scroll-proportion="0.4448598">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/kareem3d/membership/src/migrations/2014_01_03_214254_create_user_info_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/kareem3d/membership/src/migrations/2014_01_03_214321_create_accounts_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/kareem3d/membership/src/migrations/2014_01_03_214313_create_user_contacts_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="38" selection-start="333" selection-end="333" vertical-scroll-proportion="0.47663552">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/kareem3d/membership/src/migrations/2014_01_25_102941_create_roles_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/kareem3d/membership/src/migrations/2014_01_25_103206_create_user_role_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/kareem3d/membership/src/migrations/2014_01_27_202554_create_role_requests_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/Kareem3d/Freak/FreakServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.66728973">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak-images/src/views/detail.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="33" column="23" selection-start="1107" selection-end="1107" vertical-scroll-proportion="0.33271027">
@@ -866,27 +824,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/freak/views/product/form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="38" selection-start="4892" selection-end="4892" vertical-scroll-proportion="-11.769231">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/helpers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="64" selection-start="333" selection-end="333" vertical-scroll-proportion="0.317757">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/views/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="157" column="45" selection-start="7212" selection-end="7212" vertical-scroll-proportion="-3.3846154">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/app.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="869" vertical-scroll-proportion="0.0">
@@ -896,7 +833,91 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/production/app.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="63" selection-start="966" selection-end="966" vertical-scroll-proportion="0.8897196">
+        <state line="16" column="0" selection-start="476" selection-end="476" vertical-scroll-proportion="0.3962617">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/views/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="157" column="45" selection-start="7212" selection-end="7212" vertical-scroll-proportion="0.16858238">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/freak/views/product/form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="96" column="38" selection-start="4892" selection-end="4892" vertical-scroll-proportion="0.5862069">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/helpers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="17" selection-start="264" selection-end="264" vertical-scroll-proportion="0.2542056">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="3" selection-start="586" selection-end="586" vertical-scroll-proportion="0.8093458">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="1" selection-start="1654" selection-end="1654" vertical-scroll-proportion="1.7943925">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/Kareem3d/Freak/FreakServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="35" selection-start="1108" selection-end="1108" vertical-scroll-proportion="0.77757007">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/Kareem3d/Freak/Controllers/FreakBaseController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.5252336">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/Kareem3d/Freak/Controllers/ConfigurationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/Kareem3d/Freak/Controllers/FreakController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="5" selection-start="348" selection-end="348" vertical-scroll-proportion="0.4448598">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/Kareem3d/Freak/Controllers/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/Kareem3d/Freak/Controllers/RegisterController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.4655173">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/Kareem3d/Freak/Controllers/RequestController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="27" selection-start="637" selection-end="637" vertical-scroll-proportion="0.42803738">
           <folding />
         </state>
       </provider>

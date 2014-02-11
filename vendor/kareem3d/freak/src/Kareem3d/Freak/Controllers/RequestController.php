@@ -28,6 +28,7 @@ class RequestController extends FreakBaseController {
      */
     public function element($element, $uri = '')
     {
+        dd($element, $uri);
         $element = $this->freak->findElement($element);
 
         return $element->call(Request::getMethod(), $uri);

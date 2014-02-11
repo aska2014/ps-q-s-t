@@ -33,14 +33,3 @@ Route::Get('/checkout', function()
 {
     return View::make('pages.checkout');
 });
-
-
-
-
-
-
-
-
-Route::get('setup', function()
-{
-});

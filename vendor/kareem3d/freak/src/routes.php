@@ -10,10 +10,6 @@ $loginFreakConfig = array_merge(freakRouteConfig(), array(
 
 Route::group($loginFreakConfig, function()
 {
-    Route::get('test', function()
-    {
-        echo 'what';
-    });
     Route::controller('/login', 'Kareem3d\Freak\Controllers\LoginController');
     Route::controller('/register', 'Kareem3d\Freak\Controllers\RegisterController');
 });
