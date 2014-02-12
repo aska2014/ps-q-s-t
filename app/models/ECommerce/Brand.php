@@ -1,5 +1,6 @@
 <?php namespace ECommerce;
 
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
 
 class Brand extends \BaseModel {
@@ -27,6 +28,19 @@ class Brand extends \BaseModel {
         ->groupBy('brands.id')
         ->orderBy('number_of_products', 'DESC')
         ->select('brands.*', DB::raw('COUNT(*) as number_of_products'));
+    }
+
+    /**
+     * @param int $take
+     * @return Collection
+     */
+    public function getUniqueProducts($take = 0)
+    {
+        $query = Product::byCategory($this)->unique();
+
+        if($take > 0) return $query->take($take);
+
+        return $query->get();
     }
 
     /**

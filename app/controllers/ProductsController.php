@@ -31,10 +31,12 @@ class ProductsController extends BaseController {
      */
     public function brand(Brand $brand)
     {
-        $products = $brand->products;
         $carousel = $this->getCarousel();
+        $products = $this->products->byBrand($brand)->unique()->get();
 
-        return View::make('pages.products', compact('products', 'carousel'));
+        $this->addToVisible($products);
+
+        return View::make('pages.products', compact('brand', 'products', 'carousel'));
     }
 
     /**
@@ -43,10 +45,12 @@ class ProductsController extends BaseController {
      */
     public function category(Category $category)
     {
-        $products = $category->products;
         $carousel = $this->getCarousel();
+        $products = $this->products->byCategory($category)->unique()->get();
 
-        return View::make('pages.products', compact('products', 'carousel'));
+        $this->addToVisible($products);
+
+        return View::make('pages.products', compact('category', 'products', 'carousel'));
     }
 
     /**
@@ -55,6 +59,8 @@ class ProductsController extends BaseController {
      */
     protected function getCarousel()
     {
-        return new \Website\Carousel('Related products', $this->products->random()->take(25)->get());
+        $products = $this->products->random()->take(25)->get();
+
+        return new \Website\Carousel('Related products', $products);
     }
 }

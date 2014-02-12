@@ -20,7 +20,7 @@
     <div class="menu" id="main-menu">
 
         <ul>
-            <li><a style="background:#fcac47" class="active" href="{{ URL::route('home') }}">Home</a></li>
+            <li><a style="background:#fcac47" href="{{ URL::route('home') }}">Home</a></li>
 
             @for($i = 0; $i < $brands->count(); $i++)
             <li>

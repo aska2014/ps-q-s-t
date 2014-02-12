@@ -52,6 +52,14 @@ class BaseController extends Controller {
         return $this->errors;
     }
 
+    /**
+     * @param \Illuminate\Support\Collection $products
+     */
+    protected function addToVisible(\Illuminate\Support\Collection $products)
+    {
+        App::make('VisibleProductRepository')->add($products);
+    }
+
 	/**
 	 * Setup the layout used by the controller.
 	 *

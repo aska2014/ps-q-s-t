@@ -15,11 +15,24 @@ angular.module('qbrando.controllers', ['qbrando.services']).
         }
     }])
 
-    .controller('HeaderController', ['Sticky', function(Sticky) {
+    .controller('HeaderController', ['Sticky', '$location', function(Sticky, $location) {
 
         // Make sticky menu
         Sticky.make(angular.element('#main-menu'), angular.element("#sticky-menu"));
 
+        // Make active menu item
+        var makeActiveMenu = function()
+        {
+            $("#main-menu").find('a').each(function()
+            {
+                if($(this).attr('href') == $location.absUrl().replace(/\/+$/, ''))
+                {
+                    $(this).addClass('active');
+                }
+            });
+        }
+
+        makeActiveMenu();
     }])
 
     .controller('OfferTimerController', ['$scope', 'Timer', function($scope, Timer) {

@@ -91,9 +91,56 @@ angular.module('qbrando.services', []).
     factory('Products', [function() {
     }])
 
-    .factory('Cart', ['$resource', '$cookieStore', function( $resource, $cookieStore ) {
+    .factory('Cart', ['$cookieStore', function( $cookieStore ) {
 
         return {
-            add: function(product){}
+
+            itemsCookieName: '',
+            giftsCookieName: '',
+
+            'init': function(itemsCookieName, giftsCookieName) {
+                this.itemsCookieName = itemsCookiename;
+                this.giftsCookieName = giftsCookieName;
+            },
+
+            'save': function() {
+                $cookieStore.put(this.cookieName, products);
+            },
+
+            'add': function() {
+                $cookieStore.put(this.cookieName, products);
+            },
+
+            // Get all products
+            'getItems': function() {
+                return $cookieStore.get(this.itemsCookieName);
+            },
+
+            'getGifts': function() {
+                return $cookieStore.get(this.giftsCookieName);
+            },
+
+            // Get total number of products in cart
+            'totalItems': function() {
+
+                return this.calculateTotal(this.getItems());
+            },
+
+            // Get total number of products in cart
+            'totalGifts': function() {
+
+                return this.calculateTotal(this.getGifts());
+            },
+
+            'calculateTotal': function(items) {
+                var total = 0;
+
+                for(var i = 0;i < items.length; i++)
+                {
+                    total += items[i].quantity;
+                }
+
+                return total;
+            }
         }
     }]);

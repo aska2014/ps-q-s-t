@@ -14,16 +14,24 @@ View::composer('partials.static.header', function($view)
 View::composer('partials.products.offers', function($view)
 {
     $view->offerPositions = App::make('Offers\OfferPosition')->getNotEmpty();
-    $view->middleProducts = App::make('ECommerce\Product')->take(2)->get();
+    $view->middleProducts = App::make('ECommerce\Product')->take(2)->unique()->get();
+
+    App::make('VisibleProductRepository')->add($view->middleProducts);
 });
 
 View::composer('partials.products.fancy', function($view)
 {
-    $view->fancyCategories = App::make('ECommerce\Category')->all();
+    $view->fancyCategories = App::make('ECommerce\Category')->get();
+
+    App::make('VisibleProductRepository')->addRecursive($view->fancyCategories);
 });
 
 View::share('success', Responser::getSuccess());
 View::share('errors', Responser::getErrors());
+
+
+
+
 
 
 App::bind('Cart\Cart', function( $app )
@@ -32,4 +40,9 @@ App::bind('Cart\Cart', function( $app )
                           $app->make('Offers\MassOffer')->makeItems(),
                           $app->make('Cart\ItemFactoryInterface')->makeItems(),
                           $app->make('Cart\ItemFactoryInterface')->makeGifts());
+});
+
+App::singleton('VisibleProductRepository', function()
+{
+    return new VisibleProductRepository(new \Illuminate\Support\Collection());
 });

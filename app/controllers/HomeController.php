@@ -18,7 +18,9 @@ class HomeController extends BaseController {
      */
     public function index()
 	{
-        $carousel = new Carousel('Top sales of this month', $this->products->topSales()->get());
+        $products = $this->products->topSales()->unique()->get();
+
+        $carousel = new Carousel('Top sales of this month', $products);
 
         return View::make('pages.home', compact('carousel'));
 	}

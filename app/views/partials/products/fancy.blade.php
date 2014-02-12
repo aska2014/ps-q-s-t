@@ -26,7 +26,7 @@
     </div>
     @endif
 
-    @foreach($category->products as $product)
+    @foreach($category->getUniqueProducts(6) as $product)
     <div class="product small-product">
         <div class="image">
             <img class="img-responsive" src="{{ $product->getImage('main')->getNearest(179,118) }}" alt=""/>

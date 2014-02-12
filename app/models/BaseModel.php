@@ -10,5 +10,4 @@ class BaseModel extends \Kareem3d\Eloquent\Model {
     {
         return $query->orderBy(DB::raw('RAND()'));
     }
-
 }

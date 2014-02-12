@@ -1,5 +1,7 @@
 <?php namespace ECommerce;
 
+use Illuminate\Support\Collection;
+
 class Category extends \BaseModel {
 
     /**
@@ -18,6 +20,14 @@ class Category extends \BaseModel {
     public function getMainProduct()
     {
         return $this->products->first();
+    }
+
+    /**
+     * @return Collection
+     */
+    public function getUniqueProducts()
+    {
+       return Product::byCategory($this)->unique()->get();
     }
 
     /**

@@ -1,5 +1,6 @@
 <?php namespace ECommerce;
 
+use Illuminate\Support\Facades\App;
 use Offers\OfferPosition;
 use Offers\ProductOffer;
 use Units\Price;
@@ -55,7 +56,7 @@ class Product extends \BaseModel {
      */
     public function scopeByBrand($query, $brand)
     {
-        if($brand instanceof Category) $brand = $brand->id;
+        if($brand instanceof Brand) $brand = $brand->id;
 
         return $query->where('brand_id', $brand);
     }
@@ -141,6 +142,26 @@ class Product extends \BaseModel {
     public function getCurrentPriceAttribute()
     {
         return ProductOffer::calculatePriceFromProduct( $this, new \DateTime() );
+    }
+
+
+    /**
+     * @param $query
+     * @return mixed
+     */
+    public function scopeUnique($query)
+    {
+        $ids = $this->getVisibleIds();
+
+        return empty($ids) ? $query : $query->whereNotIn('id', $ids);
+    }
+
+    /**
+     * @return array
+     */
+    public function getVisibleIds()
+    {
+        return App::make('VisibleProductRepository')->getIds();
     }
 
     /**
