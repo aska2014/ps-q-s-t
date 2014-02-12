@@ -28,6 +28,16 @@ class Product extends \BaseModel {
 
     /**
      * @param $query
+     * @return mixed
+     * @todo
+     */
+    public function scopeTopSales($query)
+    {
+        return $query;
+    }
+
+    /**
+     * @param $query
      * @param $category
      * @return mixed
      */
@@ -76,6 +86,15 @@ class Product extends \BaseModel {
         $this->price()->associate($price);
 
         $this->save();
+    }
+
+    /**
+     * @param $value
+     * @return mixed
+     */
+    public function getTitleAttribute($value)
+    {
+        return $value ?: $this->brand->name . ', Model '. $this->model;
     }
 
     /**

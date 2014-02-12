@@ -1,126 +1,18 @@
 <div class="carousel-products" ng-controller="CarouselController">
-    <div class="main-title-black"><span class="glyphicon glyphicon-th-list"></span> TOP 20 sales</div>
+    <div class="main-title-black"><span class="glyphicon glyphicon-th-list"></span> {{ $carousel->title }}</div>
     <div id="owl-demo" class="owl-carousel">
+        @foreach($carousel->products as $product)
         <div class="item">
-            <img class="lazyOwl" data-src="app/img/products/3.jpg" alt="Lazy Owl Image">
+            <img class="lazyOwl" data-src="{{ $product->getImage('main')->getNearest(250, 188) }}" alt="{{ $product->title }}">
             <div class="item-info">
-                <div class="title"><a href="#">Model 32</a></div>
+                <div class="title"><a href="{{ URL::route('product', $product->id) }}">{{ $product->title }}</a></div>
                 <div class="price">
-                    <span class="before-price">QAR 700.00</span>
-                    <span class="actual-price">QAR 500.00</span>
+<!--                    <span class="before-price">QAR 700.00</span>-->
+                    <span class="actual-price">{{ $product->price }}</span>
                 </div>
             </div>
         </div>
-        <div class="item">
-            <img class="lazyOwl" data-src="app/img/products/4.jpg" alt="Lazy Owl Image">
-            <div class="item-info">
-                <div class="title"><a href="#">Model 32</a></div>
-                <div class="price">
-                    <span class="before-price">QAR 700.00</span>
-                    <span class="actual-price">QAR 500.00</span>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <img class="lazyOwl" data-src="app/img/products/2.jpg" alt="Lazy Owl Image">
-            <div class="item-info">
-                <div class="title"><a href="#">Model 32</a></div>
-                <div class="price">
-                    <span class="before-price">QAR 700.00</span>
-                    <span class="actual-price">QAR 500.00</span>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <img class="lazyOwl" data-src="app/img/products/4.jpg" alt="Lazy Owl Image">
-            <div class="item-info">
-                <div class="title"><a href="#">Model 32</a></div>
-                <div class="price">
-                    <span class="before-price">QAR 700.00</span>
-                    <span class="actual-price">QAR 500.00</span>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <img class="lazyOwl" data-src="app/img/products/3.jpg" alt="Lazy Owl Image">
-            <div class="item-info">
-                <div class="title"><a href="#">Model 32</a></div>
-                <div class="price">
-                    <span class="before-price">QAR 700.00</span>
-                    <span class="actual-price">QAR 500.00</span>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <img class="lazyOwl" data-src="app/img/products/4.jpg" alt="Lazy Owl Image">
-            <div class="item-info">
-                <div class="title"><a href="#">Model 32</a></div>
-                <div class="price">
-                    <span class="before-price">QAR 700.00</span>
-                    <span class="actual-price">QAR 500.00</span>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <img class="lazyOwl" data-src="app/img/products/2.jpg" alt="Lazy Owl Image">
-            <div class="item-info">
-                <div class="title"><a href="#">Model 32</a></div>
-                <div class="price">
-                    <span class="before-price">QAR 700.00</span>
-                    <span class="actual-price">QAR 500.00</span>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <img class="lazyOwl" data-src="app/img/products/4.jpg" alt="Lazy Owl Image">
-            <div class="item-info">
-                <div class="title"><a href="#">Model 32</a></div>
-                <div class="price">
-                    <span class="before-price">QAR 700.00</span>
-                    <span class="actual-price">QAR 500.00</span>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <img class="lazyOwl" data-src="app/img/products/3.jpg" alt="Lazy Owl Image">
-            <div class="item-info">
-                <div class="title"><a href="#">Model 32</a></div>
-                <div class="price">
-                    <span class="before-price">QAR 700.00</span>
-                    <span class="actual-price">QAR 500.00</span>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <img class="lazyOwl" data-src="app/img/products/4.jpg" alt="Lazy Owl Image">
-            <div class="item-info">
-                <div class="title"><a href="#">Model 32</a></div>
-                <div class="price">
-                    <span class="before-price">QAR 700.00</span>
-                    <span class="actual-price">QAR 500.00</span>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <img class="lazyOwl" data-src="app/img/products/2.jpg" alt="Lazy Owl Image">
-            <div class="item-info">
-                <div class="title"><a href="#">Model 32</a></div>
-                <div class="price">
-                    <span class="before-price">QAR 700.00</span>
-                    <span class="actual-price">QAR 500.00</span>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <img class="lazyOwl" data-src="app/img/products/4.jpg" alt="Lazy Owl Image">
-            <div class="item-info">
-                <div class="title"><a href="#">Model 32</a></div>
-                <div class="price">
-                    <span class="before-price">QAR 700.00</span>
-                    <span class="actual-price">QAR 500.00</span>
-                </div>
-            </div>
-        </div>
+        @endforeach
     </div>
 </div>
 

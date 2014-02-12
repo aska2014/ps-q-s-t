@@ -71,15 +71,12 @@
 
 
     <div class="second-column">
-        <div class="img-box">
-            <img src="{{ URL::asset('app/img/products/3.jpg') }}" class="img-responsive" alt=""/>
+        @foreach($middleProducts as $product)
+        <div class="img-box" url-to="{{ URL::route('product', $product->id) }}">
+            <img src="{{ $product->getImage('main')->getNearest(232, 174) }}" class="img-responsive" style="height:179px" alt=""/>
         </div>
-
         <div class="separator"></div>
-
-        <div class="img-box">
-            <img src="{{ URL::asset('app/img/products/2.jpg') }}" class="img-responsive" alt=""/>
-        </div>
+        @endforeach
     </div>
 
 

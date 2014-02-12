@@ -14,6 +14,7 @@ View::composer('partials.static.header', function($view)
 View::composer('partials.products.offers', function($view)
 {
     $view->offerPositions = App::make('Offers\OfferPosition')->getNotEmpty();
+    $view->middleProducts = App::make('ECommerce\Product')->take(2)->get();
 });
 
 View::composer('partials.products.fancy', function($view)

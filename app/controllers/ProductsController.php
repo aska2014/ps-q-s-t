@@ -20,7 +20,9 @@ class ProductsController extends BaseController {
      */
     public function product(Product $product)
     {
-        return View::make('pages.product', compact('product'));
+        $carousel = $this->getCarousel();
+
+        return View::make('pages.product', compact('product', 'carousel'));
     }
 
     /**
@@ -30,8 +32,9 @@ class ProductsController extends BaseController {
     public function brand(Brand $brand)
     {
         $products = $brand->products;
+        $carousel = $this->getCarousel();
 
-        return View::make('pages.products', compact('products'));
+        return View::make('pages.products', compact('products', 'carousel'));
     }
 
     /**
@@ -41,7 +44,17 @@ class ProductsController extends BaseController {
     public function category(Category $category)
     {
         $products = $category->products;
+        $carousel = $this->getCarousel();
 
-        return View::make('pages.products', compact('products'));
+        return View::make('pages.products', compact('products', 'carousel'));
+    }
+
+    /**
+     * @return \Website\Carousel
+     * @todo
+     */
+    protected function getCarousel()
+    {
+        return new \Website\Carousel('Related products', $this->products->random()->take(25)->get());
     }
 }

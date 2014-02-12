@@ -1,13 +1,25 @@
 <?php
 
+use ECommerce\Product;
+
 class ShoppingCartController extends BaseController {
+
+    /**
+     * @param Product $products
+     */
+    public function __construct(Product $products)
+    {
+        $this->products = $products;
+    }
 
     /**
      * @return mixed
      */
     public function index()
     {
-        return View::make('pages.cart');
+        $carousel = new \Website\Carousel('Related products', $this->products->random()->take(25)->get());
+
+        return View::make('pages.cart', compact('carousel'));
     }
 
     /**

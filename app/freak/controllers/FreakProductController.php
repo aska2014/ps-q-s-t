@@ -86,6 +86,8 @@ class FreakProductController extends \Kareem3d\Freak\Core\ElementController {
         $product->update(Input::all());
 
         $product->setPrice(Input::get('price.value'), Input::get('price.currency'));
+
+        return $product;
     }
 
     /**

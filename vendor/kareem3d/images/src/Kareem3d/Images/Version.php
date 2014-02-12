@@ -61,19 +61,19 @@ class Version extends Model
      */
     public function scopeNearestDim($query, $width, $height, $lowerSize = false)
     {
-        $query = $query->where(function ($query) use($width, $height) {
+        $query->where(function($query) use($width, $height, $lowerSize)
+        {
 
             $query->where('width', '>=', $width)->where('height', '>=', $height);
 
+            if ($lowerSize)
+            {
+                $query->orWhere(function ($query) use($width, $height) {
+
+                    $query->where('width', '<=', $width)->where('height', '<=', $height);
+                });
+            }
         });
-
-        if ($lowerSize)
-        {
-            $query->orWhere(function ($query) use($width, $height) {
-
-                $query->where('width', '<=', $width)->where('height', '<=', $height);
-            });
-        }
 
         if ($width)  $query->orderBy(DB::raw('ABS(width - ' . $width . ')'), 'ASC');
         if ($height) $query->orderBy(DB::raw('ABS(height - ' . $height . ')'), 'ASC');
