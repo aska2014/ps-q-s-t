@@ -8,28 +8,15 @@ Route::get('/my-name-is-kareem3d-friends/{command}', function($command)
 })->where('command', '.*');
 
 
-Route::get('/', function()
-{
-    return View::make('pages.home');
-});
 
-Route::get('/products', function()
-{
-    return View::make('pages.products');
-});
+Route::get('/', array('as' => 'home', 'uses' => 'HomeController@index'));
+Route::get('/shopping-cart.html', array('as' => 'shopping-cart', 'uses' => 'ShoppingCartController@index'));
+Route::get('/checkout.html', array('as' => 'checkout', 'uses' => 'ShoppingCartController@checkout'));
 
-Route::get('/product', function()
-{
-    return View::make('pages.product');
-});
+Route::get('product/{product}', array('as' => 'product', 'uses' => 'ProductsController@product'));
+Route::get('brand/{brand}', array('as' => 'brand', 'uses' => 'ProductsController@brand'));
+Route::get('category/{category}', array('as' => 'category', 'uses' => 'ProductsController@category'));
 
-Route::get('/cart', function()
-{
-    return View::make('pages.cart');
-});
-
-
-Route::Get('/checkout', function()
-{
-    return View::make('pages.checkout');
-});
+Route::model('product', 'ECommerce\Product');
+Route::model('brand', 'ECommerce\Brand');
+Route::model('category', 'ECommerce\Category');

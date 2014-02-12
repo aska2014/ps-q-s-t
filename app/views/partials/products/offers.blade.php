@@ -4,21 +4,23 @@
 
     <div class="first-column">
 
+        @if($offer = $offerPositions->get('left_offer'))
         <div class="flying-product">
-            <div class="box-title">50% off for the day</div>
+            <div class="box-title"><a href="{{ URL::route('product', $offer->product->id) }}">{{ $offer->title }}</a></div>
             <div class="body">
                 <div class="image">
-                    <img src="{{ URL::asset('app/img/products/1.jpg') }}" class="img-responsive" alt=""/>
+                    <img src="{{ $offer->product->getImage('main')->getNearest(306, 202) }}" class="img-responsive" alt=""/>
                 </div>
                 <div class="info">
-                    <div class="title"><a href="#">Model 32</a></div>
+                    <div class="title"><a href="{{ URL::route('product', $offer->product->id) }}">{{ $offer->product->title }}</a></div>
                     <div class="price">
-                        <span class="before-price">QAR 700.00</span>
-                        <span class="actual-price">QAR 500.00</span>
+<!--                        <span class="before-price">QAR 30</span>-->
+                        <span class="actual-price">{{ $offer->product->price }}</span>
                     </div>
                 </div>
             </div>
         </div>
+        @endif
 
         <div class="separator"></div>
 
@@ -82,33 +84,35 @@
 
 
     <div class="third-column">
+
+        @if($offer = $offerPositions->get('right_offer'))
         <div class="flying-big-product">
-            <div class="box-title">Special offer of the day</div>
+            <div class="box-title"><a href="{{ URL::route('product', $offer->product->id) }}">{{ $offer->title }}</a></div>
             <div class="body">
                 <div class="image">
-                    <img src="{{ URL::asset('app/img/products/4.jpg') }}" class="img-responsive" alt=""/>
+                    <img src="{{ $offer->product->getImage('main')->getNearest(232, 174) }}" class="img-responsive" alt=""/>
                 </div>
                 <div class="info">
                     <div class="row">
                         <div class="key">Model: </div>
-                        <div class="value">86</div>
+                        <div class="value">{{ $offer->product->model }}</div>
                     </div>
                     <div class="clearfix"></div>
                     <div class="row">
                         <div class="key">Brand: </div>
-                        <div class="value"><a href="#">Cartier</a></div>
+                        <div class="value"><a href="{{ URL::route('brand', $offer->product->brand->id) }}">{{ $offer->product->brand->name }}</a></div>
                     </div>
                     <div class="clearfix"></div>
                     <div class="row">
                         <div class="key">Gender: </div>
-                        <div class="value">unisex</div>
+                        <div class="value">{{ $offer->product->gender }}</div>
                     </div>
                     <div class="clearfix"></div>
                     <div class="row">
                         <div class="key">Price: </div>
                         <div class="value price">
-                            <span class="before-price">QAR 700.00</span>
-                            <span class="actual-price">QAR 500.00</span>
+<!--                            <span class="before-price">QAR 700.00</span>-->
+                            <span class="actual-price">{{ $offer->product->price }}</span>
                         </div>
                     </div>
                 </div>
@@ -117,6 +121,7 @@
                 <div class="clearfix"></div>
             </div>
         </div>
+        @endif
 
         <div class="separator"></div>
 

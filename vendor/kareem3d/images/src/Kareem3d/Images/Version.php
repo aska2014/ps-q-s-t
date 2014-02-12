@@ -1,5 +1,6 @@
 <?php namespace Kareem3d\Images;
 
+use Illuminate\Support\Facades\DB;
 use Kareem3d\Eloquent\Model;
 use Kareem3d\PathManager\Path;
 use Kareem3d\PathManager\PathException;

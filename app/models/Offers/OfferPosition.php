@@ -42,7 +42,7 @@ class OfferPosition extends \DateRangeModel {
     {
         foreach(static::$availablePositions as $position)
         {
-            $query->where('position', $position);
+            $query->orWhere('position', $position);
         }
 
         return $query;
@@ -56,6 +56,21 @@ class OfferPosition extends \DateRangeModel {
     public function scopeByPosition($query, $position)
     {
         return $query->where('position', $position);
+    }
+
+    /**
+     * @return Collection
+     */
+    public static function getNotEmpty()
+    {
+        $positions = new Collection();
+
+        foreach(static::allPositions()->get() as $offer)
+        {
+            $positions->put($offer->position, $offer);
+        }
+
+        return $positions;
     }
 
     /**

@@ -13,23 +13,21 @@
 
     <div class="right-header">
 
-
     </div>
 
-
     <div class="clearfix"></div>
-
 
     <div class="menu" id="main-menu">
 
         <ul>
-            <li><a style="background:#fcac47" class="active" href="#">Home</a></li>
-            <li><a style="background:#ee3d26" href="#">Home</a></li>
-            <li><a style="background:#ce374a" href="#">Home</a></li>
-            <li><a style="background:#872e45" href="#">Home</a></li>
-            <li><a style="background:#642a59" href="#">Home</a></li>
-            <li><a style="background:#232351" href="#">Home</a></li>
-            <li><a class="simple" href="#">
+            <li><a style="background:#fcac47" class="active" href="{{ URL::route('home') }}">Home</a></li>
+
+            @for($i = 0; $i < $brands->count(); $i++)
+            <li>
+                <a style="background:{{ $headerColors[$i] }}" href="{{ URL::route('brand', $brands[$i]->id) }}">{{ $brands[$i]->name }}</a>
+            </li>
+            @endfor
+            <li><a class="simple" href="{{ URL::route('shopping-cart') }}">
                     <span class="glyphicon glyphicon-shopping-cart"></span>
                     Shopping cart
                 </a></li>
@@ -39,13 +37,13 @@
     <div id="sticky-menu">
 
         <ul>
-            <li><a style="background:#fcac47" href="#">Home</a></li>
-            <li><a style="background:#ee3d26" href="#">Home</a></li>
-            <li><a style="background:#ce374a" href="#">Home</a></li>
-            <li><a style="background:#872e45" href="#">Home</a></li>
-            <li><a style="background:#642a59" href="#">Home</a></li>
-            <li><a style="background:#232351" href="#">Home</a></li>
-            <li><a class="simple" href="#">
+            <li><a style="background:#fcac47" href="{{ URL::route('home') }}">Home</a></li>
+            @for($i = 0; $i < $brands->count(); $i++)
+            <li>
+                <a style="background:{{ $headerColors[$i] }}" href="{{ URL::route('brand', $brands[$i]->id) }}">{{ $brands[$i]->name }}</a>
+            </li>
+            @endfor
+            <li><a class="simple" href="{{ URL::route('shopping-cart') }}">
                     <span class="glyphicon glyphicon-shopping-cart"></span>
                     Shopping cart
                 </a></li>

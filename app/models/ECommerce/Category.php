@@ -13,6 +13,14 @@ class Category extends \BaseModel {
     public $timestamps = false;
 
     /**
+     * @return mixed
+     */
+    public function getMainProduct()
+    {
+        return $this->products->first();
+    }
+
+    /**
      * Defining relations
      */
     public function parent(){ return $this->belongsTo(Category::getClass()); }

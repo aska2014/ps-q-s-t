@@ -38,9 +38,9 @@ class ImageSeeder extends \Illuminate\Database\Seeder {
             )));
 
         $group->specs()->create(array(
-            'directory' => 'albums/products/400x315'
+            'directory' => 'albums/products/422x288'
         ))->setCode(new Code(array(
-                'code' => '$image->grab(400, 315, true); return $image;'
+                'code' => '$image->grab(422, 288, true); return $image;'
             )));
 
         $group->specs()->create(array(

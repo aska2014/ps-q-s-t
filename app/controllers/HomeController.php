@@ -2,8 +2,12 @@
 
 class HomeController extends BaseController {
 
-	public function showWelcome()
+    /**
+     * @return mixed
+     */
+    public function index()
 	{
+        return View::make('pages.home');
 	}
 
 }
