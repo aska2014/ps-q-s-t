@@ -59,7 +59,7 @@ class ProductsController extends BaseController {
      */
     protected function getCarousel()
     {
-        $products = $this->products->random()->take(25)->get();
+        $products = $this->products->random()->take(static::PRODUCTS_PER_CAROUSEL)->get();
 
         return new \Website\Carousel('Related products', $products);
     }

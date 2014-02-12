@@ -84,7 +84,7 @@
     <file path="/CookieRepository.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391867194308" ignored="false" />
     <file path="/ItemRepositoryInterface.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391866542918" ignored="false" />
     <file path="/CookieFactory.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391869035280" ignored="false" />
-    <file path="/BaseController.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392216578267" ignored="false" />
+    <file path="/BaseController.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392244181338" ignored="false" />
     <file path="$PROJECT_DIR$/../www/app/views/partials/body/new_checkout.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391870614179" ignored="false" />
     <file path="$PROJECT_DIR$/../www/public/app/js/controllers.js" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391870633522" ignored="false" />
     <file path="/HomeController.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392244106938" ignored="false" />
@@ -129,7 +129,7 @@
     <file path="/FreakOfferPositionControl.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392201610607" ignored="false" />
     <file path="/DateRangeModel.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392202247885" ignored="false" />
     <file path="/FreakOfferPositionController.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392205887686" ignored="false" />
-    <file path="/ProductsController.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392216768862" ignored="false" />
+    <file path="/ProductsController.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392244189469" ignored="false" />
     <file path="/ShoppingCartController.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392212398246" ignored="false" />
     <file path="/Carousel.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392212159562" ignored="false" />
     <file path="/Version.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392212836843" ignored="false" />
@@ -157,10 +157,28 @@
       <file leaf-file-name="HomeController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/HomeController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="74" selection-start="391" selection-end="391" vertical-scroll-proportion="0.5869159">
+            <state line="20" column="93" selection-start="410" selection-end="410" vertical-scroll-proportion="0.5869159">
               <folding>
                 <element signature="e#7#29#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProductsController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/ProductsController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="61" column="52" selection-start="1432" selection-end="1461" vertical-scroll-proportion="-14.038462">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/BaseController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="37" selection-start="124" selection-end="124" vertical-scroll-proportion="-4.576923">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -177,9 +195,7 @@
       <list>
         <option value="$PROJECT_DIR$/app/models/VisibleCategoryRepository.php" />
         <option value="$PROJECT_DIR$/app/models/BaseModel.php" />
-        <option value="$PROJECT_DIR$/app/controllers/BaseController.php" />
         <option value="$PROJECT_DIR$/app/models/ECommerce/Product.php" />
-        <option value="$PROJECT_DIR$/app/controllers/ProductsController.php" />
         <option value="$PROJECT_DIR$/app/models/VisibleProductRepository.php" />
         <option value="$PROJECT_DIR$/app/views/partials/products/fancy.blade.php" />
         <option value="$PROJECT_DIR$/app/models/ECommerce/Brand.php" />
@@ -190,6 +206,8 @@
         <option value="$PROJECT_DIR$/public/app/js/controllers.js" />
         <option value="$PROJECT_DIR$/app/views/templates/angular.blade.php" />
         <option value="$PROJECT_DIR$/public/app/js/services.js" />
+        <option value="$PROJECT_DIR$/app/controllers/BaseController.php" />
+        <option value="$PROJECT_DIR$/app/controllers/ProductsController.php" />
         <option value="$PROJECT_DIR$/app/controllers/HomeController.php" />
       </list>
     </option>
@@ -638,16 +656,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/VisibleProductRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="328" selection-end="328" vertical-scroll-proportion="0.49525616" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/BaseController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="5" selection-start="1217" selection-end="1217" vertical-scroll-proportion="0.7571157" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/public/fr_aa/services.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="77" column="13" selection-start="2144" selection-end="2203" vertical-scroll-proportion="0.7323689" />
@@ -721,9 +729,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/BaseController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="37" selection-start="124" selection-end="124" vertical-scroll-proportion="-4.576923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/ProductsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="52" selection-start="1432" selection-end="1461" vertical-scroll-proportion="-14.038462">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="74" selection-start="391" selection-end="391" vertical-scroll-proportion="0.5869159">
+        <state line="20" column="93" selection-start="410" selection-end="410" vertical-scroll-proportion="0.5869159">
           <folding>
             <element signature="e#7#29#0" expanded="true" />
           </folding>
