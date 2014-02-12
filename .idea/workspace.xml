@@ -87,7 +87,7 @@
     <file path="/BaseController.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392216578267" ignored="false" />
     <file path="$PROJECT_DIR$/../www/app/views/partials/body/new_checkout.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391870614179" ignored="false" />
     <file path="$PROJECT_DIR$/../www/public/app/js/controllers.js" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391870633522" ignored="false" />
-    <file path="/HomeController.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392216922190" ignored="false" />
+    <file path="/HomeController.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392244106938" ignored="false" />
     <file path="$PROJECT_DIR$/../www/app/controllers/HomeController.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391870925232" ignored="false" />
     <file path="$PROJECT_DIR$/../www/app/start/global.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391870950731" ignored="false" />
     <file path="$PROJECT_DIR$/../www/public/slider/slides.xml" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391871261703" ignored="false" />
@@ -154,30 +154,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="services.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/app/js/services.js">
+      <file leaf-file-name="HomeController.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/HomeController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="141" column="0" selection-start="3573" selection-end="3573" vertical-scroll-proportion="0.6969697">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Cart.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/Cart/Cart.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="83" column="0" selection-start="1571" selection-end="1571" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="angular.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/templates/angular.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="64" selection-start="2936" selection-end="2936" vertical-scroll-proportion="0.0">
+            <state line="20" column="74" selection-start="391" selection-end="391" vertical-scroll-proportion="0.5869159">
               <folding>
-                <marker date="1391704006436" expanded="true" signature="735:796" placeholder="..." />
+                <element signature="e#7#29#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -198,7 +180,6 @@
         <option value="$PROJECT_DIR$/app/controllers/BaseController.php" />
         <option value="$PROJECT_DIR$/app/models/ECommerce/Product.php" />
         <option value="$PROJECT_DIR$/app/controllers/ProductsController.php" />
-        <option value="$PROJECT_DIR$/app/controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/app/models/VisibleProductRepository.php" />
         <option value="$PROJECT_DIR$/app/views/partials/products/fancy.blade.php" />
         <option value="$PROJECT_DIR$/app/models/ECommerce/Brand.php" />
@@ -209,6 +190,7 @@
         <option value="$PROJECT_DIR$/public/app/js/controllers.js" />
         <option value="$PROJECT_DIR$/app/views/templates/angular.blade.php" />
         <option value="$PROJECT_DIR$/public/app/js/services.js" />
+        <option value="$PROJECT_DIR$/app/controllers/HomeController.php" />
       </list>
     </option>
   </component>
@@ -508,6 +490,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -638,11 +638,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="71" selection-start="455" selection-end="455" vertical-scroll-proportion="0.7096774" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/VisibleProductRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="0" selection-start="328" selection-end="328" vertical-scroll-proportion="0.49525616" />
@@ -698,31 +693,40 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/templates/angular.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="64" selection-start="2936" selection-end="2936" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1391704006436" expanded="true" signature="735:796" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/Cart/CookieFactory.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="39" selection-start="865" selection-end="880" vertical-scroll-proportion="1.1906614" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Cart/Cart.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="0" selection-start="1571" selection-end="1571" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/app/js/services.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="141" column="0" selection-start="3573" selection-end="3573" vertical-scroll-proportion="0.6969697">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Cart/Cart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="0" selection-start="1571" selection-end="1571" vertical-scroll-proportion="0.0317757">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/templates/angular.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="64" selection-start="2936" selection-end="2936" vertical-scroll-proportion="0.61869156">
+          <folding>
+            <marker date="1391704006436" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="74" selection-start="391" selection-end="391" vertical-scroll-proportion="0.5869159">
+          <folding>
+            <element signature="e#7#29#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

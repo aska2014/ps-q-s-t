@@ -18,7 +18,7 @@ class HomeController extends BaseController {
      */
     public function index()
 	{
-        $products = $this->products->topSales()->unique()->get();
+        $products = $this->products->topSales()->unique()->take(20)->get();
 
         $carousel = new Carousel('Top sales of this month', $products);
 
