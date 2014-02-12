@@ -46,5 +46,16 @@
                 "uri": "all"
             }
         ]
+    },
+    {
+        "element": "offer_position",
+        "title": "Offers positions",
+        "children": [
+            {
+                "title": "Edit positions",
+                "icon": "icol-add",
+                "uri": "form"
+            }
+        ]
     }
 ]

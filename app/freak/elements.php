@@ -19,6 +19,10 @@ return array(
         'controller' => 'FreakProductOfferController',
     ),
 
+    'offer_position' => array(
+        'controller' => 'FreakOfferPositionController',
+    ),
+
     'order' => array(
         'controller' => 'FreakOrderController',
     ),

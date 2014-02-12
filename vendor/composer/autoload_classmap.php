@@ -69,6 +69,7 @@ return array(
     'Crypt_TripleDES' => $vendorDir . '/phpseclib/phpseclib/phpseclib/Crypt/TripleDES.php',
     'Crypt_Twofish' => $vendorDir . '/phpseclib/phpseclib/phpseclib/Crypt/Twofish.php',
     'DatabaseSeeder' => $baseDir . '/app/database/seeds/DatabaseSeeder.php',
+    'DateRangeModel' => $baseDir . '/app/models/DateRangeModel.php',
     'ECommerce\\Brand' => $baseDir . '/app/models/ECommerce/Brand.php',
     'ECommerce\\Category' => $baseDir . '/app/models/ECommerce/Category.php',
     'ECommerce\\Order' => $baseDir . '/app/models/ECommerce/Order.php',

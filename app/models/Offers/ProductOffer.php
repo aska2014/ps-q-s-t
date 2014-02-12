@@ -3,7 +3,7 @@
 use ECommerce\Product;
 use Units\Price;
 
-class ProductOffer extends \BaseModel {
+class ProductOffer extends \DateRangeModel {
 
     /**
      * @var string
@@ -19,18 +19,6 @@ class ProductOffer extends \BaseModel {
      * @var array
      */
     protected $fillable = array('discount_percentage', 'from_date', 'to_date', 'product_id');
-
-    /**
-     * @return mixed|void
-     */
-    public function beforeSave()
-    {
-        if($this->to_date == '')
-        {
-            $this->attributes['from_date'] = '2000-01-01 01:01:01';
-            $this->attributes['to_date'] = '2099-01-01 01:01:01';
-        }
-    }
 
     /**
      * @param $product
@@ -53,38 +41,6 @@ class ProductOffer extends \BaseModel {
         $attributes['product_id'] = $product;
 
         return static::create($attributes);
-    }
-
-    /**
-     * @param $value
-     */
-    public function setFromDateAttribute($value)
-    {
-        $this->attributes['from_date'] = date('Y-m-d H:i:s', strtotime($value));
-    }
-
-    /**
-     * @param $value
-     */
-    public function setToDateAttribute($value)
-    {
-        $this->attributes['to_date'] = date('Y-m-d H:i:s', strtotime($value));
-    }
-
-
-    /**
-     * @param $query
-     * @param $date
-     * @return mixed
-     */
-    public function scopeCurrent($query, $date)
-    {
-        if($date instanceof \DateTime) $date = $date->format('Y-m-d H:i:s');
-
-        return $query->where(function($query) use($date)
-        {
-            $query->where('from_date', '<=', $date)->where('to_date', '>=', $date);
-        })->orWhereNull('to_date');
     }
 
     /**

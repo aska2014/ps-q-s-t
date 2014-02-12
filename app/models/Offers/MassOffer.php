@@ -2,25 +2,12 @@
 
 use Units\Price;
 
-class MassOffer extends \BaseModel {
+class MassOffer extends \DateRangeModel {
 
     /**
      * @var string
      */
     protected $table = 'mass_offers';
-
-    /**
-     * @param $query
-     * @param $date
-     * @return mixed
-     */
-    public function scopeCurrent($query, $date)
-    {
-        if($date instanceof \DateTime) $date = $date->format('Y-m-d H:i:s');
-
-        return $query->where('from_date', '<=', $date)
-                     ->where('to_date', '>=', $date);
-    }
 
     /**
      * @param $noOfProducts

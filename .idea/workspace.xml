@@ -6,7 +6,7 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/composer.json" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392136474661" ignored="false" />
     <file path="D:/website/arrabah/app/views/home/index.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391359200696" ignored="false" />
-    <file path="/routes.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392147391514" ignored="false" />
+    <file path="/routes.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392204384231" ignored="false" />
     <file path="/home.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391678204371" ignored="false" />
     <file path="/dummy.xml" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391695526614" ignored="false" />
     <file path="/angular.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391678265596" ignored="false" />
@@ -50,7 +50,7 @@
     <file path="/2014_02_06_210120_create_prices_table.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391720505993" ignored="false" />
     <file path="/2014_02_06_210124_create_products_table.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391982325644" ignored="false" />
     <file path="/2014_02_06_210134_create_countries_table.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391982385412" ignored="false" />
-    <file path="/a.dummy" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392030062072" ignored="false" />
+    <file path="/a.dummy" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392203170812" ignored="false" />
     <file path="/2014_02_06_210135_create_cities_table.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391982407491" ignored="false" />
     <file path="/2014_02_06_210139_create_locations_table.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391982424966" ignored="false" />
     <file path="/2014_02_06_210144_create_orders_table.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391727777520" ignored="false" />
@@ -68,11 +68,11 @@
     <file path="/Location.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391730239696" ignored="false" />
     <file path="/City.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391730223743" ignored="false" />
     <file path="/Country.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391730229754" ignored="false" />
-    <file path="/ProductOffer.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392148682225" ignored="false" />
-    <file path="/MassOffer.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391861632496" ignored="false" />
+    <file path="/ProductOffer.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392201928585" ignored="false" />
+    <file path="/MassOffer.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392201996519" ignored="false" />
     <file path="/BaseModel.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392024353858" ignored="false" />
     <file path="/Brand.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391730199436" ignored="false" />
-    <file path="/OfferPosition.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391762809136" ignored="false" />
+    <file path="/OfferPosition.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392205847098" ignored="false" />
     <file path="/Cart.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391869272017" ignored="false" />
     <file path="$PROJECT_DIR$/../www/app/libraries/Cart.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391764618230" ignored="false" />
     <file path="/Item.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391868194057" ignored="false" />
@@ -102,7 +102,7 @@
     <file path="/index.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392143764005" ignored="false" />
     <file path="/global.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391889016966" ignored="false" />
     <file path="/index.html" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391889444169" ignored="false" />
-    <file path="/form.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392149098811" ignored="false" />
+    <file path="/form.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392206409231" ignored="false" />
     <file path="/FreakPriceController.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391949594898" ignored="false" />
     <file path="/FreakProductOfferControl.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391966644411" ignored="false" />
     <file path="/url.js" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392148044860" ignored="false" />
@@ -110,7 +110,7 @@
     <file path="/FreakBrandController.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391981456596" ignored="false" />
     <file path="/HTML Fragment (FreakBrandController.php:547).html" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391981319630" ignored="false" />
     <file path="/FreakOrderController.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391981575317" ignored="false" />
-    <file path="/all.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392051893877" ignored="false" />
+    <file path="/all.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392200998057" ignored="false" />
     <file path="/ui_comps.js" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392022757214" ignored="false" />
     <file path="/FreakProductOfferController.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392148510781" ignored="false" />
     <file path="/all.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392038727089" ignored="false" />
@@ -125,7 +125,10 @@
     <file path="/master.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392139182319" ignored="false" />
     <file path="/2014_01_27_193125_create_code_table.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392145376120" ignored="false" />
     <file path="/RequestController.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392147676730" ignored="false" />
-    <file path="/Controller.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392148363639" ignored="false" />
+    <file path="/Controller.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392204360006" ignored="false" />
+    <file path="/FreakOfferPositionControl.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392201610607" ignored="false" />
+    <file path="/DateRangeModel.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392202247885" ignored="false" />
+    <file path="/FreakOfferPositionController.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392205887686" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,19 +148,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Controller.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/Kareem3d/Freak/Core/Controller.php">
+      <file leaf-file-name="OfferPosition.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/Offers/OfferPosition.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="83" column="84" selection-start="1950" selection-end="1950" vertical-scroll-proportion="-42.153847">
-              <folding />
+            <state line="28" column="74" selection-start="530" selection-end="538" vertical-scroll-proportion="-6.8461537">
+              <folding>
+                <element signature="e#25#47#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="form.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/freak/views/product/form.php">
+        <entry file="file://$PROJECT_DIR$/app/freak/views/offer_position/form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="133" column="0" selection-start="6066" selection-end="6066" vertical-scroll-proportion="0.64176244">
+            <state line="49" column="0" selection-start="2108" selection-end="2108" vertical-scroll-proportion="0.42337164">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FreakOfferPositionController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/freak/controllers/FreakOfferPositionController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="59" column="8" selection-start="1049" selection-end="1049" vertical-scroll-proportion="-8.153846">
               <folding />
             </state>
           </provider>
@@ -173,22 +187,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/artisan.php" />
-        <option value="$PROJECT_DIR$/public/index.php" />
-        <option value="$PROJECT_DIR$/app/commands/ResetupCommand.php" />
-        <option value="$PROJECT_DIR$/vendor/kareem3d/images/src/migrations/2014_01_27_193125_create_code_table.php" />
-        <option value="$PROJECT_DIR$/vendor/kareem3d/images/src/migrations/2014_01_27_193152_create_image_groups_table.php" />
-        <option value="$PROJECT_DIR$/vendor/kareem3d/membership/src/migrations/2014_01_03_214313_create_user_contacts_table.php" />
-        <option value="$PROJECT_DIR$/vendor/kareem3d/freak/src/views/index.php" />
-        <option value="$PROJECT_DIR$/app/config/production/app.php" />
-        <option value="$PROJECT_DIR$/app/routes.php" />
-        <option value="$PROJECT_DIR$/vendor/kareem3d/freak/src/Kareem3d/Freak/Controllers/RequestController.php" />
-        <option value="$PROJECT_DIR$/vendor/kareem3d/freak/src/routes.php" />
         <option value="$PROJECT_DIR$/public/packages/kareem3d/freak/url.js" />
-        <option value="$PROJECT_DIR$/vendor/kareem3d/freak/src/Kareem3d/Freak/Core/Controller.php" />
         <option value="$PROJECT_DIR$/app/freak/controllers/FreakProductOfferController.php" />
-        <option value="$PROJECT_DIR$/app/models/Offers/ProductOffer.php" />
         <option value="$PROJECT_DIR$/app/freak/views/product/form.php" />
+        <option value="$PROJECT_DIR$/app/freak/views/offer/form.php" />
+        <option value="$PROJECT_DIR$/app/freak/elements.php" />
+        <option value="$PROJECT_DIR$/app/freak/views/offer_position/all.php" />
+        <option value="$PROJECT_DIR$/app/freak/controllers/FreakOfferPositionControl.php" />
+        <option value="$PROJECT_DIR$/app/models/DateRangeModel.php" />
+        <option value="$PROJECT_DIR$/app/models/Offers/ProductOffer.php" />
+        <option value="$PROJECT_DIR$/app/models/Offers/MassOffer.php" />
+        <option value="$PROJECT_DIR$/app/freak/menu.js" />
+        <option value="$PROJECT_DIR$/vendor/kareem3d/freak/src/Kareem3d/Freak/Core/Controller.php" />
+        <option value="$PROJECT_DIR$/vendor/kareem3d/freak/src/routes.php" />
+        <option value="$PROJECT_DIR$/app/models/Offers/OfferPosition.php" />
+        <option value="$PROJECT_DIR$/app/freak/controllers/FreakOfferPositionController.php" />
+        <option value="$PROJECT_DIR$/app/freak/views/offer_position/form.php" />
       </list>
     </option>
   </component>
@@ -196,7 +210,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1376" />
+    <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -675,6 +689,90 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Offers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Location" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ECommerce" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="freak" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -724,6 +822,54 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="offer_position" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="freak" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="freak" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -832,14 +978,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24961948" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23972602" sideWeight="0.6712095" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2030303" sideWeight="0.6712095" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.025553662" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -916,114 +1062,116 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/routes.php">
+    <entry file="file://$PROJECT_DIR$/app/freak/views/product/form.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="3" selection-start="586" selection-end="586" vertical-scroll-proportion="0.8093458">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/Kareem3d/Freak/FreakServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="35" selection-start="1108" selection-end="1108" vertical-scroll-proportion="0.77757007">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/Kareem3d/Freak/Controllers/FreakBaseController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.5252336">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/Kareem3d/Freak/Controllers/ConfigurationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/Kareem3d/Freak/Controllers/FreakController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="5" selection-start="348" selection-end="348" vertical-scroll-proportion="0.4448598">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/Kareem3d/Freak/Controllers/RegisterController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.4655173">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/Kareem3d/Freak/Controllers/RequestController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="610" selection-end="610" vertical-scroll-proportion="0.42803738">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/Kareem3d/Freak/Controllers/LoginController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="5" selection-start="554" selection-end="554" vertical-scroll-proportion="0.5719626">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/packages/kareem3d/freak/url.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="0" selection-start="978" selection-end="978" vertical-scroll-proportion="0.75757575">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="1" selection-start="438" selection-end="438" vertical-scroll-proportion="0.54018694">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/freak/views/product/one.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="0" selection-start="1841" selection-end="1841" vertical-scroll-proportion="0.5766283">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/Kareem3d/Freak/Core/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="84" selection-start="1950" selection-end="1950" vertical-scroll-proportion="-42.153847">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Offers/ProductOffer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="45" selection-start="1170" selection-end="1170" vertical-scroll-proportion="0.2859813">
+        <state line="35" column="69" selection-start="1976" selection-end="2226" vertical-scroll-proportion="0.5536398">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/freak/controllers/FreakProductOfferController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="42" selection-start="1060" selection-end="1060" vertical-scroll-proportion="0.317757">
+        <state line="33" column="5" selection-start="711" selection-end="711" vertical-scroll-proportion="0.49345794">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/packages/kareem3d/freak/fr_aa/controllers.js">
+    <entry file="file://$PROJECT_DIR$/app/models/ECommerce/Product.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="116" column="27" selection-start="2872" selection-end="2953" vertical-scroll-proportion="3.59854">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/freak/views/product/form.php">
+    <entry file="file://$PROJECT_DIR$/app/models/BaseModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="133" column="0" selection-start="6066" selection-end="6066" vertical-scroll-proportion="0.64176244">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/ECommerce/Brand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="7" selection-start="163" selection-end="163" vertical-scroll-proportion="0.34953272">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/DateRangeModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="20" selection-start="27" selection-end="27" vertical-scroll-proportion="0.0635514">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_06_210203_create_offer_positions_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="36" selection-start="516" selection-end="524" vertical-scroll-proportion="0.54018694">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Offers/ProductOffer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="42" selection-start="108" selection-end="108" vertical-scroll-proportion="0.1271028">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Offers/MassOffer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="39" selection-start="82" selection-end="82" vertical-scroll-proportion="0.1271028">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/Kareem3d/Freak/Core/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="0" selection-start="584" selection-end="584" vertical-scroll-proportion="0.1271028">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/Kareem3d/Freak/Core/ElementController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="48" selection-start="86" selection-end="86" vertical-scroll-proportion="0.0635514">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="0" selection-start="1055" selection-end="1055" vertical-scroll-proportion="0.7308411">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/freak/menu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="40" selection-start="1317" selection-end="1317" vertical-scroll-proportion="0.6363636">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/freak/controllers/FreakOfferPositionController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="8" selection-start="1049" selection-end="1049" vertical-scroll-proportion="-8.153846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Offers/OfferPosition.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="74" selection-start="530" selection-end="538" vertical-scroll-proportion="-6.8461537">
+          <folding>
+            <element signature="e#25#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/freak/views/offer_position/form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="0" selection-start="2108" selection-end="2108" vertical-scroll-proportion="0.42337164">
           <folding />
         </state>
       </provider>
