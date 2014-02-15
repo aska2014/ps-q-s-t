@@ -146,6 +146,7 @@
     <file path="/2014_01_03_214313_create_user_contacts_table.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392486875063" ignored="false" />
     <file path="/message_to_user.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392491380257" ignored="false" />
     <file path="/UserInfo.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392503911514" ignored="false" />
+    <file path="/app.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392505928529" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +169,7 @@
       <file leaf-file-name="routes.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="11" selection-start="1620" selection-end="1620" vertical-scroll-proportion="0.67741936">
+            <state line="54" column="11" selection-start="1620" selection-end="1620" vertical-scroll-proportion="1.1612903">
               <folding />
             </state>
           </provider>
@@ -184,7 +185,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/pages/cart.blade.php" />
         <option value="$PROJECT_DIR$/public/app/css/app.less" />
         <option value="$PROJECT_DIR$/app/composers.php" />
         <option value="$PROJECT_DIR$/app/models/Offers/MassOffer.php" />
@@ -200,6 +200,7 @@
         <option value="$PROJECT_DIR$/app/database/migrations/2014_02_06_210144_create_orders_table.php" />
         <option value="$PROJECT_DIR$/app/models/ECommerce/Order.php" />
         <option value="$PROJECT_DIR$/app/routes.php" />
+        <option value="$PROJECT_DIR$/app/config/production/app.php" />
       </list>
     </option>
   </component>
@@ -306,6 +307,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="migrations" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="production" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -439,13 +480,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/freak/views/product/form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.2821012">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/phrase.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state line="41" column="4" selection-start="1089" selection-end="1110" vertical-scroll-proportion="0.33273056">
@@ -546,9 +580,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/production/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="454" selection-end="454" vertical-scroll-proportion="0.4516129">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="11" selection-start="1620" selection-end="1620" vertical-scroll-proportion="0.67741936">
+        <state line="54" column="11" selection-start="1620" selection-end="1620" vertical-scroll-proportion="1.1612903">
           <folding />
         </state>
       </provider>
