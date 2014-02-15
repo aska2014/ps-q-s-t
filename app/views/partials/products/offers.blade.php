@@ -15,8 +15,8 @@
                 <div class="info" to-url="product.url">
                     <div class="title"><a ng-bind="product.title" href="{{ URL::product($offer->product) }}">{{ $offer->product->title }}</a></div>
                     <div class="price">
-                        @if($product->hasOfferPrice())
-                        <span ng-bind="product.actual_price | currency:currency" class="before-price">{{ $product->getActualPrice() }}</span>
+                        @if($offer->product->hasOfferPrice())
+                        <span ng-bind="product.actual_price | currency:currency" class="before-price">{{ $offer->product->getActualPrice() }}</span>
                         @endif
                         <span ng-bind="product.price | currency:currency" class="actual-price">{{ $offer->product->getOfferPrice() }}</span>
                     </div>
@@ -112,8 +112,8 @@
                     <div class="row">
                         <div class="key">Price: </div>
                         <div class="value price">
-                            @if($product->hasOfferPrice())
-                            <span ng-bind="product.actual_price | currency:currency" class="before-price">{{ $product->getActualPrice() }}</span>
+                            @if($offer->product->hasOfferPrice())
+                            <span ng-bind="product.actual_price | currency:currency" class="before-price">{{ $offer->product->getActualPrice() }}</span>
                             @endif
                             <span ng-bind="product.price | currency:currency" class="actual-price">{{ $offer->product->getOfferPrice() }}</span>
                         </div>
