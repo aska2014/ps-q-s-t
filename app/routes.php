@@ -48,7 +48,10 @@ Route::get('/message-to-user.html', array('as' => 'message-to-user', function()
 }));
 
 
-
+Route::get('/test', function()
+{
+    echo 'what';
+});
 
 Route::get('/convert', function()
 {
