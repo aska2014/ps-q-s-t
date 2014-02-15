@@ -6,10 +6,12 @@ class ShoppingCartController extends BaseController {
 
     /**
      * @param Product $products
+     * @param Location\Country $countries
      */
-    public function __construct(Product $products)
+    public function __construct(Product $products, \Location\Country $countries)
     {
         $this->products = $products;
+        $this->countries = $countries;
     }
 
     /**
@@ -27,6 +29,8 @@ class ShoppingCartController extends BaseController {
      */
     public function checkout()
     {
-        return View::make('pages.checkout');
+        $countries = $this->countries->with('cities')->get();
+
+        return View::make('pages.checkout', compact('countries'));
     }
 }

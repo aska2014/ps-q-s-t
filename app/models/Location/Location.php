@@ -10,6 +10,16 @@ class Location extends \BaseModel {
     protected $table = 'locations';
 
     /**
+     * @var bool
+     */
+    public $timestamps = false;
+
+    /**
+     * @var string
+     */
+    protected $with = array('city');
+
+    /**
      * Defining relations
      */
     public function orders(){ return $this->hasMany(Order::getClass()); }

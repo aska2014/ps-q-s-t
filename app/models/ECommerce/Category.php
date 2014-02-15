@@ -19,15 +19,37 @@ class Category extends \BaseModel {
      */
     public function getMainProduct()
     {
-        return $this->products->first();
+        return $this->products->last();
     }
 
     /**
+     * @param $query
+     * @return mixed
+     */
+    public function scopeNotEmpty($query)
+    {
+        return $query->whereIn('id', function( $query )
+        {
+            $query->from('products');
+
+            $query->distinct();
+            $query->select('category_id');
+
+            return $query;
+        });
+    }
+
+    /**
+     * @param int $take
      * @return Collection
      */
-    public function getUniqueProducts()
+    public function getUniqueProducts($take = 0)
     {
-       return Product::byCategory($this)->unique()->get();
+        $query = Product::byCategory($this)->unique();
+
+        if($take > 0) return $query->take($take)->get();
+
+       return $query->get();
     }
 
     /**

@@ -21,7 +21,7 @@
         "children": [
             {
                 "title": "Add new category",
-                "icon": "icol-add",
+                "icon": "icol-drawer",
                 "uri": "form"
             },
             {
@@ -55,6 +55,17 @@
                 "title": "Edit positions",
                 "icon": "icol-add",
                 "uri": "form"
+            }
+        ]
+    },
+    {
+        "element": "order",
+        "title": "Orders",
+        "children": [
+            {
+                "title": "Display all orders",
+                "icon": "icol-add",
+                "uri": "all"
             }
         ]
     }

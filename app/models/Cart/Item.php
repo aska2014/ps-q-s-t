@@ -40,7 +40,7 @@ class Item {
      */
     public function getPrice()
     {
-        return $this->product->current_price;
+        return $this->product->getOfferPrice();
     }
 
     /**

@@ -4,33 +4,98 @@
 
 
 angular.module('qbrando.directives', [])
-    .directive('cartBtn', [function () {
-        return {
-            restrict: 'E',
-            replace:true,
-            template: '<div class="add-to-cart"><span class="glyphicon glyphicon-plus"></span> Add To Cart</div>',
+
+    .directive('toUrl', [function() {
+
+        return  {
+            restrict: 'A',
+            scope: {
+                url: '=toUrl'
+            },
             link: function(scope, element, attrs) {
 
-                element.on('click', function() {
+                element.css('cursor', 'pointer');
 
-                    // Put this product in cart and load the loading image
-                });
-
-                attrs.$observe('product.inCart', function(oldValue, newValue)
+                element.on('click', function()
                 {
-                    if(newValue == true) {
-                        // Replace element with in cart button
-                    }
+                    window.location.href = scope.url;
                 });
             }
         }
     }])
 
-    .directive('buyNowBtn', [function() {
+    .directive('cartBtn', ['Cart', function (Cart) {
+        return {
+            restrict: 'E',
+            replace:true,
+            scope: {
+                "product": "="
+            },
+            template: '<div class="add-to-cart"><span class="glyphicon glyphicon-plus"></span> Add To Cart</div>',
+            link: function(scope, element, attrs) {
+
+                if(attrs.hasOwnProperty('noText')) {
+
+                    element.html('');
+                }
+
+                element.on('click', function() {
+                    // Add item to the cart
+                    Cart.addItem(scope.product);
+                });
+
+                Cart.registerListener(function(cart)
+                {
+                    if(cart.has(scope.product)) {
+
+                        if(attrs.hasOwnProperty('noText')) {
+
+                            element.replaceWith('<div class="in-cart"></div>')
+                        }
+                        else {
+
+                            element.replaceWith('<div class="in-cart"><span class="glyphicon glyphicon-shopping-cart"></span> In Cart</div>')
+                        }
+                    }
+                })
+            }
+        }
+    }])
+
+    .directive('buyNowBtn', ['Cart', function(Cart) {
         return {
             restrict: 'E',
             replace: true,
-            template: '<div class="buy-now">Buy now <span class="glyphicon glyphicon-share"></span></div>'
+            scope: {
+                "product": "="
+            },
+            template: '<div class="buy-now">Buy now <span class="glyphicon glyphicon-share"></span></div>',
+            link: function(scope, element, attrs) {
 
+                if(attrs.hasOwnProperty('noText')) {
+
+                    element.html('');
+                }
+
+                element.on('click', function()
+                {
+                    window.location.href = scope.product.url + '?buy-now';
+                });
+
+                Cart.registerListener(function(cart)
+                {
+                    if(cart.has(scope.product)) {
+
+                        if(! attrs.hasOwnProperty('noText')) {
+
+                            element.replaceWith('<div class="show-details" onclick="window.location.href=\'' + scope.product.url + '\'"><span class="glyphicon glyphicon-zoom-in"></span> Details</div>');
+                        }
+                        else
+                        {
+                            element.replaceWith('<div class="show-details" onclick="window.location.href=\'' + scope.product.url + '\'"</div>');
+                        }
+                    }
+                });
+            }
         }
     }]);

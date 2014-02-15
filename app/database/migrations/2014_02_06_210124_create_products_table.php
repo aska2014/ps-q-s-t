@@ -21,15 +21,13 @@ class CreateProductsTable extends Migration {
             $table->text('description');
             $table->string('model');
             $table->enum('gender', array('unisex', 'male', 'female'));
+            $table->float('price')->unsigned();
 
             $table->integer('category_id')->unsigned();
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('NO ACTION')->onUpdate('CASCADE');
 
             $table->integer('brand_id')->unsigned();
             $table->foreign('brand_id')->references('id')->on('brands')->onDelete('NO ACTION')->onUpdate('CASCADE');
-
-            $table->integer('price_id')->unsigned()->nullable();
-            $table->foreign('price_id')->references('id')->on('prices')->onDelete('SET NULL')->onUpdate('CASCADE');
 
             $table->timestamps();
 		});

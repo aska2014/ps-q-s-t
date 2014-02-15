@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\App;
 use Offers\OfferPosition;
 use Offers\ProductOffer;
+use URL;
 use Units\Price;
 
 class Product extends \BaseModel {
@@ -20,12 +21,17 @@ class Product extends \BaseModel {
     /**
      * @var array
      */
-    protected $with = array('price');
+    protected $with = array('brand', 'category');
 
     /**
      * @var array
      */
-    protected $fillable = array('title', 'description', 'model', 'gender', 'category_id', 'brand_id', 'price_id');
+    protected $fillable = array('title', 'description', 'model', 'gender', 'category_id', 'brand_id', 'price');
+
+    /**
+     * @var array
+     */
+    protected $prices = array();
 
     /**
      * @param $query
@@ -35,6 +41,36 @@ class Product extends \BaseModel {
     public function scopeTopSales($query)
     {
         return $query;
+    }
+
+    /**
+     * @param $query
+     * @param $category
+     * @return mixed
+     */
+    public function scopeByCategoryName($query, $category)
+    {
+        return $query->join('categories', 'categories.id', '=', 'products.category_id')->where('categories.name', '=', $category)->select('products.*');
+    }
+
+    /**
+     * @param $query
+     * @param $brand
+     * @return mixed
+     */
+    public function scopeByBrandName($query, $brand)
+    {
+        return $query->join('brands', 'brands.id', '=', 'products.brand_id')->where('brands.name', '=', $brand)->select('products.*');
+    }
+
+    /**
+     * @param $query
+     * @param $model
+     * @return mixed
+     */
+    public function scopeByModel($query, $model)
+    {
+        return $query->where('model', $model);
     }
 
     /**
@@ -73,29 +109,11 @@ class Product extends \BaseModel {
 
     /**
      * @param $value
-     * @param string $currency
-     * @return Price
-     */
-    public function setPrice($value, $currency = '')
-    {
-        if(! $price = $this->price) $price = new Price();
-
-        $price->fill(compact('value', 'currency'));
-
-        $price->save();
-
-        $this->price()->associate($price);
-
-        $this->save();
-    }
-
-    /**
-     * @param $value
      * @return mixed
      */
     public function getTitleAttribute($value)
     {
-        return $value ?: $this->brand->name . ', Model '. $this->model;
+        return $value ?: 'Model '. $this->model;
     }
 
     /**
@@ -106,7 +124,7 @@ class Product extends \BaseModel {
      */
     public function addDiscountPrice($from, $to, $afterPrice)
     {
-        if($afterPrice instanceof Price)  $afterPrice = $afterPrice->value;
+        if($afterPrice instanceof Price)  $afterPrice = $afterPrice->value();
 
         $beforePrice = $this->price->value;
 
@@ -136,14 +154,33 @@ class Product extends \BaseModel {
     }
 
     /**
+     * @return \Units\Price
+     */
+    public function getActualPrice()
+    {
+        if(isset($this->prices['actual']))  return $this->prices['actual'];
+
+        return $this->prices['actual'] = new Price($this->price);
+    }
+
+    /**
+     * @return bool
+     */
+    public function hasOfferPrice()
+    {
+        return $this->getOfferPrice()->value() < $this->getActualPrice()->value();
+    }
+
+    /**
      * @return Price
      * @return float
      */
-    public function getCurrentPriceAttribute()
+    public function getOfferPrice()
     {
-        return ProductOffer::calculatePriceFromProduct( $this, new \DateTime() );
-    }
+        if(isset($this->prices['offer'])) return $this->prices['offer'];
 
+        return $this->prices['offer'] = ProductOffer::calculatePriceFromProduct( $this, new \DateTime() );
+    }
 
     /**
      * @param $query
@@ -173,8 +210,6 @@ class Product extends \BaseModel {
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function price(){ return $this->belongsTo(Price::getClass()); }
-
     public function productOffers(){ return $this->hasMany(ProductOffer::getClass()); }
     public function offerPositions(){ return $this->hasMany(OfferPosition::getClass()); }
 

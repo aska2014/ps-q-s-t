@@ -5886,6 +5886,7 @@ body {
 }
 .large-container {
   width: 100%;
+  min-height: 1205px;
   background: url('../img/main-bg.jpg') no-repeat;
 }
 .body-container {
@@ -5929,66 +5930,6 @@ a {
 }
 a:hover {
   color: inherit;
-}
-.add-to-cart-special {
-  background: url('../img/add-to-cart-special.jpg');
-  width: 209px;
-  height: 66px;
-  cursor: pointer;
-}
-.add-to-cart-special:hover {
-  opacity: 0.9;
-  filter: alpha(opacity=90);
-}
-.add-to-cart-yellow {
-  background: url('../img/add-to-cart-yellow.jpg');
-  width: 210px;
-  height: 50px;
-  cursor: pointer;
-}
-.add-to-cart-yellow:hover {
-  opacity: 0.9;
-  filter: alpha(opacity=90);
-}
-.buy-now-blue {
-  background: url('../img/buy-now-blue.jpg');
-  width: 210px;
-  height: 50px;
-  cursor: pointer;
-}
-.buy-now-blue:hover {
-  opacity: 0.9;
-  filter: alpha(opacity=90);
-}
-.checkout-green {
-  background: url('../img/checkout-green.jpg');
-  width: 210px;
-  height: 50px;
-  cursor: pointer;
-}
-.checkout-green:hover {
-  opacity: 0.9;
-  filter: alpha(opacity=90);
-}
-.checkout-red {
-  background: url('../img/checkout-red.jpg');
-  width: 210px;
-  height: 50px;
-  cursor: pointer;
-}
-.checkout-red:hover {
-  opacity: 0.9;
-  filter: alpha(opacity=90);
-}
-.continue-shopping-yellow {
-  background: url('../img/continue-shopping-yellow.jpg');
-  width: 210px;
-  height: 50px;
-  cursor: pointer;
-}
-.continue-shopping-yellow:hover {
-  opacity: 0.9;
-  filter: alpha(opacity=90);
 }
 .main-title {
   font-size: 20px;
@@ -6259,6 +6200,28 @@ a:hover {
 .grid-products .buttons .buy-now span {
   margin-left: 4px;
 }
+.grid-products .buttons .in-cart {
+  background: #E9E9E9;
+  font-weight: bold;
+  color: #666666;
+  cursor: pointer;
+}
+.grid-products .buttons .in-cart:hover {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+.grid-products .buttons .show-details {
+  background: #333;
+  color: #FFF;
+  cursor: pointer;
+}
+.grid-products .buttons .show-details:hover {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+.grid-products .buttons .show-details span {
+  margin-left: 4px;
+}
 .carousel-products {
   background: #FFF;
   margin-left: -15px;
@@ -6397,6 +6360,28 @@ a:hover {
 .fancy-products .buttons .buy-now span {
   margin-left: 4px;
 }
+.fancy-products .buttons .in-cart {
+  background: #E9E9E9;
+  font-weight: bold;
+  color: #666666;
+  cursor: pointer;
+}
+.fancy-products .buttons .in-cart:hover {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+.fancy-products .buttons .show-details {
+  background: #333;
+  color: #FFF;
+  cursor: pointer;
+}
+.fancy-products .buttons .show-details:hover {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+.fancy-products .buttons .show-details span {
+  margin-left: 4px;
+}
 .main-product {
   background: url('../img/box-bg-1.jpg') no-repeat right #ffffff;
   margin-left: -15px;
@@ -6442,8 +6427,32 @@ a:hover {
 .main-product .row .value {
   float: left;
 }
-.main-product .add-to-cart-yellow {
+.main-product .add-to-cart {
   margin-top: 20px;
+  background: url('../img/add-to-cart-yellow.jpg');
+  width: 210px;
+  height: 50px;
+  cursor: pointer;
+}
+.main-product .add-to-cart:hover {
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+}
+.main-product .buy-now {
+  background: url('../img/buy-now-blue.jpg');
+  width: 210px;
+  height: 50px;
+  cursor: pointer;
+}
+.main-product .buy-now:hover {
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+}
+.main-product .in-cart {
+  display: none;
+}
+.main-product .show-details {
+  display: none;
 }
 .main-offers {
   margin-left: -15px;
@@ -6555,7 +6564,7 @@ a:hover {
 }
 .flying-big-product .body {
   background: #FFF;
-  padding: 17px 10px;
+  padding: 22px 10px 23px 10px;
 }
 .flying-big-product .image {
   float: left;
@@ -6579,8 +6588,27 @@ a:hover {
 .flying-big-product .row .value {
   float: left;
 }
-.flying-big-product .add-to-cart-special {
+.flying-big-product .add-to-cart {
+  background: url('../img/add-to-cart-special.jpg');
+  width: 210px;
+  height: 48px;
+  cursor: pointer;
   float: right;
+}
+.flying-big-product .add-to-cart:hover {
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+}
+.flying-big-product .in-cart {
+  background: url('../img/in-cart-special.jpg');
+  width: 210px;
+  height: 48px;
+  cursor: pointer;
+  float: right;
+}
+.flying-big-product .in-cart:hover {
+  opacity: 0.9;
+  filter: alpha(opacity=90);
 }
 .offer-timer .box-title {
   padding: 13px 15px 10px 15px;
@@ -6592,6 +6620,9 @@ a:hover {
 }
 .offer-timer .box-title span {
   color: #fcac47;
+}
+.offer-timer .box-title a:hover {
+  text-decoration: none;
 }
 .offer-timer .body {
   background: #FFF;
@@ -6621,6 +6652,107 @@ a:hover {
   width: 476px;
   height: 87px;
   cursor: pointer;
+}
+.add-to-cart-special {
+  background: url('../img/add-to-cart-special.jpg');
+  width: 210px;
+  height: 48px;
+  cursor: pointer;
+}
+.add-to-cart-special:hover {
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+}
+.add-to-cart-yellow {
+  background: url('../img/add-to-cart-yellow.jpg');
+  width: 210px;
+  height: 50px;
+  cursor: pointer;
+}
+.add-to-cart-yellow:hover {
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+}
+.in-cart-special {
+  background: url('../img/in-cart-special.jpg');
+  width: 210px;
+  height: 48px;
+  cursor: pointer;
+}
+.in-cart-special:hover {
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+}
+.buy-now-blue {
+  background: url('../img/buy-now-blue.jpg');
+  width: 210px;
+  height: 50px;
+  cursor: pointer;
+}
+.buy-now-blue:hover {
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+}
+.checkout-green {
+  background: url('../img/checkout-green.jpg');
+  width: 210px;
+  height: 50px;
+  cursor: pointer;
+}
+.checkout-green:hover {
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+}
+.checkout-red {
+  background: url('../img/checkout-red.jpg');
+  width: 210px;
+  height: 50px;
+  cursor: pointer;
+}
+.checkout-red:hover {
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+}
+.continue-shopping-yellow {
+  background: url('../img/continue-shopping-yellow.jpg');
+  width: 210px;
+  height: 50px;
+  cursor: pointer;
+}
+.continue-shopping-yellow:hover {
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+}
+.add-to-cart-btn {
+  background: #ee3d26;
+  color: #FFF;
+  cursor: pointer;
+}
+.add-to-cart-btn:hover {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+.in-cart-btn {
+  background: #E9E9E9;
+  font-weight: bold;
+  color: #666666;
+  cursor: pointer;
+}
+.in-cart-btn:hover {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+.buy-now-btn {
+  background: #333;
+  color: #FFF;
+  cursor: pointer;
+}
+.buy-now-btn:hover {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+.buy-now-btn span {
+  margin-left: 4px;
 }
 .fancy-red-btn {
   -moz-box-shadow: inset 0px 1px 0px 0px #f5978e;

@@ -2,13 +2,16 @@
     <div class="main-title-black"><span class="glyphicon glyphicon-th-list"></span> {{ $carousel->title }}</div>
     <div id="owl-demo" class="owl-carousel">
         @foreach($carousel->products as $product)
-        <div class="item">
-            <img class="lazyOwl" data-src="{{ $product->getImage('main')->getNearest(250, 188) }}" alt="{{ $product->title }}">
-            <div class="item-info">
-                <div class="title"><a href="{{ URL::route('product', $product->id) }}">{{ $product->title }}</a></div>
+        <div class="item" ng-controller="ProductController">
+            <input type="hidden" ng-bind="product.id" value="{{ $product->id }}"/>
+            <img class="lazyOwl" ng-bind="product.image" data-src="{{ $product->getImage('main')->getNearest(250, 188) }}" alt="{{ $product->title }}">
+            <div class="item-info" to-url="product.url">
+                <div class="title"><a ng-bind="product.title" href="{{ URL::product($product) }}">{{ $product->title }}</a></div>
                 <div class="price">
-<!--                    <span class="before-price">QAR 700.00</span>-->
-                    <span class="actual-price">{{ $product->price }}</span>
+                    @if($product->hasOfferPrice())
+                    <span ng-bind="product.actual_price | currency:currency" class="before-price">{{ $product->getActualPrice() }}</span>
+                    @endif
+                    <span ng-bind="product.price | currency:currency" class="actual-price">{{ $product->getOfferPrice() }}</span>
                 </div>
             </div>
         </div>

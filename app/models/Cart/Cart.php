@@ -9,7 +9,7 @@ class Cart {
     /**
      * @var \Offers\MassOffer
      */
-    protected $massOffers;
+    protected $massOffer;
 
     /**
      * @var \Offers\ProductOffer
@@ -28,13 +28,13 @@ class Cart {
 
     /**
      * @param \Offers\ProductOffer $productOffers
-     * @param \Offers\MassOffer $massOffers
+     * @param \Offers\MassOffer $massOffer
      * @param array $items
      * @param array $gifts
      */
-    public function __construct(ProductOffer $productOffers, MassOffer $massOffers, array $items, array $gifts)
+    public function __construct(ProductOffer $productOffers, MassOffer $massOffer, array $items, array $gifts)
     {
-        $this->massOffers = $massOffers;
+        $this->massOffer = $massOffer;
         $this->productOffers = $productOffers;
         $this->items = $items;
         $this->gifts = $gifts;
@@ -58,6 +58,7 @@ class Cart {
 
     /**
      * @return Item[]
+     * @return array|\Cart\Item[]
      */
     public function getItems()
     {
@@ -82,7 +83,7 @@ class Cart {
         $numberOfGifts     = $this->getGiftsQuantity();
         $giftsMaximumPrice = $this->getGiftsMaximumPrice();
 
-        if(! $this->massOffers->validateGifts($numberOfItems, $numberOfGifts, $giftsMaximumPrice, new \DateTime('now')))
+        if(! $this->massOffer->validateGifts($numberOfItems, $numberOfGifts, $giftsMaximumPrice))
         {
             throw new CartException('Something went wrong while trying to validate gifts in the cart.');
         }
@@ -105,7 +106,27 @@ class Cart {
     }
 
     /**
-     * @param array $items
+     * @return float
+     */
+    public function getTotalPrice()
+    {
+        $price = 0;
+
+        foreach($this->items as $item)
+        {
+            $price += $item->getPrice()->value() * $item->getQuantity();
+        }
+
+        if($this->massOffer->appliesTo($this->items))
+        {
+            return $this->massOffer->calculatePriceFrom($price);
+        }
+
+        return $price;
+    }
+
+    /**
+     * @param Item[] $items
      * @return int
      */
     protected function calculateQuantity( array $items )
@@ -114,7 +135,7 @@ class Cart {
 
         foreach($items as $item)
         {
-            $quantity += $item->quantity;
+            $quantity += $item->getQuantity();
         }
 
         return $quantity;
@@ -125,6 +146,8 @@ class Cart {
      */
     protected function getGiftsMaximumPrice()
     {
+        if(count($this->gifts) === 0) return new Price(0);
+
         $maximum = $this->gifts[0]->getPrice();
 
         for($i = 0; $i < count($this->gifts) - 1; $i++)

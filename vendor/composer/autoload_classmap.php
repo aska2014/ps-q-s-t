@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'AddDiscountPercentageMassOffers' => $baseDir . '/app/database/migrations/2014_02_15_150517_add_discount_percentage_mass_offers.php',
     'BaseController' => $baseDir . '/app/controllers/BaseController.php',
     'BaseModel' => $baseDir . '/app/models/BaseModel.php',
     'Boris\\Boris' => $vendorDir . '/d11wtq/boris/lib/Boris/Boris.php',
@@ -49,7 +50,6 @@ return array(
     'CreateMassOffersTable' => $baseDir . '/app/database/migrations/2014_02_06_210208_create_mass_offers_table.php',
     'CreateOfferPositionsTable' => $baseDir . '/app/database/migrations/2014_02_06_210203_create_offer_positions_table.php',
     'CreateOrdersTable' => $baseDir . '/app/database/migrations/2014_02_06_210144_create_orders_table.php',
-    'CreatePricesTable' => $baseDir . '/app/database/migrations/2014_02_06_210120_create_prices_table.php',
     'CreateProductOffersTable' => $baseDir . '/app/database/migrations/2014_02_06_210158_create_product_offers_table.php',
     'CreateProductOrderTable' => $baseDir . '/app/database/migrations/2014_02_06_210149_create_product_order_table.php',
     'CreateProductsTable' => $baseDir . '/app/database/migrations/2014_02_06_210124_create_products_table.php',
@@ -1025,6 +1025,8 @@ return array(
     'Predis\\Session\\SessionHandler' => $vendorDir . '/predis/predis/lib/Predis/Session/SessionHandler.php',
     'Predis\\Transaction\\AbortedMultiExecException' => $vendorDir . '/predis/predis/lib/Predis/Transaction/AbortedMultiExecException.php',
     'Predis\\Transaction\\MultiExecContext' => $vendorDir . '/predis/predis/lib/Predis/Transaction/MultiExecContext.php',
+    'ProductController' => $baseDir . '/app/controllers/ProductController.php',
+    'ProductsController' => $baseDir . '/app/controllers/ProductsController.php',
     'Psr\\Log\\AbstractLogger' => $vendorDir . '/psr/log/Psr/Log/AbstractLogger.php',
     'Psr\\Log\\InvalidArgumentException' => $vendorDir . '/psr/log/Psr/Log/InvalidArgumentException.php',
     'Psr\\Log\\LogLevel' => $vendorDir . '/psr/log/Psr/Log/LogLevel.php',
@@ -1035,6 +1037,7 @@ return array(
     'Psr\\Log\\NullLogger' => $vendorDir . '/psr/log/Psr/Log/NullLogger.php',
     'ResetupCommand' => $baseDir . '/app/commands/ResetupCommand.php',
     'SessionHandlerInterface' => $vendorDir . '/symfony/http-foundation/Symfony/Component/HttpFoundation/Resources/stubs/SessionHandlerInterface.php',
+    'ShoppingCartController' => $baseDir . '/app/controllers/ShoppingCartController.php',
     'Stack\\Builder' => $vendorDir . '/stack/builder/src/Stack/Builder.php',
     'Stack\\StackedHttpKernel' => $vendorDir . '/stack/builder/src/Stack/StackedHttpKernel.php',
     'Symfony\\Component\\BrowserKit\\Client' => $vendorDir . '/symfony/browser-kit/Symfony/Component/BrowserKit/Client.php',
@@ -1525,6 +1528,8 @@ return array(
     'Symfony\\Component\\Translation\\Writer\\TranslationWriter' => $vendorDir . '/symfony/translation/Symfony/Component/Translation/Writer/TranslationWriter.php',
     'TestCase' => $baseDir . '/app/tests/TestCase.php',
     'Units\\Price' => $baseDir . '/app/models/Units/Price.php',
+    'VisibleProductRepository' => $baseDir . '/app/models/VisibleProductRepository.php',
+    'Website\\Carousel' => $baseDir . '/app/models/Website/Carousel.php',
     'Whoops\\Exception\\ErrorException' => $vendorDir . '/filp/whoops/src/Whoops/Exception/ErrorException.php',
     'Whoops\\Exception\\Frame' => $vendorDir . '/filp/whoops/src/Whoops/Exception/Frame.php',
     'Whoops\\Exception\\FrameCollection' => $vendorDir . '/filp/whoops/src/Whoops/Exception/FrameCollection.php',

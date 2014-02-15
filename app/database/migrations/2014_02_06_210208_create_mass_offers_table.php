@@ -21,10 +21,12 @@ class CreateMassOffersTable extends Migration {
             $table->text('description');
 
             $table->integer('start_quantity')->unsigned();
+            $table->float('start_price')->unsigned();
+
+            $table->float('max_gift_price')->unsigned();
             $table->float('gifts_per_product')->unsigned();
 
-            $table->integer('max_gift_price_id')->unsigned()->nullable();
-            $table->foreign('max_gift_price_id')->references('id')->on('prices')->onDelete('SET NULL')->onUpdate('CASCADE');
+            $table->float('discount_percentage');
 
             $table->dateTime('from_date');
             $table->dateTime('to_date');

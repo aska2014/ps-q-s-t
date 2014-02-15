@@ -66,7 +66,7 @@ class CheckoutController extends BaseController {
         $this->cart->hardValidate();
 
         // First create order
-        $order = $this->createOrder(Input::get('Location'), Input::get('UserInfo'));
+        $order = $this->createOrder(Input::get('Location'), Input::get('UserInfo'), Input::get('Contact'));
 
         // If there were errors
         if(! $this->emptyErrors())
@@ -75,9 +75,12 @@ class CheckoutController extends BaseController {
             Responser::errors($this->getErrors());
         }
 
-        $this->messageToUser(
+        // Destory cart
+        $this->itemFactory->destroy();
+
+        return $this->messageToUser(
             'Thanks '. ucfirst($order->userInfo->first_name) .'! Order has been placed successfully.',
-            'We will contact you soon at <span style="color:#C20676">'.$order->userInfo->contact_number.'</span>
+            'We will contact you soon at <span style="color:#C20676">'.Input::get('Contact.number').'</span>
             to confirm time of delivery and shipping address.<br /><br />
              Thank you for choosing QBrando <strong>online shop for luxury in Qatar</strong><br /><br />
             <a href='.URL::route('home').'>Go back home</a>'
@@ -87,7 +90,7 @@ class CheckoutController extends BaseController {
     /**
      * Create user and location
      */
-    protected function createOrder($locationInputs, $userInfoInputs)
+    protected function createOrder($locationInputs, $userInfoInputs, $contactInputs)
     {
         $location = $this->locations->newInstance($locationInputs);
 
@@ -96,6 +99,7 @@ class CheckoutController extends BaseController {
             $this->addErrors($location->getValidatorMessages());
         }
 
+        // Create user information
         $userInfo = $this->userInfo->newInstance($userInfoInputs);
 
         if(! $userInfo->validate())
@@ -108,10 +112,13 @@ class CheckoutController extends BaseController {
             $location->save();
             $userInfo->save();
 
-            $order = $this->orders->createFrom($this->userInfo, $this->locations);
+            // Create contact information for this user
+            foreach($contactInputs as $type => $value)
+            {
+                if($value) $userInfo->contacts()->create(compact('type', 'value'));
+            }
 
-            $order->addProducts($this->cart->getItems());
-            $order->addGifts($this->cart->getGifts());
+            $order = $this->orders->createFrom($userInfo, $location, $this->cart);
 
             return $order;
         }

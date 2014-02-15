@@ -1,5 +1,6 @@
 <?php namespace Offers;
 
+use Cart\Item;
 use Units\Price;
 
 class MassOffer extends \DateRangeModel {
@@ -10,21 +11,28 @@ class MassOffer extends \DateRangeModel {
     protected $table = 'mass_offers';
 
     /**
+     * @var bool
+     */
+    public $timestamps = false;
+
+    /**
+     * @var array
+     */
+    protected $prices = array();
+
+    /**
      * @param $noOfProducts
      * @param $noOfGifts
      * @param Price $maximumPrice
-     * @param $date
      * @return bool
      */
-    public static function validateGifts($noOfProducts, $noOfGifts, Price $maximumPrice, $date)
+    public function validateGifts($noOfProducts, $noOfGifts, Price $maximumPrice)
     {
-        $massOffer = static::current($date)->first();
+        return $this->calculateNumberOfGifts($noOfProducts) >= $noOfGifts &&
 
-        return $massOffer->calculateNumberOfGifts($noOfProducts) == $noOfGifts &&
+                $this->getMaxGiftPrice()->compare($maximumPrice, function($p1, $p2) {
 
-               $massOffer->max_gift_price->compare($maximumPrice, function($p1, $p2) {
-
-                   return $p1 > $p2;
+                   return $p1 >= $p2;
                });
     }
 
@@ -38,8 +46,41 @@ class MassOffer extends \DateRangeModel {
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * @param Item[] $items
+     * @return bool
      */
-    public function maxGiftPrice(){ return $this->belongsTo(Price::getClass()); }
+    public function appliesTo(array $items)
+    {
+        return $this->start_quantity >= count($items);
+    }
+
+    /**
+     * @param $price
+     * @return float
+     */
+    public function calculatePriceFrom($price)
+    {
+        return $price * (1 - ($this->discount_percentage / 100));
+    }
+
+    /**
+     * @return Price
+     */
+    public function getMaxGiftPrice()
+    {
+        if(isset($this->prices['max_gift'])) return $this->prices['max_gift'];
+
+        return $this->prices['max_gift'] = new Price($this->max_gift_price);
+    }
+
+    /**
+     * @return \Units\Price
+     */
+    public function getStartPrice()
+    {
+        if(isset($this->prices['start'])) return $this->prices['start'];
+
+        return $this->prices['start'] = new Price($this->start_price);
+    }
 
 }

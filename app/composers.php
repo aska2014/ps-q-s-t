@@ -1,8 +1,15 @@
 <?php
 
+use Cart\CookieFactory;
+
 View::composer('templates.angular', function($view)
 {
     $view->environment = App::Environment();
+
+    $view->itemCookieKey = CookieFactory::ITEM_COOKIE_KEY;
+    $view->giftCookieKey = CookieFactory::GIFT_COOKIE_KEY;
+
+    $view->massOffer = App::make('Offers\MassOffer')->current(new DateTime())->first();
 });
 
 View::composer('partials.static.header', function($view)
@@ -21,9 +28,7 @@ View::composer('partials.products.offers', function($view)
 
 View::composer('partials.products.fancy', function($view)
 {
-    $view->fancyCategories = App::make('ECommerce\Category')->get();
-
-    App::make('VisibleProductRepository')->addRecursive($view->fancyCategories);
+    $view->fancyCategories = App::make('ECommerce\Category')->notEmpty()->get();
 });
 
 View::share('success', Responser::getSuccess());
@@ -32,12 +37,13 @@ View::share('errors', Responser::getErrors());
 
 
 
+App::bind('Cart\ItemFactoryInterface', 'Cart\CookieFactory');
 
 
 App::bind('Cart\Cart', function( $app )
 {
-    return new \Cart\Cart($app->make('Offers\ProductOffer')->makeItems(),
-                          $app->make('Offers\MassOffer')->makeItems(),
+    return new \Cart\Cart($app->make('Offers\ProductOffer'),
+                          $app->make('Offers\MassOffer')->current(new DateTime())->first(),
                           $app->make('Cart\ItemFactoryInterface')->makeItems(),
                           $app->make('Cart\ItemFactoryInterface')->makeGifts());
 });

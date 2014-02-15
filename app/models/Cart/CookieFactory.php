@@ -4,8 +4,8 @@ use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 class CookieFactory implements ItemFactoryInterface {
 
-    const ITEM_COOKIE_KEY = '*8u9fijCX<ASD@#';
-    const GIFT_COOKIE_KEY = '*(FIUJCKX<ASD@#';
+    const ITEM_COOKIE_KEY = 'rijekfd';
+    const GIFT_COOKIE_KEY = 'trcbsdfg';
 
     protected $loaded;
 
@@ -26,7 +26,7 @@ class CookieFactory implements ItemFactoryInterface {
     {
         if(isset($this->loaded['gifts'])) return $this->loaded['gifts'];
 
-        return $this->loaded['gifts'] = $this->generateItemsFromJson($this->getItemsCookies());
+        return $this->loaded['gifts'] = $this->generateItemsFromJson($this->getGiftsCookies());
     }
 
     /**
@@ -53,7 +53,7 @@ class CookieFactory implements ItemFactoryInterface {
             return array_map(function($item) {
 
                 try{
-                    return Item::make($item->id, $item->quantity, $item->price);
+                    return Item::make($item->id, $item->quantity);
                 }catch(ModelNotFoundException $e) {
                     throw new CartException("Some products in your cart where not found. There's a chance the product has been deleted from our stock after you added it in your cart.");
                 }

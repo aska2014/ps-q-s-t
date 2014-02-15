@@ -23,7 +23,11 @@ class CreateOrdersTable extends Migration {
             $table->integer('location_id')->unsigned();
             $table->foreign('location_id')->references('id')->on('locations')->onDelete('CASCADE')->onUpdate('CASCADE');
 
+            $table->float('price');
+
             $table->timestamps();
+
+            $table->softDeletes();
 		});
 	}
 

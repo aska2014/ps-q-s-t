@@ -19,7 +19,7 @@ class FreakOrderController extends \Kareem3d\Freak\Core\ElementController {
      */
     public function index()
     {
-        return $this->orders->all();
+        return $this->orders->with('products', 'userInfo', 'location')->get();
     }
 
     /**
@@ -30,7 +30,7 @@ class FreakOrderController extends \Kareem3d\Freak\Core\ElementController {
      */
     public function show($id)
     {
-        return $this->orders->findOrFail($id);
+        return $this->orders->with('products', 'userInfo', 'location')->findOrFail($id);
     }
 
     /**

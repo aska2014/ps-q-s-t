@@ -38,7 +38,7 @@ class FreakProductController extends \Kareem3d\Freak\Core\ElementController {
      */
     public function show($id)
     {
-        return $this->products->with('category', 'brand', 'price', 'productOffers')->findOrFail($id);
+        return $this->products->with('category', 'brand', 'productOffers')->findOrFail($id)->toJson();
     }
 
     /**
@@ -66,11 +66,7 @@ class FreakProductController extends \Kareem3d\Freak\Core\ElementController {
      */
     public function store()
     {
-        $product = $this->products->create(Input::all());
-
-        $product->setPrice(Input::get('price.value'), Input::get('price.currency'));
-
-        return $product;
+        return $this->products->create(Input::all());
     }
 
     /**
@@ -84,8 +80,6 @@ class FreakProductController extends \Kareem3d\Freak\Core\ElementController {
         $product = $this->products->findOrFail($id);
 
         $product->update(Input::all());
-
-        $product->setPrice(Input::get('price.value'), Input::get('price.currency'));
 
         return $product;
     }

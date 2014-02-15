@@ -62,8 +62,8 @@ class ProductOffer extends \DateRangeModel {
      */
     public function calculateDiscountFrom($beforePrice, $afterPrice)
     {
-        if($beforePrice instanceof Price) $beforePrice = $beforePrice->value;
-        if($afterPrice instanceof Price)  $afterPrice = $afterPrice->value;
+        if($beforePrice instanceof Price) $beforePrice = $beforePrice->value();
+        if($afterPrice instanceof Price)  $afterPrice = $afterPrice->value();
 
         // Calculate discount percentage
         $this->discount_percentage = 100 - ($afterPrice / $beforePrice) * 100;
@@ -78,10 +78,12 @@ class ProductOffer extends \DateRangeModel {
     {
         if($discount = static::current($date)->byProduct($product)->pluck('discount_percentage'))
         {
-            return $product->price->multiply( $discount / 100 );
+            $price = clone($product->getActualPrice());
+
+            return $price->multiply($discount / 100)->round();
         }
 
-        return $product->price;
+        return $product->getActualPrice();
     }
 
     /**

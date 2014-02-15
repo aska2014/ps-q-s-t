@@ -19,7 +19,8 @@
 
     <!--[if lte IE 8]>
     <script>
-        document.createElement('my-cart-btn');
+        document.createElement('cart-btn');
+        document.createElement('buy-now-btn');
     </script>
     <![endif]-->
 
@@ -39,8 +40,13 @@
     @yield('head')
 
 </head>
-<body ng-controller="MainController">
-
+<body ng-controller="MainController" ng-init="
+cart.init('{{ $itemCookieKey }}', '{{ $giftCookieKey }}');
+price.init('QAR');
+@if($massOffer)
+massOffer.init('{{ $massOffer->title }}', '{{ $massOffer->description }}', '{{ $massOffer->to_date }}', {{ $massOffer->start_quantity }}, {{ $massOffer->getStartPrice()->value() ?: 0 }}, {{ $massOffer->discount_percentage ?: 0 }}, {{ $massOffer->gifts_per_product ?: 0 }}, {{ $massOffer->getMaxGiftPrice()->value() ?: 0 }})
+@endif
+">
 <div class="large-container">
 
     <div class="container">
@@ -61,17 +67,16 @@
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
-<script src="http://code.angularjs.org/1.2.0rc1/angular.min.js"></script>
-<script src="http://code.angularjs.org/1.2.0rc1/angular-resource.min.js"></script>
-<script src="http://code.angularjs.org/1.2.0rc1/angular-cookies.min.js"></script>
+<script src="http://code.angularjs.org/1.2.12/angular.min.js"></script>
+<script src="http://code.angularjs.org/1.2.12/angular-resource.min.js"></script>
+<!--<script src="http://code.angularjs.org/1.2.12/angular-cookies.min.js"></script>-->
 @else
 <script src="{{ URL::asset('app/lib/jquery.min.js') }}"></script>
 <script src="{{ URL::asset('app/lib/jquery-ui.min.js') }}"></script>
 <script src="{{ URL::asset('app/lib/bootstrap/dist/js/bootstrap.min.js') }}"></script>
 
-<script src="{{ URL::asset('app/lib/angular/angular.js') }}"></script>
+<script src="{{ URL::asset('app/lib/angular/angular.min.js') }}"></script>
 <script src="{{ URL::asset('app/lib/angular/angular-resource.min.js') }}"></script>
-<script src="{{ URL::asset('app/lib/angular/angular-cookies.min.js') }}"></script>
 @endif
 
 <script src="{{ URL::asset('app/js/app.js') }}"></script>

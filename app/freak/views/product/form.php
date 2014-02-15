@@ -47,7 +47,7 @@
                     <div class="control-group">
                         <label class="control-label" for="input00">Price</label>
                         <div class="controls">
-                            <input type="text" id="input00" class="span2" ng-model="model.price.value">
+                            <input type="text" id="input00" class="span2" ng-model="model.price">
                         </div>
                     </div>
                     <div class="form-actions">
@@ -108,13 +108,13 @@
 
         $scope.$watch('offer.price', function(value)
         {
-            $scope.offer.discount_percentage = (100 - ((value / $scope.model.price.value) * 100)).toFixed(2);
+            $scope.offer.discount_percentage = (100 - ((value / $scope.model.price) * 100)).toFixed(2);
         });
 
         $scope.$watch('offer.discount_percentage', function(value)
         {
             value = value / 100;
-            $scope.offer.price = Math.round($scope.model.price.value - (value * $scope.model.price.value));
+            $scope.offer.price = Math.round($scope.model.price - (value * $scope.model.price));
         });
 
         $scope.$watch('model.id', function(id)

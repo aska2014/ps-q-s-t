@@ -22,6 +22,7 @@ class CreateProductOrderTable extends Migration {
             $table->integer('order_id')->unsigned();
             $table->foreign('order_id')->references('id')->on('orders')->onDelete('CASCADE')->onUpdate('CASCADE');
 
+            $table->float('price')->unsigned();
             $table->integer('quantity');
 
             $table->primary(array('product_id', 'order_id'));

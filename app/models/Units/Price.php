@@ -3,17 +3,7 @@
 use ECommerce\Product;
 use Offers\MassOffer;
 
-class Price extends \BaseModel {
-
-    /**
-     * @var string
-     */
-    protected $table = 'prices';
-
-    /**
-     * @var bool
-     */
-    public $timestamps = false;
+class Price {
 
     /**
      * @var string
@@ -21,22 +11,68 @@ class Price extends \BaseModel {
     public static $defaultCurrency = 'QAR';
 
     /**
-     * @return mixed|void
+     * @var string
      */
-    public function beforeSave()
-    {
-        if(! $this->currency)
-        {
-            $this->currency = static::$defaultCurrency;
-        }
-    }
+    protected $currency;
+
+    /**
+     * @var float
+     */
+    protected $value;
 
     /**
      * @param $value
+     * @param string $currency
+     * @return \Units\Price
      */
-    public function setValueAttribute($value)
+    public function __construct($value, $currency = '')
     {
-        $this->attributes['value'] = str_replace(',', '', $value);
+        $this->currency = $currency ?: static::$defaultCurrency;
+
+        $this->value = $value;
+
+        $this->round(2);
+    }
+
+    /**
+     * @param $price
+     * @return Price
+     *
+     * @todo Make sure they have the same currencies first
+     */
+    public function multiply( $price )
+    {
+        $this->value = $this->extractValue($price) * $this->value;
+
+        return $this;
+    }
+
+    /**
+     * @param int $precision
+     * @return Price
+     */
+    public function round( $precision = 0 )
+    {
+        $this->value = round($this->value, $precision);
+
+        return $this;
+    }
+
+    /**
+     * @param $price
+     * @return float
+     */
+    protected function extractValue($price)
+    {
+        return $price instanceof Price ? $price->value() : $price;
+    }
+
+    /**
+     * @return float
+     */
+    public function value()
+    {
+        return $this->value;
     }
 
     /**
@@ -44,25 +80,15 @@ class Price extends \BaseModel {
      */
     public function format()
     {
-        return "{$this->currency} {$this->value}";
+        return "{$this->currency} {$this->formattedValue()}";
     }
 
     /**
-     * @param $value
-     * @return mixed
-     */
-    public function multiply( $value )
-    {
-        $this->value = $this->extractValue($value) * $this->value;
-    }
-
-    /**
-     * @param $value
      * @return string
      */
-    public function getValueAttribute($value)
+    public function formattedValue()
     {
-        return number_format($value, 2);
+        return number_format($this->value(), 2);
     }
 
     /**
@@ -84,22 +110,4 @@ class Price extends \BaseModel {
     {
         return $this->format();
     }
-
-    /**
-     * @param $x
-     * @return mixed
-     */
-    protected function extractValue( $x )
-    {
-        if($x instanceof Price) return $x->value;
-
-        return $x;
-    }
-
-    /**
-     * Defining relations
-     */
-    public function product(){ return $this->hasOne(Product::getClass()); }
-    public function massOffer(){ return $this->hasMany(MassOffer::getClass()); }
-
 }

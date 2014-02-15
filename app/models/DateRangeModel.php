@@ -14,7 +14,7 @@ class DateRangeModel extends BaseModel {
 
         if($this->to_date == '')
         {
-            $this->attributes['to_date'] = '2099-01-01 01:01:01';
+            $this->attributes['to_date'] = '2060-01-01 01:01:01';
         }
     }
 
@@ -24,7 +24,7 @@ class DateRangeModel extends BaseModel {
     public function makeInfinite()
     {
         $this->attributes['from_date'] = '2000-01-01 01:01:01';
-        $this->attributes['to_date'] = '2099-01-01 01:01:01';
+        $this->attributes['to_date'] = '2060-01-01 01:01:01';
     }
 
     /**
@@ -32,7 +32,14 @@ class DateRangeModel extends BaseModel {
      */
     public function setFromDateAttribute($value)
     {
-        $this->attributes['from_date'] = date('Y-m-d H:i:s', strtotime($value));
+        if($value instanceof \DateTime)
+        {
+            $this->attributes['from_date'] = $value->format('Y-m-d H:i:s');
+        }
+        else
+        {
+            $this->attributes['from_date'] = date('Y-m-d H:i:s', strtotime($value));
+        }
     }
 
     /**
@@ -40,7 +47,14 @@ class DateRangeModel extends BaseModel {
      */
     public function setToDateAttribute($value)
     {
-        $this->attributes['to_date'] = date('Y-m-d H:i:s', strtotime($value));
+        if($value instanceof \DateTime)
+        {
+            $this->attributes['to_date'] = $value->format('Y-m-d H:i:s');
+        }
+        else
+        {
+            $this->attributes['to_date'] = date('Y-m-d H:i:s', strtotime($value));
+        }
     }
 
     /**

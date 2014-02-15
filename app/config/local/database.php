@@ -15,5 +15,16 @@ return array(
             'prefix'    => 'krq_',
         ),
 
+        'remote' => array(
+            'driver'    => 'mysql',
+            'host'      => 'speedupb.com',
+            'database'  => 'speedupb_master',
+            'username'  => 'speedupb_kemo',
+            'password'  => '*&ADNSKYH$#A',
+            'charset'   => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix'    => 'krq_',
+        ),
+
     )
 );

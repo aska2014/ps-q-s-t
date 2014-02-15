@@ -2,47 +2,50 @@
     @foreach($fancyCategories as $category)
     <div class="main-title">
         <span class="glyphicon glyphicon-th-list"></span>
-        <a href="{{ URL::route('category', $category->id) }}">{{ $category->name }}</a>
+        <a href="{{ URL::category($category) }}">{{ $category->name }}</a>
     </div>
 
     @if($product = $category->getMainProduct())
-    <div class="product big-product">
+    <div class="product big-product" ng-controller="ProductController">
+        <input type="hidden" ng-bind="product.id" value="{{ $product->id }}"/>
         <div class="image">
-            <img class="img-responsive" src="{{ $product->getImage('main')->getNearest(422, 288) }}" alt=""/>
+            <img ng-bind="product.image" class="img-responsive" src="{{ $product->getImage('main')->getNearest(422, 288) }}" alt=""/>
         </div>
 
-        <div class="info" to-url="{{ URL::route('product', $product->id) }}">
-            <div class="title"><a href="{{ URL::route('product', $product->id) }}">{{ $product->title }}</a></div>
+        <div class="info" to-url="product.url">
+            <div class="title"><a ng-bind="product.title" href="{{ URL::product($product) }}">{{ $product->title }}</a></div>
             <div class="price">
-<!--                <span class="before-price">QAR 700.00</span>-->
-                <span class="actual-price">{{ $product->price }}</span>
+                @if($product->hasOfferPrice())
+                <span ng-bind="product.actual_price | currency:currency" class="before-price">{{ $product->getActualPrice() }}</span>
+                @endif
+                <span ng-bind="product.price | currency:currency" class="actual-price">{{ $product->getOfferPrice() }}</span>
             </div>
         </div>
 
         <div class="buttons">
-            <cart-btn></cart-btn>
-            <buy-now-btn></buy-now-btn>
+            <cart-btn product="product"></cart-btn>
+            <buy-now-btn product="product"></buy-now-btn>
         </div>
     </div>
     @endif
 
     @foreach($category->getUniqueProducts(6) as $product)
-    <div class="product small-product">
+    <div class="product small-product" ng-controller="ProductController">
+        <input type="hidden" ng-bind="product.id" value="{{ $product->id }}"/>
         <div class="image">
-            <img class="img-responsive" src="{{ $product->getImage('main')->getNearest(179,118) }}" alt=""/>
+            <img ng-bind="product.image" class="img-responsive" src="{{ $product->getImage('main')->getNearest(179,118) }}" alt=""/>
         </div>
 
-        <div class="info">
+        <div class="info" to-url="product.url">
+            <div class="title"><a ng-bind="product.title" href="{{ URL::product($product) }}">{{ $product->title }}</a></div>
             <div class="price">
-                <span class="actual-price">QAR 500.00</span>
+                <span ng-bind="product.price | currency:currency" class="actual-price">{{ $product->getOfferPrice() }}</span>
             </div>
         </div>
 
         <div class="buttons">
-
-            <cart-btn></cart-btn>
-            <buy-now-btn></buy-now-btn>
-
+            <cart-btn product="product"></cart-btn>
+            <buy-now-btn product="product"></buy-now-btn>
         </div>
     </div>
     @endforeach

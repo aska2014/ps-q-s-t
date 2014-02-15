@@ -1,5 +1,7 @@
 <?php namespace ECommerce;
 
+use Cart\Cart;
+use Cart\Item;
 use Kareem3d\Membership\UserInfo;
 use Location\Location;
 use Units\Price;
@@ -12,28 +14,45 @@ class Order extends \BaseModel {
     protected $table = 'orders';
 
     /**
+     * @var bool
+     */
+    protected $softDelete = true;
+
+    /**
      * @param UserInfo $userInfo
      * @param Location $location
+     * @param Cart $cart
      * @return \Illuminate\Database\Eloquent\Model|static
      */
-    public static function createFrom(UserInfo $userInfo, Location $location)
+    public static function createFrom(UserInfo $userInfo, Location $location, Cart $cart)
     {
-        return static::create(array(
+        /**
+         * @param Order $order
+         */
+        $order = static::create(array(
             'user_info_id' => $userInfo->id,
-            'location_id' => $location->id
+            'location_id' => $location->id,
+            // Round to the nearest two values
+            'price' => round($cart->getTotalPrice(), 2),
         ));
+
+        $order->addProducts($cart->getItems());
+        $order->addGifts($cart->getGifts());
+
+        return $order;
     }
 
     /**
      * @param Product $product
      * @param $quantity
+     * @param $price
      * @return void
      */
-    public function addProduct(Product $product, $quantity)
+    public function addProduct(Product $product, $quantity, $price)
     {
-        $this->products()->attach($product, array(
-            'quantity' => $quantity
-        ));
+        if($price instanceof Price) $price = $price->value();
+
+        $this->products()->attach($product, compact('quantity', 'price'));
     }
 
     /**
@@ -42,30 +61,28 @@ class Order extends \BaseModel {
      */
     public function addGift(Product $product, $quantity)
     {
-        $this->gifts()->attach($product, array(
-            'quantity' => $quantity
-        ));
+        $this->gifts()->attach($product, compact('quantity'));
     }
 
     /**
-     * @param $objects
+     * @param Item[] $objects
      */
     public function addProducts($objects)
     {
         foreach($objects as $object)
         {
-            $this->addProduct($object->product, $object->quantity);
+            $this->addProduct($object->getProduct(), $object->getQuantity(), $object->getPrice());
         }
     }
 
     /**
-     * @param $objects
+     * @param Item[] $objects
      */
     public function addGifts($objects)
     {
         foreach($objects as $object)
         {
-            $this->addProduct($object->product, $object->quantity);
+            $this->addGift($object->getProduct(), $object->getQuantity());
         }
     }
 
@@ -91,7 +108,7 @@ class Order extends \BaseModel {
     public function location(){ return $this->belongsTo(Location::getClass());}
     public function userInfo(){ return $this->belongsTo(UserInfo::getClass());}
 
-    public function gifts(){ return $this->belongsToMany(Product::getClass(), 'gift_order'); }
-    public function products(){ return $this->belongsToMany(Product::getClass(), 'product_order'); }
+    public function gifts(){ return $this->belongsToMany(Product::getClass(), 'gift_order')->withPivot('quantity'); }
+    public function products(){ return $this->belongsToMany(Product::getClass(), 'product_order')->withPivot('quantity', 'price'); }
 
 }

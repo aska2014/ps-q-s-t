@@ -15,6 +15,11 @@ class City extends \BaseModel {
     public $timestamps = false;
 
     /**
+     * @var array
+     */
+    protected $with = array('country');
+
+    /**
      * Defining relations
      */
     public function country(){ return $this->belongsTo(Country::getClass());}

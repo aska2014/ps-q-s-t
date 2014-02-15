@@ -48,6 +48,8 @@ class ResetupCommand extends Command {
         $this->call('migrate', array('--package' => 'kareem3d/freak'));
         $this->call('migrate');
         $this->call('db:seed', array('--class' => "ImageSeeder"));
+        $this->call('db:seed', array('--class' => "CountrySeeder"));
+        $this->call('db:seed', array('--class' => "MassOfferSeeder"));
 	}
 
 	/**

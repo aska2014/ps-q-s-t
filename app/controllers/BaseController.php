@@ -4,9 +4,7 @@ use Illuminate\Support\MessageBag;
 
 class BaseController extends Controller {
 
-
     const PRODUCTS_PER_CAROUSEL = 12;
-
 
     /**
      * @var MessageBag
@@ -20,7 +18,7 @@ class BaseController extends Controller {
      */
     protected function messageToUser($title, $body)
     {
-        return Redirect::route('messages-to-user')->with('title', $title)->with('body', $body);
+        return Redirect::route('message-to-user')->with('title', $title)->with('body', $body);
     }
 
     /**

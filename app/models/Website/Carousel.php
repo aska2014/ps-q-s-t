@@ -1,5 +1,7 @@
 <?php namespace Website;
 
+use Illuminate\Support\Collection;
+
 class Carousel {
 
     /**
@@ -8,7 +10,7 @@ class Carousel {
     public $title;
 
     /**
-     * @var Illuminate\Support\Collection
+     * @var \Illuminate\Support\Collection
      */
     public $products;
 
@@ -16,7 +18,7 @@ class Carousel {
      * @param $title
      * @param \Illuminate\Support\Collection $products
      */
-    public function __construct($title, \Illuminate\Support\Collection $products)
+    public function __construct($title, Collection $products)
     {
         $this->title = $title;
         $this->products = $products;
