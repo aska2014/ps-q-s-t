@@ -80,7 +80,7 @@ class ProductOffer extends \DateRangeModel {
         {
             $price = clone($product->getActualPrice());
 
-            return $price->multiply($discount / 100)->round();
+            return new Price($price->value() * (1 - ($discount / 100)));
         }
 
         return $product->getActualPrice();

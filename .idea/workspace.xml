@@ -59,7 +59,7 @@
     <file path="/2014_02_06_210208_create_mass_offers_table.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392472244507" ignored="false" />
     <file path="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391727605238" ignored="false" />
     <file path="/migrate-all.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391727698794" ignored="false" />
-    <file path="/Product.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392542351104" ignored="false" />
+    <file path="/Product.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392556802335" ignored="false" />
     <file path="/Category.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392477931128" ignored="false" />
     <file path="/Bran.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391728668379" ignored="false" />
     <file path="/Price.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392502537368" ignored="false" />
@@ -67,7 +67,7 @@
     <file path="/Location.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392504757073" ignored="false" />
     <file path="/City.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392504767654" ignored="false" />
     <file path="/Country.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391730229754" ignored="false" />
-    <file path="/ProductOffer.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392495515862" ignored="false" />
+    <file path="/ProductOffer.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392556866421" ignored="false" />
     <file path="/MassOffer.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392503730936" ignored="false" />
     <file path="/BaseModel.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392216116723" ignored="false" />
     <file path="/Brand.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392219649207" ignored="false" />
@@ -177,6 +177,24 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Product.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/ECommerce/Product.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="147" column="29" selection-start="3240" selection-end="3240" vertical-scroll-proportion="-0.65384614">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProductOffer.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/Offers/ProductOffer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="82" column="71" selection-start="2089" selection-end="2089" vertical-scroll-proportion="-10.961538">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -187,7 +205,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/freak/views/mass_offer/one.php" />
         <option value="$PROJECT_DIR$/app/freak/views/product/form.php" />
         <option value="$PROJECT_DIR$/app/freak/views/mass_offer/form.php" />
         <option value="$PROJECT_DIR$/app/freak/views/product/all.php" />
@@ -196,12 +213,13 @@
         <option value="$PROJECT_DIR$/public/app/css/offers.less" />
         <option value="$PROJECT_DIR$/app/views/partials/products/offers.blade.php" />
         <option value="$PROJECT_DIR$/app/start/local.php" />
-        <option value="$PROJECT_DIR$/app/models/ECommerce/Product.php" />
         <option value="$PROJECT_DIR$/app/start/production.php" />
         <option value="$PROJECT_DIR$/app/start/global.php" />
         <option value="$PROJECT_DIR$/app/controllers/ProductController.php" />
         <option value="$PROJECT_DIR$/app/views/pages/cart.blade.php" />
         <option value="$PROJECT_DIR$/app/views/pages/checkout.blade.php" />
+        <option value="$PROJECT_DIR$/app/models/ECommerce/Product.php" />
+        <option value="$PROJECT_DIR$/app/models/Offers/ProductOffer.php" />
         <option value="$PROJECT_DIR$/app/controllers/ProductsController.php" />
       </list>
     </option>
@@ -478,13 +496,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/freak/views/product/all.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="45" selection-start="747" selection-end="747" vertical-scroll-proportion="0.16283526">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/freak/controllers/FreakMassOfferController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="53" column="21" selection-start="966" selection-end="966" vertical-scroll-proportion="0.36448598">
@@ -536,13 +547,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/ECommerce/Product.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="413" selection-end="413" vertical-scroll-proportion="0.5655577">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/start/production.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="0" selection-start="7" selection-end="7" vertical-scroll-proportion="-1.1624266">
@@ -584,6 +588,20 @@
     <entry file="file://$PROJECT_DIR$/app/controllers/ProductController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="25" selection-start="397" selection-end="397" vertical-scroll-proportion="0.6812977">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Offers/ProductOffer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="71" selection-start="2089" selection-end="2089" vertical-scroll-proportion="-10.961538">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/ECommerce/Product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="147" column="29" selection-start="3240" selection-end="3240" vertical-scroll-proportion="-0.65384614">
           <folding />
         </state>
       </provider>
