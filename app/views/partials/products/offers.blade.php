@@ -1,6 +1,6 @@
 <div class="separator"></div>
 
-<div class="main-offers">
+<div class="main-offers" ng-cloak>
 
     <div class="first-column">
 

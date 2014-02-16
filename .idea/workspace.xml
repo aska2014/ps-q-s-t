@@ -16,7 +16,7 @@
     <file path="/header.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392414805146" ignored="false" />
     <file path="/header.less" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391697071973" ignored="false" />
     <file path="$PROJECT_DIR$/public/app/css/header.css" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391697156119" ignored="false" />
-    <file path="/offers.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392568299729" ignored="false" />
+    <file path="/offers.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392568832339" ignored="false" />
     <file path="/offers.less" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392564652848" ignored="false" />
     <file path="/products.less" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392565683569" ignored="false" />
     <file path="/URL.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392413504135" ignored="false" />
@@ -170,19 +170,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/app/js/controllers.js">
+      <file leaf-file-name="offers.blade.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/partials/products/offers.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="0" selection-start="678" selection-end="678" vertical-scroll-proportion="0.40328467">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.less" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/app/css/app.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="1" selection-start="1340" selection-end="1340" vertical-scroll-proportion="0.0">
+            <state line="2" column="33" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0651341">
               <folding />
             </state>
           </provider>
@@ -211,9 +202,9 @@
         <option value="$PROJECT_DIR$/public/app/css/products.less" />
         <option value="$PROJECT_DIR$/app/views/pages/cart.blade.php" />
         <option value="$PROJECT_DIR$/app/models/Units/Price.php" />
-        <option value="$PROJECT_DIR$/app/views/partials/products/offers.blade.php" />
         <option value="$PROJECT_DIR$/public/app/css/app.less" />
         <option value="$PROJECT_DIR$/public/app/js/controllers.js" />
+        <option value="$PROJECT_DIR$/app/views/partials/products/offers.blade.php" />
       </list>
     </option>
   </component>
@@ -669,13 +660,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/partials/products/offers.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="131" column="47" selection-start="6020" selection-end="6020" vertical-scroll-proportion="0.8003914">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/public/assets/js/libs/jquery-1.8.3.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9020" column="4" selection-start="253169" selection-end="253169" vertical-scroll-proportion="0.33333334">
@@ -683,16 +667,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/css/app.less">
+    <entry file="file://$PROJECT_DIR$/public/app/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="1" selection-start="1340" selection-end="1340" vertical-scroll-proportion="0.0">
+        <state line="30" column="9" selection-start="756" selection-end="756" vertical-scroll-proportion="0.46532845">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/js/controllers.js">
+    <entry file="file://$PROJECT_DIR$/public/app/css/app.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="678" selection-end="678" vertical-scroll-proportion="0.40328467">
+        <state line="70" column="1" selection-start="1340" selection-end="1340" vertical-scroll-proportion="0.3939394">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/products/offers.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="33" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0651341">
           <folding />
         </state>
       </provider>
