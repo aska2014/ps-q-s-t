@@ -6270,9 +6270,6 @@ a:hover {
     width: 17.5%;
   }
 }
-.fancy-products .small-product .info {
-  bottom: 30px;
-}
 .fancy-products .small-product .title a {
   color: #333;
   font-size: 14px;
@@ -6285,7 +6282,7 @@ a:hover {
 }
 .fancy-products .small-product img {
   width: 179px;
-  height: 118px;
+  height: 120px;
 }
 .fancy-products .big-product {
   position: relative;

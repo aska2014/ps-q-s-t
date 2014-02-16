@@ -11,6 +11,12 @@ angular.module('qbrando.controllers', ['qbrando.services']).
         $scope.price = Price;
         $scope.currency = 'QAR ';
         $scope.massOffer = MassOffer;
+
+
+        $(".slidedown-info").mouseover(function()
+        {
+            $(this).find('.info').slideUp('fast');
+        });
     }])
 
     .controller('HeaderController', ['Sticky', '$location', function(Sticky, $location) {
@@ -51,6 +57,14 @@ angular.module('qbrando.controllers', ['qbrando.services']).
 
         // Add these information to partial information..
         Products.addPartialInfo($scope.product);
+
+        $element.find('img[data-large]').imagezoomsl({
+
+            zoomrange: [3, 3],
+            magnifiersize: [500, 200],
+            magnifierborder: "1px solid #CCC",
+            disablewheel: false
+        });
     }])
 
 

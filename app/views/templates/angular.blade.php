@@ -85,6 +85,8 @@ massOffer.init('{{ $massOffer->title }}', '{{ $massOffer->description }}', '{{ $
 <script src="{{ URL::asset('app/js/filters.js') }}"></script>
 <script src="{{ URL::asset('app/js/directives.js') }}"></script>
 
+<script src="{{ URL::asset('app/lib/zoom/zoomsl-3.0.min.js') }}"></script>
+
 
 @yield('scripts')
 

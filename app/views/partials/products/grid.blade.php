@@ -1,13 +1,13 @@
 <div class="grid-products">
 
     @foreach($products as $product)
-    <div class="product" ng-controller="ProductController" p-id="{{$product->id}}">
+    <div class="product slidedown-info" ng-controller="ProductController">
         <input type="hidden" ng-bind="product.id" value="{{ $product->id }}"/>
         <div class="image">
-            <img class="img-responsive" ng-bind="product.image" src="{{ $product->getImage('main')->getNearest(230, 180) }}" alt=""/>
+            @include('partials.parts.img', compact('product'))
         </div>
 
-        <div class="info" to-url="product.url">
+        <div class="info slidedown" to-url="product.url">
             <div class="title"><a ng-bind="product.title" href="{{ URL::product($product) }}">{{ $product->title }}</a></div>
             <div class="price">
                 @if($product->hasOfferPrice())
@@ -26,8 +26,6 @@
 
     <div class="clearfix"></div>
 </div>
-
-
 
 <div class="text-center">
     {{ $products->links() }}

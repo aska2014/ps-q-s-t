@@ -9,7 +9,7 @@
     <div class="product big-product" ng-controller="ProductController">
         <input type="hidden" ng-bind="product.id" value="{{ $product->id }}"/>
         <div class="image">
-            <img ng-bind="product.image" class="img-responsive" src="{{ $product->getImage('main')->getNearest(422, 288) }}" alt=""/>
+            <img class="img-responsive" ng-bind="product.image" src="{{ $product->getImage('main')->getSmallest() }}" />
         </div>
 
         <div class="info" to-url="product.url">
@@ -33,14 +33,9 @@
     <div class="product small-product" ng-controller="ProductController">
         <input type="hidden" ng-bind="product.id" value="{{ $product->id }}"/>
         <div class="image">
-            <img ng-bind="product.image" class="img-responsive" src="{{ $product->getImage('main')->getNearest(179,118) }}" alt=""/>
-        </div>
 
-        <div class="info" to-url="product.url">
-            <div class="title"><a ng-bind="product.title" href="{{ URL::product($product) }}">{{ $product->title }}</a></div>
-            <div class="price">
-                <span ng-bind="product.price | currency:currency" class="actual-price">{{ $product->getOfferPrice() }}</span>
-            </div>
+            @include('partials.parts.img', compact('product'))
+
         </div>
 
         <div class="buttons">
