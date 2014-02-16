@@ -45,6 +45,20 @@ class Product extends \BaseModel {
 
     /**
      * @param $query
+     * @param $ids
+     * @return mixed
+     */
+    public function scopeByIds($query, $ids)
+    {
+        $ids = explode(',', $ids);
+
+        if(count($ids) > 0) return $query->whereIn('id', $ids);
+
+        return $query->where('id', 0);
+    }
+
+    /**
+     * @param $query
      * @param $category
      * @return mixed
      */

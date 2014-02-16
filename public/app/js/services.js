@@ -140,17 +140,50 @@ angular.module('qbrando.services', []).
             return null;
         }
 
-        function request( id, callback )
+        function requestMultiple(items, callback)
         {
-            var product = $http.get('product/one/' + id).success(callback).error(function()
+            var ids = '';
+
+            for(var i = 0; i < items.length; i++)
+            {
+                if(i == items.length - 1)
+                    ids += items[i].id;
+
+                else
+                    ids += items[i].id + ',';
+            }
+
+            $http.get('product/multiple/' + ids).success(function(products) {
+
+                for(var i = 0;i < products.length; i++)
+                {
+                    products[i] = Helpers.merge_options(products[i], items[i]);
+                }
+
+                // Push the retrieved product to the loaded products
+                fullInfoProducts.push(products);
+
+                callback(products);
+
+            }).error(function()
             {
                 alert('Something went wrong while trying to get the product information');
             });
+        }
 
-            // Push the retrieved product to the loaded products
-            fullInfoProducts.push(product);
+        function request( id, callback )
+        {
+            $http.get('product/one/' + id).success(function(product) {
 
-            return product
+                // Push the retrieved product to the loaded products
+                fullInfoProducts.push(product);
+
+                callback(product);
+
+            }).error(function()
+            {
+                alert('Something went wrong while trying to get the product information');
+            });
         }
 
         return {
@@ -245,6 +278,12 @@ angular.module('qbrando.services', []).
                 callback(product);
 
                 return product;
+            },
+
+
+            'loadMultipleFullInfo': function(items, callback)
+            {
+                requestMultiple(items, callback);
             },
 
 
