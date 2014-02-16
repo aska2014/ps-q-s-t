@@ -34,7 +34,7 @@
     <file path="/grid.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392464156628" ignored="false" />
     <file path="/product.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391679811817" ignored="false" />
     <file path="/one.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392495568571" ignored="false" />
-    <file path="/cart.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392503153016" ignored="false" />
+    <file path="/cart.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392556404727" ignored="false" />
     <file path="/cart.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391684401591" ignored="false" />
     <file path="/cart.less" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392469433490" ignored="false" />
     <file path="/checkout.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392503184762" ignored="false" />
@@ -168,20 +168,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ProductController.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/controllers/ProductController.php">
+      <file leaf-file-name="cart.blade.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/pages/cart.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="25" selection-start="397" selection-end="397" vertical-scroll-proportion="0.40076336">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="global.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/start/global.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="0" selection-start="1650" selection-end="1650" vertical-scroll-proportion="-4.923077">
-              <folding />
+            <state line="22" column="0" selection-start="755" selection-end="755" vertical-scroll-proportion="0.4324853">
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -196,7 +190,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/config/production/mail.php" />
         <option value="$PROJECT_DIR$/app/freak/menu.js" />
         <option value="$PROJECT_DIR$/app/freak/views/mass_offer/one.php" />
         <option value="$PROJECT_DIR$/app/freak/views/product/form.php" />
@@ -212,6 +205,7 @@
         <option value="$PROJECT_DIR$/app/start/production.php" />
         <option value="$PROJECT_DIR$/app/start/global.php" />
         <option value="$PROJECT_DIR$/app/controllers/ProductController.php" />
+        <option value="$PROJECT_DIR$/app/views/pages/cart.blade.php" />
       </list>
     </option>
   </component>
@@ -277,6 +271,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -447,20 +481,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/freak/views/product/form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="22" selection-start="5164" selection-end="5164" vertical-scroll-proportion="0.5114943">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/freak/views/mass_offer/one.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="39" selection-start="1061" selection-end="1175" vertical-scroll-proportion="0.5869159">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_06_210208_create_mass_offers_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="9" selection-start="287" selection-end="287" vertical-scroll-proportion="0.34953272">
@@ -547,17 +567,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/start/global.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="0" selection-start="1650" selection-end="1650" vertical-scroll-proportion="-4.923077">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/ProductController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="25" selection-start="397" selection-end="397" vertical-scroll-proportion="0.40076336">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/start/global.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="0" selection-start="1650" selection-end="1650" vertical-scroll-proportion="0.24427481">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="575" selection-end="575" vertical-scroll-proportion="0.48664123">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pages/cart.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="755" selection-end="755" vertical-scroll-proportion="0.4324853">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

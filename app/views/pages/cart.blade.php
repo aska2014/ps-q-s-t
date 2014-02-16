@@ -21,7 +21,7 @@
                 Your cart is empty. <a style="color:#900" href="{{ URL::route('home'); }}">Continue shopping</a>
             </div>
 
-            <div ng-switch-default>
+            <div ng-switch-default ng-show="products">
                 <table class="table">
                     <thead>
                     <tr>
