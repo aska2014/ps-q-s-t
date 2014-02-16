@@ -5,12 +5,12 @@
     <div class="first-column">
 
         @if($offer = $offerPositions->get('left_offer'))
-        <div class="flying-product" ng-controller="ProductController">
+        <div class="flying-product slidedown-info" ng-controller="ProductController">
             <input type="hidden" ng-bind="product.id" value="{{ $offer->product->id }}"/>
             <div class="box-title"><a href="{{ URL::product($offer->product) }}">{{ $offer->title }}</a></div>
             <div class="body">
                 <div class="image">
-                    <img ng-bind="product.image" src="{{ $offer->product->getImage('main')->getNearest(306, 202) }}" class="img-responsive" alt=""/>
+                    @include('partials.parts.img', array('product' => $offer->product, 'size' => '306x202'))
                 </div>
                 <div class="info" to-url="product.url">
                     <div class="title"><a ng-bind="product.title" href="{{ URL::product($offer->product) }}">{{ $offer->product->title }}</a></div>
@@ -75,8 +75,8 @@
 
     <div class="second-column">
         @foreach($middleProducts as $product)
-        <div class="img-box" onclick="window.location.href='{{ URL::product($product) }}'">
-            <img src="{{ $product->getImage('main')->getNearest(232, 174) }}" class="img-responsive" style="height:179px" alt=""/>
+        <div class="img-box">
+            @include('partials.parts.normal_img', array('product' => $product, 'size' => '232x174'))
         </div>
         <div class="separator"></div>
         @endforeach
@@ -91,7 +91,7 @@
             <div class="box-title"><a href="{{ URL::product($offer->product) }}">{{ $offer->title }}</a></div>
             <div class="body">
                 <div class="image">
-                    <img ng-bind="product.image" src="{{ $offer->product->getImage('main')->getNearest(232, 174) }}" class="img-responsive" alt=""/>
+                    @include('partials.parts.img', array('product' => $offer->product, 'size' => '232x174'))
                 </div>
                 <div class="info">
                     <div class="row">

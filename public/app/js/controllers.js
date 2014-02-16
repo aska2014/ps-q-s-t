@@ -17,6 +17,14 @@ angular.module('qbrando.controllers', ['qbrando.services']).
         {
             $(this).find('.info').slideUp('fast');
         });
+
+        $('img[data-large]').imagezoomsl({
+
+            zoomrange: [3, 3],
+            magnifiersize: [500, 200],
+            magnifierborder: "1px solid #CCC",
+            disablewheel: false
+        });
     }])
 
     .controller('HeaderController', ['Sticky', '$location', function(Sticky, $location) {
@@ -57,14 +65,6 @@ angular.module('qbrando.controllers', ['qbrando.services']).
 
         // Add these information to partial information..
         Products.addPartialInfo($scope.product);
-
-        $element.find('img[data-large]').imagezoomsl({
-
-            zoomrange: [3, 3],
-            magnifiersize: [500, 200],
-            magnifierborder: "1px solid #CCC",
-            disablewheel: false
-        });
     }])
 
 

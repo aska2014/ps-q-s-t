@@ -6490,6 +6490,9 @@ a:hover {
 .main-offers .second-column .img-box {
   cursor: pointer;
 }
+.main-offers .second-column .img-box img {
+  height: 180px;
+}
 .main-offers .second-column .img-box:hover {
   opacity: 0.9;
   filter: alpha(opacity=90);

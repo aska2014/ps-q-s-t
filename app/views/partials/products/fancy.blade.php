@@ -9,7 +9,7 @@
     <div class="product big-product" ng-controller="ProductController">
         <input type="hidden" ng-bind="product.id" value="{{ $product->id }}"/>
         <div class="image">
-            <img class="img-responsive" ng-bind="product.image" src="{{ $product->getImage('main')->getSmallest() }}" />
+            <img class="img-responsive" ng-bind="product.image" src="{{ $product->getImage('main')->getLargest() }}" />
         </div>
 
         <div class="info" to-url="product.url">
@@ -34,7 +34,7 @@
         <input type="hidden" ng-bind="product.id" value="{{ $product->id }}"/>
         <div class="image">
 
-            @include('partials.parts.img', compact('product'))
+            @include('partials.parts.img', array('product' => $product, 'size' => '422x288'))
 
         </div>
 
