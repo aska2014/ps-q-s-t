@@ -44,6 +44,7 @@
 
                     <select class="form-control" id="location-country"
                             ng-model="country"
+                            ng-required
                             ng-options="country.name for country in countries"
                             required>
                         <option value="">Select country</option>
@@ -56,6 +57,7 @@
                     <select class="form-control" id="location-city"
                             ng-model="city"
                             name="Location[city_id]"
+                            ng-required
                             ng-disabled="!country"
                             ng-options="city.id as city.name for city in country.cities">
                         <option value="">Select city</option>
@@ -65,7 +67,7 @@
 
                 <div class="form-group">
                     <label for="location-address">Address*</label>
-                    <textarea id="location-address" class="form-control" name="Location[address]" ng-model="order.location.address" required cols="30" rows="2"></textarea>
+                    <textarea id="location-address" class="form-control" name="Location[address]" ng-model="order.location.address" ng-required cols="30" rows="2"></textarea>
                 </div>
 
             </div>
