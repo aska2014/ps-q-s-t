@@ -50,7 +50,7 @@ Route::get('/message-to-user.html', array('as' => 'message-to-user', function()
 
 Route::get('/test', function()
 {
-    echo 'what1';
+    throw new Exception("TEST TEST TES");
 });
 
 Route::get('/convert', function()
