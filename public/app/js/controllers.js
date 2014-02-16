@@ -22,7 +22,7 @@ angular.module('qbrando.controllers', ['qbrando.services']).
 
             zoomrange: [3, 3],
             magnifiersize: [500, 200],
-            magnifierborder: "1px solid #CCC",
+            magnifierborder: "0px solid #DDD",
             disablewheel: false
         });
     }])

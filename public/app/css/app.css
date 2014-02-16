@@ -6122,6 +6122,14 @@ a:hover {
 .checkout .info {
   color: #666666;
 }
+.textdn {
+  background: #EEE !important;
+  color: #333 !important;
+  width: 500px !important;
+  border-left: 8px solid #EE3D26 !important;
+  border-bottom: 1px solid #DDD !important;
+  border-right: 2px solid #333 !important;
+}
 .grid-products {
   margin-left: -15px;
   margin-right: -15px;
