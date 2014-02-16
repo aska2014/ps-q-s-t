@@ -6143,13 +6143,13 @@ a:hover {
   padding: 0px;
   position: relative;
   background: #FFF;
-  margin: 0px 12px;
+  margin: 20px 40px;
   margin-bottom: 20px;
 }
 @media (min-width: 992px) {
   .grid-products .product {
     float: left;
-    width: 22.5%;
+    width: 25%;
   }
 }
 .grid-products .info {
