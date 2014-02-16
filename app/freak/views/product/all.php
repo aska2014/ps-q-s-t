@@ -18,7 +18,7 @@
                 </thead>
                 <tbody>
                 <tr ng-repeat="product in models">
-                    <th>{{ product.id }}</th>
+                    <td>{{ product.id }}</td>
                     <td>{{ product.title }}</td>
                     <td>{{ product.model }}</td>
                     <td>

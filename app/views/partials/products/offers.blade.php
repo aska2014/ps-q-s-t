@@ -75,7 +75,7 @@
 
     <div class="second-column">
         @foreach($middleProducts as $product)
-        <div class="img-box" url-to="product.url">
+        <div class="img-box" onclick="window.location.href='{{ URL::product($product) }}'">
             <img src="{{ $product->getImage('main')->getNearest(232, 174) }}" class="img-responsive" style="height:179px" alt=""/>
         </div>
         <div class="separator"></div>

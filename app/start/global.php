@@ -49,16 +49,31 @@ Log::useFiles(storage_path().'/logs/laravel.log');
 |
 */
 
+function readableArray($array, $concat = '<br />')
+{
+    $string = '';
+
+    foreach($array as $key => $value)
+    {
+        if(is_array($value))
+        {
+            $string .=  $key .'= ['.readableArray($value, ';').']' . $concat;
+        }
+
+        else
+        {
+            $string .= $key .'=' . $value . $concat;
+        }
+    }
+    return $string;
+}
+
 $sendMailWithException = function(Exception $exception, $code)
 {
-    $inputsMessage = '';
-
-    foreach(Input::all() as $key => $value) $inputsMessage .= $key .'=' . $value . '<br />';
-
     $data = array(
         'errorTitle' => get_class($exception) . ' <br />' . $exception->getMessage(),
         'errorDescription' => 'In file:' . $exception->getFile() . ', In line:'.$exception->getLine() . '',
-        'errorPage' => Request::url() . ' : ' . Request::getMethod() . '<br /><br />INPUTS ARE: <br />' . $inputsMessage
+        'errorPage' => Request::url() . ' : ' . Request::getMethod() . '<br /><br />INPUTS ARE: <br />' . readableArray(Input::all())
     );
 
     Mail::send('emails.error', $data, function($message)

@@ -28,7 +28,7 @@ class FreakMassOfferController extends \Kareem3d\Freak\Core\ElementController {
      */
     public function show($id)
     {
-        // TODO: Implement show() method.
+        return $this->offers->findOrFail($id);
     }
 
     /**
@@ -38,7 +38,7 @@ class FreakMassOfferController extends \Kareem3d\Freak\Core\ElementController {
      */
     public function store()
     {
-        // TODO: Implement store() method.
+        return $this->offers->create(Input::all());
     }
 
     /**
@@ -49,7 +49,11 @@ class FreakMassOfferController extends \Kareem3d\Freak\Core\ElementController {
      */
     public function update($id)
     {
-        // TODO: Implement update() method.
+        $offer = $this->offers->findOrFail($id);
+
+        $offer->update(Input::all());
+
+        return $offer;
     }
 
     /**
@@ -60,6 +64,6 @@ class FreakMassOfferController extends \Kareem3d\Freak\Core\ElementController {
      */
     public function destroy($id)
     {
-        // TODO: Implement destroy() method.
+        $this->offers->findOrFail($id)->delete();
     }
 }

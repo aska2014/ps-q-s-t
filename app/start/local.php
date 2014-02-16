@@ -1,3 +1,3 @@
 <?php
 
-//
+Mail::pretend();

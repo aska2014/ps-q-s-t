@@ -64,7 +64,23 @@
         "children": [
             {
                 "title": "Display all orders",
+                "icon": "icol-drawer",
+                "uri": "all"
+            }
+        ]
+    },
+    {
+        "element": "mass_offer",
+        "title": "Mass offer",
+        "children": [
+            {
+                "title": "Add new offer",
                 "icon": "icol-add",
+                "uri": "form"
+            },
+            {
+                "title": "Display all offers",
+                "icon": "icol-drawer",
                 "uri": "all"
             }
         ]

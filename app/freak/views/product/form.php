@@ -108,13 +108,16 @@
 
         $scope.$watch('offer.price', function(value)
         {
-            $scope.offer.discount_percentage = (100 - ((value / $scope.model.price) * 100)).toFixed(2);
+            if(value) $scope.offer.discount_percentage = (100 - ((value / $scope.model.price) * 100)).toFixed(2);
         });
 
         $scope.$watch('offer.discount_percentage', function(value)
         {
-            value = value / 100;
-            $scope.offer.price = Math.round($scope.model.price - (value * $scope.model.price));
+            if(value)
+            {
+                value = value / 100;
+                $scope.offer.price = Math.round($scope.model.price - (value * $scope.model.price));
+            }
         });
 
         $scope.$watch('model.id', function(id)
