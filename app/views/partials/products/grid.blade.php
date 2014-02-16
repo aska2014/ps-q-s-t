@@ -4,7 +4,7 @@
     <div class="product slidedown-info" ng-controller="ProductController">
         <input type="hidden" ng-bind="product.id" value="{{ $product->id }}"/>
         <div class="image">
-            @include('partials.parts.img', compact('product'))
+            @include('partials.parts.img', array('product' => $product, 'size' => '230x180'))
         </div>
 
         <div class="info slidedown" to-url="product.url">

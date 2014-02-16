@@ -31,7 +31,7 @@
     <file path="/controllers.js" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392563382312" ignored="false" />
     <file path="/carousel.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392493641898" ignored="false" />
     <file path="/fancy.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392564221050" ignored="false" />
-    <file path="/grid.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392563408987" ignored="false" />
+    <file path="/grid.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392564990949" ignored="false" />
     <file path="/product.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391679811817" ignored="false" />
     <file path="/one.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392495568571" ignored="false" />
     <file path="/cart.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392556404727" ignored="false" />
@@ -170,28 +170,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="offers.blade.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/partials/products/offers.blade.php">
+      <file leaf-file-name="grid.blade.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/partials/products/grid.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="49" selection-start="196" selection-end="196" vertical-scroll-proportion="0.23287672">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="img.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/partials/parts/img.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="64" selection-start="0" selection-end="497" vertical-scroll-proportion="-2.6153846">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="offers.less" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/app/css/offers.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="20" selection-start="357" selection-end="357" vertical-scroll-proportion="0.0">
+            <state line="6" column="93" selection-start="340" selection-end="340" vertical-scroll-proportion="0.19960861">
               <folding />
             </state>
           </provider>
@@ -216,13 +198,13 @@
         <option value="$PROJECT_DIR$/app/controllers/ProductsController.php" />
         <option value="$PROJECT_DIR$/app/views/templates/angular.blade.php" />
         <option value="$PROJECT_DIR$/public/app/css/products.less" />
-        <option value="$PROJECT_DIR$/app/views/partials/products/grid.blade.php" />
         <option value="$PROJECT_DIR$/public/app/js/controllers.js" />
         <option value="$PROJECT_DIR$/app/views/partials/parts/img.blade.php" />
         <option value="$PROJECT_DIR$/app/views/partials/products/fancy.blade.php" />
         <option value="$PROJECT_DIR$/app/views/partials/parts/normal_img.blade.php" />
         <option value="$PROJECT_DIR$/public/app/css/offers.less" />
         <option value="$PROJECT_DIR$/app/views/partials/products/offers.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/partials/products/grid.blade.php" />
       </list>
     </option>
   </component>
@@ -578,13 +560,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/partials/products/grid.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="310" selection-end="310" vertical-scroll-proportion="0.23287672">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/partials/static/header.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="43" column="17" selection-start="1357" selection-end="1357" vertical-scroll-proportion="1.1622137">
@@ -613,23 +588,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/products/offers.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="66" selection-start="3377" selection-end="3377" vertical-scroll-proportion="0.5655577">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/partials/parts/img.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="64" selection-start="0" selection-end="497" vertical-scroll-proportion="-2.6153846">
+        <state line="4" column="64" selection-start="0" selection-end="497" vertical-scroll-proportion="0.1330724">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/app/css/offers.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="20" selection-start="357" selection-end="357" vertical-scroll-proportion="0.0">
+        <state line="20" column="20" selection-start="357" selection-end="357" vertical-scroll-proportion="0.5254545">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/partials/products/offers.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/views/partials/products/grid.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="49" selection-start="196" selection-end="196" vertical-scroll-proportion="0.23287672">
+        <state line="6" column="93" selection-start="340" selection-end="340" vertical-scroll-proportion="0.19960861">
           <folding />
         </state>
       </provider>
