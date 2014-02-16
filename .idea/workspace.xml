@@ -8,9 +8,9 @@
     <file path="D:/website/arrabah/app/views/home/index.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391359200696" ignored="false" />
     <file path="/routes.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392543430623" ignored="false" />
     <file path="/home.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391678204371" ignored="false" />
-    <file path="/dummy.xml" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391695526614" ignored="false" />
+    <file path="/dummy.xml" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392561625954" ignored="false" />
     <file path="/angular.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392493837978" ignored="false" />
-    <file path="/Dummy.txt" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392543261786" ignored="false" />
+    <file path="/Dummy.txt" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392561618922" ignored="false" />
     <file path="/composers.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392503673362" ignored="false" />
     <file path="/app.less" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392503292241" ignored="false" />
     <file path="/header.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392414805146" ignored="false" />
@@ -18,7 +18,7 @@
     <file path="$PROJECT_DIR$/public/app/css/header.css" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391697156119" ignored="false" />
     <file path="/offers.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392545401402" ignored="false" />
     <file path="/offers.less" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392545491518" ignored="false" />
-    <file path="/products.less" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392557280550" ignored="false" />
+    <file path="/products.less" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392561682847" ignored="false" />
     <file path="/URL.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392413504135" ignored="false" />
     <file path="/top_sales.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391605504316" ignored="false" />
     <file path="/Asset.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391605653640" ignored="false" />
@@ -31,7 +31,7 @@
     <file path="/controllers.js" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392558983066" ignored="false" />
     <file path="/carousel.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392493641898" ignored="false" />
     <file path="/fancy.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392494954014" ignored="false" />
-    <file path="/grid.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392464156628" ignored="false" />
+    <file path="/grid.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392561625527" ignored="false" />
     <file path="/product.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391679811817" ignored="false" />
     <file path="/one.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392495568571" ignored="false" />
     <file path="/cart.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392556404727" ignored="false" />
@@ -128,7 +128,7 @@
     <file path="/FreakOfferPositionControl.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392201610607" ignored="false" />
     <file path="/DateRangeModel.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392248487113" ignored="false" />
     <file path="/FreakOfferPositionController.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392494144932" ignored="false" />
-    <file path="/ProductsController.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392555463254" ignored="false" />
+    <file path="/ProductsController.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392561719324" ignored="false" />
     <file path="/ShoppingCartController.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392507100738" ignored="false" />
     <file path="/Carousel.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392212159562" ignored="false" />
     <file path="/Version.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392212836843" ignored="false" />
@@ -168,10 +168,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="services.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/app/js/services.js">
+      <file leaf-file-name="ProductsController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/ProductsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="342" column="47" selection-start="9831" selection-end="9831" vertical-scroll-proportion="0.49348232">
+            <state line="30" column="0" selection-start="808" selection-end="808" vertical-scroll-proportion="-15.730769">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.less" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/app/css/app.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="81" column="19" selection-start="1561" selection-end="1561" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="products.less" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/app/css/products.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="23" selection-start="137" selection-end="137" vertical-scroll-proportion="0.09272727">
               <folding />
             </state>
           </provider>
@@ -187,7 +205,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/freak/views/mass_offer/all.php" />
         <option value="$PROJECT_DIR$/app/freak/controllers/FreakMassOfferController.php" />
         <option value="$PROJECT_DIR$/public/app/css/offers.less" />
         <option value="$PROJECT_DIR$/app/views/partials/products/offers.blade.php" />
@@ -197,12 +214,13 @@
         <option value="$PROJECT_DIR$/app/views/pages/cart.blade.php" />
         <option value="$PROJECT_DIR$/app/models/ECommerce/Product.php" />
         <option value="$PROJECT_DIR$/app/models/Offers/ProductOffer.php" />
-        <option value="$PROJECT_DIR$/app/controllers/ProductsController.php" />
         <option value="$PROJECT_DIR$/app/controllers/ProductController.php" />
-        <option value="$PROJECT_DIR$/public/app/css/products.less" />
         <option value="$PROJECT_DIR$/app/views/pages/checkout.blade.php" />
         <option value="$PROJECT_DIR$/public/app/js/controllers.js" />
         <option value="$PROJECT_DIR$/public/app/js/services.js" />
+        <option value="$PROJECT_DIR$/app/views/partials/products/grid.blade.php" />
+        <option value="$PROJECT_DIR$/app/controllers/ProductsController.php" />
+        <option value="$PROJECT_DIR$/public/app/css/products.less" />
       </list>
     </option>
   </component>
@@ -361,7 +379,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
+              <option name="myItemId" value="partials" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="partials" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="products" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -532,13 +576,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/start/local.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="16" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0648855">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/partials/products/offers.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="81" column="19" selection-start="3631" selection-end="3631" vertical-scroll-proportion="0.51663405">
@@ -551,13 +588,6 @@
     <entry file="file://$PROJECT_DIR$/public/app/css/offers.less">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="0" selection-start="367" selection-end="367" vertical-scroll-proportion="0.6490909">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/css/app.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="30" selection-start="393" selection-end="393" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -593,13 +623,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/ProductsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="809" selection-end="809" vertical-scroll-proportion="0.23287672">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/Offers/ProductOffer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="82" column="71" selection-start="2089" selection-end="2089" vertical-scroll-proportion="0.54389316">
@@ -621,13 +644,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/css/products.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="174" column="20" selection-start="2850" selection-end="2850" vertical-scroll-proportion="0.66">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/app/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="83" column="0" selection-start="2183" selection-end="2183" vertical-scroll-proportion="0.47486034">
@@ -642,9 +658,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/products/grid.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="8" selection-start="1237" selection-end="1237" vertical-scroll-proportion="1.0645792">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/app/js/services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="342" column="47" selection-start="9831" selection-end="9831" vertical-scroll-proportion="0.49348232">
+        <state line="342" column="47" selection-start="9831" selection-end="9831" vertical-scroll-proportion="1.348231">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/ProductsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="0" selection-start="808" selection-end="808" vertical-scroll-proportion="-15.730769">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/css/app.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="19" selection-start="1561" selection-end="1561" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/css/products.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="23" selection-start="137" selection-end="137" vertical-scroll-proportion="0.09272727">
           <folding />
         </state>
       </provider>

@@ -23,4 +23,12 @@
         </div>
     </div>
     @endforeach
+
+    <div class="clearfix"></div>
+</div>
+
+
+
+<div class="text-center">
+    {{ $products->links() }}
 </div>

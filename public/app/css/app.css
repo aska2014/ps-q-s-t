@@ -6135,13 +6135,13 @@ a:hover {
   padding: 0px;
   position: relative;
   background: #FFF;
-  margin: 0px 12px;
+  margin: 0px 10px;
   margin-bottom: 20px;
 }
 @media (min-width: 992px) {
   .grid-products .product {
     float: left;
-    width: 22.5%;
+    width: 30.833333333333336%;
   }
 }
 .grid-products .info {
@@ -6160,8 +6160,8 @@ a:hover {
 }
 .grid-products img {
   margin: 0px auto;
-  /* height:250px; */
-  height: 180px;
+  height: 250px;
+  /* height:180px; */
   width: 350px;
 }
 .grid-products .buttons div {
