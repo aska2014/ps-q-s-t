@@ -75,7 +75,7 @@
 
     <div class="second-column">
         @foreach($middleProducts as $product)
-        <div class="img-box">
+        <div class="img-box" onclick="window.location.href='{{ URL::product($product) }}'">
             @include('partials.parts.normal_img', array('product' => $product, 'size' => '232x174'))
         </div>
         <div class="separator"></div>
