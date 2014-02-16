@@ -15,9 +15,11 @@ class ProductController extends BaseController {
     /**
      * @param $ids
      */
-    public function getMultiple($ids)
+    public function getMultiple($ids = '')
     {
         $products = $this->products->byIds($ids)->get();
+
+        $array = array();
 
         foreach($products as $product)
         {
