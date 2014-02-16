@@ -168,10 +168,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="checkout.blade.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/pages/checkout.blade.php">
+      <file leaf-file-name="ProductsController.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/ProductsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="0" selection-start="3458" selection-end="3458" vertical-scroll-proportion="0.86692756">
+            <state line="31" column="0" selection-start="809" selection-end="809" vertical-scroll-proportion="0.23287672">
               <folding />
             </state>
           </provider>
@@ -196,13 +196,13 @@
         <option value="$PROJECT_DIR$/public/app/css/offers.less" />
         <option value="$PROJECT_DIR$/app/views/partials/products/offers.blade.php" />
         <option value="$PROJECT_DIR$/app/start/local.php" />
-        <option value="$PROJECT_DIR$/app/controllers/ProductsController.php" />
         <option value="$PROJECT_DIR$/app/models/ECommerce/Product.php" />
         <option value="$PROJECT_DIR$/app/start/production.php" />
         <option value="$PROJECT_DIR$/app/start/global.php" />
         <option value="$PROJECT_DIR$/app/controllers/ProductController.php" />
         <option value="$PROJECT_DIR$/app/views/pages/cart.blade.php" />
         <option value="$PROJECT_DIR$/app/views/pages/checkout.blade.php" />
+        <option value="$PROJECT_DIR$/app/controllers/ProductsController.php" />
       </list>
     </option>
   </component>
@@ -543,23 +543,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/ProductsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="34" selection-start="843" selection-end="843" vertical-scroll-proportion="-0.6966732">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/start/production.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="0" selection-start="7" selection-end="7" vertical-scroll-proportion="-1.1624266">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/ProductController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="25" selection-start="397" selection-end="397" vertical-scroll-proportion="0.40076336">
           <folding />
         </state>
       </provider>
@@ -590,7 +576,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pages/checkout.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="0" selection-start="3458" selection-end="3458" vertical-scroll-proportion="0.86692756">
+        <state line="48" column="37" selection-start="2466" selection-end="2466" vertical-scroll-proportion="0.30136988">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/ProductController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="25" selection-start="397" selection-end="397" vertical-scroll-proportion="0.6812977">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/ProductsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="0" selection-start="809" selection-end="809" vertical-scroll-proportion="0.23287672">
           <folding />
         </state>
       </provider>

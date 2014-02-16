@@ -29,8 +29,6 @@ class ProductsController extends BaseController {
         // Fail if no product was found
         if(is_null($product)) throw new ModelNotFoundException();
 
-        dd($product->getOfferPrice());
-
         $carousel = $this->getCarousel();
 
         return View::make('pages.product', compact('product', 'carousel'));
