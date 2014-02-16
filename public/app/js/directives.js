@@ -13,7 +13,6 @@ angular.module('qbrando.directives', [])
                 url: '=toUrl'
             },
             link: function(scope, element, attrs) {
-
                 element.css('cursor', 'pointer');
 
                 element.on('click', function()
@@ -96,6 +95,27 @@ angular.module('qbrando.directives', [])
                         {
                             element.replaceWith('<div class="show-details" onclick="window.location.href=\'' + scope.product.url + '\'"</div>');
                         }
+                    }
+                });
+            }
+        }
+    }])
+
+
+    .directive('qFadingInit', [function() {
+        return {
+            restrict: 'A',
+            link: function(scope, element, attrs) {
+
+                var interval = 100;
+
+                attrs.$observe('qFadingInit', function(val)
+                {
+                    if(val)
+                    {
+                        $(element).css('display', 'none');
+                        $(element).delay(val * interval)
+                            .fadeTo('slow', 1);
                     }
                 });
             }

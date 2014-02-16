@@ -25,18 +25,6 @@ angular.module('qbrando.controllers', ['qbrando.services']).
             magnifierborder: "0px solid #DDD",
             disablewheel: false
         });
-
-        var delay = 1000;
-        for(var col = 0; col <= 2; col ++)
-        {
-            for(var row = 0; row <= 1; row++)
-            {
-                var element = $("#pp" + row + "" + col);
-                element.css('display', 'none');
-                element.delay(delay).fadeTo('slow', 1);
-                delay += 150;
-            }
-        }
     }])
 
     .controller('HeaderController', ['Sticky', '$location', function(Sticky, $location) {
