@@ -32,7 +32,7 @@
                     <span class="btn-group">
                         <a href="#{{ url.elementView('product', 'one/' + product.id) }}" class="btn btn-small"><i class="icon-search"></i></a>
                         <a href="#{{ url.elementView('product', 'form/' + product.id) }}" class="btn btn-small"><i class="icon-pencil"></i></a>
-                        <a href="#{{ url.element('product', 'delete/' + product.id, true) }}" class="btn btn-small"><i class="icon-trash"></i></a>
+                        <a ng-click="delete($index)" class="btn btn-small"><i class="icon-trash"></i></a>
                     </span>
                     </td>
                 </tr>

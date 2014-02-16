@@ -150,7 +150,7 @@ angular.module('freak.controllers', []).
 
 
 
-    .controller('ElementAllCtrl', ['$scope', '$routeParams', 'Element', function($scope, $routeParams, Element) {
+    .controller('ElementAllCtrl', ['$scope', '$routeParams', 'Element', '$location', function($scope, $routeParams, Element, $location) {
 
         $scope.element = $routeParams.element;
 
@@ -166,4 +166,15 @@ angular.module('freak.controllers', []).
 
             $scope.alert.error('Ooops!', 'Something went wrong. Try again');
         });
+
+        $scope.delete = function(index)
+        {
+            $scope.models[index].$delete();
+
+            $scope.models.splice(index, 1);
+
+            $scope.alert.success('Deleted successfully!');
+
+            $location.path($scope.url.elementView($routeParams.element, 'all/' ));
+        }
     }])

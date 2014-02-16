@@ -79,7 +79,9 @@ angular.module('qbrando.directives', [])
 
                 element.on('click', function()
                 {
-                    window.location.href = scope.product.url + '?buy-now';
+                    Cart.addItem(scope.product);
+
+                    window.location.href = '/checkout.html';
                 });
 
                 Cart.registerListener(function(cart)
