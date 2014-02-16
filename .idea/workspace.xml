@@ -27,7 +27,7 @@
     <file path="/products.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391637981158" ignored="false" />
     <file path="/footer.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391630494143" ignored="false" />
     <file path="/products_0.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391638175129" ignored="false" />
-    <file path="/services.js" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392561113846" ignored="false" />
+    <file path="/services.js" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392561240384" ignored="false" />
     <file path="/controllers.js" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392558983066" ignored="false" />
     <file path="/carousel.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392493641898" ignored="false" />
     <file path="/fancy.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392494954014" ignored="false" />
@@ -171,7 +171,7 @@
       <file leaf-file-name="services.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/app/js/services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="389" column="0" selection-start="11097" selection-end="11097" vertical-scroll-proportion="0.61452514">
+            <state line="342" column="47" selection-start="9831" selection-end="9831" vertical-scroll-proportion="0.49348232">
               <folding />
             </state>
           </provider>
@@ -644,7 +644,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/app/js/services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="389" column="0" selection-start="11097" selection-end="11097" vertical-scroll-proportion="0.61452514">
+        <state line="342" column="47" selection-start="9831" selection-end="9831" vertical-scroll-proportion="0.49348232">
           <folding />
         </state>
       </provider>

@@ -317,7 +317,7 @@ angular.module('qbrando.services', []).
                 this.start_price         = _start_price;
                 this.gifts_per_product   = _gifts_per_product;
                 this.discount_percentage = _discount_percentage;
-                this.maximum_gift_price  = _maximum_gift_price;
+                this.max_gift_price  = _maximum_gift_price;
             },
 
 
@@ -335,14 +335,15 @@ angular.module('qbrando.services', []).
 
             doesOfferApplies: function(items)
             {
-                var quantity = 0;
+                var quantity = 0, price = 0;
 
                 for(var i = 0; i < items.length; i ++)
                 {
                     quantity += items[i].quantity;
+                    price    += items[i].price;
                 }
 
-                return quantity >= this.start_quantity;
+                return quantity >= this.start_quantity && price >= this.start_price;
             }
         }
     }])
