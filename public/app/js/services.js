@@ -40,8 +40,6 @@ angular.module('qbrando.services', []).
                 this.seconds = seconds;
 
                 this.callTimeOut();
-
-                console.log('asdffd');
             },
 
             callTimeOut: function() {
@@ -389,7 +387,12 @@ angular.module('qbrando.services', []).
                     else
                     {
                         item.quantity = quantity;
-                        items.push(item);
+
+                        items.push({
+                            id: item.id,
+                            quantity: quantity,
+                            price: item.price
+                        });
                     }
 
                     // Save to cookie store

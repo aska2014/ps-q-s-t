@@ -81,12 +81,6 @@ angular.module('qbrando.controllers', ['qbrando.services']).
 
         $scope.contact = {};
         $scope.location = {};
-
-        $scope.$watch('location.city', function(country)
-        {
-            console.log(country);
-        }, true);
-
     }])
 
 
