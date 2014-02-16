@@ -5,6 +5,7 @@ use Illuminate\Support\MessageBag;
 class BaseController extends Controller {
 
     const PRODUCTS_PER_CAROUSEL = 12;
+    const PRODUCTS_PER_PAGE = 12;
 
     /**
      * @var MessageBag

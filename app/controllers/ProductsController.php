@@ -40,7 +40,7 @@ class ProductsController extends BaseController {
      */
     public function brand($brand)
     {
-        $products = $this->products->byBrandName($brand)->unique()->paginate(12);
+        $products = $this->products->byBrandName($brand)->unique()->paginate(static::PRODUCTS_PER_PAGE);
 
         $carousel = $this->getCarousel();
 
@@ -53,7 +53,7 @@ class ProductsController extends BaseController {
      */
     public function category($category)
     {
-        $products = $this->products->byCategoryName($category)->unique()->paginate(12);
+        $products = $this->products->byCategoryName($category)->unique()->paginate(static::PRODUCTS_PER_PAGE);
 
         $carousel = $this->getCarousel();
 
