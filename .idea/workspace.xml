@@ -170,10 +170,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="cart.blade.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/pages/cart.blade.php">
+      <file leaf-file-name="Price.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/models/Units/Price.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="38" selection-start="509" selection-end="509" vertical-scroll-proportion="0.5655577">
+            <state line="33" column="22" selection-start="561" selection-end="561" vertical-scroll-proportion="0.42175573">
               <folding />
             </state>
           </provider>
@@ -189,7 +189,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/models/Offers/ProductOffer.php" />
         <option value="$PROJECT_DIR$/app/controllers/ProductController.php" />
         <option value="$PROJECT_DIR$/app/views/pages/checkout.blade.php" />
         <option value="$PROJECT_DIR$/public/app/js/services.js" />
@@ -205,6 +204,7 @@
         <option value="$PROJECT_DIR$/public/app/js/controllers.js" />
         <option value="$PROJECT_DIR$/public/app/css/products.less" />
         <option value="$PROJECT_DIR$/app/views/pages/cart.blade.php" />
+        <option value="$PROJECT_DIR$/app/models/Units/Price.php" />
       </list>
     </option>
   </component>
@@ -522,13 +522,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/ProductsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="108" selection-start="1491" selection-end="1491" vertical-scroll-proportion="0.23483366">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/BaseController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="33" selection-start="157" selection-end="157" vertical-scroll-proportion="0.22709924">
@@ -633,7 +626,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pages/cart.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="38" selection-start="509" selection-end="509" vertical-scroll-proportion="0.5655577">
+        <state line="12" column="10" selection-start="295" selection-end="295" vertical-scroll-proportion="0.39921722">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Units/Price.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="22" selection-start="561" selection-end="561" vertical-scroll-proportion="0.42175573">
           <folding />
         </state>
       </provider>

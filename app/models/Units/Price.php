@@ -31,7 +31,7 @@ class Price {
 
         $this->value = $value;
 
-        $this->round(2);
+        $this->round(0);
     }
 
     /**
