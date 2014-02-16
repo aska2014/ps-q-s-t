@@ -22,15 +22,15 @@
 
                 <div class="form-group">
                     <label for="contact-name">Name*</label>
-                    <input type="text" ng-model="order.contact.name" id="contact-name" class="form-control" name="UserInfo[name]" placeholder="Your name" required>
+                    <input type="text" ng-model="contact.name" id="contact-name" class="form-control" name="UserInfo[name]" placeholder="Your name" required>
                 </div>
                 <div class="form-group">
                     <label for="contact-number">Contact number*</label>
-                    <input type="text" ng-model="order.contact.number" id="contact-number" class="form-control" name="Contact[number]" placeholder="Valid number for contact" required>
+                    <input type="text" ng-model="contact.number" id="contact-number" class="form-control" name="Contact[number]" placeholder="Valid number for contact" required>
                 </div>
                 <div class="form-group">
                     <label for="contact-email">Email address <small>[Not required]</small></label>
-                    <input type="text" ng-model="order.contact.email" id="contact-email" class="form-control" name="Contact[email]">
+                    <input type="text" ng-model="contact.email" id="contact-email" class="form-control" name="Contact[email]">
                 </div>
 
             </div>
@@ -43,10 +43,9 @@
                     <label for="location-country">Country*</label>
 
                     <select class="form-control" id="location-country"
-                            ng-model="country"
-                            ng-required
-                            ng-options="country.name for country in countries"
-                            required>
+                            ng-model="location.country"
+                            required
+                            ng-options="country.name for country in countries">
                         <option value="">Select country</option>
                     </select>
                 </div>
@@ -55,19 +54,19 @@
                     <label for="location-city">City*</label>
 
                     <select class="form-control" id="location-city"
-                            ng-model="city"
+                            ng-model="location.city"
                             name="Location[city_id]"
-                            ng-required
-                            ng-disabled="!country"
-                            ng-options="city.id as city.name for city in country.cities">
+                            required
+                            ng-disabled="!location.country">
                         <option value="">Select city</option>
+                        <option ng-repeat="city in location.country.cities" value="@{{ city.id }}">@{{ city.name }}</option>
                     </select>
 
                 </div>
 
                 <div class="form-group">
                     <label for="location-address">Address*</label>
-                    <textarea id="location-address" class="form-control" name="Location[address]" ng-model="order.location.address" ng-required cols="30" rows="2"></textarea>
+                    <textarea id="location-address" class="form-control" name="Location[address]" ng-model="order.location.address" required cols="30" rows="2"></textarea>
                 </div>
 
             </div>

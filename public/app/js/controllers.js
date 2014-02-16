@@ -79,9 +79,14 @@ angular.module('qbrando.controllers', ['qbrando.services']).
 
     .controller('CheckoutController', ['$scope', function ($scope) {
 
-//        $scope.defaultCity = function() {
-//            $scope.city = $scope.country.length > 0 ? $scope.country[0] : '';
-//        }
+        $scope.contact = {};
+        $scope.location = {};
+
+        $scope.$watch('location.city', function(country)
+        {
+            console.log(country);
+        }, true);
+
     }])
 
 

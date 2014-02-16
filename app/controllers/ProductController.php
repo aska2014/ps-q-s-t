@@ -45,10 +45,12 @@ class ProductController extends BaseController {
      */
     protected function getProductArray(Product $product)
     {
+        $version = $product->getImage('main')->getSmallest();
+
         return array(
             'id'    => $product->id,
             'title' => $product->title,
-            'image' => $product->getImage('main')->getSmallest()->url,
+            'image' =>  $version? $version->url : '',
             'url'   => URL::product($product),
             'brand' => $product->brand->name,
             'category' => $product->category->name,

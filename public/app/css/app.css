@@ -6453,7 +6453,7 @@ a:hover {
   filter: alpha(opacity=90);
 }
 .main-product .in-cart {
-  display: none;
+  background: #EEE;
 }
 .main-product .show-details {
   display: none;
