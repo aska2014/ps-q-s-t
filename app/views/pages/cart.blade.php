@@ -2,7 +2,7 @@
 
 @section('body')
 
-<div class="cart">
+<div class="cart" ng-cloak>
 
     <div class="alert alert-success">
         <a href="#" class="close" data-dismiss="alert">&times;</a>
@@ -15,7 +15,7 @@
 
     <div ng-controller="CartController" class="cart-container">
 
-        <div class="table-responsive" ng-cloak ng-switch on="cart.isEmpty()">
+        <div class="table-responsive" ng-switch on="cart.isEmpty()">
 
             <div ng-switch-when="true" class="text-center" style="padding:40px;">
                 Your cart is empty. <a style="color:#900" href="{{ URL::route('home'); }}">Continue shopping</a>
