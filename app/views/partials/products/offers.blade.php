@@ -5,7 +5,7 @@
     <div class="first-column">
 
         @if($offer = $offerPositions->get('left_offer'))
-        <div class="flying-product">
+        <div class="flying-product" ng-controller="ProductController">
             <input type="hidden" ng-bind="product.id" value="{{ $offer->product->id }}"/>
             <div class="box-title"><a href="{{ URL::product($offer->product) }}">{{ $offer->title }}</a></div>
             <div class="body">
