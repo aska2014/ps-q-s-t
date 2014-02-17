@@ -13,7 +13,7 @@
     <file path="/Dummy.txt" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392588207672" ignored="false" />
     <file path="/composers.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392503673362" ignored="false" />
     <file path="/app.less" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392568682645" ignored="false" />
-    <file path="/header.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392650302142" ignored="false" />
+    <file path="/header.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392653771930" ignored="false" />
     <file path="/header.less" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392648518774" ignored="false" />
     <file path="$PROJECT_DIR$/public/app/css/header.css" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391697156119" ignored="false" />
     <file path="/offers.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392646075533" ignored="false" />
@@ -174,7 +174,7 @@
       <file leaf-file-name="routes.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="24" selection-start="1872" selection-end="1872" vertical-scroll-proportion="0.8707224">
+            <state line="53" column="4" selection-start="1675" selection-end="1675" vertical-scroll-proportion="0.8060837">
               <folding />
             </state>
           </provider>
@@ -199,12 +199,12 @@
         <option value="$PROJECT_DIR$/public/app/css/header.less" />
         <option value="$PROJECT_DIR$/public/app/js/controllers.js" />
         <option value="$PROJECT_DIR$/app/views/partials/products/offers.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/partials/static/header.blade.php" />
         <option value="$PROJECT_DIR$/app/views/pages/cart.blade.php" />
         <option value="$PROJECT_DIR$/public/app/js/services.js" />
         <option value="$PROJECT_DIR$/app/models/BaseModel.php" />
         <option value="$PROJECT_DIR$/app/views/templates/angular.blade.php" />
         <option value="$PROJECT_DIR$/app/views/pages/checkout.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/partials/static/header.blade.php" />
         <option value="$PROJECT_DIR$/app/routes.php" />
       </list>
     </option>
@@ -640,18 +640,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/partials/static/header.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="13" selection-start="1714" selection-end="1714" vertical-scroll-proportion="1.6806084">
-          <folding>
-            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#5;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#5;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/app/js/services.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="328" column="18" selection-start="9191" selection-end="9191" vertical-scroll-proportion="0.48979592">
@@ -712,9 +700,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/static/header.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="20" selection-start="1084" selection-end="1084" vertical-scroll-proportion="0.2889734">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="24" selection-start="1872" selection-end="1872" vertical-scroll-proportion="0.8707224">
+        <state line="53" column="4" selection-start="1675" selection-end="1675" vertical-scroll-proportion="0.8060837">
           <folding />
         </state>
       </provider>

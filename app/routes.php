@@ -52,15 +52,3 @@ Route::get('/message-to-user.html', array('as' => 'message-to-user', function()
 
     return Redirect::route('home');
 }));
-
-
-Route::get('/test', function()
-{
-    $country = \Location\Country::create(array(
-        'name' => 'United Arab Emirates',
-    ));
-
-    $country->cities()->create(array(
-        'name' => 'Dubai'
-    ));
-});

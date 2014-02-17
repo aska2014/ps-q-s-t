@@ -31,7 +31,7 @@
                 <a class="simple" href="{{ URL::route('shopping-cart') }}">
                     <span class="glyphicon glyphicon-shopping-cart"></span>
                     Shopping cart<br />
-                    <b>@{{ cart.totalItems() }}</b> <strong>items</strong>
+                    <b ng-cloak>@{{ cart.totalItems() }}</b> <strong>items</strong>
                 </a>
             </li>
         </ul>
