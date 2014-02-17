@@ -174,8 +174,10 @@
       <file leaf-file-name="cart.blade.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/pages/cart.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="48" selection-start="937" selection-end="937" vertical-scroll-proportion="0.19883041">
-              <folding />
+            <state line="35" column="0" selection-start="1570" selection-end="1570" vertical-scroll-proportion="0.76218325">
+              <folding>
+                <element signature="n#style#0;n#strong#1;n#p#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -712,8 +714,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pages/cart.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="48" selection-start="937" selection-end="937" vertical-scroll-proportion="0.19883041">
-          <folding />
+        <state line="35" column="0" selection-start="1570" selection-end="1570" vertical-scroll-proportion="0.76218325">
+          <folding>
+            <element signature="n#style#0;n#strong#1;n#p#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
