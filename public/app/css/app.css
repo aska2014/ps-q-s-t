@@ -6457,7 +6457,14 @@ a:hover {
   filter: alpha(opacity=90);
 }
 .main-product .in-cart {
-  background: #EEE;
+  background: url('../img/shopping-cart-yellow.jpg');
+  width: 210px;
+  height: 50px;
+  cursor: pointer;
+}
+.main-product .in-cart:hover {
+  opacity: 0.9;
+  filter: alpha(opacity=90);
 }
 .main-product .show-details {
   display: none;
@@ -6688,6 +6695,16 @@ a:hover {
   cursor: pointer;
 }
 .add-to-cart-yellow:hover {
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+}
+.shopping-cart-yellow {
+  background: url('../img/shopping-cart-yellow.jpg');
+  width: 210px;
+  height: 50px;
+  cursor: pointer;
+}
+.shopping-cart-yellow:hover {
   opacity: 0.9;
   filter: alpha(opacity=90);
 }

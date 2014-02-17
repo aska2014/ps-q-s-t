@@ -14,10 +14,13 @@ angular.module('qbrando.directives', [])
             },
             link: function(scope, element, attrs) {
                 element.css('cursor', 'pointer');
-
                 element.on('click', function()
                 {
-                    window.location.href = scope.url;
+                    var url;
+                    if(scope.url) url = scope.url;
+                    else          url = $(element).find('a').first().attr('href');
+
+                    window.location.href = url;
                 });
             }
         }
@@ -114,7 +117,7 @@ angular.module('qbrando.directives', [])
                     if(val)
                     {
                         $(element).css('display', 'none');
-                        $(element).delay((val * interval) + 600)
+                        $(element).delay((val * interval) + 500)
                             .fadeTo('slow', 1);
                     }
                 });

@@ -6,7 +6,7 @@
             @include('partials.parts.img', array('product' => $product, 'size' => '230x180'))
         </div>
 
-        <div class="info slidedown" to-url="product.url">
+        <div class="info slidedown" to-url>
             <div class="title"><a href="{{ URL::product($product) }}">{{ $product->title }}</a></div>
             <div class="price">
                 @if($product->hasOfferPrice())

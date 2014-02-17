@@ -11,7 +11,7 @@
             <img class="img-responsive" src="{{ $product->getImage('main')->getLargest() }}" />
         </div>
 
-        <div class="info" to-url="product.url">
+        <div class="info" to-url>
             <div class="title"><a href="{{ URL::product($product) }}">{{ $product->title }}</a></div>
             <div class="price">
                 @if($product->hasOfferPrice())
