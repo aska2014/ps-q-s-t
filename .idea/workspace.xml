@@ -135,7 +135,7 @@
     <file path="/VisibleCategoryRepository.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392219358312" ignored="false" />
     <file path="/app.js" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392220041081" ignored="false" />
     <file path="/2014_02_12_230619_add_mass_offer_attributes.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392248277083" ignored="false" />
-    <file path="$PROJECT_DIR$/public/app/css/app.css" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392656559382" ignored="false" />
+    <file path="$PROJECT_DIR$/public/app/css/app.css" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392656589588" ignored="false" />
     <file path="/ModelNotFoundException.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392396584736" ignored="false" />
     <file path="/body.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392464795515" ignored="false" />
     <file path="/info.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392464682422" ignored="false" />
@@ -152,7 +152,7 @@
     <file path="/img.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392645410948" ignored="false" />
     <file path="/normal_img.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392564601102" ignored="false" />
     <file path="/BackupDatabaseCommand.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392636674196" ignored="false" />
-    <file path="$PROJECT_DIR$/public/app/css/offers.css" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392656559382" ignored="false" />
+    <file path="$PROJECT_DIR$/public/app/css/offers.css" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392656603961" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,7 +202,7 @@
       <file leaf-file-name="offers.less" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/app/css/offers.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="32" selection-start="1782" selection-end="1782" vertical-scroll-proportion="0.7916667">
+            <state line="90" column="17" selection-start="1767" selection-end="1767" vertical-scroll-proportion="0.6992754">
               <folding />
             </state>
           </provider>
@@ -687,7 +687,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/app/css/offers.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="32" selection-start="1782" selection-end="1782" vertical-scroll-proportion="0.7916667">
+        <state line="90" column="17" selection-start="1767" selection-end="1767" vertical-scroll-proportion="0.6992754">
           <folding />
         </state>
       </provider>
