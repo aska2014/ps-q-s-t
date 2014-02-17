@@ -40,6 +40,7 @@
                     <td class="action-col" width="10%">
                     <span class="btn-group">
                         <a href="#{{ url.elementView('order', 'one/' + order.id) }}" class="btn btn-small"><i class="icon-search"></i></a>
+                        <a ng-click="delete($index)" class="btn btn-small"><i class="icon-trash"></i></a>
                     </span>
                     </td>
                 </tr>
