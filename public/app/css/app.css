@@ -6129,6 +6129,10 @@ a:hover {
   border-left: 8px solid #EE3D26 !important;
   border-bottom: 1px solid #DDD !important;
   border-right: 2px solid #333 !important;
+  font-family: Verdana !important;
+}
+.textdn span {
+  color: #ce374a;
 }
 .grid-products {
   margin-left: -15px;

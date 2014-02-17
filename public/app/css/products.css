@@ -1,5 +1,5 @@
-NameError: .make-row is undefined in D:\Projects\QBrando\new_www\public\app\css\products.less on line 12, column 3:
-11 
-12   .make-row();
-13   background: #FFF;
+NameError: variable @special-font-color is undefined in D:\Projects\QBrando\new_www\public\app\css\products.less on line 8, column 14:
+7   border-right:2px solid #333 !important;
+8   span{color:@special-font-color}
+9   font-family: Verdana !important;
 

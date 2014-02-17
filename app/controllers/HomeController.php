@@ -20,7 +20,7 @@ class HomeController extends BaseController {
 	{
         $products = $this->products->topSales()->unique()->take(static::PRODUCTS_PER_CAROUSEL)->get();
 
-        $carousel = new Carousel('Top sales of this month', $products);
+        $carousel = new Carousel('Top sales for this month', $products);
 
         return View::make('pages.home', compact('carousel'));
 	}
