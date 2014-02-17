@@ -6316,6 +6316,9 @@ a:hover {
 .fancy-products .small-product .buttons a {
   font-size: 9px;
 }
+.fancy-products .small-product a:hover {
+  text-decoration: none;
+}
 .fancy-products .small-product img {
   width: 179px;
   height: 120px;
