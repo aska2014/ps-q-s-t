@@ -1,5 +1,5 @@
-NameError: .make-row is undefined in D:\Projects\QBrando\new_www\public\app\css\offers.less on line 2, column 3:
-1 .main-offers{
-2   .make-row();
-3 
+ParseError: Unrecognised input in D:\Projects\QBrando\new_www\public\app\css\offers.less on line 91, column 3:
+90     a:hover{text-decoration: none;}
+91   @special-font; font-size:13px;
+92   }
 
