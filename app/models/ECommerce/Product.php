@@ -45,6 +45,14 @@ class Product extends \BaseModel {
 
     /**
      * @param $query
+     */
+    public function scopeMix($query)
+    {
+        return $query;
+    }
+
+    /**
+     * @param $query
      * @param $ids
      * @return mixed
      */

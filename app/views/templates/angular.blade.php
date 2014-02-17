@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <title>Qbrando | Online shop for luxury in Qatar</title>
-
+    <link href='http://fonts.googleapis.com/css?family=Frijole' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{{ URL::asset('app/css/app.css') }}"/>
+
 
     <link rel="icon" href="{{ URL::asset('favicon.ico') }}" type="image/x-icon"/>
     <link rel="shortcut icon" href="{{ URL::asset('favicon.ico') }}" type="image/x-icon"/>

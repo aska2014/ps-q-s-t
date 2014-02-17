@@ -6591,6 +6591,8 @@ a:hover {
   text-transform: uppercase;
   background: #CE374A;
   color: #FFF;
+  font-family: 'Frijole', cursive;
+  font-size: 14px;
 }
 .flying-product img {
   margin: 0px auto;
@@ -6620,6 +6622,8 @@ a:hover {
   background: #642a59;
   color: #FFF;
   font-size: 20px;
+  font-family: 'Frijole', cursive;
+  font-size: 14px;
 }
 .flying-big-product .body {
   background: #FFF;
