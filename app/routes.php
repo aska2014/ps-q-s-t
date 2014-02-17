@@ -56,67 +56,11 @@ Route::get('/message-to-user.html', array('as' => 'message-to-user', function()
 
 Route::get('/test', function()
 {
-    throw new Exception("TEST TEST TES");
-});
+    $country = \Location\Country::create(array(
+        'name' => 'United Arab Emirates',
+    ));
 
-Route::get('/convert', function()
-{
-    exit();
-    // Convert categories
-    foreach(Category::on('remote')->get() as $category)
-    {
-        Category::create($category->getAttributes());
-    }
-
-    // Convert brands
-    foreach(Brand::on('remote')->get() as $brand)
-    {
-        Brand::create($brand->getAttributes());
-    }
-
-
-    // Convert products
-    foreach(Product::on('remote')->get() as $product)
-    {
-        $price = DB::connection('remote')->table('prices')->where('id', $product->price_id)->pluck('value');
-
-        $p = new Product(array(
-            'id' => $product->id,
-            'title' => $product->title ?: '',
-            'description' => $product->description ?: '',
-            'model' => $product->model ?: '',
-            'gender' => $product->gender ?: '',
-            'price' => $price,
-            'category_id' => $product->category_id,
-            'brand_id' => $product->brand_id,
-            'created_at' => $product->created_at,
-            'updated_at' => $product->updated_at
-        ));
-
-        $p->save();
-    }
-
-
-    // Convert images
-    foreach(Image::on('remote')->get() as $image)
-    {
-        Image::create($image->getAttributes());
-    }
-
-    // Convert versions
-    foreach(\Kareem3d\Images\Version::on('remote')->get() as $image)
-    {
-        \Kareem3d\Images\Version::create($image->getAttributes());
-    }
-
-    foreach(\Offers\ProductOffer::on('remote')->get() as $offer)
-    {
-        if($offer->discount_percentage > 0)
-        {
-            \Offers\ProductOffer::create(array(
-                'discount_percentage' => $offer->discount_percentage,
-                'product_id' => $offer->product_id
-            ));
-        }
-    }
+    $country->cities()->create(array(
+        'name' => 'Dubai'
+    ));
 });

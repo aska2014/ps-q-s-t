@@ -45,7 +45,8 @@
                     <select class="form-control" id="location-country"
                             ng-model="location.country"
                             required
-                            ng-options="country.name for country in countries">
+                            ng-options="country.name for country in countries"
+                            ng-change="location.city = location.country.cities[0].id">
                         <option value="">Select country</option>
                     </select>
                 </div>
@@ -58,7 +59,6 @@
                             name="Location[city_id]"
                             required
                             ng-disabled="!location.country">
-                        <option value="">Select city</option>
                         <option ng-repeat="city in location.country.cities" value="@{{ city.id }}">@{{ city.name }}</option>
                     </select>
 
