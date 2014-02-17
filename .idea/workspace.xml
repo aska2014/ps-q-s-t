@@ -12,7 +12,7 @@
     <file path="/angular.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392652605244" ignored="false" />
     <file path="/Dummy.txt" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392654791773" ignored="false" />
     <file path="/composers.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392503673362" ignored="false" />
-    <file path="/app.less" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392655815415" ignored="false" />
+    <file path="/app.less" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392656853321" ignored="false" />
     <file path="/header.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392653771930" ignored="false" />
     <file path="/header.less" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392648518774" ignored="false" />
     <file path="$PROJECT_DIR$/public/app/css/header.css" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391697156119" ignored="false" />
@@ -59,7 +59,7 @@
     <file path="/2014_02_06_210208_create_mass_offers_table.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392472244507" ignored="false" />
     <file path="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391727605238" ignored="false" />
     <file path="/migrate-all.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391727698794" ignored="false" />
-    <file path="/Product.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392656256699" ignored="false" />
+    <file path="/Product.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392656905947" ignored="false" />
     <file path="/Category.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392477931128" ignored="false" />
     <file path="/Bran.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391728668379" ignored="false" />
     <file path="/Price.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392635008330" ignored="false" />
@@ -135,7 +135,7 @@
     <file path="/VisibleCategoryRepository.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392219358312" ignored="false" />
     <file path="/app.js" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392220041081" ignored="false" />
     <file path="/2014_02_12_230619_add_mass_offer_attributes.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392248277083" ignored="false" />
-    <file path="$PROJECT_DIR$/public/app/css/app.css" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392656589588" ignored="false" />
+    <file path="$PROJECT_DIR$/public/app/css/app.css" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392656874006" ignored="false" />
     <file path="/ModelNotFoundException.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392396584736" ignored="false" />
     <file path="/body.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392464795515" ignored="false" />
     <file path="/info.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392464682422" ignored="false" />
@@ -152,7 +152,7 @@
     <file path="/img.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392645410948" ignored="false" />
     <file path="/normal_img.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392564601102" ignored="false" />
     <file path="/BackupDatabaseCommand.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392636674196" ignored="false" />
-    <file path="$PROJECT_DIR$/public/app/css/offers.css" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392656603961" ignored="false" />
+    <file path="$PROJECT_DIR$/public/app/css/offers.css" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392656893471" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,28 +181,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Product.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/ECommerce/Product.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="22" selection-start="880" selection-end="880" vertical-scroll-proportion="-6.5384617">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="app.less" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/app/css/app.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="84" column="15" selection-start="1617" selection-end="1617" vertical-scroll-proportion="0.0">
+            <state line="7" column="19" selection-start="139" selection-end="139" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="offers.less" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="offers.less" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/app/css/offers.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="17" selection-start="1767" selection-end="1767" vertical-scroll-proportion="0.6992754">
+            <state line="39" column="0" selection-start="616" selection-end="616" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Product.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/models/ECommerce/Product.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="50" column="43" selection-start="901" selection-end="901" vertical-scroll-proportion="0.3489279">
               <folding />
             </state>
           </provider>
@@ -230,10 +230,10 @@
         <option value="$PROJECT_DIR$/app/views/partials/products/carousel.blade.php" />
         <option value="$PROJECT_DIR$/app/views/pages/home.blade.php" />
         <option value="$PROJECT_DIR$/app/controllers/HomeController.php" />
-        <option value="$PROJECT_DIR$/app/models/ECommerce/Product.php" />
         <option value="$PROJECT_DIR$/app/views/templates/angular.blade.php" />
         <option value="$PROJECT_DIR$/public/app/css/app.less" />
         <option value="$PROJECT_DIR$/public/app/css/offers.less" />
+        <option value="$PROJECT_DIR$/app/models/ECommerce/Product.php" />
       </list>
     </option>
   </component>
@@ -506,7 +506,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.025553662" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.015332198" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.015332198" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -648,26 +648,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="64" selection-start="381" selection-end="381" vertical-scroll-proportion="-12.076923">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/templates/angular.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="0" selection-start="368" selection-end="368" vertical-scroll-proportion="-1.1072797">
           <folding>
             <marker date="1392656414846" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/ECommerce/Product.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="22" selection-start="880" selection-end="880" vertical-scroll-proportion="-6.5384617">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -678,16 +664,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/css/app.less">
+    <entry file="file://$PROJECT_DIR$/public/app/css/offers.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="15" selection-start="1617" selection-end="1617" vertical-scroll-proportion="0.0">
+        <state line="39" column="0" selection-start="616" selection-end="616" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/css/offers.less">
+    <entry file="file://$PROJECT_DIR$/public/app/css/app.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="17" selection-start="1767" selection-end="1767" vertical-scroll-proportion="0.6992754">
+        <state line="7" column="19" selection-start="139" selection-end="139" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="64" selection-start="381" selection-end="381" vertical-scroll-proportion="-12.076923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/ECommerce/Product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="43" selection-start="901" selection-end="901" vertical-scroll-proportion="0.3489279">
           <folding />
         </state>
       </provider>

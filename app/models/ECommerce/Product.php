@@ -48,7 +48,7 @@ class Product extends \BaseModel {
      */
     public function scopeMix($query)
     {
-        return $query;
+        return $query->orderBy('id', 'DESC');
     }
 
     /**
