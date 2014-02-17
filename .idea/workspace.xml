@@ -10,7 +10,7 @@
     <file path="/home.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392568895930" ignored="false" />
     <file path="/dummy.xml" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392650302674" ignored="false" />
     <file path="/angular.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392652605244" ignored="false" />
-    <file path="/Dummy.txt" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392588207672" ignored="false" />
+    <file path="/Dummy.txt" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392654791773" ignored="false" />
     <file path="/composers.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392503673362" ignored="false" />
     <file path="/app.less" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392568682645" ignored="false" />
     <file path="/header.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392653771930" ignored="false" />
@@ -37,7 +37,7 @@
     <file path="/cart.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392651777934" ignored="false" />
     <file path="/cart.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391684401591" ignored="false" />
     <file path="/cart.less" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392647651807" ignored="false" />
-    <file path="/checkout.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392653347006" ignored="false" />
+    <file path="/checkout.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392654956733" ignored="false" />
     <file path="/checkout.less" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391693394999" ignored="false" />
     <file path="/buttons.less" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392638575888" ignored="false" />
     <file path="/directives.js" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392646487866" ignored="false" />
@@ -171,10 +171,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="all.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/freak/views/order/all.php">
+      <file leaf-file-name="checkout.blade.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/pages/checkout.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="105" selection-start="1934" selection-end="1934" vertical-scroll-proportion="0.49707603">
+            <state line="72" column="49" selection-start="3550" selection-end="3550" vertical-scroll-proportion="0.46978557">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="services.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/app/js/services.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="492" column="26" selection-start="14192" selection-end="14205" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -202,10 +211,10 @@
         <option value="$PROJECT_DIR$/public/app/js/services.js" />
         <option value="$PROJECT_DIR$/app/models/BaseModel.php" />
         <option value="$PROJECT_DIR$/app/views/templates/angular.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/pages/checkout.blade.php" />
         <option value="$PROJECT_DIR$/app/views/partials/static/header.blade.php" />
         <option value="$PROJECT_DIR$/app/routes.php" />
         <option value="$PROJECT_DIR$/app/freak/views/order/all.php" />
+        <option value="$PROJECT_DIR$/app/views/pages/checkout.blade.php" />
       </list>
     </option>
   </component>
@@ -289,28 +298,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="freak" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="new_www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="new_www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="freak" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -329,41 +316,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="freak" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="order" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="new_www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="new_www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="freak" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mass_offer" />
+              <option name="myItemId" value="pages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -542,13 +499,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/js/services.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="328" column="18" selection-start="9191" selection-end="9191" vertical-scroll-proportion="0.48979592">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pages/cart.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="35" column="0" selection-start="1570" selection-end="1570" vertical-scroll-proportion="1.159844">
@@ -588,13 +538,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pages/checkout.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="85" selection-start="2502" selection-end="2502" vertical-scroll-proportion="0.79532164">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/app/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="53" column="24" selection-start="1413" selection-end="1413" vertical-scroll-proportion="0.030797102">
@@ -625,7 +568,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/freak/views/order/all.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="105" selection-start="1934" selection-end="1934" vertical-scroll-proportion="0.49707603">
+        <state line="44" column="25" selection-start="1988" selection-end="1988" vertical-scroll-proportion="0.5633528">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/js/services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="492" column="26" selection-start="14192" selection-end="14205" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pages/checkout.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="49" selection-start="3550" selection-end="3550" vertical-scroll-proportion="0.46978557">
           <folding />
         </state>
       </provider>

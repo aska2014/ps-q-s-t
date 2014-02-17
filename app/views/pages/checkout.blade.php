@@ -70,6 +70,13 @@
                 </div>
 
             </div>
+            <p class="text-left text-danger price">
+                You are about to create an order with <strong ng-bind="cart.totalItems() + ' items'"></strong> and total cost:
+                <strong class="price" ng-bind="cart.afterOfferPrice() | currency:currency"></strong>
+                <span ng-show="cart.hasOfferPrice()">instead of
+                    <span class="before-price" ng-bind="cart.beforeOfferPrice() | currency:currency"></span>
+                </span>
+            </p>
 
             <div class="buttons text-right">
     <!--            <button type="submit" class="fancy-yellow-btn"><span class="glyphicon glyphicon-arrow-left"></span> Shopping cart</button>-->
