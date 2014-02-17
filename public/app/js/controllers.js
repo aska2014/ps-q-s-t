@@ -51,10 +51,7 @@ angular.module('qbrando.controllers', ['qbrando.services']).
 
         $scope.timer = Timer;
 
-        $scope.timerFinishAt = function(date)
-        {
-            $scope.timer.finishAt(date);
-        }
+        $scope.timer.finishAt($scope.massOffer.end_date);
     }])
 
 
@@ -63,7 +60,11 @@ angular.module('qbrando.controllers', ['qbrando.services']).
     }])
 
 
-    .controller('CartController', ['$scope', 'Cart', 'Products', function ($scope, Cart, Products) {
+    .controller('CartController', ['$scope', 'Cart', 'Products', 'Timer', function ($scope, Cart, Products, Timer) {
+
+        $scope.timer = Timer;
+
+        $scope.timer.finishAt($scope.massOffer.end_date);
 
         Products.loadProductsFromItems(Cart.getItems(), function(products)
         {

@@ -19,7 +19,14 @@
                     <a href="#" class="close" data-dismiss="alert">&times;</a>
 
                     <p>
-                        <strong>Nice timing!</strong> @{{ massOffer.description }}<br/>
+                        <strong>Nice timing!</strong> @{{ massOffer.description }}<br/><Br />
+                        This offer will end in:
+                        <strong style="color:#F33;">
+                            <span ng-hide="timer.days == 0">@{{ timer.days }} days :</span>
+                            <span ng-hide="timer.days == 0 && timer.hours == 0">@{{ timer.hours }} hours :</span>
+                            <span ng-hide="timer.days == 0 && timer.hours == 0 && timer.minutes == 0">@{{ timer.minutes}} minutes :</span>
+                            <span>@{{ timer.seconds }} seconds</span>
+                        </strong>
                     </p>
                 </div>
                 <table class="table">

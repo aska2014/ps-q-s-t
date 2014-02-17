@@ -26,7 +26,7 @@
 
         <div class="separator"></div>
 
-        <div class="offer-timer" q-fading-init="2" ng-cloak ng-controller="OfferTimerController" ng-init="timerFinishAt(massOffer.end_date)">
+        <div class="offer-timer" q-fading-init="2" ng-cloak ng-controller="OfferTimerController">
             <div class="box-title"><a href="#" title="@{{ massOffer.description }}">@{{ massOffer.title }} <span>limited</span></a></div>
             <div class="body">
                 <div class="timer">
