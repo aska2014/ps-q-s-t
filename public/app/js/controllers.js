@@ -59,33 +59,30 @@ angular.module('qbrando.controllers', ['qbrando.services']).
 
 
 
-    .controller('ProductController', ['$scope', '$element', 'Products', 'Extractor', function ($scope, $element, Products, Extractor) {
+    .controller('ProductController', ['$scope', function ($scope) {
 
-        $scope.product = Extractor($element);
-
-        // Add these information to partial information..
-        Products.addPartialInfo($scope.product);
     }])
 
 
     .controller('CartController', ['$scope', 'Cart', 'Products', function ($scope, Cart, Products) {
 
-        Products.loadMultipleFullInfo(Cart.getItems(), function(products)
+        Products.loadProductsFromItems(Cart.getItems(), function(products)
         {
             $scope.products = products;
-
-            console.log($scope.products);
         });
 
         $scope.removeItem = function(index)
         {
+            // Remove products from array
             $scope.products.splice(index, 1);
 
+            // Remove from cart
             Cart.removeItem(index);
         }
 
         $scope.updateQuantity = function(index)
         {
+            // Update quantity
             Cart.updateItem(index, $scope.products[index].quantity);
         }
     }])
@@ -99,11 +96,6 @@ angular.module('qbrando.controllers', ['qbrando.services']).
 
 
     .controller('CarouselController', ['$element', function($element) {
-    }])
-
-
-    .controller('ProductsController', ['$scope', function ($scope) {
-
     }])
 
 

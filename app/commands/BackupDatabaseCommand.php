@@ -53,6 +53,8 @@ class BackupDatabaseCommand extends Command {
             $tableData = $this->convertToArray(DB::connection('remote')->select('SELECT * FROM '.$table));
 
             DB::table(str_replace('krq_', '',$table))->insert($tableData);
+
+            $this->info('Table '.$table.' has been filled');
         }
 	}
 

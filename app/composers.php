@@ -42,10 +42,10 @@ App::bind('Cart\ItemFactoryInterface', 'Cart\CookieFactory');
 
 App::bind('Cart\Cart', function( $app )
 {
-    return new \Cart\Cart($app->make('Offers\ProductOffer'),
-                          $app->make('Offers\MassOffer')->current(new DateTime())->first(),
-                          $app->make('Cart\ItemFactoryInterface')->makeItems(),
-                          $app->make('Cart\ItemFactoryInterface')->makeGifts());
+    return new \Cart\Cart($app->make('Cart\ItemFactoryInterface')->makeItems(),
+                          $app->make('Cart\ItemFactoryInterface')->makeGifts(),
+                          $app->make('Offers\ProductOffer'),
+                          $app->make('Offers\MassOffer')->current(new DateTime())->first());
 });
 
 App::singleton('VisibleProductRepository', function()

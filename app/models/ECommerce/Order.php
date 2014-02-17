@@ -33,7 +33,7 @@ class Order extends \BaseModel {
             'user_info_id' => $userInfo->id,
             'location_id' => $location->id,
             // Round to the nearest two values
-            'price' => round($cart->getTotalPrice(), 2),
+            'price' => $cart->getTotalPrice()->value(),
         ));
 
         $order->addProducts($cart->getItems());

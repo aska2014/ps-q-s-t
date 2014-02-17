@@ -18,7 +18,6 @@ angular.module('qbrando.services', []).
             seconds: 0,
             stopped: false,
 
-
             finishAt: function(date) {
 
                 var today = new Date();
@@ -123,43 +122,36 @@ angular.module('qbrando.services', []).
     factory('Products', ['$http', 'Helpers', function($http, Helpers) {
 
         // Array of full information products..
-        var fullInfoProducts = [];
+        var loadedProducts = [];
 
-        // Partial including (title, image, price)
-        var partialInfoProducts = [];
-
-        function search( products, id )
+        /**
+         * Search in loaded products
+         * @param id
+         * @returns {*}
+         */
+        function search( id )
         {
-            for(var i = 0;i < products.length; i++)
+            for(var i = 0;i < loadedProducts.length; i++)
             {
-                if(products[i].id == id) return products[i];
+                if(loadedProducts[i].id == id) return loadedProducts[i];
             }
 
             return null;
         }
 
-        function requestMultiple(items, callback)
+        /**
+         * Request multiple products
+         * @param ids
+         * @param callback
+         * @todo search if they were loaded first
+         */
+        function requestMultiple(ids, callback)
         {
-            var ids = '';
-
-            for(var i = 0; i < items.length; i++)
-            {
-                if(i == items.length - 1)
-                    ids += items[i].id;
-
-                else
-                    ids += items[i].id + ',';
-            }
-
-            $http.get('product/multiple/' + ids).success(function(products) {
-
-                for(var i = 0;i < products.length; i++)
-                {
-                    products[i] = Helpers.merge_options(products[i], items[i]);
-                }
+            // Make a single request to get all products
+            $http.get('product/multiple/' + ids.concat()).success(function(products) {
 
                 // Push the retrieved product to the loaded products
-                fullInfoProducts.push(products);
+                loadedProducts.push(products);
 
                 callback(products);
 
@@ -169,127 +161,65 @@ angular.module('qbrando.services', []).
             });
         }
 
+        /**
+         * Request one product
+         * @param id
+         * @param callback
+         */
         function request( id, callback )
         {
-            $http.get('product/one/' + id).success(function(product) {
+            // First search in loaded products
+            var product = search(id);
 
-                // Push the retrieved product to the loaded products
-                fullInfoProducts.push(product);
 
-                callback(product);
+            // If product exists
+            if(product) callback(product);
 
-            }).error(function()
-            {
-                alert('Something went wrong while trying to get the product information');
-            });
+            // If product hasn't been loaded yet then go request it
+            else {
+
+                $http.get('product/one/' + id).success(function(product) {
+                    // Push the retrieved product to the loaded products
+                    loadedProducts.push(product);
+
+                    callback(product);
+
+                }).error(function()
+                {
+                    alert('Something went wrong while trying to get the product information');
+                });
+            }
         }
 
         return {
 
-
-            'need': function(products, attributes, callback)
+            'loadProduct': function(id, callback)
             {
-                var loadedProducts = [];
-                var dontLoadProduct = false;
+                request(id, callback)
+            },
 
-                // Loop through all products
-                for(var i = 0; i < products.length; i++)
+
+            'loadProductsFromIds': function(ids, callback)
+            {
+                requestMultiple(ids, callback);
+            },
+
+            'loadProductsFromItems': function(items, callback)
+            {
+                // Extract ids from cart items
+                var ids = [];
+                for(var i = 0; i < items.length; i++) ids.push(items[i].id);
+
+                // Request multiple products with ids
+                requestMultiple(ids, function(products)
                 {
-                    // Check if they have all needed attributes
-                    for(var j = 0; j < attributes.length; j++)
+                    // Merge product options with the given items
+                    for(var i = 0;i < products.length; i++)
                     {
-                        // If they dont have at least one attribute
-                        if(! products[i].hasOwnProperty(attributes[j]))
-                        {
-                            // Get full information about this product
-                            this.mergeFullInfo(products[i], function(product) {
-
-                                // Product is loaded then append it to loaded products
-                                loadedProducts.push(product);
-
-                                // If finished loading all products then callback
-                                if(loadedProducts.length >= products.length)
-                                {
-                                    callback(loadedProducts);
-                                }
-                            });
-
-                            // Don't load this product
-                            dontLoadProduct = true;
-                            break;
-                        }
+                        products[i] = Helpers.merge_options(products[i], items[i]);
                     }
 
-                    if(! dontLoadProduct) loadedProducts.push(products[i]);
-                }
-
-                if(loadedProducts.length >= products.length)
-                {
-                    callback(loadedProducts);
-                }
-            },
-
-            'addPartialInfo': function(product)
-            {
-                partialInfoProducts.push(product);
-            },
-
-            /**
-             * @param id
-             * @param callback
-             * @returns product
-             */
-            'getPartialInfo': function(id, callback)
-            {
-                // Search in full information products
-                var product = search(fullInfoProducts, id);
-                if(product == null)
-                {
-                    // Search partial information
-                    product = search(partialInfoProducts, id);
-
-                    if(product == null)
-                    {
-                        return request(id, callback);
-                    }
-                }
-
-                callback(product);
-
-                return product;
-            },
-
-            /**
-             * @param id
-             * @param callback
-             * @returns product
-             */
-            'getFullInfo': function(id, callback)
-            {
-                // First try to get the product from the full loaded products
-                var product = search(fullInfoProducts, id);
-                if(product == null)
-                {
-                    return request(id, callback);
-                }
-
-                callback(product);
-
-                return product;
-            },
-
-
-            'loadMultipleFullInfo': function(items, callback)
-            {
-                requestMultiple(items, callback);
-            },
-
-
-            'mergeFullInfo': function(product, callback)
-            {
-                this.getFullInfo(product.id, function(new_product) {
-
-                    callback(Helpers.merge_options(product, new_product));
+                    callback(products);
                 });
             }
         };
@@ -302,7 +232,7 @@ angular.module('qbrando.services', []).
             title: '',
             description: '',
             end_date: '',
-            start_quantity: 0,
+            start_quantity: 1000,
             start_price: 0,
             max_gift_price: 0,
             gifts_per_product: 0,
@@ -326,10 +256,9 @@ angular.module('qbrando.services', []).
                 return this.doesOfferApplies(items) ? Math.floor(items.length * this.gifts_per_product) : 0;
             },
 
-
-            calculateDiscountPercentage: function(items)
+            calculatePriceFrom: function(price)
             {
-                return this.doesOfferApplies(items) ? this.discount_percentage : 0;
+                return price * (1 - (this.discount_percentage / 100));
             },
 
 
@@ -340,7 +269,7 @@ angular.module('qbrando.services', []).
                 for(var i = 0; i < items.length; i ++)
                 {
                     quantity += items[i].quantity;
-                    price    += items[i].price;
+                    price    += items[i].price * items[i].quantity;
                 }
 
                 return quantity >= this.start_quantity && price >= this.start_price;
@@ -387,7 +316,7 @@ angular.module('qbrando.services', []).
                     // Push it to the array if it's new
                     else
                     {
-                        item.quantity = quantity;
+                        console.log(item);
 
                         items.push({
                             id: item.id,
@@ -562,11 +491,17 @@ angular.module('qbrando.services', []).
             //--------------------------- Price calculations --------------------------------//
 
             'hasOfferPrice': function() {
+
                 return MassOffer.doesOfferApplies(this.getItems());
             },
             'afterOfferPrice': function() {
 
-                return this.calculateTotalPrice(this.getItems()) * (1 - MassOffer.calculateDiscountPercentage(this.getItems()) / 100);
+                var total = this.beforeOfferPrice();
+
+                // If mass offer applies then calculate price from the total
+                if(MassOffer.doesOfferApplies(this.getItems())) total = MassOffer.calculatePriceFrom(total);
+
+                return total;
             },
 
             'beforeOfferPrice': function() {
@@ -624,85 +559,6 @@ angular.module('qbrando.services', []).
             }
         }
     })
-
-
-
-
-    .factory('Extractor', ['Price', function(Price)
-    {
-
-        var extract = function(name, $element, custom)
-        {
-            var the_element;
-
-            // If custom is defined
-            if(custom == 'price') {
-
-                the_element = $element.find('[ng-bind="' + name + ' | currency:currency"]');
-
-                if(the_element.length <= 0) return '';
-
-                return Price.getValue(the_element.html());
-            }
-
-            the_element = $element.find('[ng-bind="' + name + '"]');
-
-            if(the_element.length <= 0) return '';
-
-            if(custom) return the_element.attr(custom);
-
-            // Try to get the html first
-            var html = the_element.html();
-            if(html) return html;
-
-            // Try to get the value
-            var value = the_element.val();
-            if(value) return value;
-
-            // Try to get the src
-            var src = the_element.attr('src');
-            if(src) return src;
-
-            // Try to get data_src
-            var data_src = the_element.attr('data-src');
-            if(data_src) return data_src;
-
-            return '';
-        }
-
-        /**
-         * @param $element Angular element
-         * @return product object
-         */
-        return function($element) {
-
-            var attributes = ['id', 'title', 'image', 'price', 'actual_price', 'model', 'gender', 'brand', 'url'];
-            var product = {};
-
-            var value = '';
-
-            for(var i = 0;i < attributes.length; i ++)
-            {
-                if(attributes[i] == 'price' || attributes[i] == 'actual_price')
-                {
-                    value = extract('product.' + attributes[i], $element, 'price');
-                }
-                else if(attributes[i] == 'url')
-                {
-                    value = extract('product.title', $element, 'href');
-                }
-                else
-                {
-                    value = extract('product.' + attributes[i], $element);
-                }
-
-                if(value != '') product[attributes[i]] = value;
-            }
-
-            return product;
-        }
-    }])
-
 
 
     .factory('Helpers', function()

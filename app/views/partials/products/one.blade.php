@@ -1,32 +1,31 @@
-<div class="main-product" ng-controller="ProductController">
-    <input type="hidden" ng-bind="product.id" value="{{ $product->id }}"/>
+<div class="main-product" ng-controller="ProductController" ng-init='product={{ $product->toCartJson() }}'>
     <div class="image">
-        <img ng-bind="product.image" class="img-responsive" src="{{ $product->getImage('main')->getLargest() }}" alt=""/>
+        <img class="img-responsive" src="{{ $product->getImage('main')->getLargest() }}" alt=""/>
     </div>
 
     <div class="info">
         <div class="row">
             <div class="key">Model: </div>
-            <div ng-bind="product.model" class="value">{{ $product->model }}</div>
+            <div class="value">{{ $product->model }}</div>
         </div>
         <div class="clearfix"></div>
         <div class="row">
             <div class="key">Brand: </div>
-            <div class="value"><a ng-bind="product.brand" href="{{ URL::brand($product->brand) }}">{{ $product->brand->name }}</a></div>
+            <div class="value"><a href="{{ URL::brand($product->brand) }}">{{ $product->brand->name }}</a></div>
         </div>
         <div class="clearfix"></div>
         <div class="row">
             <div class="key">Gender: </div>
-            <div ng-bind="product.gender" class="value">{{ $product->gender }}</div>
+            <div class="value">{{ $product->gender }}</div>
         </div>
         <div class="clearfix"></div>
         <div class="row">
             <div class="key">Price: </div>
             <div class="value price">
                 @if($product->hasOfferPrice())
-                <span ng-bind="product.actual_price | currency:currency" class="before-price">{{ $product->getActualPrice() }}</span>
+                <span class="before-price">{{ $product->getActualPrice() }}</span>
                 @endif
-                <span ng-bind="product.price | currency:currency" class="actual-price">{{ $product->getOfferPrice() }}</span>
+                <span class="actual-price">{{ $product->getOfferPrice() }}</span>
             </div>
         </div>
 

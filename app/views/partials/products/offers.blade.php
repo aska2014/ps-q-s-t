@@ -5,20 +5,19 @@
     <div class="first-column">
 
         @if($offer = $offerPositions->get('left_offer'))
-        <div class="flying-product slidedown-info" q-fading-init="1" ng-controller="ProductController">
-            <input type="hidden" ng-bind="product.id" value="{{ $offer->product->id }}"/>
+        <div class="flying-product slidedown-info" q-fading-init="1" ng-controller="ProductController" ng-init='{{ $offer->product->toCartJson() }}'>
             <div class="box-title"><a href="{{ URL::product($offer->product) }}">{{ $offer->title }}</a></div>
             <div class="body">
                 <div class="image">
                     @include('partials.parts.img', array('product' => $offer->product, 'size' => '306x202'))
                 </div>
                 <div class="info" to-url="product.url">
-                    <div class="title"><a ng-bind="product.title" href="{{ URL::product($offer->product) }}">{{ $offer->product->title }}</a></div>
+                    <div class="title"><a href="{{ URL::product($offer->product) }}">{{ $offer->product->title }}</a></div>
                     <div class="price">
                         @if($offer->product->hasOfferPrice())
-                        <span ng-bind="product.actual_price | currency:currency" class="before-price">{{ $offer->product->getActualPrice() }}</span>
+                        <span class="before-price">{{ $offer->product->getActualPrice() }}</span>
                         @endif
-                        <span ng-bind="product.price | currency:currency" class="actual-price">{{ $offer->product->getOfferPrice() }}</span>
+                        <span class="actual-price">{{ $offer->product->getOfferPrice() }}</span>
                     </div>
                 </div>
             </div>
@@ -87,8 +86,8 @@
     <div class="third-column">
 
         @if($offer = $offerPositions->get('right_offer'))
-        <div class="flying-big-product" ng-controller="ProductController" q-fading-init="5">
-            <input type="hidden" ng-bind="product.id" value="{{ $offer->product->id }}"/>
+        <div class="flying-big-product" ng-controller="ProductController" q-fading-init="5" ng-init='product={{ $offer->product->toCartJson() }}'>
+            <input type="hidden" value="{{ $offer->product->id }}"/>
             <div class="box-title"><a href="{{ URL::product($offer->product) }}">{{ $offer->title }}</a></div>
             <div class="body">
                 <div class="image">
@@ -97,26 +96,26 @@
                 <div class="info">
                     <div class="row">
                         <div class="key">Model: </div>
-                        <div ng-bind="product.model" class="value">{{ $offer->product->model }}</div>
+                        <div class="value">{{ $offer->product->model }}</div>
                     </div>
                     <div class="clearfix"></div>
                     <div class="row">
                         <div class="key">Brand: </div>
-                        <div class="value"><a ng-bind="product.brand" href="{{ URL::brand($offer->product->brand) }}">{{ $offer->product->brand->name }}</a></div>
+                        <div class="value"><a href="{{ URL::brand($offer->product->brand) }}">{{ $offer->product->brand->name }}</a></div>
                     </div>
                     <div class="clearfix"></div>
                     <div class="row">
                         <div class="key">Gender: </div>
-                        <div ng-bind="product.gender" class="value">{{ $offer->product->gender }}</div>
+                        <div class="value">{{ $offer->product->gender }}</div>
                     </div>
                     <div class="clearfix"></div>
                     <div class="row">
                         <div class="key">Price: </div>
                         <div class="value price">
                             @if($offer->product->hasOfferPrice())
-                            <span ng-bind="product.actual_price | currency:currency" class="before-price">{{ $offer->product->getActualPrice() }}</span>
+                            <span class="before-price">{{ $offer->product->getActualPrice() }}</span>
                             @endif
-                            <span ng-bind="product.price | currency:currency" class="actual-price">{{ $offer->product->getOfferPrice() }}</span>
+                            <span class="actual-price">{{ $offer->product->getOfferPrice() }}</span>
                         </div>
                     </div>
                 </div>

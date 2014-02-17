@@ -58,4 +58,14 @@ class Item {
     {
         return $this->quantity;
     }
+
+    /**
+     * @return Price
+     */
+    public function getSubTotal()
+    {
+        $price = clone $this->getPrice();
+
+        return $price->multiply($this->getQuantity());
+    }
 }

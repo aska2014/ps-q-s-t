@@ -21,28 +21,31 @@ class MassOffer extends \DateRangeModel {
     protected $prices = array();
 
     /**
-     * @param $noOfProducts
-     * @param $noOfGifts
-     * @param Price $maximumPrice
+     * @param Item[] $items
+     * @param Item[] $gifts
      * @return bool
      */
-    public function validateGifts($noOfProducts, $noOfGifts, Price $maximumPrice)
+    public function validateGifts($items, $gifts)
     {
-        return $this->calculateNumberOfGifts($noOfProducts) >= $noOfGifts &&
+        foreach($gifts as $gift)
+        {
+            // If the maximum gift price defined is smaller than any of the gift prices then return false
+            if($this->getMaxGiftPrice()->smallerThan($gift->getPrice())) {
 
-                $this->getMaxGiftPrice()->compare($maximumPrice, function($p1, $p2) {
+                return false;
+            }
+        }
 
-                   return $p1 >= $p2;
-               });
+        return $this->calculateNumberOfGifts($items) >= count($gifts);
     }
 
     /**
-     * @param $count
+     * @param Item[] $items
      * @return int
      */
-    public function calculateNumberOfGifts($count)
+    public function calculateNumberOfGifts($items)
     {
-        return floor($this->gifts_per_product * $count);
+        return floor($this->gifts_per_product * count($items));
     }
 
     /**
@@ -51,16 +54,26 @@ class MassOffer extends \DateRangeModel {
      */
     public function appliesTo(array $items)
     {
-        return $this->start_quantity >= count($items);
+        $total = new Price(0);
+
+        foreach($items as $item)
+        {
+            $total->add($item->getSubTotal());
+        }
+
+        // If number of items greater than start quantity and total greater than or equal start price
+        return count($items) >= $this->start_quantity && $total->greaterThanOrEqual($this->getStartPrice());
     }
 
     /**
-     * @param $price
-     * @return float
+     * @param Price $price
+     * @return Price
      */
-    public function calculatePriceFrom($price)
+    public function calculatePriceFrom(Price $price)
     {
-        return $price * (1 - ($this->discount_percentage / 100));
+        $price = clone $price;
+
+        return $price->multiply(1 - ($this->discount_percentage / 100));
     }
 
     /**

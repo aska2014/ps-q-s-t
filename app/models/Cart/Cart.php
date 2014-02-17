@@ -32,7 +32,7 @@ class Cart {
      * @param array $items
      * @param array $gifts
      */
-    public function __construct(ProductOffer $productOffers, MassOffer $massOffer, array $items, array $gifts)
+    public function __construct(array $items, array $gifts, ProductOffer $productOffers, MassOffer $massOffer = null)
     {
         $this->massOffer = $massOffer;
         $this->productOffers = $productOffers;
@@ -49,6 +49,7 @@ class Cart {
     }
 
     /**
+     * @param array $items
      * @param array $items
      */
     public function setItems(array $items)
@@ -74,16 +75,26 @@ class Cart {
     }
 
     /**
+     * @return bool
+     */
+    public function hasGifts()
+    {
+        return count($this->gifts) > 0;
+    }
+
+    /**
      * @throws CartException
      * @return bool
      */
     public function hardValidate()
     {
-        $numberOfItems     = $this->getItemsQuantity();
-        $numberOfGifts     = $this->getGiftsQuantity();
-        $giftsMaximumPrice = $this->getGiftsMaximumPrice();
+        if(is_null($this->massOffer) && $this->hasGifts())
+        {
+            throw new CartException('We current don\'t have any special offers so you cant have gifts in your cart.');
+        }
 
-        if(! $this->massOffer->validateGifts($numberOfItems, $numberOfGifts, $giftsMaximumPrice))
+        // If there's mass offer and gift validation is false
+        elseif($this->massOffer && !$this->massOffer->validateGifts($this->getItems(), $this->getGifts()))
         {
             throw new CartException('Something went wrong while trying to validate gifts in the cart.');
         }
@@ -106,19 +117,22 @@ class Cart {
     }
 
     /**
-     * @return float
+     * @return Price
      */
     public function getTotalPrice()
     {
-        $price = 0;
+        $price = new Price(0);
 
+        // Add subtotals
         foreach($this->items as $item)
         {
-            $price += $item->getPrice()->value() * $item->getQuantity();
+            $price->add($item->getSubTotal());
         }
 
-        if($this->massOffer->appliesTo($this->items))
+        // Check if there's mass offer and it applies on this items
+        if($this->massOffer && $this->massOffer->appliesTo($this->items))
         {
+            // Calculate price from mass offer
             return $this->massOffer->calculatePriceFrom($price);
         }
 
@@ -139,29 +153,6 @@ class Cart {
         }
 
         return $quantity;
-    }
-
-    /**
-     * @return Price
-     */
-    protected function getGiftsMaximumPrice()
-    {
-        if(count($this->gifts) === 0) return new Price(0);
-
-        $maximum = $this->gifts[0]->getPrice();
-
-        for($i = 0; $i < count($this->gifts) - 1; $i++)
-        {
-            if($this->gifts[$i]->getPrice()->compare($maximum, function($p1, $p2)
-            {
-                return $p1 > $p2;
-            }))
-            {
-                $maximum = $this->gifts[$i]->getPrice();
-            }
-        }
-
-        return $maximum;
     }
 
 }

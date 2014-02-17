@@ -38,6 +38,7 @@ class Price {
      * @param $price
      * @return Price
      *
+     * @return $this
      * @todo Make sure they have the same currencies first
      */
     public function multiply( $price )
@@ -45,6 +46,87 @@ class Price {
         $this->value = $this->extractValue($price) * $this->value;
 
         return $this;
+    }
+
+    /**
+     * @param $price
+     * @return $this
+     */
+    public function add( $price )
+    {
+        $this->value = $this->extractValue($price) + $this->value;
+
+        return $this;
+    }
+
+    /**
+     * @param $price
+     * @return $this
+     */
+    public function subtract( $price )
+    {
+        $this->value = $this->extractValue($price) - $this->value;
+
+        return $this;
+    }
+
+    /**
+     * @param $price
+     * @return $this
+     */
+    public function divide( $price )
+    {
+        $this->value = $this->value / $price;
+
+        return $this;
+    }
+
+    /**
+     * @param Price $price
+     * @return bool
+     */
+    public function greaterThan(Price $price)
+    {
+        return $this->compare($price, function($p1, $p2)
+        {
+            return $p1 > $p2;
+        });
+    }
+
+    /**
+     * @param Price $price
+     * @return bool
+     */
+    public function greaterThanOrEqual(Price $price)
+    {
+        return $this->compare($price, function($p1, $p2)
+        {
+            return $p1 >= $p2;
+        });
+    }
+
+    /**
+     * @param Price $price
+     * @return bool
+     */
+    public function smallerThan(Price $price)
+    {
+        return $this->compare($price, function($p1, $p2)
+        {
+            return $p1 < $p2;
+        });
+    }
+
+    /**
+     * @param Price $price
+     * @return bool
+     */
+    public function smallerThanOrEqual(Price $price)
+    {
+        return $this->compare($price, function($p1, $p2)
+        {
+            return $p1 <= $p2;
+        });
     }
 
     /**

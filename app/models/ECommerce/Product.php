@@ -216,6 +216,17 @@ class Product extends \BaseModel {
     }
 
     /**
+     * @return string
+     */
+    public function toCartJson()
+    {
+        return json_encode(array(
+            'id' => $this->id,
+            'price' => $this->getOfferPrice()->value()
+        ));
+    }
+
+    /**
      * Defining relations
      */
     public function category(){ return $this->belongsTo(Category::getClass()); }

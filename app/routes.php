@@ -13,6 +13,12 @@ Route::get('/my-name-is-kareem3d-friends/{command}', function($command)
 })->where('command', '.*');
 
 
+Route::get('/test-remote-connection', function()
+{
+    DB::connection('remote')->select('SELECT 1');
+});
+
+
 Route::get('/', array('as' => 'home', 'uses' => 'HomeController@index'));
 Route::get('/shopping-cart.html', array('as' => 'shopping-cart', 'uses' => 'ShoppingCartController@index'));
 Route::get('/checkout.html', array('as' => 'checkout', 'uses' => 'ShoppingCartController@checkout'));
