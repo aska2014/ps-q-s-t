@@ -16,11 +16,7 @@ angular.module('qbrando.directives', [])
                 element.css('cursor', 'pointer');
                 element.on('click', function()
                 {
-                    var url;
-                    if(scope.url) url = scope.url;
-                    else          url = $(element).find('a').first().attr('href');
-
-                    window.location.href = url;
+                    window.location.href = scope.url;
                 });
             }
         }
@@ -50,13 +46,15 @@ angular.module('qbrando.directives', [])
                 {
                     if(cart.has(scope.product)) {
 
+                        var onclick = 'onclick="window.location.href=\'/shopping-cart.html\'"';
+
                         if(attrs.hasOwnProperty('noText')) {
 
-                            element.replaceWith('<div class="in-cart"></div>')
+                            element.replaceWith('<div class="in-cart" '+onclick+'></div>')
                         }
                         else {
 
-                            element.replaceWith('<div class="in-cart"><span class="glyphicon glyphicon-shopping-cart"></span> In Cart</div>')
+                            element.replaceWith('<div class="in-cart" '+onclick+'><span class="glyphicon glyphicon-shopping-cart"></span> In Cart</div>')
                         }
                     }
                 })
@@ -90,18 +88,15 @@ angular.module('qbrando.directives', [])
                 {
                     if(cart.has(scope.product)) {
 
+                        var onclick = 'onclick="window.location.href=\'' + scope.product.url + '\'"';
+
                         if(! attrs.hasOwnProperty('noText')) {
 
-                            element.replaceWith('<div class="show-details"><span class="glyphicon glyphicon-zoom-in"></span> Details</div>');
+                            element.replaceWith('<div class="show-details" '+onclick+'><span class="glyphicon glyphicon-zoom-in"></span> Details</div>');
                         }
                         else
                         {
-                            element.replaceWith('<div class="show-details"></div>');
-                        }
-
-                        if(scope.product.url)
-                        {
-                            element.attr('onclick', 'window.location.href="' + scope.product.url +'"');
+                            element.replaceWith('<div class="show-details" '+onclick+'></div>');
                         }
                     }
                 });

@@ -4,7 +4,7 @@
         @foreach($carousel->products as $product)
         <div class="item" ng-controller="ProductController" ng-init='product={{ $product->toCartJson() }}'>
             <img class="lazyOwl" data-src="{{ $product->getImage('main')->getNearest(250, 188) }}" alt="{{ $product->title }}">
-            <div class="item-info" to-url="">
+            <div class="item-info" to-url="product.url">
                 <div class="title"><a href="{{ URL::product($product) }}">{{ $product->title }}</a></div>
                 <div class="price">
                     @if($product->hasOfferPrice())

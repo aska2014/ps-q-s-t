@@ -222,7 +222,8 @@ class Product extends \BaseModel {
     {
         return json_encode(array(
             'id' => $this->id,
-            'price' => $this->getOfferPrice()->value()
+            'price' => $this->getOfferPrice()->value(),
+            'url' => URL::product($this)
         ));
     }
 

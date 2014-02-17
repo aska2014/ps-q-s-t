@@ -11,7 +11,7 @@
                 <div class="image">
                     @include('partials.parts.img', array('product' => $offer->product, 'size' => '306x202'))
                 </div>
-                <div class="info" to-url>
+                <div class="info" to-url="product.url">
                     <div class="title"><a href="{{ URL::product($offer->product) }}">{{ $offer->product->title }}</a></div>
                     <div class="price">
                         @if($offer->product->hasOfferPrice())
