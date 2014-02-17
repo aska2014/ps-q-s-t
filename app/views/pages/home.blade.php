@@ -6,7 +6,6 @@
 
     @include('partials.products.offers')
 
-    @include('partials.products.carousel')
 
     @include('partials.products.fancy')
 
