@@ -30,7 +30,7 @@
     <file path="/services.js" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392635990904" ignored="false" />
     <file path="/controllers.js" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392649336429" ignored="false" />
     <file path="/carousel.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392655064724" ignored="false" />
-    <file path="/fancy.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392646030082" ignored="false" />
+    <file path="/fancy.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392656971134" ignored="false" />
     <file path="/grid.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392646041733" ignored="false" />
     <file path="/product.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391679811817" ignored="false" />
     <file path="/one.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392495568571" ignored="false" />
@@ -172,38 +172,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="HomeController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/HomeController.php">
+      <file leaf-file-name="fancy.blade.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/partials/products/fancy.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="64" selection-start="381" selection-end="381" vertical-scroll-proportion="-12.076923">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.less" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/app/css/app.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="19" selection-start="139" selection-end="139" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="offers.less" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/app/css/offers.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="0" selection-start="616" selection-end="616" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Product.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/models/ECommerce/Product.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="43" selection-start="901" selection-end="901" vertical-scroll-proportion="0.3489279">
-              <folding />
+            <state line="2" column="51" selection-start="124" selection-end="124" vertical-scroll-proportion="0.0662768">
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -218,7 +193,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/partials/products/offers.blade.php" />
         <option value="$PROJECT_DIR$/app/views/pages/cart.blade.php" />
         <option value="$PROJECT_DIR$/public/app/js/services.js" />
         <option value="$PROJECT_DIR$/app/models/BaseModel.php" />
@@ -234,6 +208,7 @@
         <option value="$PROJECT_DIR$/public/app/css/app.less" />
         <option value="$PROJECT_DIR$/public/app/css/offers.less" />
         <option value="$PROJECT_DIR$/app/models/ECommerce/Product.php" />
+        <option value="$PROJECT_DIR$/app/views/partials/products/fancy.blade.php" />
       </list>
     </option>
   </component>
@@ -578,13 +553,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/app/js/controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="24" selection-start="1413" selection-end="1413" vertical-scroll-proportion="0.030797102">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/partials/static/header.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="34" column="20" selection-start="1084" selection-end="1084" vertical-scroll-proportion="0.2889734">
@@ -664,31 +632,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/ECommerce/Product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="43" selection-start="901" selection-end="901" vertical-scroll-proportion="0.3489279">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/app/css/offers.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="0" selection-start="616" selection-end="616" vertical-scroll-proportion="0.0">
+        <state line="39" column="0" selection-start="616" selection-end="616" vertical-scroll-proportion="0.49275362">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/app/css/app.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="19" selection-start="139" selection-end="139" vertical-scroll-proportion="0.0">
+        <state line="7" column="19" selection-start="139" selection-end="139" vertical-scroll-proportion="0.2155797">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="64" selection-start="381" selection-end="381" vertical-scroll-proportion="-12.076923">
+        <state line="20" column="64" selection-start="381" selection-end="381" vertical-scroll-proportion="0.59695816">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/ECommerce/Product.php">
+    <entry file="file://$PROJECT_DIR$/app/views/partials/products/fancy.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="43" selection-start="901" selection-end="901" vertical-scroll-proportion="0.3489279">
-          <folding />
+        <state line="2" column="51" selection-start="124" selection-end="124" vertical-scroll-proportion="0.0662768">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
