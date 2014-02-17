@@ -247,7 +247,7 @@ angular.module('qbrando.services', []).
                 this.start_price         = _start_price;
                 this.gifts_per_product   = _gifts_per_product;
                 this.discount_percentage = _discount_percentage;
-                this.max_gift_price  = _maximum_gift_price;
+                this.max_gift_price      = _maximum_gift_price;
             },
 
 

@@ -9,7 +9,7 @@
     <file path="/routes.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392636714222" ignored="false" />
     <file path="/home.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392568895930" ignored="false" />
     <file path="/dummy.xml" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392650302674" ignored="false" />
-    <file path="/angular.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392493837978" ignored="false" />
+    <file path="/angular.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392652605244" ignored="false" />
     <file path="/Dummy.txt" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392588207672" ignored="false" />
     <file path="/composers.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392503673362" ignored="false" />
     <file path="/app.less" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392568682645" ignored="false" />
@@ -69,7 +69,7 @@
     <file path="/Country.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391730229754" ignored="false" />
     <file path="/ProductOffer.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392556866421" ignored="false" />
     <file path="/MassOffer.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392636550281" ignored="false" />
-    <file path="/BaseModel.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392216116723" ignored="false" />
+    <file path="/BaseModel.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392652648990" ignored="false" />
     <file path="/Brand.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392219649207" ignored="false" />
     <file path="/OfferPosition.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392209718297" ignored="false" />
     <file path="/Cart.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392636534493" ignored="false" />
@@ -171,13 +171,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="cart.blade.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/pages/cart.blade.php">
+      <file leaf-file-name="angular.blade.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/templates/angular.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="0" selection-start="1570" selection-end="1570" vertical-scroll-proportion="0.76218325">
+            <state line="48" column="2" selection-start="1904" selection-end="1904" vertical-scroll-proportion="0.6296296">
               <folding>
-                <element signature="n#style#0;n#strong#1;n#p#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <marker date="1392652669049" expanded="true" signature="735:840" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MassOffer.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/Offers/MassOffer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="31" selection-start="89" selection-end="89" vertical-scroll-proportion="-2.6153846">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DateRangeModel.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/DateRangeModel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="33" selection-start="40" selection-end="40" vertical-scroll-proportion="-1.3076923">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseModel.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/BaseModel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="21" selection-start="113" selection-end="113" vertical-scroll-proportion="-3.9230769">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -192,9 +219,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/routes.php" />
-        <option value="$PROJECT_DIR$/public/app/css/buttons.less" />
-        <option value="$PROJECT_DIR$/app/controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/app/views/partials/parts/img.blade.php" />
         <option value="$PROJECT_DIR$/public/app/css/products.less" />
         <option value="$PROJECT_DIR$/app/views/partials/products/carousel.blade.php" />
@@ -208,6 +232,9 @@
         <option value="$PROJECT_DIR$/app/views/partials/products/offers.blade.php" />
         <option value="$PROJECT_DIR$/app/views/partials/static/header.blade.php" />
         <option value="$PROJECT_DIR$/app/views/pages/cart.blade.php" />
+        <option value="$PROJECT_DIR$/public/app/js/services.js" />
+        <option value="$PROJECT_DIR$/app/models/BaseModel.php" />
+        <option value="$PROJECT_DIR$/app/views/templates/angular.blade.php" />
       </list>
     </option>
   </component>
@@ -600,27 +627,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/partials/products/carousel.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="54" selection-start="565" selection-end="565" vertical-scroll-proportion="0.19391635">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/partials/products/fancy.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="27" selection-start="1390" selection-end="1390" vertical-scroll-proportion="0.30409357">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/partials/products/grid.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="55" selection-start="380" selection-end="380" vertical-scroll-proportion="0.1444867">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/partials/products/one.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="14" selection-start="407" selection-end="407" vertical-scroll-proportion="-0.06653992">
@@ -663,13 +669,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/js/services.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="233" column="20" selection-start="6090" selection-end="6098" vertical-scroll-proportion="0.45825604">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/app/css/app.less">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="27" selection-start="90" selection-end="96" vertical-scroll-proportion="0.123188406">
@@ -691,15 +690,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/templates/angular.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="700" selection-end="700" vertical-scroll-proportion="0.5964912">
-          <folding>
-            <marker date="1392562063144" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/partials/static/header.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="52" column="13" selection-start="1714" selection-end="1714" vertical-scroll-proportion="1.6806084">
@@ -712,11 +702,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/js/services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="328" column="18" selection-start="9191" selection-end="9191" vertical-scroll-proportion="0.48979592">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pages/cart.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="1570" selection-end="1570" vertical-scroll-proportion="0.76218325">
+        <state line="35" column="0" selection-start="1570" selection-end="1570" vertical-scroll-proportion="1.159844">
           <folding>
             <element signature="n#style#0;n#strong#1;n#p#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/BaseModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="21" selection-start="113" selection-end="113" vertical-scroll-proportion="-3.9230769">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/DateRangeModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="33" selection-start="40" selection-end="40" vertical-scroll-proportion="-1.3076923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Offers/MassOffer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="31" selection-start="89" selection-end="89" vertical-scroll-proportion="-2.6153846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/templates/angular.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="2" selection-start="1904" selection-end="1904" vertical-scroll-proportion="0.6296296">
+          <folding>
+            <marker date="1392652669049" expanded="true" signature="735:840" placeholder="..." />
           </folding>
         </state>
       </provider>
