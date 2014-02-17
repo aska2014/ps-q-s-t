@@ -8,7 +8,7 @@
     @if($product = $category->getMainProduct())
     <div class="product big-product" ng-controller="ProductController" ng-init='product={{ $product->toCartJson() }}'>
         <div class="image">
-            <img class="img-responsive" src="{{ $product->getImage('main')->getLargest() }}" />
+            <img class="img-responsive" src="{{ $product->getImage('main')->getNearest(422, 288) }}" />
         </div>
 
         <div class="info" to-url="product.url">
@@ -32,7 +32,7 @@
     <div class="product small-product" ng-controller="ProductController" ng-init='product={{ $product->toCartJson() }}'>
         <div class="image">
 
-            @include('partials.parts.img', array('product' => $product, 'size' => '422x288'))
+            @include('partials.parts.img', array('product' => $product, 'size' => '306x202'))
 
         </div>
 
