@@ -3,14 +3,6 @@
 @section('body')
 
 <div class="cart" ng-cloak>
-
-    <div class="alert alert-success">
-        <a href="#" class="close" data-dismiss="alert">&times;</a>
-
-        <p>
-            <strong>Nice timing!</strong> @{{ massOffer.description }}<br/>
-        </p>
-    </div>
     <div class="main-title"><span class="glyphicon glyphicon-shopping-cart"></span> Your shopping cart</div>
 
     <div ng-controller="CartController" class="cart-container">
@@ -22,6 +14,14 @@
             </div>
 
             <div ng-switch-default ng-show="products">
+
+                <div class="alert alert-success">
+                    <a href="#" class="close" data-dismiss="alert">&times;</a>
+
+                    <p>
+                        <strong>Nice timing!</strong> @{{ massOffer.description }}<br/>
+                    </p>
+                </div>
                 <table class="table">
                     <thead>
                     <tr>

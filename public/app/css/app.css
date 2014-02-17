@@ -6065,11 +6065,42 @@ a:hover {
   padding: 30px 0px;
 }
 .header .menu ul .simple {
-  background: #E9E9E9;
-  color: #666666;
+  background: #FFF;
+  color: #333;
   font-size: 15px;
   font-weight: bold;
-  line-height: 24px;
+  line-height: 20px;
+  height: 44px;
+  padding: 13px 0px 7px 0px;
+}
+.header .menu ul .simple b {
+  font-weight: normal;
+  font-size: 18px;
+  color: #EE3D26;
+  display: none;
+}
+.header .menu ul .simple strong {
+  font-weigh: normal;
+  font-size: 11px;
+  display: none;
+}
+.header .menu ul .simple:hover {
+  top: 22px;
+  padding: 13px 0px 7px 0px;
+  height: inherit;
+}
+.header .menu ul .simple:hover b,
+.header .menu ul .simple:hover strong {
+  display: inline;
+}
+.header .menu ul .simple.active {
+  top: 12px;
+  padding: 17px 0px 13px 0px;
+  height: inherit;
+}
+.header .menu ul .simple.active b,
+.header .menu ul .simple.active strong {
+  display: inline;
 }
 #sticky-menu {
   display: none;
@@ -6093,14 +6124,11 @@ a:hover {
   font-size: 18px;
 }
 #sticky-menu ul .simple {
-  background: #E9E9E9;
-  color: #666666;
-  font-family: Arial;
+  background: #EEE;
+  color: #333;
   font-size: 15px;
-  text-transform: none;
   font-weight: bold;
-  font-style: normal;
-  line-height: 24px;
+  line-height: 25px;
 }
 .checkout {
   background: #FFF;
@@ -6938,9 +6966,16 @@ a:hover {
   margin-left: -15px;
   margin-right: -15px;
   background: #FFF;
+  padding-top: 20px;
 }
 .cart .cart-container {
   padding: 20px;
+}
+.cart .alert {
+  margin-bottom: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  box-shadow: 0px 0px 10px #EEE;
 }
 .cart input {
   width: 60px;
@@ -6948,6 +6983,7 @@ a:hover {
 }
 .cart table {
   border-collapse: collapse;
+  border-top: 3px solid #666;
 }
 .cart table tr th {
   background: #EEE;

@@ -27,10 +27,13 @@
                 <a style="background:{{ $headerColors[$i] }}" href="{{ URL::brand($brands[$i]) }}">{{ $brands[$i]->name }}</a>
             </li>
             @endfor
-            <li><a class="simple" href="{{ URL::route('shopping-cart') }}">
+            <li>
+                <a class="simple" href="{{ URL::route('shopping-cart') }}">
                     <span class="glyphicon glyphicon-shopping-cart"></span>
-                    Shopping cart
-                </a></li>
+                    Shopping cart<br />
+                    <b>3</b> <strong>items</strong>
+                </a>
+            </li>
         </ul>
 
     </div>

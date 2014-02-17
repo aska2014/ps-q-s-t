@@ -49,11 +49,23 @@
       li a.active{top:0px; padding:30px 0px;}
 
       .simple{
-        background:#E9E9E9;
-        color:#666666;
+        background:#FFF;
+        color:#333;
         font-size:15px;
         font-weight:bold;
-        line-height:24px;
+        line-height:20px;
+        height:44px;
+        padding:13px 0px 7px 0px;
+        b{font-weight: normal; font-size:18px; color:#EE3D26; display:none;}
+        strong{font-weigh:normal; font-size:11px; display:none;}
+
+        &:hover{top:22px; padding:13px 0px 7px 0px; height:inherit;
+          b,strong{display:inline}
+        }
+
+        &.active{top:12px; padding:17px 0px 13px 0px; height:inherit;
+          b,strong{display:inline}
+        }
       }
     }
   }
@@ -77,14 +89,11 @@
       font-size:18px;
     }
     .simple{
-      background:#E9E9E9;
-      color:#666666;
-      font-family:Arial;
+      background:#EEE;
+      color:#333;
       font-size:15px;
-      text-transform: none;
       font-weight:bold;
-      font-style:normal;
-      line-height:24px;
+      line-height:25px;
     }
   }
 }
