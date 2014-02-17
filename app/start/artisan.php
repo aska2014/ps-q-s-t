@@ -13,3 +13,4 @@
 
 
 Artisan::add(new ResetupCommand());
+Artisan::add(new BackupDatabaseCommand());

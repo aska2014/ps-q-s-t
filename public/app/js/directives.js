@@ -107,14 +107,14 @@ angular.module('qbrando.directives', [])
             restrict: 'A',
             link: function(scope, element, attrs) {
 
-                var interval = 100;
+                var interval = 250;
 
                 attrs.$observe('qFadingInit', function(val)
                 {
                     if(val)
                     {
                         $(element).css('display', 'none');
-                        $(element).delay(val * interval)
+                        $(element).delay((val * interval) + 1000)
                             .fadeTo('slow', 1);
                     }
                 });
