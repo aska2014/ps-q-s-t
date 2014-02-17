@@ -38,7 +38,7 @@
 
         <div class="buttons">
             <cart-btn product="product"></cart-btn>
-            <buy-now-btn product="product"></buy-now-btn>
+            <a href="{{ URL::product($product) }}" class="show-details"><span class="glyphicon glyphicon-zoom-in"></span> Details</a>
         </div>
     </div>
     @endforeach

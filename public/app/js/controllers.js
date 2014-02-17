@@ -59,7 +59,12 @@ angular.module('qbrando.controllers', ['qbrando.services']).
 
 
 
-    .controller('ProductController', ['$scope', function ($scope) {
+    .controller('ProductController', ['$scope', '$element', function ($scope, element) {
+
+        $scope.$watch('product', function()
+        {
+            if($scope.product) $scope.product.url = $(element).find('a').first().attr('href');
+        });
 
     }])
 

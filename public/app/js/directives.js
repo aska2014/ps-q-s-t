@@ -92,11 +92,16 @@ angular.module('qbrando.directives', [])
 
                         if(! attrs.hasOwnProperty('noText')) {
 
-                            element.replaceWith('<div class="show-details" onclick="window.location.href=\'' + scope.product.url + '\'"><span class="glyphicon glyphicon-zoom-in"></span> Details</div>');
+                            element.replaceWith('<div class="show-details"><span class="glyphicon glyphicon-zoom-in"></span> Details</div>');
                         }
                         else
                         {
-                            element.replaceWith('<div class="show-details" onclick="window.location.href=\'' + scope.product.url + '\'"</div>');
+                            element.replaceWith('<div class="show-details"></div>');
+                        }
+
+                        if(scope.product.url)
+                        {
+                            element.attr('onclick', 'window.location.href="' + scope.product.url +'"');
                         }
                     }
                 });

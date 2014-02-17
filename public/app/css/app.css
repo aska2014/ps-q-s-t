@@ -6277,14 +6277,11 @@ a:hover {
     width: 17.5%;
   }
 }
-.fancy-products .small-product .title a {
-  color: #333;
-  font-size: 14px;
-}
 .fancy-products .small-product .image {
   height: 120px;
 }
-.fancy-products .small-product .buttons div {
+.fancy-products .small-product .buttons div,
+.fancy-products .small-product .buttons a {
   font-size: 9px;
 }
 .fancy-products .small-product img {
@@ -6333,7 +6330,8 @@ a:hover {
 .fancy-products img {
   margin: 0px auto;
 }
-.fancy-products .buttons div {
+.fancy-products .buttons div,
+.fancy-products .buttons a {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -6342,7 +6340,8 @@ a:hover {
   padding: 10px;
 }
 @media (min-width: 992px) {
-  .fancy-products .buttons div {
+  .fancy-products .buttons div,
+  .fancy-products .buttons a {
     float: left;
     width: 50%;
   }
