@@ -63,7 +63,7 @@ angular.module('qbrando.controllers', ['qbrando.services']).
                 }
             });
 
-            if($("#yourSelect option[value='" + absUrl + "']").length > 0)
+            if(dropdown.find("option[value='" + absUrl + "']").length > 0)
             {
                 dropdown.val(absUrl);
             }

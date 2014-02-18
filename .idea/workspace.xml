@@ -28,7 +28,7 @@
     <file path="/footer.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391630494143" ignored="false" />
     <file path="/products_0.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391638175129" ignored="false" />
     <file path="/services.js" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392725666620" ignored="false" />
-    <file path="/controllers.js" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392732906155" ignored="false" />
+    <file path="/controllers.js" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392734444710" ignored="false" />
     <file path="/carousel.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392655064724" ignored="false" />
     <file path="/fancy.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392732257332" ignored="false" />
     <file path="/grid.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392646041733" ignored="false" />
@@ -171,13 +171,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="angular.blade.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/templates/angular.blade.php">
+      <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/app/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="107" selection-start="225" selection-end="225" vertical-scroll-proportion="0.1325536">
-              <folding>
-                <marker date="1392733688452" expanded="true" signature="850:955" placeholder="..." />
-              </folding>
+            <state line="66" column="13" selection-start="1809" selection-end="1809" vertical-scroll-proportion="0.7083333">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -204,10 +202,10 @@
         <option value="$PROJECT_DIR$/public/app/css/app.less" />
         <option value="$PROJECT_DIR$/app/views/partials/products/fancy.blade.php" />
         <option value="$PROJECT_DIR$/app/views/partials/static/header.blade.php" />
-        <option value="$PROJECT_DIR$/public/app/js/controllers.js" />
         <option value="$PROJECT_DIR$/public/app/css/header.less" />
         <option value="$PROJECT_DIR$/public/app/css/products.less" />
         <option value="$PROJECT_DIR$/app/views/templates/angular.blade.php" />
+        <option value="$PROJECT_DIR$/public/app/js/controllers.js" />
       </list>
     </option>
   </component>
@@ -677,13 +675,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/js/controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="0" selection-start="1507" selection-end="1507" vertical-scroll-proportion="0.47644928">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/app/css/products.less">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="32" selection-start="467" selection-end="467" vertical-scroll-proportion="0.36594203">
@@ -730,8 +721,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="107" selection-start="225" selection-end="225" vertical-scroll-proportion="0.1325536">
           <folding>
-            <marker date="1392733688452" expanded="true" signature="850:955" placeholder="..." />
+            <marker date="1392733688452" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/js/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="13" selection-start="1809" selection-end="1809" vertical-scroll-proportion="0.7083333">
+          <folding />
         </state>
       </provider>
     </entry>
