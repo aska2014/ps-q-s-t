@@ -237,6 +237,7 @@ angular.module('qbrando.services', []).
             max_gift_price: 0,
             gifts_per_product: 0,
             discount_percentage: 0,
+            exists: false,
 
             init: function(_title, _description, _end_date, _start_quantity, _start_price, _discount_percentage, _gifts_per_product, _maximum_gift_price)
             {
@@ -248,6 +249,7 @@ angular.module('qbrando.services', []).
                 this.gifts_per_product   = _gifts_per_product;
                 this.discount_percentage = _discount_percentage;
                 this.max_gift_price      = _maximum_gift_price;
+                this.exists              = true;
             },
 
 

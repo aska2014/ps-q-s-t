@@ -6084,21 +6084,26 @@ a:hover {
   font-size: 11px;
   display: none;
 }
-.header .menu ul .simple:hover {
+.header .menu ul .simple.semi-active {
+  top: 12px;
+  padding: 20px 0px 10px 0px;
   top: 22px;
   padding: 13px 0px 7px 0px;
   height: inherit;
 }
-.header .menu ul .simple:hover b,
-.header .menu ul .simple:hover strong {
+.header .menu ul .simple.semi-active b,
+.header .menu ul .simple.semi-active strong {
   display: inline;
 }
+.header .menu ul .simple:hover,
 .header .menu ul .simple.active {
   top: 12px;
   padding: 17px 0px 13px 0px;
   height: inherit;
 }
+.header .menu ul .simple:hover b,
 .header .menu ul .simple.active b,
+.header .menu ul .simple:hover strong,
 .header .menu ul .simple.active strong {
   display: inline;
 }

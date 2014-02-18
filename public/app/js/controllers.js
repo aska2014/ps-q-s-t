@@ -27,10 +27,21 @@ angular.module('qbrando.controllers', ['qbrando.services']).
         });
     }])
 
-    .controller('HeaderController', ['Sticky', '$location', function(Sticky, $location) {
+    .controller('HeaderController', ['$scope', 'Sticky', '$location', function($scope, Sticky, $location) {
 
         // Make sticky menu
 //        Sticky.make(angular.element('#main-menu'), angular.element("#sticky-menu"));
+
+
+        $scope.getCartClass = function()
+        {
+            if($scope.cart.isEmpty())
+            {
+                return 'simple';
+            }
+
+            return 'simple semi-active';
+        }
 
         // Make active menu item
         var makeActiveMenu = function()

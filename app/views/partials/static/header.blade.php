@@ -27,8 +27,8 @@
                 <a style="background:{{ $headerColors[$i] }}" href="{{ URL::brand($brands[$i]) }}">{{ $brands[$i]->name }}</a>
             </li>
             @endfor
-            <li>
-                <a class="simple" href="{{ URL::route('shopping-cart') }}">
+            <li ng-cloak>
+                <a ng-class="getCartClass()" href="{{ URL::route('shopping-cart') }}">
                     <span class="glyphicon glyphicon-shopping-cart"></span>
                     Shopping cart<br />
                     <b ng-cloak>@{{ cart.totalItems() }}</b> <strong>items</strong>

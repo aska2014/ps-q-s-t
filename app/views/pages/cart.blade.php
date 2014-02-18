@@ -15,7 +15,7 @@
 
             <div ng-switch-default ng-show="products">
 
-                <div class="alert alert-success">
+                <div class="alert alert-success" ng-show="massOffer.exists">
                     <a href="#" class="close" data-dismiss="alert">&times;</a>
 
                     <p>
