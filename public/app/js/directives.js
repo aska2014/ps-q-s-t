@@ -29,7 +29,7 @@ angular.module('qbrando.directives', [])
             scope: {
                 "product": "="
             },
-            template: '<div class="add-to-cart"><span class="glyphicon glyphicon-plus"></span> Add To Cart</div>',
+            template: '<div class="add-to-cart"><span class="glyphicon glyphicon-plus"></span>&nbspAdd To Cart</div>',
             link: function(scope, element, attrs) {
 
                 if(attrs.hasOwnProperty('noText')) {
@@ -54,7 +54,7 @@ angular.module('qbrando.directives', [])
                         }
                         else {
 
-                            element.replaceWith('<div class="in-cart" '+onclick+'><span class="glyphicon glyphicon-shopping-cart"></span> In Cart</div>')
+                            element.replaceWith('<div class="in-cart" '+onclick+'><span class="glyphicon glyphicon-shopping-cart"></span>&nbspIn Cart</div>')
                         }
                     }
                 })
@@ -69,7 +69,7 @@ angular.module('qbrando.directives', [])
             scope: {
                 "product": "="
             },
-            template: '<div class="buy-now">Buy now <span class="glyphicon glyphicon-share"></span></div>',
+            template: '<div class="buy-now">Buy now&nbsp<span class="glyphicon glyphicon-share"></span></div>',
             link: function(scope, element, attrs) {
 
                 if(attrs.hasOwnProperty('noText')) {
@@ -92,7 +92,7 @@ angular.module('qbrando.directives', [])
 
                         if(! attrs.hasOwnProperty('noText')) {
 
-                            element.replaceWith('<div class="show-details" '+onclick+'><span class="glyphicon glyphicon-zoom-in"></span> Details</div>');
+                            element.replaceWith('<div class="show-details" '+onclick+'><span class="glyphicon glyphicon-zoom-in"></span>&nbspDetails</div>');
                         }
                         else
                         {

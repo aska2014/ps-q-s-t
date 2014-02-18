@@ -6,7 +6,11 @@
 
         @if($offer = $offerPositions->get('left_offer'))
         <div class="flying-product slidedown-info" q-fading-init="1" ng-controller="ProductController" ng-init='{{ $offer->product->toCartJson() }}'>
-            <div class="box-title"><a href="{{ URL::product($offer->product) }}">{{ $offer->title }}</a></div>
+            <div class="box-title">
+                <span class="glyphicon glyphicon-tag"></span>
+                &nbsp
+                <a href="{{ URL::product($offer->product) }}">{{ $offer->title }}</a>
+            </div>
             <div class="body">
                 <div class="image">
                     @include('partials.parts.img', array('product' => $offer->product, 'size' => '306x202'))
@@ -88,7 +92,11 @@
         @if($offer = $offerPositions->get('right_offer'))
         <div class="flying-big-product" ng-controller="ProductController" q-fading-init="5" ng-init='product={{ $offer->product->toCartJson() }}'>
             <input type="hidden" value="{{ $offer->product->id }}"/>
-            <div class="box-title"><a href="{{ URL::product($offer->product) }}">{{ $offer->title }}</a></div>
+            <div class="box-title">
+                <span class="glyphicon glyphicon-tags"></span>
+                &nbsp
+                <a href="{{ URL::product($offer->product) }}">{{ $offer->title }}</a>
+            </div>
             <div class="body">
                 <div class="image">
                     @include('partials.parts.img', array('product' => $offer->product, 'size' => '232x174'))

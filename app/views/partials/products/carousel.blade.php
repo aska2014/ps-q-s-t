@@ -1,5 +1,5 @@
 <div class="carousel-products" ng-controller="CarouselController" ng-cloak>
-    <div class="main-title-black"><span class="glyphicon glyphicon-th-list"></span> {{ $carousel->title }}</div>
+    <div class="main-title-black"><span class="glyphicon glyphicon-th-list"></span>&nbsp{{ $carousel->title }}</div>
     <div id="owl-demo" class="owl-carousel">
         @foreach($carousel->products as $product)
         <div class="item" ng-controller="ProductController" ng-init='product={{ $product->toCartJson() }}'>
