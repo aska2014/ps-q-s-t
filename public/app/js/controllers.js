@@ -27,13 +27,20 @@ angular.module('qbrando.controllers', ['qbrando.services']).
         });
     }])
 
-    .controller('HeaderController', ['$scope', 'Sticky', '$location', function($scope, Sticky, $location) {
+    .controller('HeaderController', ['$scope', 'Sticky', '$location', '$element', function($scope, Sticky, $location, element) {
 
         // Make sticky menu
 //        Sticky.make(angular.element('#main-menu'), angular.element("#sticky-menu"));
 
+        var dropdown = $(element).find('select');
+        var mainmenu = $(element).find('#main-menu');
 
-        $scope.getCartClass = function()
+        dropdown.on('change', function()
+        {
+            window.location.href = dropdown.val();
+        });
+
+        $scope.getCartItemClass = function()
         {
             if($scope.cart.isEmpty())
             {
@@ -46,13 +53,20 @@ angular.module('qbrando.controllers', ['qbrando.services']).
         // Make active menu item
         var makeActiveMenu = function()
         {
-            $("#main-menu").find('a').each(function()
+            var absUrl = $location.absUrl().replace(/\/+$/, '');
+
+            mainmenu.find('a').each(function()
             {
-                if($(this).attr('href') == $location.absUrl().replace(/\/+$/, ''))
+                if($(this).attr('href') == absUrl)
                 {
                     $(this).addClass('active');
                 }
             });
+
+            if($("#yourSelect option[value='" + absUrl + "']").length > 0)
+            {
+                dropdown.val(absUrl);
+            }
         }
 
         makeActiveMenu();

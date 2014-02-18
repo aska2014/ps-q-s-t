@@ -114,7 +114,7 @@ angular.module('qbrando.directives', [])
 
                 attrs.$observe('qFadingInit', function(val)
                 {
-                    if(val)
+                    if(val && $(element).css('display') != 'none')
                     {
                         $(element).css('display', 'none');
                         $(element).delay((val * interval) + 300)

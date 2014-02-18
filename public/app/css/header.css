@@ -1,5 +1,5 @@
-NameError: .make-row is undefined in D:\Projects\QBrando\new_www\public\app\css\header.less on line 3, column 3:
-2   background: url('@{images}/water-splash.png') no-repeat;
-3   .make-row();
-4   height: 291px;
+NameError: .make-row is undefined in D:\Projects\QBrando\new_www\public\app\css\header.less on line 2, column 3:
+1 .header {
+2   .make-row();
+3   height: 250px;
 

@@ -17,6 +17,20 @@
 
     <div class="clearfix"></div>
 
+
+    <div class="small-screen-menu">
+        <select class="form-control">
+            <option value="">Select page</option>
+            <option value="{{ URL::route('home') }}">Home</option>
+
+            @foreach($brands as $brand)
+            <option value="{{ URL::brand($brand) }}">{{ $brand->name }}</option>
+            @endforeach
+
+            <option value="{{ URL::route('shopping-cart') }}">Shopping cart</option>
+        </select>
+    </div>
+
     <div class="menu" id="main-menu">
 
         <ul>
@@ -28,30 +42,16 @@
             </li>
             @endfor
             <li ng-cloak>
-                <a ng-class="getCartClass()" href="{{ URL::route('shopping-cart') }}">
+                <a ng-class="getCartItemClass()" href="{{ URL::route('shopping-cart') }}">
                     <span class="glyphicon glyphicon-shopping-cart"></span>
-                    Shopping cart<br />
-                    <b ng-cloak>@{{ cart.totalItems() }}</b> <strong>items</strong>
+                    Shopping cart
+                    <b ng-cloak><br />@{{ cart.totalItems() }}</b> <strong>items</strong>
                 </a>
             </li>
         </ul>
 
     </div>
-    <div id="sticky-menu">
 
-        <ul>
-            <li><a style="background:#fcac47" href="{{ URL::route('home') }}">Home</a></li>
-            @for($i = 0; $i < $brands->count(); $i++)
-            <li>
-                <a style="background:{{ $headerColors[$i] }}" href="{{ URL::brand($brands[$i]) }}">{{ $brands[$i]->name }}</a>
-            </li>
-            @endfor
-            <li><a class="simple" href="{{ URL::route('shopping-cart') }}">
-                    <span class="glyphicon glyphicon-shopping-cart"></span>
-                    Shopping cart
-                </a></li>
-        </ul>
-
-    </div>
+    <!-- Removed sticky menu -->
 
 </div>

@@ -1,13 +1,22 @@
 .header {
-  background: url('@{images}/water-splash.png') no-repeat;
   .make-row();
-  height: 291px;
+  height: 250px;
+
+  @media(min-width:@screen-sm) {
+    height: 291px;
+    background: url('@{images}/water-splash.png') no-repeat;
+  }
 
   // Left header
   .left-header{
     .make-md-column(4);
 
     .call-us{background: url('@{images}/call-us-header.png') no-repeat;.size(119px, 145px);}
+    .call-us{
+      @media(max-width:@screen-md) {
+        display:none;
+      }
+    }
   }
 
 // Middle header
@@ -23,11 +32,20 @@
     .shopping-cart-btn{float:right; position: relative; top:197px; left:15px; z-index: 1000;}
   }
 
+  select{
+    @media(min-width:@screen-sm) {
+      display:none;
+    }
+  }
+
   // Menu
   .menu{
     .make-md-column(12);
     position: relative;
     top:2px;
+    @media(max-width:@screen-sm) {
+      display:none;
+    }
 
     ul{
       list-style: none;
@@ -42,6 +60,9 @@
         font-size:18px;
         font-style:normal;
         line-height:24px;
+        @media(max-width:@screen-md) {
+          font-size:14px;
+        }
       }
 
       li a:hover{top:20px; padding:20px 0px;}
@@ -51,19 +72,24 @@
       .simple{
         background:#FFF;
         color:#333;
-        font-size:15px;
-        font-weight:bold;
-        line-height:20px;
-        height:44px;
-        padding:13px 0px 7px 0px;
-        b{font-weight: normal; font-size:18px; color:#EE3D26; display:none;}
-        strong{font-weigh:normal; font-size:11px; display:none;}
+        span,b,strong{display: none;}
+        @media(min-width:@screen-md) {
+          background:#FFF;
+          color:#333;
+          font-size:15px;
+          font-weight:bold;
+          line-height:20px;
+          height:44px;
+          padding:13px 0px 7px 0px;
+          b{font-weight: normal; font-size:18px; color:#EE3D26; display:none;}
+          strong{font-weigh:normal; font-size:11px; display:none;}
 
-        &.semi-active{top:12px; padding:20px 0px 10px 0px; top:22px; padding:13px 0px 7px 0px; height:inherit;
-          b,strong{display:inline}}
+          &.semi-active{top:12px; padding:20px 0px 10px 0px; top:22px; padding:13px 0px 7px 0px; height:inherit;
+            b,strong{display:inline}}
 
-        &:hover, &.active{top:12px; padding:17px 0px 13px 0px; height:inherit;
-          b,strong{display:inline}
+          &:hover, &.active{top:12px; padding:17px 0px 13px 0px; height:inherit;
+            b,strong{display:inline}
+          }
         }
       }
     }

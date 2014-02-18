@@ -27,8 +27,9 @@
     </div>
     @endif
 
+    <?php $i = 1; ?>
     @foreach($category->getUniqueProducts(6) as $product)
-    <div class="product small-product" ng-controller="ProductController" ng-init='product={{ $product->toCartJson() }}'>
+    <div class="product small-product {{ ($i++%2) ? 'left-product':'' }}" ng-controller="ProductController" ng-init='product={{ $product->toCartJson() }}'>
         <div class="image">
 
             @include('partials.parts.img', array('product' => $product, 'size' => '306x202'))
