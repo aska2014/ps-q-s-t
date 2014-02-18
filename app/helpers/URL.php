@@ -23,9 +23,9 @@ class URL extends LaravelURL {
     public static function product(Product $product)
     {
         return static::route('product', array(
-            'category_name' => static::format($product->category->name),
-            'brand_name' => static::format($product->brand->name),
-            'title' => static::format('model-' . $product->model)
+            'category_name' => static::encode($product->category->name),
+            'brand_name' => static::encode($product->brand->name),
+            'title' => static::encode('model-' . $product->model)
         ));
     }
 
@@ -35,7 +35,7 @@ class URL extends LaravelURL {
      */
     public static function category(Category $category)
     {
-        return static::route('category', static::format($category->name));
+        return static::route('category', static::encode($category->name));
     }
 
     /**
@@ -44,7 +44,7 @@ class URL extends LaravelURL {
      */
     public static function brand(Brand $brand)
     {
-        return static::route('brand', static::format($brand->name));
+        return static::route('brand', static::encode($brand->name));
     }
 
 
@@ -52,8 +52,26 @@ class URL extends LaravelURL {
      * @param $title
      * @return string
      */
-    public static function format( $title )
+    public static function encode( $title )
     {
-        return \Illuminate\Support\Str::slug(strtolower($title));
+        $title = str_replace(' ', '-', $title);
+
+        $title = str_replace('&', '-and-', $title);
+
+        return strtolower($title);
+    }
+
+
+    /**
+     * @param $slug
+     * @return string
+     */
+    public static function decode( $slug )
+    {
+        $slug = str_replace('-and-', '&', $slug);
+
+        $slug = str_replace('-', ' ', $slug);
+
+        return strtolower($slug);
     }
 }

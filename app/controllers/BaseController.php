@@ -85,9 +85,7 @@ class BaseController extends Controller {
 
         foreach($slugs as $slug)
         {
-            $slug = str_replace('-', ' ', $slug);
-
-            array_push($array, $slug);
+            array_push($array, URL::decode($slug));
         }
 
         return count($array) == 1 ? $array[0] : $array;
