@@ -24,7 +24,9 @@ class ProductsController extends BaseController {
      */
     public function product($category, $brand, $title)
     {
-        $product = $this->products->byCategoryName($category)->byBrandName($brand)->byModel(str_replace('model', '', $title))->first();
+        list($category, $brand, $title) = $this->convertSlugs($category, $brand, $title);
+
+        $product = $this->products->byCategoryName($category)->byBrandName($brand)->byModel($title)->first();
 
         // Fail if no product was found
         if(is_null($product)) throw new ModelNotFoundException();
@@ -40,6 +42,8 @@ class ProductsController extends BaseController {
      */
     public function brand($brand)
     {
+        $brand = $this->convertSlugs($brand);
+
         $products = $this->products->byBrandName($brand)->unique()->paginate(static::PRODUCTS_PER_PAGE);
 
         $carousel = $this->getCarousel();
@@ -53,6 +57,8 @@ class ProductsController extends BaseController {
      */
     public function category($category)
     {
+        $category = $this->convertSlugs($category);
+
         $products = $this->products->byCategoryName($category)->unique()->paginate(static::PRODUCTS_PER_PAGE);
 
         $carousel = $this->getCarousel();

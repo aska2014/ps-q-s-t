@@ -23,9 +23,9 @@ class URL extends LaravelURL {
     public static function product(Product $product)
     {
         return static::route('product', array(
-            'category_name' => strtolower($product->category->name),
-            'brand_name' => strtolower($product->brand->name),
-            'title' => strtolower('model' . $product->model)
+            'category_name' => static::format($product->category->name),
+            'brand_name' => static::format($product->brand->name),
+            'title' => static::format('model-' . $product->model)
         ));
     }
 
@@ -35,7 +35,7 @@ class URL extends LaravelURL {
      */
     public static function category(Category $category)
     {
-        return static::route('category', $category->name);
+        return static::route('category', static::format($category->name));
     }
 
     /**
@@ -44,7 +44,16 @@ class URL extends LaravelURL {
      */
     public static function brand(Brand $brand)
     {
-        return static::route('brand', $brand->name);
+        return static::route('brand', static::format($brand->name));
     }
 
+
+    /**
+     * @param $title
+     * @return string
+     */
+    public static function format( $title )
+    {
+        return \Illuminate\Support\Str::slug(strtolower($title));
+    }
 }

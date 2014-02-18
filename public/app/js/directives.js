@@ -117,7 +117,7 @@ angular.module('qbrando.directives', [])
                     if(val)
                     {
                         $(element).css('display', 'none');
-                        $(element).delay((val * interval) + 500)
+                        $(element).delay((val * interval) + 300)
                             .fadeTo('slow', 1);
                     }
                 });

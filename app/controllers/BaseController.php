@@ -75,4 +75,21 @@ class BaseController extends Controller {
 		}
 	}
 
+    /**
+     * @return array
+     */
+    protected function convertSlugs()
+    {
+        $array = array();
+        $slugs = func_get_args();
+
+        foreach($slugs as $slug)
+        {
+            $slug = str_replace('-', ' ', $slug);
+
+            array_push($array, $slug);
+        }
+
+        return count($array) == 1 ? $array[0] : $array;
+    }
 }

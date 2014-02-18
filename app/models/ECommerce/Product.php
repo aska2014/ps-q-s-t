@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\App;
 use Offers\OfferPosition;
 use Offers\ProductOffer;
-use URL;
+use URL, DB;
 use Units\Price;
 
 class Product extends \BaseModel {
@@ -72,7 +72,8 @@ class Product extends \BaseModel {
      */
     public function scopeByCategoryName($query, $category)
     {
-        return $query->join('categories', 'categories.id', '=', 'products.category_id')->where('categories.name', '=', $category)->select('products.*');
+        return $query->join('categories', 'categories.id', '=', 'products.category_id')
+            ->where(DB::raw('LOWER(krq_categories.name)'), '=', $category)->select('products.*');
     }
 
     /**
@@ -82,7 +83,8 @@ class Product extends \BaseModel {
      */
     public function scopeByBrandName($query, $brand)
     {
-        return $query->join('brands', 'brands.id', '=', 'products.brand_id')->where('brands.name', '=', $brand)->select('products.*');
+        return $query->join('brands', 'brands.id', '=', 'products.brand_id')
+            ->where(DB::raw('LOWER(krq_brands.name)'), 'like', $brand.'%')->select('products.*');
     }
 
     /**
@@ -92,7 +94,9 @@ class Product extends \BaseModel {
      */
     public function scopeByModel($query, $model)
     {
-        return $query->where('model', $model);
+        $model = trim(str_replace('model', '', $model));
+
+        return $query->where(DB::raw('LOWER(krq_products.model)'), $model);
     }
 
     /**

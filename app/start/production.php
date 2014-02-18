@@ -46,7 +46,7 @@ App::error(function(Exception $e, $code) use($sendMailWithException)
 
 App::error(function(Illuminate\Database\Eloquent\ModelNotFoundException $e, $code)
 {
-    $contactUs = new ContactUs();
+    $contactUs = new \Website\ContactUs();
 
     return Redirect::route('message-to-user')
         ->with('title', 'We can\'t find this product in our stock :(')
