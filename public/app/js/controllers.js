@@ -30,7 +30,7 @@ angular.module('qbrando.controllers', ['qbrando.services']).
     .controller('HeaderController', ['Sticky', '$location', function(Sticky, $location) {
 
         // Make sticky menu
-        Sticky.make(angular.element('#main-menu'), angular.element("#sticky-menu"));
+//        Sticky.make(angular.element('#main-menu'), angular.element("#sticky-menu"));
 
         // Make active menu item
         var makeActiveMenu = function()
