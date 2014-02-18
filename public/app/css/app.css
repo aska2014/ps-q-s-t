@@ -5856,6 +5856,9 @@ td.visible-print {
 .ng-cloak {
   display: none !important;
 }
+.glyphicon {
+  margin-right: 10px;
+}
 .secondary-btn {
   background: url('../img/gradients/black-gradient.jpg');
   background: #333;

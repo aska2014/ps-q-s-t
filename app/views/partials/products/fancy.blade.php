@@ -1,6 +1,6 @@
 <div class="fancy-products">
     @foreach($fancyCategories as $category)
-    <div class="main-title" style="margin-top:40px;">
+    <div class="main-title" style="margin-top:20px;">
         <span class="glyphicon glyphicon-th-list"></span>
         <a href="{{ URL::category($category) }}">{{ $category->name }}</a>
     </div>
