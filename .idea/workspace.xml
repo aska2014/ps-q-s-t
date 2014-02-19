@@ -109,7 +109,7 @@
     <file path="/FreakBrandController.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391981456596" ignored="false" />
     <file path="/HTML Fragment (FreakBrandController.php:547).html" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391981319630" ignored="false" />
     <file path="/FreakOrderController.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392504862750" ignored="false" />
-    <file path="/all.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392811756729" ignored="false" />
+    <file path="/all.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392811846898" ignored="false" />
     <file path="/ui_comps.js" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392022757214" ignored="false" />
     <file path="/FreakProductOfferController.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392494273459" ignored="false" />
     <file path="/all.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392038727089" ignored="false" />
@@ -185,7 +185,7 @@
       <file leaf-file-name="all.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/freak/views/mass_offer/all.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="22" selection-start="2308" selection-end="2308" vertical-scroll-proportion="0.9348659">
+            <state line="29" column="30" selection-start="1228" selection-end="1228" vertical-scroll-proportion="0.38122606">
               <folding />
             </state>
           </provider>
@@ -805,7 +805,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/freak/views/mass_offer/all.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="22" selection-start="2308" selection-end="2308" vertical-scroll-proportion="0.9348659">
+        <state line="29" column="30" selection-start="1228" selection-end="1228" vertical-scroll-proportion="0.38122606">
           <folding />
         </state>
       </provider>

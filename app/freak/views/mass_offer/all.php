@@ -27,7 +27,7 @@
                     <td>{{ offer.discount_percentage }}</td>
                     <td>{{ offer.gifts_per_product }}</td>
                     <td>{{ offer.max_gift_price }}</td>
-                    <td>( {{ offer.from_date }} ) &nbsp&nbsp&nbsp -> &nbsp&nbsp&nbsp ( {{ offer.to_date }} )</td>
+                    <td>From: {{ offer.from_date }}<br /> To: {{ offer.to_date }}</td>
                     <td class="action-col" width="10%">
                     <span class="btn-group">
                         <a href="#{{ url.elementView('mass_offer', 'one/' + offer.id) }}" class="btn btn-small"><i class="icon-search"></i></a>
