@@ -44,6 +44,8 @@
                     <th>Start quantity</th>
                     <th>Start price</th>
                     <th>Discount percentage</th>
+                    <th>Gifts per product</th>
+                    <th>Max gift price</th>
                     <th>Date range</th>
                     <th>Tools</th>
                 </tr>
