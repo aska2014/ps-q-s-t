@@ -3,6 +3,15 @@
 class BaseModel extends \Kareem3d\Eloquent\Model {
 
     /**
+     * @param $query
+     * @return mixed
+     */
+    public function scopeOrderByDate($query)
+    {
+        return $query->orderBy('created_at', 'DESC');
+    }
+
+    /**
      * @param $attribute
      * @return string
      */
