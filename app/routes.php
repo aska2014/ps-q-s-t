@@ -27,9 +27,7 @@ Route::get('{category_name}/{brand_name}/{title}.html', array('as' => 'product',
 Route::get('brand/{brand_name}', array('as' => 'brand', 'uses' => 'ProductsController@brand'));
 Route::get('category/{category_name}', array('as' => 'category', 'uses' => 'ProductsController@category'));
 
-Route::model('product', 'ECommerce\Product');
-Route::model('brand', 'ECommerce\Brand');
-Route::model('category', 'ECommerce\Category');
+Route::get('/choose-your-gifts.html', array('as' => 'choose-gifts', 'uses' => 'ProductsController@chooseGifts'));
 
 
 // Form post requests

@@ -23,6 +23,17 @@
                         </ul>
                     </td>
                 </tr>
+                <tr ng-show="model.gifts.length > 0">
+                    <th>Gifts</th>
+                    <td>
+                        <ul>
+                            <li ng-repeat="gift in model.gifts">
+                                <strong>{{ gift.pivot.quantity }}</strong>&nbsp&nbsp&nbsp * &nbsp&nbsp&nbsp
+                                <a href="#{{ url.elementView('product', 'one/' + gift.id) }}">{{ gift.title }}</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
                 <tr>
                     <th>Order total price</th>
                     <td>

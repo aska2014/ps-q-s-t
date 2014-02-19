@@ -45,6 +45,26 @@ class Product extends \BaseModel {
 
     /**
      * @param $query
+     * @param $price
+     * @return mixed
+     */
+    public function scopePriceGreaterThan($query, $price)
+    {
+        return $query->where('price', '>=', $price);
+    }
+
+    /**
+     * @param $query
+     * @param $price
+     * @return mixed
+     */
+    public function scopePriceSmallerThan($query, $price)
+    {
+        return $query->where('price', '<=', $price);
+    }
+
+    /**
+     * @param $query
      */
     public function scopeMix($query)
     {

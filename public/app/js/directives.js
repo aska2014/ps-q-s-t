@@ -62,6 +62,51 @@ angular.module('qbrando.directives', [])
         }
     }])
 
+
+    .directive('qGiftBtn', ['Cart', function (Cart) {
+        return {
+            restrict: 'E',
+            replace:true,
+            scope: {
+                "product": "="
+            },
+            template: '<div class="add-to-cart"><span class="glyphicon glyphicon-gift"></span>&nbspAdd Gift</div>',
+            link: function(scope, element, attrs) {
+
+                if(attrs.hasOwnProperty('noText')) {
+
+                    element.html('');
+                }
+
+                element.on('click', function() {
+
+                    if(Cart.getNumberOfGiftsLeft() > 0)
+                    {
+                        // Add item to the cart
+                        Cart.addGift(scope.product);
+                    }
+                });
+
+                Cart.registerListener(function(cart)
+                {
+                    if(cart.has(scope.product)) {
+
+                        var onclick = 'onclick="window.location.href=\'/shopping-cart.html\'"';
+
+                        if(attrs.hasOwnProperty('noText')) {
+
+                            element.replaceWith('<div class="in-cart" '+onclick+'></div>')
+                        }
+                        else {
+
+                            element.replaceWith('<div class="in-cart" '+onclick+'><span class="glyphicon glyphicon-shopping-cart"></span>&nbspIn Cart</div>')
+                        }
+                    }
+                })
+            }
+        }
+    }])
+
     .directive('buyNowBtn', ['Cart', function(Cart) {
         return {
             restrict: 'E',

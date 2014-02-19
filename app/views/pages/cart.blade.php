@@ -15,20 +15,34 @@
 
             <div ng-switch-default ng-show="products">
 
-                <div class="alert alert-success" ng-show="massOffer.exists">
-                    <a href="#" class="close" data-dismiss="alert">&times;</a>
 
-                    <p>
-                        <strong>Nice timing!</strong> @{{ massOffer.description }}<br/><Br />
-                        This offer will end in:
-                        <strong style="color:#F30; font-weight: normal">
-                            <span ng-hide="timer.days == 0">@{{ timer.days }} days,</span>
-                            <span ng-hide="timer.days == 0 && timer.hours == 0">@{{ timer.hours }} hours,</span>
-                            <span ng-hide="timer.days == 0 && timer.hours == 0">@{{ timer.minutes}} minutes and</span>
-                            <span>@{{ timer.seconds }} seconds</span>
-                        </strong>
-                    </p>
-                </div>
+                    <div class="alert alert-success" ng-show="massOffer.isGiftOffer()">
+                        <a href="#" class="close" data-dismiss="alert">&times;</a>
+                        <p>
+                            <strong>Nice timing!</strong> @{{ massOffer.description }}
+                        </p>
+                        <p ng-show="cart.getNumberOfGiftsLeft() > 0">
+                            <br/>
+                            You have <span style="font-weight: bold;">@{{ cart.getNumberOfGiftsLeft() }}</span> Gifts waiting for you
+
+                            &nbsp
+                            <a class="btn btn-success" href="{{ URL::route('choose-gifts') }}">
+                                <span class="glyphicon glyphicon-gift" style="margin-top:3px;"></span>
+                                Choose your gifts
+                            </a>
+
+                        </p>
+                    </div>
+
+                    <div class="alert alert-success" ng-show="massOffer.isDiscountOffer()">
+                        <a href="#" class="close" data-dismiss="alert">&times;</a>
+                        <p>
+                            <strong>Nice timing!</strong> @{{ massOffer.description }}
+                        </p>
+                    </div>
+
+
+
                 <table class="table">
                     <thead>
                     <tr>
@@ -42,7 +56,9 @@
 
                     <tbody>
                     <tr ng-repeat="product in products">
-                        <td><input class="form-control" type="number" min="1" max="20" ng-change="updateQuantity($index)" ng-model="product.quantity"/></td>
+                        <td>
+                            <input class="form-control" type="number" min="1" max="20" ng-change="updateQuantity($index)" ng-model="product.quantity"/>
+                        </td>
                         <td>
                             <a ng-href="@{{product.url}}">@{{ product.title }}</a>
                             <img ng-src="@{{ product.image }}" class="img-responsive" alt=""/>
@@ -51,9 +67,17 @@
                         <td>@{{ cart.calculateSubTotalPrice(product) | currency:currency }}</td>
                         <td><span class="glyphicon glyphicon-remove" ng-click="removeItem($index)"></span></td>
                     </tr>
+                    <tr ng-repeat="gift in gifts">
+                        <td>1</td>
+                        <td>
+                            <a ng-href="@{{gift.url}}">@{{ gift.title }}</a>
+                            <img ng-src="@{{ gift.image }}" class="img-responsive" alt=""/>
+                        </td>
+                        <td style="color:#F00; font-size:16px;">FREE!</td>
+                        <td style="color:#AAA;">QAR 0.00</td>
+                        <td><span class="glyphicon glyphicon-remove" ng-click="removeGift($index)"></span></td>
+                    </tr>
                     </tbody>
-
-
                 </table>
 
                 <div class="total">

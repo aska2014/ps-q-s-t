@@ -85,15 +85,42 @@ angular.module('qbrando.controllers', ['qbrando.services']).
     }])
 
 
-    .controller('CartController', ['$scope', 'Cart', 'Products', 'Timer', function ($scope, Cart, Products, Timer) {
+    .controller('GiftsController', ['$scope', 'Cart', function($scope, Cart) {
+
+        $scope.choose_gifts = {};
+
+        Cart.registerListener(function(cart)
+        {
+            $scope.choose_gifts.left = cart.getNumberOfGiftsLeft();
+
+            // No gifts left to choose
+            if($scope.choose_gifts.left <= 0) {
+
+                window.location.href = '/shopping-cart.html';
+            }
+
+            if(!$scope.$$phase) {
+                $scope.$apply();
+            }
+        });
+    }])
+
+
+    .controller('CartController', ['$scope', 'Cart', 'Products', 'Timer', 'Helpers', function ($scope, Cart, Products, Timer, Helpers) {
 
         $scope.timer = Timer;
 
         $scope.timer.finishAt($scope.massOffer.end_date);
 
+
         Products.loadProductsFromItems(Cart.getItems(), function(products)
         {
             $scope.products = products;
+        });
+
+        Products.loadProductsFromItems(Cart.getGifts(), function(gifts)
+        {
+            $scope.gifts = gifts;
         });
 
         $scope.removeItem = function(index)
@@ -103,12 +130,28 @@ angular.module('qbrando.controllers', ['qbrando.services']).
 
             // Remove from cart
             Cart.removeItem(index);
+
+            $scope.updateGifts();
+        }
+
+        $scope.removeGift = function(index)
+        {
+            $scope.gifts.splice(index, 1);
+
+            Cart.removeGift(index);
         }
 
         $scope.updateQuantity = function(index)
         {
             // Update quantity
             Cart.updateItem(index, $scope.products[index].quantity);
+
+            $scope.updateGifts();
+        }
+
+        $scope.updateGifts = function()
+        {
+            $scope.gifts = Helpers.extract_matchings($scope.gifts, Cart.getGifts(), 'id');
         }
     }])
 

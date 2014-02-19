@@ -255,7 +255,7 @@ angular.module('qbrando.services', []).
 
             calculateNumberOfGifts: function(items)
             {
-                return this.doesOfferApplies(items) ? Math.floor(items.length * this.gifts_per_product) : 0;
+                return this.doesOfferApplies(items) ? Math.floor(this.calculateQuantity(items) * this.gifts_per_product) : 0;
             },
 
             calculatePriceFrom: function(price)
@@ -263,18 +263,44 @@ angular.module('qbrando.services', []).
                 return price * (1 - (this.discount_percentage / 100));
             },
 
-
             doesOfferApplies: function(items)
             {
-                var quantity = 0, price = 0;
+                return this.calculateQuantity(items) >= this.start_quantity && this.calculatePrice(items) >= this.start_price;
+            },
+
+            isGiftOffer: function()
+            {
+                return this.gifts_per_product > 0;
+            },
+
+            isDiscountOffer: function()
+            {
+                return this.discount_percentage > 0;
+            },
+
+
+            calculateQuantity: function(items)
+            {
+                var quantity = 0;
 
                 for(var i = 0; i < items.length; i ++)
                 {
                     quantity += items[i].quantity;
-                    price    += items[i].price * items[i].quantity;
                 }
 
-                return quantity >= this.start_quantity && price >= this.start_price;
+                return quantity;
+            },
+
+            calculatePrice: function(items)
+            {
+                var price = 0;
+
+                for(var i = 0; i < items.length; i ++)
+                {
+                    price += items[i].price * items[i].quantity;
+                }
+
+                return price;
             }
         }
     }])
@@ -295,8 +321,6 @@ angular.module('qbrando.services', []).
 
                 this.callListeners();
             },
-
-
 
             'store': {
                 'add': function(cookieName, item, quantity) {
@@ -396,17 +420,23 @@ angular.module('qbrando.services', []).
 
                 this.store.add(this.itemsCookieName, item ,quantity);
 
+                this.makeSureGiftsAreValid();
+
                 this.callListeners();
             },
             'updateItem': function(index, quantity) {
 
                 this.store.update(this.itemsCookieName, index ,quantity);
 
+                this.makeSureGiftsAreValid();
+
                 this.callListeners();
             },
             'removeItem': function(index) {
 
                 this.store.remove(this.itemsCookieName, index);
+
+                this.makeSureGiftsAreValid();
 
                 this.callListeners();
             },
@@ -436,11 +466,15 @@ angular.module('qbrando.services', []).
 
                 this.store.update(this.giftsCookieName, index ,quantity);
 
+                this.makeSureGiftsAreValid();
+
                 this.callListeners();
             },
             'removeGift': function(index) {
 
                 this.store.remove(this.giftsCookieName, index);
+
+                this.makeSureGiftsAreValid();
 
                 this.callListeners();
             },
@@ -456,6 +490,20 @@ angular.module('qbrando.services', []).
 
                 return this.store.has(this.giftsCookieName, item);
             },
+            'getNumberOfGiftsLeft': function() {
+
+                return MassOffer.calculateNumberOfGifts(this.getItems()) - this.store.total(this.giftsCookieName);
+            },
+            'makeSureGiftsAreValid': function() {
+
+                console.log(this.getNumberOfGiftsLeft());
+
+                // Remove gifts as long as number of gifts is < 0
+                while(this.getNumberOfGiftsLeft() < 0)
+                {
+                    this.removeGift(0);
+                }
+            },
             //////////////////////////////////////////////////////////////////////////////////
 
 
@@ -468,8 +516,10 @@ angular.module('qbrando.services', []).
                 return this.hasItem(item) || this.hasGift(item);
             },
             'callListeners': function() {
+
                 for(var i = 0;i < this.listeners.length; i ++) {
 
+                    // Make sure gifts are valid first
                     this.callListener(this.listeners[i]);
                 }
             },
@@ -494,7 +544,7 @@ angular.module('qbrando.services', []).
 
             'hasOfferPrice': function() {
 
-                return MassOffer.doesOfferApplies(this.getItems());
+                return MassOffer.doesOfferApplies(this.getItems()) && MassOffer.isDiscountOffer();
             },
             'afterOfferPrice': function() {
 
@@ -577,6 +627,19 @@ angular.module('qbrando.services', []).
                 for (var attrname in obj1) { obj3[attrname] = obj1[attrname]; }
                 for (var attrname in obj2) { obj3[attrname] = obj2[attrname]; }
                 return obj3;
+            },
+
+            extract_matchings: function(arr1,arr2, attr) {
+                var arr3 = [];
+                for(var i = 0; i < arr1.length; i ++) {
+                    for(var j = 0; j < arr2.length; j ++) {
+                        if(arr1[i][attr] == arr2[j][attr]) {
+                            arr3.push(arr1[i]);
+                            break;
+                        }
+                    }
+                }
+                return arr3;
             }
         }
     });

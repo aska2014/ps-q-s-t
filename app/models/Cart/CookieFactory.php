@@ -34,8 +34,8 @@ class CookieFactory implements ItemFactoryInterface {
      */
     public function destroy()
     {
-        setcookie(self::ITEM_COOKIE_KEY, "", time()-3600);
-        setcookie(self::GIFT_COOKIE_KEY, "", time()-3600);
+        setcookie(self::ITEM_COOKIE_KEY, "", time()-3600, "/");
+        setcookie(self::GIFT_COOKIE_KEY, "", time()-3600, "/");
     }
 
     /**

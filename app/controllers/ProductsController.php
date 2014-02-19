@@ -9,10 +9,12 @@ class ProductsController extends BaseController {
 
     /**
      * @param Product $products
+     * @param Offers\MassOffer $massOffers
      */
-    public function __construct(Product $products)
+    public function __construct(Product $products, \Offers\MassOffer $massOffers)
     {
         $this->products = $products;
+        $this->massOffers = $massOffers;
     }
 
     /**
@@ -34,6 +36,17 @@ class ProductsController extends BaseController {
         $carousel = $this->getCarousel();
 
         return View::make('pages.product', compact('product', 'carousel'));
+    }
+
+
+    /**
+     * @return mixed
+     */
+    public function chooseGifts()
+    {
+        $products = $this->massOffers->current(new DateTime('now'))->first()->filterGiftsFromCollection($this->products->all());
+
+        return View::make('pages.choose_gifts', compact('products'));
     }
 
     /**

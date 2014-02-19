@@ -1,6 +1,8 @@
 <?php namespace Offers;
 
 use Cart\Item;
+use ECommerce\Product;
+use Illuminate\Support\Collection;
 use Units\Price;
 
 class MassOffer extends \DateRangeModel {
@@ -40,12 +42,40 @@ class MassOffer extends \DateRangeModel {
     }
 
     /**
+     * @param Collection $products
+     * @return array
+     */
+    public function filterGiftsFromCollection($products)
+    {
+        return $products->filter(function(Product $product)
+        {
+            return $product->getOfferPrice()->smallerThanOrEqual($this->getMaxGiftPrice());
+        });
+    }
+
+    /**
      * @param Item[] $items
      * @return int
      */
     public function calculateNumberOfGifts($items)
     {
-        return floor($this->gifts_per_product * count($items));
+        return floor($this->gifts_per_product * $this->calculateQuantity($items));
+    }
+
+    /**
+     * @param Item[] $items
+     * @return int
+     */
+    protected function calculateQuantity($items)
+    {
+        $quantity = 0;
+
+        foreach($items as $item)
+        {
+            $quantity += $item->getQuantity();
+        }
+
+        return $quantity;
     }
 
     /**

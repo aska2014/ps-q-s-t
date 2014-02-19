@@ -54,6 +54,16 @@ App::error(function(Exception $exception)
 
 });
 
+App::error(function(\Cart\CartException $exception)
+{
+    App::make('Cart\ItemFactoryInterface')->destroy();
+
+    $contact = new ContactUs();
+
+    return Redirect::route('message-to-user')->with('title', 'Something went wrong while trying to validate your cart!')
+           ->with('body', 'Please try again. If you still have this problem contact us at '. $contact->getEmailAddress());
+});
+
 /*
 |--------------------------------------------------------------------------
 | Maintenance Mode Handler

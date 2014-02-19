@@ -32,7 +32,7 @@
                 </tr>
                 <tr>
                     <th>Price</th>
-                    <td>{{ model.price.value }}</td>
+                    <td>{{ model.price }}</td>
                 </tr>
                 <tr>
                     <th>Offers</th>
