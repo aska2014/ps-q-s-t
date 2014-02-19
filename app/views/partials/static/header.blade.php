@@ -45,7 +45,7 @@
                 <a ng-class="getCartItemClass()" href="{{ URL::route('shopping-cart') }}">
                     <span class="glyphicon glyphicon-shopping-cart"></span>
                     Shopping cart
-                    <b ng-cloak><br />@{{ cart.totalItems() }}</b> <strong>items</strong>
+                    <b ng-cloak><br />@{{ cart.totalQuantity() }}</b> <strong>items</strong>
                 </a>
             </li>
         </ul>

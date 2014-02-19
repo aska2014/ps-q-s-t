@@ -10,6 +10,26 @@
     <div ng-switch-default>
         <form name="checkout-form" action="{{ URL::route('checkout.post') }}" method="POST">
 
+            <div class="alert alert-success" ng-show="massOffer.isGiftOffer() && (cart.getNumberOfGiftsAllowed() == 0 || cart.getNumberOfGiftsLeft() > 0)">
+                <a href="#" class="close" data-dismiss="alert">&times;</a>
+                <p>
+                    <strong>Nice timing!</strong> @{{ massOffer.description }}
+                </p><br/>
+                <a class="btn btn-success" href="{{ URL::route('shopping-cart') }}" ng-show="cart.getNumberOfGiftsLeft() == 0">
+                    <span class="glyphicon glyphicon-gift" style="margin-top:3px;"></span>
+                    Go to your shopping cart
+                </a>
+                <p ng-show="cart.getNumberOfGiftsLeft() > 0">
+                    You have <span style="font-weight: bold;">@{{ cart.getNumberOfGiftsLeft() }}</span> Gifts waiting for you
+
+                    &nbsp
+                    <a class="btn btn-success" href="{{ URL::route('choose-gifts') }}">
+                        <span class="glyphicon glyphicon-gift" style="margin-top:3px;"></span>
+                        Choose your gifts
+                    </a>
+
+                </p>
+            </div>
             <div class="main-title">
                 <span class="glyphicon glyphicon-shopping-cart"></span>
                 Checkout form
@@ -71,7 +91,7 @@
 
             </div>
             <p class="text-left text-danger price">
-                You are about to create an order with <strong ng-bind="cart.totalItems() + ' items'"></strong> and total cost:
+                You are about to create an order with <strong ng-bind="cart.totalQuantity() + ' items'"></strong> and total cost:
                 <strong class="price" ng-bind="cart.afterOfferPrice() | currency:currency"></strong>
                 <span ng-show="cart.hasOfferPrice()">instead of
                     <span class="before-price" ng-bind="cart.beforeOfferPrice() | currency:currency"></span>

@@ -490,9 +490,14 @@ angular.module('qbrando.services', []).
 
                 return this.store.has(this.giftsCookieName, item);
             },
+            'getNumberOfGiftsAllowed': function() {
+
+                console.log(MassOffer.calculateNumberOfGifts(this.getItems()));
+                return MassOffer.calculateNumberOfGifts(this.getItems());
+            },
             'getNumberOfGiftsLeft': function() {
 
-                return MassOffer.calculateNumberOfGifts(this.getItems()) - this.store.total(this.giftsCookieName);
+                return this.getNumberOfGiftsAllowed() - this.store.total(this.giftsCookieName);
             },
             'makeSureGiftsAreValid': function() {
 
@@ -514,6 +519,9 @@ angular.module('qbrando.services', []).
             'has': function(item) {
 
                 return this.hasItem(item) || this.hasGift(item);
+            },
+            'totalQuantity': function() {
+                return this.totalItems() + this.totalGifts();
             },
             'callListeners': function() {
 
