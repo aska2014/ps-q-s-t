@@ -12,6 +12,8 @@
                     <th>Start quantity</th>
                     <th>Start price</th>
                     <th>Discount percentage</th>
+                    <th>Gifts per product</th>
+                    <th>Max gift price</th>
                     <th>Date range</th>
                     <th>Tools</th>
                 </tr>
@@ -23,6 +25,8 @@
                     <td>{{ offer.start_quantity }}</td>
                     <td>{{ offer.start_price }}</td>
                     <td>{{ offer.discount_percentage }}</td>
+                    <td>{{ offer.gifts_per_product }}</td>
+                    <td>{{ offer.max_gift_price }}</td>
                     <td>( {{ offer.from_date }} ) &nbsp&nbsp&nbsp -> &nbsp&nbsp&nbsp ( {{ offer.to_date }} )</td>
                     <td class="action-col" width="10%">
                     <span class="btn-group">

@@ -109,7 +109,7 @@
     <file path="/FreakBrandController.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391981456596" ignored="false" />
     <file path="/HTML Fragment (FreakBrandController.php:547).html" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391981319630" ignored="false" />
     <file path="/FreakOrderController.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392504862750" ignored="false" />
-    <file path="/all.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392545100945" ignored="false" />
+    <file path="/all.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392811756729" ignored="false" />
     <file path="/ui_comps.js" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392022757214" ignored="false" />
     <file path="/FreakProductOfferController.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392494273459" ignored="false" />
     <file path="/all.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392038727089" ignored="false" />
@@ -173,10 +173,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="form.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="form.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/freak/views/mass_offer/form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="55" selection-start="2867" selection-end="2867" vertical-scroll-proportion="0.5766283">
+            <state line="51" column="55" selection-start="2867" selection-end="2867" vertical-scroll-proportion="-11.576923">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="all.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/freak/views/mass_offer/all.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="47" selection-start="1189" selection-end="1189" vertical-scroll-proportion="0.61877394">
               <folding />
             </state>
           </provider>
@@ -192,7 +201,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/models/Cart/Cart.php" />
         <option value="$PROJECT_DIR$/app/models/Offers/MassOffer.php" />
         <option value="$PROJECT_DIR$/app/start/global.php" />
         <option value="$PROJECT_DIR$/app/models/Cart/CookieFactory.php" />
@@ -208,6 +216,7 @@
         <option value="$PROJECT_DIR$/app/views/pages/checkout.blade.php" />
         <option value="$PROJECT_DIR$/app/views/partials/static/header.blade.php" />
         <option value="$PROJECT_DIR$/app/freak/views/mass_offer/form.php" />
+        <option value="$PROJECT_DIR$/app/freak/views/mass_offer/all.php" />
       </list>
     </option>
   </component>
@@ -682,13 +691,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/app/js/controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="0" selection-start="2665" selection-end="2665" vertical-scroll-proportion="0.7518248">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pages/choose_gifts.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="45" selection-start="297" selection-end="309" vertical-scroll-proportion="0.2605364">
@@ -796,7 +798,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/freak/views/mass_offer/form.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="55" selection-start="2867" selection-end="2867" vertical-scroll-proportion="0.5766283">
+        <state line="51" column="55" selection-start="2867" selection-end="2867" vertical-scroll-proportion="-11.576923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/freak/views/mass_offer/all.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="47" selection-start="1189" selection-end="1189" vertical-scroll-proportion="0.61877394">
           <folding />
         </state>
       </provider>
