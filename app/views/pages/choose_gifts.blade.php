@@ -4,7 +4,10 @@
 <div class="grid-products" ng-controller="GiftsController">
 
     <blockquote>
-        <p><span class="glyphicon glyphicon-gift" style="margin-top:3px;"></span> Choose your gifts</p>
+        <p><span class="glyphicon glyphicon-gift" style="margin-top:3px;"></span> Choose your gifts<br/>
+            <small>You can only choose your gifts from the following list of products</small>
+
+        </p>
         <p style="color:#EE3D26">
             You have <strong>@{{ choose_gifts.left }}</strong> gifts left to choose
         </p>
