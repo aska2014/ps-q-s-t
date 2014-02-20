@@ -11,7 +11,7 @@
     <file path="/dummy.xml" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392726213926" ignored="false" />
     <file path="/angular.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392652605244" ignored="false" />
     <file path="/Dummy.txt" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392908109402" ignored="false" />
-    <file path="/composers.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392503673362" ignored="false" />
+    <file path="/composers.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392914795486" ignored="false" />
     <file path="/app.less" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392735430887" ignored="false" />
     <file path="/header.blade.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392732750041" ignored="false" />
     <file path="/header.less" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392733374728" ignored="false" />
@@ -59,7 +59,7 @@
     <file path="/2014_02_06_210208_create_mass_offers_table.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392472244507" ignored="false" />
     <file path="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391727605238" ignored="false" />
     <file path="/migrate-all.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391727698794" ignored="false" />
-    <file path="/Product.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392758242504" ignored="false" />
+    <file path="/Product.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392914762407" ignored="false" />
     <file path="/Category.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392477931128" ignored="false" />
     <file path="/Bran.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1391728668379" ignored="false" />
     <file path="/Price.php" changelist="09236894-3e4c-4d0d-a6ca-f0330fc20f20" time="1392635008330" ignored="false" />
@@ -177,13 +177,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="angular.blade.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/templates/angular.blade.php">
+      <file leaf-file-name="composers.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/composers.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="87" selection-start="2615" selection-end="2615" vertical-scroll-proportion="0.31609195">
-              <folding>
-                <marker date="1392911967381" expanded="true" signature="850:955" placeholder="..." />
-              </folding>
+            <state line="23" column="104" selection-start="816" selection-end="816" vertical-scroll-proportion="0.47663552">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Product.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/ECommerce/Product.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="45" column="58" selection-start="989" selection-end="989" vertical-scroll-proportion="-10.461538">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -198,8 +205,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/public/app/js/directives.js" />
-        <option value="$PROJECT_DIR$/app/views/pages/choose_gifts.blade.php" />
         <option value="$PROJECT_DIR$/public/app/js/controllers.js" />
         <option value="$PROJECT_DIR$/app/freak/controllers/FreakOrderController.php" />
         <option value="$PROJECT_DIR$/app/freak/views/order/one.php" />
@@ -214,6 +219,8 @@
         <option value="$PROJECT_DIR$/app/models/BaseModel.php" />
         <option value="$PROJECT_DIR$/app/controllers/ProductsController.php" />
         <option value="$PROJECT_DIR$/app/views/templates/angular.blade.php" />
+        <option value="$PROJECT_DIR$/app/models/ECommerce/Product.php" />
+        <option value="$PROJECT_DIR$/app/composers.php" />
       </list>
     </option>
   </component>
@@ -333,46 +340,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="new_www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="new_www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="new_www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="new_www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -542,16 +509,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/pages/cart.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="54" selection-start="591" selection-end="647" vertical-scroll-proportion="0.03256705" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/freak/views/order/one.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="29" selection-start="1519" selection-end="1519" vertical-scroll-proportion="0.0317757" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/freak/views/category/form.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
@@ -633,10 +590,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/templates/angular.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="87" selection-start="2615" selection-end="2615" vertical-scroll-proportion="0.31609195">
+        <state line="73" column="51" selection-start="2808" selection-end="2808" vertical-scroll-proportion="0.44636014">
           <folding>
-            <marker date="1392911967381" expanded="true" signature="850:955" placeholder="..." />
+            <marker date="1392911967381" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/ECommerce/Product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="58" selection-start="989" selection-end="989" vertical-scroll-proportion="-10.461538">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/composers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="104" selection-start="816" selection-end="816" vertical-scroll-proportion="0.47663552">
+          <folding />
         </state>
       </provider>
     </entry>

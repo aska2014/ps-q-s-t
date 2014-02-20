@@ -40,6 +40,11 @@ class Product extends \BaseModel {
      */
     public function scopeTopSales($query)
     {
+        $query->select('products.*')
+              ->leftJoin('product_order', 'product_order.product_id', '=', 'products.id')
+              ->groupBy('product_order.product_id')
+              ->orderBy(DB::raw('SUM(quantity)'), 'DESC');
+
         return $query;
     }
 
@@ -65,6 +70,7 @@ class Product extends \BaseModel {
 
     /**
      * @param $query
+     * @todo
      */
     public function scopeMix($query)
     {
