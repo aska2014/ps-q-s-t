@@ -67,9 +67,7 @@ massOffer.init('{{ $massOffer->getClean('title') }}', '{{ $massOffer->getClean('
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
-<script src="http://code.angularjs.org/1.2.12/angular.min.js"></script>
-<script src="http://code.angularjs.org/1.2.12/angular-resource.min.js"></script>
-<!--<script src="http://code.angularjs.org/1.2.12/angular-cookies.min.js"></script>-->
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js"></script>
 @else
 <script src="{{ URL::asset('app/lib/jquery.min.js') }}"></script>
 <script src="{{ URL::asset('app/lib/jquery-ui.min.js') }}"></script>
