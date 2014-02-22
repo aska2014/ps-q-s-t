@@ -514,7 +514,7 @@ angular.module('qbrando.services', []).
 
             //--------------------------- Common methods --------------------------------//
             'isEmpty': function() {
-                return this.getItems().length == 0;
+                return this.getItems() && this.getItems().length == 0;
             },
             'has': function(item) {
 

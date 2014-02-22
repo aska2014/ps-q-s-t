@@ -94,12 +94,12 @@
             image_name: 'product'
         });
 
-        $http.get(url.element('category', '', true)).success(function(data)
+        $http.get(url.serverElement('category', '')).success(function(data)
         {
             $scope.categories = data;
         });
 
-        $http.get(url.element('brand', '', true)).success(function(data)
+        $http.get(url.serverElement('brand', '')).success(function(data)
         {
             $scope.brands = data;
         });
@@ -120,24 +120,21 @@
             }
         });
 
-        $scope.$watch('model.id', function(id)
+        $scope.whenReady(function()
         {
-            if(id !== undefined)
+            $scope.show.offer = true;
+
+            $http.get(url.serverElement('offer', 'product-current/' + $scope.model.id)).success(function(data)
             {
-                $scope.show.offer = true;
+                $scope.offer = data;
+            });
 
-                $http.get(url.element('offer', 'product-current/' + id, true)).success(function(data)
+            $scope.addOffer = function()
+            {
+                $http.post(url.serverElement('offer', 'product/' + $scope.model.id), $scope.offer).success(function()
                 {
-                    $scope.offer = data;
+                    $scope.alert.success('Offer saved', 'Offer saved successfully');
                 });
-
-                $scope.addOffer = function()
-                {
-                    $http.post(url.element('offer', 'product/' + id, true), $scope.offer).success(function()
-                    {
-                        $scope.alert.success('Offer saved', 'Offer saved successfully');
-                    });
-                }
             }
         });
     }

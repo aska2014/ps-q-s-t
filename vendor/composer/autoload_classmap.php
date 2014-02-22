@@ -6,7 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'AddDiscountPercentageMassOffers' => $baseDir . '/app/database/migrations/2014_02_15_150517_add_discount_percentage_mass_offers.php',
+    'BackupDatabaseCommand' => $baseDir . '/app/commands/BackupDatabaseCommand.php',
     'BaseController' => $baseDir . '/app/controllers/BaseController.php',
     'BaseModel' => $baseDir . '/app/models/BaseModel.php',
     'Boris\\Boris' => $vendorDir . '/d11wtq/boris/lib/Boris/Boris.php',
@@ -36,6 +36,7 @@ return array(
     'ClassPreloader\\Parser\\DirVisitor' => $vendorDir . '/classpreloader/classpreloader/src/ClassPreloader/Parser/DirVisitor.php',
     'ClassPreloader\\Parser\\FileVisitor' => $vendorDir . '/classpreloader/classpreloader/src/ClassPreloader/Parser/FileVisitor.php',
     'ClassPreloader\\Parser\\NodeTraverser' => $vendorDir . '/classpreloader/classpreloader/src/ClassPreloader/Parser/NodeTraverser.php',
+    'CountrySeeder' => $baseDir . '/app/database/seeds/CountrySeeder.php',
     'CreateAccountsTable' => $vendorDir . '/kareem3d/membership/src/migrations/2014_01_03_214321_create_accounts_table.php',
     'CreateBrandsTable' => $baseDir . '/app/database/migrations/2014_02_06_210115_create_brands_table.php',
     'CreateCategoriesTable' => $baseDir . '/app/database/migrations/2014_02_06_210056_create_categories_table.php',
@@ -281,6 +282,7 @@ return array(
     'Illuminate\\Pagination\\Paginator' => $vendorDir . '/laravel/framework/src/Illuminate/Pagination/Paginator.php',
     'Illuminate\\Pagination\\Presenter' => $vendorDir . '/laravel/framework/src/Illuminate/Pagination/Presenter.php',
     'Illuminate\\Queue\\BeanstalkdQueue' => $vendorDir . '/laravel/framework/src/Illuminate/Queue/BeanstalkdQueue.php',
+    'Illuminate\\Queue\\Capsule\\Manager' => $vendorDir . '/laravel/framework/src/Illuminate/Queue/Capsule/Manager.php',
     'Illuminate\\Queue\\Connectors\\BeanstalkdConnector' => $vendorDir . '/laravel/framework/src/Illuminate/Queue/Connectors/BeanstalkdConnector.php',
     'Illuminate\\Queue\\Connectors\\ConnectorInterface' => $vendorDir . '/laravel/framework/src/Illuminate/Queue/Connectors/ConnectorInterface.php',
     'Illuminate\\Queue\\Connectors\\IronConnector' => $vendorDir . '/laravel/framework/src/Illuminate/Queue/Connectors/IronConnector.php',
@@ -514,6 +516,7 @@ return array(
     'Location\\City' => $baseDir . '/app/models/Location/City.php',
     'Location\\Country' => $baseDir . '/app/models/Location/Country.php',
     'Location\\Location' => $baseDir . '/app/models/Location/Location.php',
+    'MassOfferSeeder' => $baseDir . '/app/database/seeds/MassOfferSeeder.php',
     'Math_BigInteger' => $vendorDir . '/phpseclib/phpseclib/phpseclib/Math/BigInteger.php',
     'Monolog\\ErrorHandler' => $vendorDir . '/monolog/monolog/src/Monolog/ErrorHandler.php',
     'Monolog\\Formatter\\ChromePHPFormatter' => $vendorDir . '/monolog/monolog/src/Monolog/Formatter/ChromePHPFormatter.php',
@@ -1530,6 +1533,7 @@ return array(
     'Units\\Price' => $baseDir . '/app/models/Units/Price.php',
     'VisibleProductRepository' => $baseDir . '/app/models/VisibleProductRepository.php',
     'Website\\Carousel' => $baseDir . '/app/models/Website/Carousel.php',
+    'Website\\ContactUs' => $baseDir . '/app/models/Website/ContactUs.php',
     'Whoops\\Exception\\ErrorException' => $vendorDir . '/filp/whoops/src/Whoops/Exception/ErrorException.php',
     'Whoops\\Exception\\Frame' => $vendorDir . '/filp/whoops/src/Whoops/Exception/Frame.php',
     'Whoops\\Exception\\FrameCollection' => $vendorDir . '/filp/whoops/src/Whoops/Exception/FrameCollection.php',

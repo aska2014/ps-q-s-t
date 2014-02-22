@@ -4,7 +4,7 @@
             <span class="title">Showing brand</span>
         </div>
         <div class="widget-content table-container">
-            <table class="table table-striped table-detail-view" ng-controller="FECategoryCtrl">
+            <table class="table table-striped table-detail-view">
                 <tbody>
                 <tr>
                     <th>Title</th>
@@ -14,7 +14,7 @@
                     <th>Products</th>
                     <td>
                         <ul>
-                            <li ng-repeat="product in products">
+                            <li ng-repeat="product in model.products">
                                 <a href="#{{ url.elementView('product', 'one/' + product.id) }}">{{ product.title }}</a>
                             </li>
                         </ul>
@@ -25,15 +25,3 @@
         </div>
     </div>
 </div>
-
-
-<script type="text/javascript">
-    function FECategoryCtrl($scope, $http, url)
-    {
-        $scope.$watch('model.id', function(id) {
-            $http.get(url.element('product', 'brand/' + id, true)).success(function(data) {
-                $scope.products = data;
-            });
-        });
-    }
-</script>

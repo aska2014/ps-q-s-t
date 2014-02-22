@@ -4,7 +4,7 @@
             <span class="title">All products</span>
         </div>
         <div class="widget-content table-container">
-            <table fr-data-table="{{ isReady }}" class="table table-striped">
+            <table fr-data-table="{{ viewOptions.ready }}" class="table table-striped">
                 <thead>
                 <tr>
                     <th>Id</th>
@@ -29,11 +29,7 @@
                     </td>
                     <td>{{ product.price }}</td>
                     <td class="action-col" width="10%">
-                    <span class="btn-group">
-                        <a href="#{{ url.elementView('product', 'one/' + product.id) }}" class="btn btn-small"><i class="icon-search"></i></a>
-                        <a href="#{{ url.elementView('product', 'form/' + product.id) }}" class="btn btn-small"><i class="icon-pencil"></i></a>
-                        <a ng-click="delete($index)" class="btn btn-small"><i class="icon-trash"></i></a>
-                    </span>
+                        <fr-data-tools></fr-data-tools>
                     </td>
                 </tr>
                 </tbody>

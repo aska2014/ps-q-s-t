@@ -21,7 +21,7 @@
                         </div>
                     </div>
                     <div class="form-actions">
-                        <button type="submit" class="btn btn-primary">Save changes</button>
+                        <button type="submit" ng-disabled="isSubmitting" class="btn btn-primary">Save changes</button>
                         <button type="reset" class="btn" type="reset">Cancel</button>
                     </div>
                 </form>
@@ -34,12 +34,12 @@
 <script type="text/javascript">
     function FEOPCtrl(url, $http, $scope)
     {
-        $http.get(url.element('offer_position/current', '', true)).success(function(data)
+        $http.get(url.serverElement('offer_position/current', '')).success(function(data)
         {
             $scope.offer_positions = data;
         });
 
-        $http.get(url.element('product', '', true)).success(function(data)
+        $http.get(url.serverElement('product', '')).success(function(data)
         {
             $scope.products = data;
         });
@@ -48,10 +48,10 @@
         {
             if ( offer_position.hasOwnProperty('id') ) {
 
-                var myUrl = url.element('offer_position', offer_position.id, true);
+                var myUrl = url.serverElement('offer_position', offer_position.id);
             }
             else {
-                var myUrl = url.element('offer_position', '', true);
+                var myUrl = url.serverElement('offer_position', '');
             }
 
             $http.post(myUrl, offer_position).success(function(data)

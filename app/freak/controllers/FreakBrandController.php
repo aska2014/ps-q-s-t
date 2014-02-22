@@ -30,7 +30,7 @@ class FreakBrandController extends \Kareem3d\Freak\Core\ElementController {
      */
     public function show($id)
     {
-        return $this->brands->findOrFail($id);
+        return $this->brands->with('products')->findOrFail($id);
     }
 
     /**

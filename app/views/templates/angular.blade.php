@@ -44,7 +44,7 @@
 cart.init('{{ $itemCookieKey }}', '{{ $giftCookieKey }}');
 price.init('QAR');
 @if($massOffer)
-massOffer.init('{{ $massOffer->getClean('title') }}', '{{ $massOffer->getClean('description') }}', '{{ $massOffer->to_date }}', {{ $massOffer->start_quantity }}, {{ $massOffer->getStartPrice()->value() ?: 0 }}, {{ $massOffer->discount_percentage ?: 0 }}, {{ $massOffer->gifts_per_product ?: 0 }}, {{ $massOffer->getMaxGiftPrice()->value() ?: 0 }})
+massOffer.init('{{ $massOffer->getClean('title') }}', '{{ $massOffer->getClean('description') }}', '{{ $massOffer->to_date }}', {{ $massOffer->start_quantity ?: 0 }}, {{ $massOffer->getStartPrice()->value() ?: 0 }}, {{ $massOffer->discount_percentage ?: 0 }}, {{ $massOffer->gifts_per_product ?: 0 }}, {{ $massOffer->getMaxGiftPrice()->value() ?: 0 }})
 @endif
 ">
 <div class="large-container">

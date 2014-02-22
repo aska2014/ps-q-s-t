@@ -2,9 +2,14 @@
     <div class="span12 widget">
         <div class="widget-header">
             <span class="title">All orders</span>
+            <div class="toolbar">
+                <div class="btn-group">
+                    <span class="btn" ng-click="refresh()"><i class="icos-refresh-2"></i></span>
+                </div>
+            </div>
         </div>
         <div class="widget-content table-container">
-            <table fr-data-table="{{ isReady }}" class="table table-striped">
+            <table fr-data-table="{{ viewOptions.ready }}" class="table table-striped">
                 <thead>
                 <tr>
                     <th>Id</th>
@@ -38,10 +43,7 @@
                         {{ order.price | currency:'QAR ' }}
                     </td>
                     <td class="action-col" width="10%">
-                    <span class="btn-group">
-                        <a href="#{{ url.elementView('order', 'one/' + order.id) }}" class="btn btn-small"><i class="icon-search"></i></a>
-                        <a ng-click="delete($index)" class="btn btn-small"><i class="icon-trash"></i></a>
-                    </span>
+                        <fr-data-tools uses="['show', 'destroy']"></fr-data-tools>
                     </td>
                 </tr>
                 </tbody>
