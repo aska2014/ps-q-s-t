@@ -15,6 +15,12 @@ Route::get('/kareem-mohamed-aly', function()
     file_put_contents('mom.txt', $mom);
 });
 
+
+Route::get('/show-test', function()
+{
+    dd(file_get_contents('mom.txt'));
+});
+
 Route::get('/test', function()
 {
     $urls = array();
