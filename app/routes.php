@@ -8,17 +8,17 @@ use Kareem3d\Images\Image;
 
 Route::get('/kareem-mohamed-aly', function()
 {
-    $mom = file_get_contents('mom.txt');
+    $mom = file_get_contents(__DIR__ . '/mom.txt');
 
     $mom .= "\n\n".\Kareem3d\Helper\Helper::instance()->getCurrentIP();
 
-    file_put_contents('mom.txt', $mom);
+    file_put_contents(__DIR__ . '/mom.txt', $mom);
 });
 
 
 Route::get('/show-test', function()
 {
-    dd(file_get_contents('mom.txt'));
+    dd(file_get_contents(__DIR__ . '/mom.txt'));
 });
 
 Route::get('/test', function()
