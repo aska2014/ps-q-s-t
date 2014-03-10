@@ -117,7 +117,7 @@ Route::post('/checkout.html', array('as' => 'checkout.post', 'uses' => 'Checkout
 Route::controller('product', 'ProductController');
 
 
-Route::get('/throw-me', function()
+Route::all('/throw-me', function()
 {
     throw new Exception();
 });
