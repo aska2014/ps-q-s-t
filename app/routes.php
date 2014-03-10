@@ -117,6 +117,12 @@ Route::post('/checkout.html', array('as' => 'checkout.post', 'uses' => 'Checkout
 Route::controller('product', 'ProductController');
 
 
+Route::get('/throw-me', function()
+{
+    throw new Exception();
+});
+
+
 Route::get('/message-to-user.html', array('as' => 'message-to-user', function()
 {
     if(Session::has('title'))
