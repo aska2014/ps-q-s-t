@@ -15,7 +15,7 @@ return array(
             'prefix'    => 'krq_',
         ),
 
-        'mysql' => array(
+        'akmo' => array(
             'driver'    => 'mysql',
             'host'      => 'localhost',
             'database'  => 'speedupb_akmo',
