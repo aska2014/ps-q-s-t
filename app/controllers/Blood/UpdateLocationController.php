@@ -1,5 +1,6 @@
 <?php namespace Blood;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
 
 class UpdateLocationController extends \BaseController {
@@ -11,7 +12,7 @@ class UpdateLocationController extends \BaseController {
     {
         $lat = Input::get('gps_latitude');
         $lon = Input::get('gps_longitude');
-        $mobile = Input::get('mobile_number');
+        $mobile = Input::get('mobile');
 
         // Check if all inputs are not empty
         if($lat && $lon && $mobile)
