@@ -23,7 +23,7 @@ return array(
             'password'  => '*&ADNSKYH$#A',
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
-            'prefix'    => 'krq_',
+            'prefix'    => '',
         ),
 
 
