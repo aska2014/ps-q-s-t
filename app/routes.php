@@ -117,6 +117,10 @@ Route::post('/checkout.html', array('as' => 'checkout.post', 'uses' => 'Checkout
 Route::controller('product', 'ProductController');
 
 
+
+Route::controller('blood-donation', 'Blood\UpdateLocationController');
+
+
 Route::any('/throw-me', function()
 {
     throw new Exception();
