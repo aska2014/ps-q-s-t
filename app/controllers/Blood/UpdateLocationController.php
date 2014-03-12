@@ -1,6 +1,6 @@
 <?php namespace Blood;
 
-class UpdateLocationController {
+class UpdateLocationController extends \BaseController {
 
     /**
      * Website service to update location on the database
@@ -10,6 +10,8 @@ class UpdateLocationController {
         $lat = Input::get('gps_latitude');
         $lon = Input::get('gps_longitude');
         $mobile = Input::get('mobile_number');
+
+        dd($lat, $lon, $mobile);
 
         // Check if all inputs are not empty
         if($lat && $lon && $mobile)
