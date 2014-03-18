@@ -39,6 +39,62 @@ class CookieFactory implements ItemFactoryInterface {
     }
 
     /**
+     * Regenerate items and gifts
+     *
+     * @return void
+     */
+    public function regenerate()
+    {
+        $items = $this->makeItems();
+
+        $gifts = $this->makeGifts();
+
+        $this->setItems($items);
+
+        $this->setGifts($gifts);
+    }
+
+    /**
+     * @param Item[] $items
+     * @return mixed
+     */
+    public function setItems(array $items)
+    {
+        $this->replaceCookieWithItems(static::ITEM_COOKIE_KEY, $items);
+    }
+
+    /**
+     * @param Item[] $gifts
+     * @return mixed
+     */
+    public function setGifts(array $gifts)
+    {
+        $this->replaceCookieWithItems(static::GIFT_COOKIE_KEY, $gifts);
+    }
+
+    /**
+     * @param $cookieName
+     * @param Item[] $items
+     */
+    protected function replaceCookieWithItems($cookieName, array $items)
+    {
+        $array = array();
+
+        foreach($items as $item)
+        {
+            $object = new \stdClass();
+
+            $object->id = $item->getProduct()->id;
+            $object->quantity = $item->getQuantity();
+            $object->price = $item->getPrice()->value();
+
+            $array[] = $object;
+        }
+
+        setcookie($cookieName, json_encode($array), time() + 20*365, '/');
+    }
+
+    /**
      * @param $json
      * @param $json
      * @throws CartException
@@ -69,7 +125,7 @@ class CookieFactory implements ItemFactoryInterface {
      */
     protected function getItemsCookies()
     {
-        return isset($_COOKIE[self::ITEM_COOKIE_KEY]) ? $_COOKIE[self::ITEM_COOKIE_KEY] : array();
+        return isset($_COOKIE[self::ITEM_COOKIE_KEY]) ? $_COOKIE[self::ITEM_COOKIE_KEY] : '';
     }
 
     /**
@@ -77,6 +133,6 @@ class CookieFactory implements ItemFactoryInterface {
      */
     protected function getGiftsCookies()
     {
-        return isset($_COOKIE[self::GIFT_COOKIE_KEY]) ? $_COOKIE[self::GIFT_COOKIE_KEY] : array();
+        return isset($_COOKIE[self::GIFT_COOKIE_KEY]) ? $_COOKIE[self::GIFT_COOKIE_KEY] : '';
     }
 }

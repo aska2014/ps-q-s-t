@@ -13,6 +13,23 @@ class ProductController extends BaseController {
     }
 
     /**
+     * @return mixed
+     */
+    public function getAll()
+    {
+        $products = $this->products->get();
+
+        $array = array();
+
+        foreach($products as $product)
+        {
+            $array[] = $this->getProductArray($product);
+        }
+
+        return Response::json($array);
+    }
+
+    /**
      * @param $ids
      */
     public function getMultiple($ids = '')

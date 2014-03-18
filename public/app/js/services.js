@@ -147,8 +147,15 @@ angular.module('qbrando.services', []).
          */
         function requestMultiple(ids, callback)
         {
+            if(ids.length == 0) {
+                callback([]);
+                return;
+            }
+
             // Make a single request to get all products
             $http.get('product/multiple/' + ids.concat()).success(function(products) {
+
+                console.log(products);
 
                 // Push the retrieved product to the loaded products
                 loadedProducts.push(products);
@@ -216,7 +223,13 @@ angular.module('qbrando.services', []).
                     // Merge product options with the given items
                     for(var i = 0;i < products.length; i++)
                     {
-                        products[i] = Helpers.merge_options(products[i], items[i]);
+                        for(var j = 0; j < items.length; j++)
+                        {
+                            if(products[i].id == items[j].id)
+                            {
+                                products[i] = Helpers.merge_options(products[i], items[j]);
+                            }
+                        }
                     }
 
                     callback(products);
@@ -277,7 +290,6 @@ angular.module('qbrando.services', []).
             {
                 return this.discount_percentage > 0;
             },
-
 
             calculateQuantity: function(items)
             {
@@ -342,8 +354,6 @@ angular.module('qbrando.services', []).
                     // Push it to the array if it's new
                     else
                     {
-                        console.log(item);
-
                         items.push({
                             id: item.id,
                             quantity: quantity,
@@ -492,7 +502,6 @@ angular.module('qbrando.services', []).
             },
             'getNumberOfGiftsAllowed': function() {
 
-                console.log(MassOffer.calculateNumberOfGifts(this.getItems()));
                 return MassOffer.calculateNumberOfGifts(this.getItems());
             },
             'getNumberOfGiftsLeft': function() {
@@ -500,8 +509,6 @@ angular.module('qbrando.services', []).
                 return this.getNumberOfGiftsAllowed() - this.store.total(this.giftsCookieName);
             },
             'makeSureGiftsAreValid': function() {
-
-                console.log(this.getNumberOfGiftsLeft());
 
                 // Remove gifts as long as number of gifts is < 0
                 while(this.getNumberOfGiftsLeft() < 0)
@@ -608,12 +615,14 @@ angular.module('qbrando.services', []).
             },
 
             get: function (name) {
+
                 var nameEQ = name + "=";
                 var ca = document.cookie.split(';');
                 for(var i=0;i < ca.length;i++) {
                     var c = ca[i];
                     while (c.charAt(0)==' ') c = c.substring(1,c.length);
-                    if (c.indexOf(nameEQ) == 0) return $.parseJSON(c.substring(nameEQ.length,c.length));
+
+                    if (c.indexOf(nameEQ) == 0) return $.parseJSON(decodeURIComponent(c.substring(nameEQ.length,c.length)));
                 }
                 return null;
             }

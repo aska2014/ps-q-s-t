@@ -52,11 +52,13 @@ class Item {
     }
 
     /**
+     * Default quantity is set to 1
+     *
      * @return int
      */
     public function getQuantity()
     {
-        return $this->quantity;
+        return is_int($this->quantity) && $this->quantity > 0 ? $this->quantity : 1;
     }
 
     /**

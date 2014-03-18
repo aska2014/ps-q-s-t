@@ -68,7 +68,17 @@ Route::get('/message-to-user.html', array('as' => 'message-to-user', function()
 }));
 
 
-Route::get('/test', function()
+Route::get('/change-currency/{currency}', function($currency)
 {
-    \Cachna\Client::makeFromConfig()->sendRequest('400');
+    $appCurrency = Session::get('application_currency');
+
+    if($appCurrency != $currency && \Units\Currency::isAvailable($currency))
+    {
+        Session::put('application_currency', $currency);
+
+        App::make('Cart\ItemFactoryInterface')->regenerate();
+    }
+
+    // Redirect back or to home page
+    try{ return Redirect::back(); } catch(Exception $e) { return Redirect::route('home'); }
 });

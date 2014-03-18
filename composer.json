@@ -4,17 +4,19 @@
 	"keywords": ["framework", "laravel"],
 	"license": "MIT",
 	"require": {
-		"laravel/framework": "4.1.*",
-        "intervention/image":"dev-master",
+            "laravel/framework": "4.1.*",
+            "intervention/image":"dev-master",
 
-        "kareem3d/freak": "dev-master",
-        "kareem3d/freak-images": "dev-master",
-        "kareem3d/eloquent": "dev-master",
-        "kareem3d/helper": "dev-master",
-        "kareem3d/membership": "dev-master",
-        "kareem3d/images": "dev-master",
-        "kareem3d/path-manager": "dev-master",
-        "kareem3d/responser": "dev-master"
+            "kareem3d/freak": "dev-master",
+            "kareem3d/freak-images": "dev-master",
+            "kareem3d/eloquent": "dev-master",
+            "kareem3d/helper": "dev-master",
+            "kareem3d/membership": "dev-master",
+            "kareem3d/images": "dev-master",
+            "kareem3d/path-manager": "dev-master",
+            "kareem3d/responser": "dev-master",
+
+            "besimple/soap": "0.2.*@dev"
 	},
 	"autoload": {
 		"classmap": [

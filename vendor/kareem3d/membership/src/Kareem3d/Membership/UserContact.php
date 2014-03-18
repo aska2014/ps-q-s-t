@@ -18,6 +18,14 @@ class UserContact extends Model {
     public $timestamps = false;
 
     /**
+     * @return mixed|void
+     */
+    public function beforeValidate()
+    {
+        $this->cleanXSS();
+    }
+
+    /**
      * @param UserInfo $userInfo
      * @param $value
      * @return \Illuminate\Database\Eloquent\Model

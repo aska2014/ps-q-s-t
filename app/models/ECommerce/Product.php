@@ -212,15 +212,7 @@ class Product extends \BaseModel {
     {
         if(isset($this->prices['actual']))  return $this->prices['actual'];
 
-        return $this->prices['actual'] = new Price($this->price);
-    }
-
-    /**
-     * @return bool
-     */
-    public function hasOfferPrice()
-    {
-        return $this->getOfferPrice()->value() < $this->getActualPrice()->value();
+        return $this->prices['actual'] = Price::make($this->price);
     }
 
     /**
@@ -232,6 +224,14 @@ class Product extends \BaseModel {
         if(isset($this->prices['offer'])) return $this->prices['offer'];
 
         return $this->prices['offer'] = ProductOffer::calculatePriceFromProduct( $this, new \DateTime() );
+    }
+
+    /**
+     * @return bool
+     */
+    public function hasOfferPrice()
+    {
+        return $this->getOfferPrice()->value() < $this->getActualPrice()->value();
     }
 
     /**

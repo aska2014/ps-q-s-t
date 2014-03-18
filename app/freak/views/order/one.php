@@ -38,7 +38,7 @@
                     <th>Order total price</th>
                     <td>
                         <strong>
-                            {{ model.price | currency:'QAR ' }}
+                            {{ model.price | currency:model.currency + ' ' }}
                         </strong>
                     </td>
                 </tr>

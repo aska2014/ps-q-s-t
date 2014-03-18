@@ -40,7 +40,7 @@
                         </ul>
                     </td>
                     <td>
-                        {{ order.price | currency:'QAR ' }}
+                        {{ order.price | currency:order.currency + ' ' }}
                     </td>
                     <td class="action-col" width="10%">
                         <fr-data-tools uses="['show', 'destroy']"></fr-data-tools>

@@ -42,7 +42,7 @@
 </head>
 <body ng-controller="MainController" ng-init="
 cart.init('{{ $itemCookieKey }}', '{{ $giftCookieKey }}');
-price.init('QAR');
+price.init('{{ $appCurrency }}');
 @if($massOffer)
 massOffer.init('{{ $massOffer->getClean('title') }}', '{{ $massOffer->getClean('description') }}', '{{ $massOffer->to_date }}', {{ $massOffer->start_quantity ?: 0 }}, {{ $massOffer->getStartPrice()->value() ?: 0 }}, {{ $massOffer->discount_percentage ?: 0 }}, {{ $massOffer->gifts_per_product ?: 0 }}, {{ $massOffer->getMaxGiftPrice()->value() ?: 0 }})
 @endif
@@ -77,6 +77,10 @@ massOffer.init('{{ $massOffer->getClean('title') }}', '{{ $massOffer->getClean('
 <script src="{{ URL::asset('app/lib/angular/angular-resource.min.js') }}"></script>
 @endif
 
+<script>
+    var appCurrency = '{{ $appCurrency }}';
+</script>
+
 <script src="{{ URL::asset('app/js/app.js') }}"></script>
 <script src="{{ URL::asset('app/js/services.js') }}"></script>
 <script src="{{ URL::asset('app/js/controllers.js') }}"></script>
@@ -84,7 +88,6 @@ massOffer.init('{{ $massOffer->getClean('title') }}', '{{ $massOffer->getClean('
 <script src="{{ URL::asset('app/js/directives.js') }}"></script>
 
 <script src="{{ URL::asset('app/lib/zoom/zoomsl-3.0.min.js') }}"></script>
-
 
 @yield('scripts')
 

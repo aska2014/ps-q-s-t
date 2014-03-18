@@ -12,11 +12,27 @@
     </div>
 
     <div class="right-header">
+        <div class="change-currency">
 
+            <label for="select-currency">Currency</label>
+
+            <select id="select-currency" class="form-control" onchange="window.location.href='/change-currency/' + this.value;">
+                @foreach($availableCurrencies as $currency)
+                @if($appCurrency == $currency)
+                <option value="{{ $currency }}" selected="selected">{{ $currency }}</option>
+                @else
+                <option value="{{ $currency }}">{{ $currency }}</option>
+                @endif
+                @endforeach
+            </select>
+        </div>
+
+        <div class="tools">
+            <span class="fa fa-gear"></span>
+        </div>
     </div>
 
     <div class="clearfix"></div>
-
 
     <div class="small-screen-menu">
         <select class="form-control">

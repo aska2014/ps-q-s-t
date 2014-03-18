@@ -1,6 +1,8 @@
 <?php namespace Units;
 
 use ECommerce\Product;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Session;
 use Offers\MassOffer;
 
 class Price {
@@ -11,7 +13,7 @@ class Price {
     public static $defaultCurrency = 'QAR';
 
     /**
-     * @var string
+     * @var Currency
      */
     protected $currency;
 
@@ -21,17 +23,49 @@ class Price {
     protected $value;
 
     /**
+     * @var ConversionPrice
+     */
+    protected $conversion;
+
+    /**
      * @param $value
-     * @param string $currency
+     * @param ConversionPrice $conversion
+     * @param \Units\Currency $currency
      * @return \Units\Price
      */
-    public function __construct($value, $currency = '')
+    public function __construct($value, ConversionPrice $conversion, Currency $currency)
     {
-        $this->currency = $currency ?: static::$defaultCurrency;
+        $this->currency = $currency;
 
-        $this->value = $value;
+        $this->conversion = $conversion;
 
+        $this->calculateValue($value, $this->currency);
+
+        // Prices are rounded
         $this->round(0);
+    }
+
+    /**
+     * @param $value
+     * @return mixed
+     */
+    public static function make($value, $test = false)
+    {
+        if($test)
+        {
+            dd($value);
+        }
+        return App::make('Units\Price', array($value));
+    }
+
+    /**
+     * @param $value
+     * @param $currency
+     */
+    public function calculateValue($value, $currency)
+    {
+        // Convert from default currency to this currency
+        $this->value = $this->conversion->convertFromDefault($value, $currency);
     }
 
     /**

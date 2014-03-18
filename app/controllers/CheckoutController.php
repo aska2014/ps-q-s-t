@@ -118,7 +118,8 @@ class CheckoutController extends BaseController {
                 if($value) $userInfo->contacts()->create(compact('type', 'value'));
             }
 
-            $order = $this->orders->createFrom($userInfo, $location, $this->cart);
+            // Save order with the current currency
+            $order = $this->orders->createFrom($userInfo, $location, $this->cart, \Units\Currency::getCurrent());
 
             return $order;
         }

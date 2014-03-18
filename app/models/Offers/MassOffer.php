@@ -84,7 +84,7 @@ class MassOffer extends \DateRangeModel {
      */
     public function appliesTo(array $items)
     {
-        $total = new Price(0);
+        $total = Price::make(0);
 
         foreach($items as $item)
         {
@@ -113,7 +113,7 @@ class MassOffer extends \DateRangeModel {
     {
         if(isset($this->prices['max_gift'])) return $this->prices['max_gift'];
 
-        return $this->prices['max_gift'] = new Price($this->max_gift_price);
+        return $this->prices['max_gift'] = Price::make($this->max_gift_price);
     }
 
     /**
@@ -123,7 +123,7 @@ class MassOffer extends \DateRangeModel {
     {
         if(isset($this->prices['start'])) return $this->prices['start'];
 
-        return $this->prices['start'] = new Price($this->start_price);
+        return $this->prices['start'] = Price::make($this->start_price);
     }
 
 }

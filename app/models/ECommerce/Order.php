@@ -2,8 +2,10 @@
 
 use Cart\Cart;
 use Cart\Item;
+use Kareem3d\Membership\Account;
 use Kareem3d\Membership\UserInfo;
 use Location\Location;
+use Units\Currency;
 use Units\Price;
 
 class Order extends \BaseModel {
@@ -19,12 +21,21 @@ class Order extends \BaseModel {
     protected $softDelete = true;
 
     /**
+     * @return mixed
+     */
+    public function getCurrencyAttribute()
+    {
+        return $this->attributes['currency'] ?: 'QAR';
+    }
+
+    /**
      * @param UserInfo $userInfo
      * @param Location $location
      * @param Cart $cart
+     * @param Currency $currency
      * @return \Illuminate\Database\Eloquent\Model|static
      */
-    public static function createFrom(UserInfo $userInfo, Location $location, Cart $cart)
+    public static function createFrom(UserInfo $userInfo, Location $location, Cart $cart, Currency $currency)
     {
         /**
          * @param Order $order
@@ -34,6 +45,7 @@ class Order extends \BaseModel {
             'location_id' => $location->id,
             // Round to the nearest two values
             'price' => $cart->getTotalPrice()->value(),
+            'currency' => $currency->__toString()
         ));
 
         $order->addProducts($cart->getItems());
@@ -106,7 +118,9 @@ class Order extends \BaseModel {
      * Defining relations
      */
     public function location(){ return $this->belongsTo(Location::getClass());}
+
     public function userInfo(){ return $this->belongsTo(UserInfo::getClass());}
+    public function account(){ return $this->belongsTo(Account::getClass(), 'account_id'); }
 
     public function gifts(){ return $this->belongsToMany(Product::getClass(), 'gift_order')->withPivot('quantity'); }
     public function products(){ return $this->belongsToMany(Product::getClass(), 'product_order')->withPivot('quantity', 'price'); }

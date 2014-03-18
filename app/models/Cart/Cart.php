@@ -90,7 +90,7 @@ class Cart {
     {
         if(is_null($this->massOffer) && $this->hasGifts())
         {
-            throw new CartException('We current don\'t have any special offers so you cant have gifts in your cart.');
+            throw new CartException('We currently don\'t have any special offers so you cant have gifts in your cart.');
         }
 
         // If there's mass offer and gift validation is false
@@ -121,7 +121,7 @@ class Cart {
      */
     public function getTotalPrice()
     {
-        $price = new Price(0);
+        $price = Price::make(0);
 
         // Add subtotals
         foreach($this->items as $item)

@@ -1,3 +1,4 @@
+@import "../lib/font-awesome-4.0.3/css/font-awesome.min.css";
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -6019,15 +6020,48 @@ a:hover {
     width: 33.33333333333333%;
   }
 }
-.header .right-header .shopping-cart-btn {
+.header .right-header .tools {
   float: right;
+  background: #FFF;
+  font-size: 20px;
+  color: #666;
+  padding: 5px 15px;
+  border-bottom: 4px solid #DDD;
+  cursor: pointer;
+  height: 45px;
+}
+.header .right-header .tools:hover {
+  color: #999;
+  background: #EEE;
+}
+.header .right-header .change-currency {
+  background: #FFF;
+  padding: 5px 10px;
+  float: right;
+  border-bottom: 4px solid #DDD;
+  border-left: 1px solid #DDD;
+  overflow: hidden;
+  width: 180px;
+  height: 45px;
+}
+.header .right-header .change-currency label {
+  display: block;
+  float: left;
+  margin-right: 10px;
   position: relative;
-  top: 197px;
-  left: 15px;
-  z-index: 1000;
+  top: 4px;
+  color: #666;
+  font-size: 14px;
+}
+.header .right-header .change-currency select {
+  display: block;
+  width: 80px;
+  height: 28px;
+  float: left;
+  font-size: 12px;
 }
 @media (min-width: 768px) {
-  .header select {
+  .header .small-screen-menu select {
     display: none;
   }
 }

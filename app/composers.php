@@ -1,6 +1,7 @@
 <?php
 
 use Cart\CookieFactory;
+use Units\Currency;
 
 View::composer('templates.angular', function($view)
 {
@@ -10,12 +11,14 @@ View::composer('templates.angular', function($view)
     $view->giftCookieKey = CookieFactory::GIFT_COOKIE_KEY;
 
     $view->massOffer = App::make('Offers\MassOffer')->current(new DateTime())->first();
+    $view->appCurrency = Currency::getCurrent();
 });
 
 View::composer('partials.static.header', function($view)
 {
     $view->brands = App::make('ECommerce\Brand')->popular()->take(5)->get();
     $view->headerColors = array('#EE3D26', '#CE374A', '#872E45', '#642A59', '#232351');
+    $view->availableCurrencies = Currency::getAvailable();
 });
 
 View::composer('partials.products.offers', function($view)
@@ -51,4 +54,16 @@ App::bind('Cart\Cart', function( $app )
 App::singleton('VisibleProductRepository', function()
 {
     return new VisibleProductRepository(new \Illuminate\Support\Collection());
+});
+
+// Application current currency
+App::bind('Units\Currency', function()
+{
+    return Currency::getCurrent();
+});
+
+// Set conversion price with default currency
+App::bind('Units\ConversionPrice', function()
+{
+    return new \Units\ConversionPrice(Currency::getDefault());
 });

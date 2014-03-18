@@ -25,6 +25,14 @@ class UserInfo extends Model {
     protected $appends = array('name');
 
     /**
+     * @return mixed|void
+     */
+    public function beforeValidate()
+    {
+        $this->cleanXSS();
+    }
+
+    /**
      * @return string
      */
     public function getNameAttribute()
