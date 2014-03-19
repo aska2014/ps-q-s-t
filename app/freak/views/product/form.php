@@ -78,6 +78,28 @@
                 </form>
             </div>
         </div>
+        <div class="widget">
+            <div class="widget-header">
+                <span class="title">Post to facebook</span>
+            </div>
+
+            <div class="widget-content form-container">
+                <form class="form-horizontal form-editor" ng-submit="postToFacebook()">
+                    <div class="control-group">
+                        <label class="control-label">
+                            Facebook title <br />
+                            <small>You can leave empty</small>
+                        </label>
+                        <div class="controls">
+                            <textarea ng-model="facebook.title" cols="5" class="span12"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Post to facebook</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -128,6 +150,15 @@
             {
                 $scope.offer = data;
             });
+
+            $scope.postToFacebook = function()
+            {
+                console.log('here');
+                $http.post(url.serverElement('product', 'facebook/' + $scope.model.id), $scope.facebook).success(function()
+                {
+                    $scope.alert.success('Posted to facebook', 'Product posted to facebook successfully');
+                });
+            }
 
             $scope.addOffer = function()
             {

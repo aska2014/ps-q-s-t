@@ -94,4 +94,46 @@ class FreakProductController extends \Kareem3d\Freak\Core\ElementController {
     {
         $this->products->findOrFail($id)->delete();
     }
+
+
+    public function postFacebook($id)
+    {
+        \Units\Currency::setCurrent('QAR');
+
+        $product = $this->products->findOrFail($id);
+
+        if(! $facebookTitle = Input::get('title'))
+        {
+            $facebookTitle = $product->title . PHP_EOL;
+
+            if($product->hasOfferPrice())
+            {
+                $facebookTitle .= 'Special Offer <<<<<'.$product->getActualPrice().' QAR>>>>>>';
+            }
+
+            else
+            {
+                $facebookTitle .= 'Price ' .$product->getActualPrice() . ' QAR';
+            }
+        }
+
+        $fb = new Facebook(Config::get('facebook.config'));
+
+        $params = array(
+            "access_token" => Config::get('facebook.access_token'),
+            "message" => $facebookTitle,
+            'description' => $facebookTitle,
+            "source" => $product->getImage('main')->getLargest()->url,
+            "link" => URL::product($product)
+        );
+
+        try {
+            $fb->api('/'.Config::get('facebook.page_id').'/feed', 'POST', $params);
+
+            return Redirect::back()->with('success', 'Product has been posted to facebook successfully.');
+        } catch(Exception $e) {
+
+            dd('Eb3tly elmsg de yhoby: ' . $e->getMessage());
+        }
+    }
 }

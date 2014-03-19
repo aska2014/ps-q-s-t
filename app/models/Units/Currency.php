@@ -18,6 +18,11 @@ class Currency {
     /**
      * @var string
      */
+    protected static $currentCurrency;
+
+    /**
+     * @var string
+     */
     protected $currency;
 
     /**
@@ -57,6 +62,11 @@ class Currency {
      */
     public static function getCurrent()
     {
+        if(static::$currentCurrency)
+        {
+            return new Currency(static::$currentCurrency);
+        }
+
         // Try to get the currency from the session
         if($currency = Session::get('application_currency', false))
         {
@@ -78,6 +88,14 @@ class Currency {
 
             return new Currency('QAR');
         }
+    }
+
+    /**
+     * @param $currentCurrency
+     */
+    public static function setCurrent($currentCurrency)
+    {
+        static::$currentCurrency =  $currentCurrency;
     }
 
     /**

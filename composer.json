@@ -16,6 +16,8 @@
             "kareem3d/path-manager": "dev-master",
             "kareem3d/responser": "dev-master",
 
+            "facebook/php-sdk": "dev-master",
+
             "besimple/soap": "0.2.*@dev"
 	},
 	"autoload": {

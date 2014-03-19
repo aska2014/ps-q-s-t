@@ -48,7 +48,7 @@
                             <img ng-src="@{{ gift.image }}" class="img-responsive" alt=""/>
                         </td>
                         <td style="color:#F00; font-size:16px;">FREE!</td>
-                        <td style="color:#AAA;">QAR 0.00</td>
+                        <td style="color:#AAA;">@{{ currency }} 0.00</td>
                         <td><span class="glyphicon glyphicon-remove" ng-click="removeGift($index)"></span></td>
                     </tr>
                     </tbody>
