@@ -34,4 +34,10 @@
 
     </div>
 
+    <div class="clearfix"></div><Br/>
+
+    <div style="padding:20px;">
+    @include('partials.parts.facebook')
+    </div>
+
 </div>
