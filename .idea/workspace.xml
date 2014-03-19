@@ -2,41 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09236894-3e4c-4d0d-a6ca-f0330fc20f20" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\Projects\QBrando\new_www\app\helpers\Asset.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\Projects\QBrando\new_www\app\mom.txt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Cart/Cart.php" afterPath="$PROJECT_DIR$/app/models/Cart/Cart.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/CheckoutController.php" afterPath="$PROJECT_DIR$/app/controllers/CheckoutController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Cart/CookieFactory.php" afterPath="$PROJECT_DIR$/app/models/Cart/CookieFactory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Cart/Item.php" afterPath="$PROJECT_DIR$/app/models/Cart/Item.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Cart/ItemFactoryInterface.php" afterPath="$PROJECT_DIR$/app/models/Cart/ItemFactoryInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Location/Location.php" afterPath="$PROJECT_DIR$/app/models/Location/Location.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Offers/MassOffer.php" afterPath="$PROJECT_DIR$/app/models/Offers/MassOffer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/ECommerce/Order.php" afterPath="$PROJECT_DIR$/app/models/ECommerce/Order.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Units/Price.php" afterPath="$PROJECT_DIR$/app/models/Units/Price.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/ECommerce/Product.php" afterPath="$PROJECT_DIR$/app/models/ECommerce/Product.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/ProductController.php" afterPath="$PROJECT_DIR$/app/controllers/ProductController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Offers/ProductOffer.php" afterPath="$PROJECT_DIR$/app/models/Offers/ProductOffer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/kareem3d/membership/src/Kareem3d/Membership/UserContact.php" afterPath="$PROJECT_DIR$/vendor/kareem3d/membership/src/Kareem3d/Membership/UserContact.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/kareem3d/membership/src/Kareem3d/Membership/UserInfo.php" afterPath="$PROJECT_DIR$/vendor/kareem3d/membership/src/Kareem3d/Membership/UserInfo.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/freak/views/order/all.php" afterPath="$PROJECT_DIR$/app/freak/views/order/all.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/templates/angular.blade.php" afterPath="$PROJECT_DIR$/app/views/templates/angular.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/app/img/call-us-header-egypt.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/GeoLocation.php" afterPath="$PROJECT_DIR$/app/helpers/GeoLocation.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/css/app.css" afterPath="$PROJECT_DIR$/public/app/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/js/app.js" afterPath="$PROJECT_DIR$/public/app/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/css/app.less" afterPath="$PROJECT_DIR$/public/app/css/app.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/autoload.php" afterPath="$PROJECT_DIR$/vendor/autoload.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/composers.php" afterPath="$PROJECT_DIR$/app/composers.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/js/controllers.js" afterPath="$PROJECT_DIR$/public/app/js/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/partials/static/header.blade.php" afterPath="$PROJECT_DIR$/app/views/partials/static/header.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/css/header.less" afterPath="$PROJECT_DIR$/public/app/css/header.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/new_www.iml" afterPath="$PROJECT_DIR$/.idea/new_www.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/freak/views/order/one.php" afterPath="$PROJECT_DIR$/app/freak/views/order/one.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes.php" afterPath="$PROJECT_DIR$/app/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/js/services.js" afterPath="$PROJECT_DIR$/public/app/js/services.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="new_www.iws" />
@@ -59,7 +30,26 @@
     <favorites_list name="new_www" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="header.blade.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/partials/static/header.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="0" selection-start="171" selection-end="171" vertical-scroll-proportion="0.21875" vertical-offset="0" max-vertical-offset="1394">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.less" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/app/css/header.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="0" selection-start="499" selection-end="499" vertical-scroll-proportion="-14.384615" vertical-offset="0" max-vertical-offset="2958">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -98,22 +88,18 @@
         <option value="$PROJECT_DIR$/app/models/Units/AppPrice.php" />
         <option value="$PROJECT_DIR$/app/models/Units/PriceConversionException.php" />
         <option value="$PROJECT_DIR$/app/models/Units/CurrencyException.php" />
-        <option value="$PROJECT_DIR$/app/helpers/GeoLocation.php" />
         <option value="$PROJECT_DIR$/app/models/Units/Currency.php" />
         <option value="$PROJECT_DIR$/app/routes.php" />
         <option value="$PROJECT_DIR$/app/models/Units/ConversionPrice.php" />
         <option value="$PROJECT_DIR$/app/models/Cart/ItemFactoryInterface.php" />
         <option value="$PROJECT_DIR$/app/models/Cart/Cart.php" />
         <option value="$PROJECT_DIR$/app/models/Cart/CookieFactory.php" />
-        <option value="$PROJECT_DIR$/app/composers.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_03_18_112505_add_currency_to_order_table.php" />
         <option value="$PROJECT_DIR$/app/controllers/CheckoutController.php" />
         <option value="$PROJECT_DIR$/app/models/ECommerce/Order.php" />
         <option value="$PROJECT_DIR$/app/freak/views/order/all.php" />
         <option value="$PROJECT_DIR$/app/freak/views/order/one.php" />
         <option value="$PROJECT_DIR$/public/app/css/app.less" />
-        <option value="$PROJECT_DIR$/app/views/partials/static/header.blade.php" />
-        <option value="$PROJECT_DIR$/public/app/css/header.less" />
         <option value="$PROJECT_DIR$/app/models/Cart/Item.php" />
         <option value="$PROJECT_DIR$/app/views/templates/angular.blade.php" />
         <option value="$PROJECT_DIR$/app/controllers/ProductsController.php" />
@@ -123,6 +109,10 @@
         <option value="$PROJECT_DIR$/app/models/Offers/ProductOffer.php" />
         <option value="$PROJECT_DIR$/public/app/js/controllers.js" />
         <option value="$PROJECT_DIR$/public/app/js/services.js" />
+        <option value="$PROJECT_DIR$/app/helpers/GeoLocation.php" />
+        <option value="$PROJECT_DIR$/app/composers.php" />
+        <option value="$PROJECT_DIR$/public/app/css/header.less" />
+        <option value="$PROJECT_DIR$/app/views/partials/static/header.blade.php" />
       </list>
     </option>
   </component>
@@ -175,6 +165,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -203,6 +194,60 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -221,7 +266,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -239,11 +284,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Units" />
+              <option name="myItemId" value="partials" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -261,13 +310,16 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="helpers" />
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="partials" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -427,27 +479,27 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32901135" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32252836" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39674798" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2688822" sideWeight="0.27876824" order="2" side_tool="true" content_ui="tabs" x="231" y="86" width="330" height="615" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2968278" sideWeight="0.72123176" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3013595" sideWeight="0.72123176" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.499187" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2350081" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.01300813" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.012965964" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284553" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -473,21 +525,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/config/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.09026549" vertical-offset="51" max-vertical-offset="2210" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/production/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="10" selection-start="412" selection-end="768" vertical-scroll-proportion="0.45293072" vertical-offset="0" max-vertical-offset="612" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/Blood/UpdateLocationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="7" selection-start="163" selection-end="163" vertical-scroll-proportion="0.18053098" vertical-offset="17" max-vertical-offset="697" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/local/database.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="0" selection-start="755" selection-end="755" vertical-scroll-proportion="0.6353982" vertical-offset="100" max-vertical-offset="782" />
@@ -588,11 +625,6 @@
         <state line="81" column="0" selection-start="1788" selection-end="1788" vertical-scroll-proportion="0.40515652" vertical-offset="1157" max-vertical-offset="2431" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="21" selection-start="2166" selection-end="2166" vertical-scroll-proportion="0.65561694" vertical-offset="919" max-vertical-offset="1462" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/Cart/Cart.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="38" column="30" selection-start="774" selection-end="774" vertical-scroll-proportion="-0.2535971" vertical-offset="753" max-vertical-offset="2737" />
@@ -601,11 +633,6 @@
     <entry file="file://$PROJECT_DIR$/app/views/partials/static/footer.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="6" selection-start="121" selection-end="121" vertical-scroll-proportion="0.12230216" vertical-offset="0" max-vertical-offset="556" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/composers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="48" selection-start="407" selection-end="407" vertical-scroll-proportion="0.36690646" vertical-offset="0" max-vertical-offset="1241" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_03_18_112505_add_currency_to_order_table.php">
@@ -638,19 +665,9 @@
         <state line="9" column="37" selection-start="348" selection-end="348" vertical-scroll-proportion="0.265625" vertical-offset="0" max-vertical-offset="22848" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/partials/static/header.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="14" selection-start="1041" selection-end="1041" vertical-scroll-proportion="0.7121771" vertical-offset="141" max-vertical-offset="1326" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/app/css/app.less">
       <provider selected="true" editor-type-id="text-editor">
         <state line="68" column="18" selection-start="1328" selection-end="1328" vertical-scroll-proportion="0.3117117" vertical-offset="983" max-vertical-offset="1564" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/css/header.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="44" selection-start="834" selection-end="834" vertical-scroll-proportion="0.44864866" vertical-offset="465" max-vertical-offset="2924" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/Cart/Item.php">
@@ -713,11 +730,6 @@
         <state line="40" column="53" selection-start="1660" selection-end="1660" vertical-scroll-proportion="0.31365314" vertical-offset="510" max-vertical-offset="1547" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/GeoLocation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="37" selection-start="259" selection-end="259" vertical-scroll-proportion="0.39115044" vertical-offset="0" max-vertical-offset="1241" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/Units/Currency.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="18" selection-start="310" selection-end="310" vertical-scroll-proportion="-1.858407" vertical-offset="1339" max-vertical-offset="1904" />
@@ -726,6 +738,62 @@
     <entry file="file://$PROJECT_DIR$/app/models/Units/ConversionPrice.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="109" column="118" selection-start="2570" selection-end="2635" vertical-scroll-proportion="-1.6485507" vertical-offset="2763" max-vertical-offset="3315" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="3" selection-start="476" selection-end="476" vertical-scroll-proportion="-0.49275362" vertical-offset="629" max-vertical-offset="1462">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Session/Store.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="505" column="5" selection-start="8742" selection-end="8742" vertical-scroll-proportion="0.3557522" vertical-offset="8333" max-vertical-offset="9826">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Session/SessionManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="21" selection-start="649" selection-end="649" vertical-scroll-proportion="0.46195653" vertical-offset="153" max-vertical-offset="3689">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Session/SessionServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="0" selection-start="572" selection-end="572" vertical-scroll-proportion="0.5185841" vertical-offset="251" max-vertical-offset="1377">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/GeoLocation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="6" selection-start="13" selection-end="13" vertical-scroll-proportion="0.06017699" vertical-offset="0" max-vertical-offset="2074">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/composers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="3" selection-start="454" selection-end="454" vertical-scroll-proportion="0.42123893" vertical-offset="0" max-vertical-offset="1258">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/css/header.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="499" selection-end="499" vertical-scroll-proportion="-14.384615" vertical-offset="0" max-vertical-offset="2958">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/static/header.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="171" selection-end="171" vertical-scroll-proportion="0.21875" vertical-offset="0" max-vertical-offset="1394">
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>

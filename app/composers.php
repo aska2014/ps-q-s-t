@@ -12,6 +12,7 @@ View::composer('templates.angular', function($view)
 
     $view->massOffer = App::make('Offers\MassOffer')->current(new DateTime())->first();
     $view->appCurrency = Currency::getCurrent();
+    $view->geo = App::make('GeoLocation');
 });
 
 View::composer('partials.static.header', function($view)

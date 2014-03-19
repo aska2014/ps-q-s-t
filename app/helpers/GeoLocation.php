@@ -3,45 +3,79 @@
 class GeoLocation {
 
     /**
-     * @return string
-     */
-    public function getCurrencyCode()
-    {
-        $ip_data = $this->getGeo();
-
-        if($ip_data && $ip_data->geoplugin_currencyCode != null)
-        {
-            return $ip_data->geoplugin_currencyCode;
-        }
-    }
-
-    /**
      * @return bool
      */
     public function isEgypt()
     {
-        return $this->getCountryName() === 'Egypt';
+        return $this->getCountryCode() === 'EG';
     }
 
     /**
+     * @return mixed
+     */
+    public function getCountryCode()
+    {
+        return $this->extractFromGeo('geoplugin_countryCode');
+    }
+
+    /**
+     * Return country currency code
+     *
      * @return string
      */
-    public function getCountryName()
+    public function getCurrencyCode()
     {
-        $ip_data = $this->getGeo();
-
-        if($ip_data && $ip_data->geoplugin_countryName != null)
-        {
-            return $ip_data->geoplugin_countryName;
-        }
+        return $this->extractFromGeo('geoplugin_currencyCode');
     }
 
     /**
      * Return country name
      *
+     * @return string
+     */
+    public function getCountryName()
+    {
+        return $this->extractFromGeo('geoplugin_countryName');
+    }
+
+    /**
+     * @param $variable
+     * @return string
+     */
+    protected function extractFromGeo($variable)
+    {
+        $geo = $this->getGeo();
+
+        if(isset($geo->$variable) && $geo->$variable != null)
+        {
+            return $geo->$variable;
+        }
+    }
+
+    /**
+     * Return Geo data
+     *
      * @return stdClass
      */
     protected function getGeo()
+    {
+        if($ipData = $this->getFromSession())
+        {
+            return $ipData;
+        }
+
+        if($ipData = $this->getFromSite())
+        {
+            $this->saveToSession($ipData);
+
+            return $ipData;
+        }
+    }
+
+    /**
+     * @return stdClass
+     */
+    protected function getFromSite()
     {
         $client  = @$_SERVER['HTTP_CLIENT_IP'];
         $forward = @$_SERVER['HTTP_X_FORWARDED_FOR'];
@@ -65,4 +99,19 @@ class GeoLocation {
         return $ip_data;
     }
 
+    /**
+     * @return mixed
+     */
+    protected function getFromSession()
+    {
+        return Session::get('ip_information');
+    }
+
+    /**
+     * @param $ip_data
+     */
+    protected function saveToSession($ip_data)
+    {
+        Session::put('ip_information', $ip_data);
+    }
 } 

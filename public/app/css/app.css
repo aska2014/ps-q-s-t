@@ -5992,6 +5992,17 @@ a:hover {
     display: none;
   }
 }
+.header .left-header .call-us-egypt {
+  background: url('../img/call-us-header.png') no-repeat;
+  width: 119px;
+  height: 145px;
+  background: url('../img/call-us-header-egypt.png') no-repeat;
+}
+@media (max-width: 992px) {
+  .header .left-header .call-us-egypt {
+    display: none;
+  }
+}
 .header .middle-header {
   position: relative;
   min-height: 1px;

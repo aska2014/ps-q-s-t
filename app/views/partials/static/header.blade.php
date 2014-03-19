@@ -2,7 +2,11 @@
 
     <div class="left-header">
 
+        @if($geo->isEgypt())
+        <div class="call-us-egypt"></div>
+        @else
         <div class="call-us"></div>
+        @endif
     </div>
 
     <div class="middle-header">
