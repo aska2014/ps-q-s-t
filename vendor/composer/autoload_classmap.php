@@ -203,6 +203,7 @@ return array(
     'CreateCategoriesTable' => $baseDir . '/app/database/migrations/2014_02_06_210056_create_categories_table.php',
     'CreateCitiesTable' => $baseDir . '/app/database/migrations/2014_02_06_210135_create_cities_table.php',
     'CreateCodeTable' => $vendorDir . '/kareem3d/images/src/migrations/2014_01_27_193125_create_code_table.php',
+    'CreateContactMessagesTable' => $baseDir . '/app/database/migrations/2014_03_19_133707_create_contact_messages_table.php',
     'CreateCountriesTable' => $baseDir . '/app/database/migrations/2014_02_06_210134_create_countries_table.php',
     'CreateGiftOrderTable' => $baseDir . '/app/database/migrations/2014_02_06_210153_create_gift_order_table.php',
     'CreateImageGroupsTable' => $vendorDir . '/kareem3d/images/src/migrations/2014_01_27_193152_create_image_groups_table.php',
