@@ -31,6 +31,7 @@ $sendMailWithException = function(Exception $exception, $code)
     Mail::send('emails.error', $data, function($message)
     {
         $message->to('kareem3d.a@gmail.com', 'Kareem Mohamed')->subject('Error from qbrando');
+        $message->to('omaraya11@facebook.com', 'Omar')->subject('Error from qbrando');
     });
 };
 
