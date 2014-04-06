@@ -37,7 +37,7 @@ $sendMailWithException = function(Exception $exception, $code)
 
 App::error(function(Exception $e, $code) use($sendMailWithException)
 {
-    call_user_func_array($sendMailWithException, array($e, $code));
+//    call_user_func_array($sendMailWithException, array($e, $code));
 
     return Redirect::route('message-to-user')
         ->with('title', 'Whoops! Something went wrong.')
