@@ -68,3 +68,9 @@ App::bind('Units\ConversionPrice', function()
 {
     return new \Units\ConversionPrice(Currency::getDefault());
 });
+
+
+App::bind('Migs\MigsRequest', function()
+{
+    return new \Migs\MigsRequest(new \Migs\MigsGenerator(), \Migs\MigsAccount::byName('test')->first());
+});

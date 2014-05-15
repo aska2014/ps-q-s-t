@@ -13,6 +13,12 @@ Route::get('/my-name-is-kareem3d-friends/{command}', function($command)
 })->where('command', '.*');
 
 
+Route::get('/welcome-page', function()
+{
+    return View::make('pages.welcome');
+});
+
+
 Route::get('/profile', function()
 {
     return View::make('pages.profile');
@@ -84,9 +90,43 @@ Route::get('/change-currency/{currency}', function($currency)
 });
 
 
-Route::get('/en/port-said/items-for-sale/computers-tablets/listing/7-listings-4807f59cf6355e629f2ea1bebd93b99b/show/', function()
-{
-//    $facebookUrl = 'http://dubizzle.qbrando.com/login.php?fbid=645304118898028&set=a.263636427064801.58209.263629920398785&type=1';
 
-    return Redirect::to('https://egypt.dubizzle.com/en/port-said/items-for-sale/computers-tablets/listing/7-listings-4807f59cf6355e629f2ea1bebd93b99b/show/?back=L2VuL3BvcnQtc2FpZC9pdGVtcy1mb3Itc2FsZS9jb21wdXRlcnMtdGFibGV0cy9zZWFyY2gvP2lzX3NlYXJjaD1GYWxzZSZwYWdlPTU=');
+Route::group(array('prefix' => 'migs'), function()
+{
+    Route::get('/seed', function()
+    {
+        \Migs\MigsAccount::create(array(
+            'name' => 'test',
+            'secret' => '7E5C2F4D270600C61F5386167ECB8DA6',
+            'merchant_id' => 'TESTEGPTEST',
+            'access_code' => '77426638'
+        ));
+    });
+
+
+    Route::get('/checkout.html', function()
+    {
+        echo '<h2>You are about to make an http request to the migs gateway with the following inputs</h2><pre>';
+
+        print_r(App::make('Migs\MigsRequest')->getRequestData());
+
+        echo '</pre><Br /><hr /><br />';
+        echo '<a href="'.URL::to('migs/checkout').'">Make request</a>';
+    });
+
+    Route::get('/checkout', function()
+    {
+        $url = App::make('Migs\MigsRequest')->simplePaymentUrl(URL::to('/migs/return'));
+
+        return Redirect::to($url);
+    });
+
+    Route::get('/return', function()
+    {
+        echo '<h2>These are the input data returned</h2><pre>';
+
+        print_r($_GET);
+
+        echo '</pre><Br /><hr /><br />';
+    });
 });
