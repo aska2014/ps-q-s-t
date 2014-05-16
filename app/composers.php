@@ -3,7 +3,7 @@
 use Cart\CookieFactory;
 use Units\Currency;
 
-View::composer('templates.angular', function($view)
+View::composer(array('templates.angular', 'pages.welcome'), function($view)
 {
     $view->environment = App::Environment();
 

@@ -15,7 +15,8 @@ Route::get('/my-name-is-kareem3d-friends/{command}', function($command)
 
 Route::get('/welcome-page', function()
 {
-    return View::make('pages.welcome');
+    $products = Product::where('id', '!=', '0')->take(6)->get();
+    return View::make('pages.welcome', compact('products'));
 });
 
 

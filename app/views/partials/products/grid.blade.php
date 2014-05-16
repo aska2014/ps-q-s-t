@@ -26,6 +26,8 @@
     <div class="clearfix"></div>
 </div>
 
+@if(method_exists($products, 'links'))
 <div class="text-center">
     {{ $products->links() }}
 </div>
+@endif

@@ -1,0 +1,158 @@
+@import "../lib/bootstrap/less/bootstrap.less";
+@import "../lib/font-awesome-4.0.3/css/font-awesome.min.css";
+
+@images: "../img";
+
+@special-font-color:#CE374A;
+@main-bg-color:#FFF;
+
+@special-font:Arial;
+
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none !important;
+}
+ul{ margin: 0px; padding: 0px;}
+
+body {
+  background:#F9F9F9;
+  color: #333;
+  font-family: Arial;
+}
+
+.large-container{
+  width:100%;
+  height:100%;
+
+  background:#F9F9F9;
+}
+
+
+@import 'buttons.less';
+
+@import url(http://fonts.googleapis.com/css?family=Arvo);
+
+.book-container{
+  width:911px;
+  height: 600px;
+
+  .make-row();
+
+  margin: 0px auto;
+
+  margin-top:20px;
+
+  .left-page{
+    .make-md-column(6);
+    background:url('@{images}/welcome-bg.jpg');
+    height:600px;
+
+    .lp-logo{
+      background:url('@{images}/negative-logo.png');
+      width: 285px;
+      height: 174px;
+      margin-left:70px;
+    }
+
+    font-family: 'Arvo', sans-serif;
+
+    .lp-limitedoffer{
+      margin-top:40px;
+      h2{color:#FFF; font-size:45px; margin:0px; text-align: center; font-weight: normal}
+      h3{
+        color:#FFF; font-size:23; margin:0px; text-align: center; font-weight: normal;
+        b{text-transform: uppercase; font-weight: normal; font-family: Arial; color: #ffc539}
+      }
+
+      p{text-align: center; color:#333; font-size:18px;}
+    }
+
+    .lp-categories{
+
+      margin-top:60px;
+      .make-row();
+
+      .lpc-category{
+        .make-md-column(6);
+
+        h2{color:#FFF; text-align: center; font-size:21px; margin: 10px 0px;}
+
+        .circle-image img{
+          margin: 0px auto;
+          display:block;
+          border:4px solid #FFF;
+          border-radius: 50%;
+          width:170px;
+          height:170px;
+        }
+      }
+    }
+  }
+  .right-page{
+    .make-md-column(6);
+    background:#FFF;
+    box-shadow: inset 9px 0px 15px #DDD;
+  }
+
+}
+
+.price{
+  .before-price{color:#666; font-size:12px; text-decoration: line-through;}
+  .actual-price{color:@special-font-color; font-size:14px;}
+}
+.grid-products{
+
+  .make-row();
+  padding:12px 0px;
+
+  .product {
+    .make-md-column-offset(0.6);
+    .make-md-column(5.4);
+    @media(max-width:500px) {
+      .make-xs-column-offset(0);
+      .make-xs-column(12);
+    }
+    background:#FFF;
+
+    margin:15px 0px;
+  }
+
+  img{margin: 0px auto;}
+
+  .info{ text-align: center;
+
+    left:0px; position: absolute;
+    bottom: 25px;
+    background: fade(#FFF, 80%);
+    width:100%; padding:10px 15px;
+    display:inline-block;
+    .title a{font-size:16px; color:#333;}
+  }
+
+
+  .buttons{
+
+    div, a{
+      .make-xs-column(6);
+      text-align: center;
+      padding:10px;
+
+      font-size:8px;// Comment this for big
+    }
+    .add-to-cart{
+      .add-to-cart-btn;
+    }
+    .buy-now{
+      .buy-now-btn;
+    }
+    .in-cart{
+      .in-cart-btn;
+    }
+    .show-details{
+      .buy-now-btn;
+    }
+  }
+}
+
+a img{border:0px;}
+a{color:inherit;}
+a:hover{color:inherit}
