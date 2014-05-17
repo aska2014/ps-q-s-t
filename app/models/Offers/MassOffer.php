@@ -28,8 +28,8 @@ class MassOffer extends \DateRangeModel {
     public static function makeDefaultOffer()
     {
         static::where('gifts_per_product', '=', 0.5)->update(array(
-            'from_date' => strtotime('now'),
-            'to_date'   => strtotime('+7 days')
+            'from_date' => date('Y-m-d H:i:s', strtotime('now')),
+            'to_date'   => date('Y-m-d H:i:s', strtotime('+7 days'))
         ));
     }
 

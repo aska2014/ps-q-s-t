@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="09236894-3e4c-4d0d-a6ca-f0330fc20f20" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Offers/MassOffer.php" afterPath="$PROJECT_DIR$/app/models/Offers/MassOffer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="new_www.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,7 +38,7 @@
       <file leaf-file-name="MassOffer.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/Offers/MassOffer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="45" selection-start="506" selection-end="506" vertical-scroll-proportion="0.23716815" vertical-offset="308" max-vertical-offset="2414">
+            <state line="31" column="68" selection-start="663" selection-end="663" vertical-scroll-proportion="0.29734513" vertical-offset="308" max-vertical-offset="2414">
               <folding />
             </state>
           </provider>
@@ -787,7 +788,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/Offers/MassOffer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="45" selection-start="506" selection-end="506" vertical-scroll-proportion="0.23716815" vertical-offset="308" max-vertical-offset="2414">
+        <state line="31" column="68" selection-start="663" selection-end="663" vertical-scroll-proportion="0.29734513" vertical-offset="308" max-vertical-offset="2414">
           <folding />
         </state>
       </provider>
