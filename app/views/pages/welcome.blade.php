@@ -66,7 +66,7 @@ massOffer.init('{{ $massOffer->getClean('title') }}', '{{ $massOffer->getClean('
         <div class="left-page">
 
             <a href="{{ URL::route('home') }}"><div class="lp-logo"></div></a>
-            <div class="lp-limitedoffer">
+            <div class="lp-limitedoffer" ng-cloak>
                 <h2>Limited offer</h2>
                 <h3>Buy two get one for <b>free</b></h3>
                 <p><span>@{{ timer.days }}</span> Days,
