@@ -15,6 +15,11 @@ class Brand extends \BaseModel {
      */
     public $timestamps = false;
 
+    /**
+     * @var array
+     */
+    protected $fillable = array('name');
+
 
     public function scopeByCategory($query, Category $category)
     {

@@ -15,6 +15,11 @@ class Category extends \BaseModel {
     public $timestamps = false;
 
     /**
+     * @var array
+     */
+    protected $fillable = array('name');
+
+    /**
      * @return mixed
      */
     public function getMainProduct()
