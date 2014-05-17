@@ -49,12 +49,8 @@ class Price {
      * @param $value
      * @return mixed
      */
-    public static function make($value, $test = false)
+    public static function make($value)
     {
-        if($test)
-        {
-            dd($value);
-        }
         return App::make('Units\Price', array($value));
     }
 
@@ -79,6 +75,8 @@ class Price {
     {
         $this->value = $this->extractValue($price) * $this->value;
 
+        $this->round(0);
+
         return $this;
     }
 
@@ -89,6 +87,8 @@ class Price {
     public function add( $price )
     {
         $this->value = $this->extractValue($price) + $this->value;
+
+        $this->round(0);
 
         return $this;
     }
@@ -101,6 +101,8 @@ class Price {
     {
         $this->value = $this->extractValue($price) - $this->value;
 
+        $this->round(0);
+
         return $this;
     }
 
@@ -111,6 +113,8 @@ class Price {
     public function divide( $price )
     {
         $this->value = $this->value / $price;
+
+        $this->round(0);
 
         return $this;
     }
