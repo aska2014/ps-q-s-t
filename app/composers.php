@@ -10,6 +10,14 @@ View::composer(array('templates.angular', 'pages.welcome'), function($view)
     $view->itemCookieKey = CookieFactory::ITEM_COOKIE_KEY;
     $view->giftCookieKey = CookieFactory::GIFT_COOKIE_KEY;
 
+    $massOfferCount = App::make('Offers\MassOffer')->current(new DateTime())->count();
+
+    // If no mass offer exists in this time. Create default mass offer
+    if($massOfferCount == 0) {
+
+        App::make('Offers\MassOffer')->makeDefaultOffer();
+    }
+
     $view->massOffer = App::make('Offers\MassOffer')->current(new DateTime())->first();
     $view->appCurrency = Currency::getCurrent();
     $view->geo = App::make('GeoLocation');

@@ -141,6 +141,14 @@ angular.module('qbrando.controllers', ['qbrando.services']).
     }])
 
 
+    .controller('WelcomeController', ['$scope', 'Timer', function($scope, Timer) {
+
+        $scope.timer = Timer;
+
+        $scope.timer.finishAt($scope.massOffer.end_date);
+    }])
+
+
 
     .controller('ProductController', ['$scope', '$element', function ($scope, element) {
     }])

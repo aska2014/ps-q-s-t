@@ -49,33 +49,44 @@
     @yield('head')
 
 </head>
-<body ng-controller="MainController">
+<body ng-controller="MainController" ng-init="
+cart.init('{{ $itemCookieKey }}', '{{ $giftCookieKey }}');
+price.init('{{ $appCurrency }}');
+@if($massOffer)
+massOffer.init('{{ $massOffer->getClean('title') }}', '{{ $massOffer->getClean('description') }}', '{{ $massOffer->to_date }}', {{ $massOffer->start_quantity ?: 0 }}, {{ $massOffer->getStartPrice()->value() ?: 0 }}, {{ $massOffer->discount_percentage ?: 0 }}, {{ $massOffer->gifts_per_product ?: 0 }}, {{ $massOffer->getMaxGiftPrice()->value() ?: 0 }})
+@endif
+">
+
+
 <div class="large-container">
 
-    <div class="book-container">
+    <div class="book-container" ng-controller="WelcomeController">
 
 
         <div class="left-page">
 
-            <div class="lp-logo"></div>
+            <a href="{{ URL::route('home') }}"><div class="lp-logo"></div></a>
             <div class="lp-limitedoffer">
                 <h2>Limited offer</h2>
-                <h3>But two get one for <b>free</b></h3>
-                <p>5 Days, 0 Hours, 36 Minutes, 16 Seconds</p>
+                <h3>Buy two get one for <b>free</b></h3>
+                <p><span>@{{ timer.days }}</span> Days,
+                    <span>@{{ timer.hours }}</span> Hours,
+                    <span>@{{ timer.minutes }}</span> Minutes and
+                    <span>@{{ timer.seconds }}</span> Seconds left</p>
             </div>
 
             <div class="lp-categories">
                 <div class="lpc-category">
                     <div class="circle-image">
-                        <img src="http://www.speedupb.com/cig-bin/ps-q-s-t/public/albums/products/250x188/product37.jpeg" alt=""/>
+                        <a href="{{ URL::route('category', 'watches') }}"><img src="{{ URL::asset('app/img/products/watch.jpg') }}" alt=""/></a>
                     </div>
-                    <h2><a href="#">Watches</a></h2>
+                    <h2><a href="{{ URL::route('category', 'watches') }}">Watches</a></h2>
                 </div>
                 <div class="lpc-category">
                     <div class="circle-image">
-                        <img src="http://www.speedupb.com/cig-bin/ps-q-s-t/public/albums/products/250x188/product37.jpeg" alt=""/>
+                        <a href="{{ URL::route('category', 'sunglasses') }}"><img src="{{ URL::asset('app/img/products/sunglass.jpg') }}" alt=""/></a>
                     </div>
-                    <h2><a href="#">Sunglasses</a></h2>
+                    <h2><a href="{{ URL::route('category', 'sunglasses') }}">Sunglasses</a></h2>
                 </div>
             </div>
         </div>

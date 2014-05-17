@@ -16,3 +16,4 @@ vendor/*
 !vendor/bin/
 !vendor/autoload.php
 !vendor/facebook
+!vendor/jenssegers

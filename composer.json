@@ -18,7 +18,9 @@
 
             "facebook/php-sdk": "dev-master",
 
-            "besimple/soap": "0.2.*@dev"
+            "besimple/soap": "0.2.*@dev",
+
+            "jenssegers/agent": "*"
 	},
 	"autoload": {
 		"classmap": [

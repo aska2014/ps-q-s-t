@@ -114,6 +114,7 @@ return array(
         'Kareem3d\Membership\MembershipServiceProvider',
         'Kareem3d\PathManager\PathManagerServiceProvider',
         'Kareem3d\Responser\ResponserServiceProvider',
+        'Jenssegers\Agent\AgentServiceProvider',
 
     ),
 
@@ -182,7 +183,7 @@ return array(
 		'View'            => 'Illuminate\Support\Facades\View',
 
         'Responser'       => 'Kareem3d\Responser\Responser',
-
+        'Agent'            => 'Jenssegers\Agent\Facades\Agent',
     ),
 
 );

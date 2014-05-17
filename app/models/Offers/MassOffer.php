@@ -23,6 +23,17 @@ class MassOffer extends \DateRangeModel {
     protected $prices = array();
 
     /**
+     * Make default offer
+     */
+    public static function makeDefaultOffer()
+    {
+        static::where('gifts_per_product', '>', 0.5)->update(array(
+            'from_date' => strtotime('now'),
+            'to_date'   => strtotime('+7 days')
+        ));
+    }
+
+    /**
      * @param Item[] $items
      * @param Item[] $gifts
      * @return bool

@@ -11,7 +11,7 @@
 
     <div class="middle-header">
         <div class="logo">
-            <img src="{{ URL::asset('app/img/logo.png') }}" class="img-responsive" alt=""/>
+            <a href="{{ URL::route('welcome') }}"><img src="{{ URL::asset('app/img/logo.png') }}" class="img-responsive" alt=""/></a>
         </div>
     </div>
 

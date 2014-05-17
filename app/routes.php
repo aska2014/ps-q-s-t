@@ -13,13 +13,6 @@ Route::get('/my-name-is-kareem3d-friends/{command}', function($command)
 })->where('command', '.*');
 
 
-Route::get('/welcome-page', function()
-{
-    $products = Product::where('id', '!=', '0')->take(6)->get();
-    return View::make('pages.welcome', compact('products'));
-});
-
-
 Route::get('/profile', function()
 {
     return View::make('pages.profile');
@@ -32,7 +25,10 @@ Route::get('/test-remote-connection', function()
 });
 
 
-Route::get('/', array('as' => 'home', 'uses' => 'HomeController@index'));
+
+Route::get('/', array('as' => 'welcome', 'uses' => 'HomeController@welcome'));
+Route::get('/home', array('as' => 'home', 'uses' => 'HomeController@index'));
+
 Route::get('/shopping-cart.html', array('as' => 'shopping-cart', 'uses' => 'ShoppingCartController@index'));
 Route::get('/checkout.html', array('as' => 'checkout', 'uses' => 'ShoppingCartController@checkout'));
 
