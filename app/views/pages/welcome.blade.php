@@ -60,6 +60,24 @@ massOffer.init('{{ $massOffer->getClean('title') }}', '{{ $massOffer->getClean('
 
 <div class="large-container">
 
+    <div id='cssmenu'>
+        <ul>
+            <li><a href="{{ URL::route('home') }}"><span>Home</span></a></li>
+            @foreach($categories as $category)
+            <li class='has-sub'><a href="{{ URL::category($category) }}"><span>{{ $category->name }}</span></a>
+                <ul>
+                    @foreach($category->brands as $brand)
+                    <li><a href='{{ URL::categoryAndBrand($category, $brand) }}'><span>{{ $brand->name }}</span></a></li>
+                    @endforeach
+                </ul>
+            </li>
+            @endforeach
+            <li class="the-right">
+                Contact us at {{ $contactUs->getMobileNumber() }}
+            </li>
+        </ul>
+    </div>
+
     <div class="book-container" ng-controller="WelcomeController">
 
 

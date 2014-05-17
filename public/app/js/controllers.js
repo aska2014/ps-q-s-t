@@ -146,6 +146,36 @@ angular.module('qbrando.controllers', ['qbrando.services']).
         $scope.timer = Timer;
 
         $scope.timer.finishAt($scope.massOffer.end_date);
+
+// Cache the elements we'll need
+        var menu = $('#cssmenu');
+        var menuList = menu.find('ul:first');
+        var listItems = menu.find('li').not('#responsive-tab');
+
+// Create responsive trigger
+        menuList.prepend('<li id="responsive-tab"><a href="#">Menu</a></li>');
+
+// Toggle menu visibility
+        menu.on('click', '#responsive-tab', function(){
+            listItems.slideToggle('fast');
+            listItems.addClass('collapsed');
+        });
+
+        $(".lpc-category").hover(function()
+        {
+            $(this).find("img").animate({
+                width:150,
+                height:150,
+                'margin-top': 10
+            }, 200);
+        }, function()
+        {
+            $(this).find("img").animate({
+                width:170,
+                height:170,
+                'margin-top': 0
+            }, 100);
+        });
     }])
 
 

@@ -21,6 +21,7 @@ View::composer(array('templates.angular', 'pages.welcome'), function($view)
     $view->massOffer = App::make('Offers\MassOffer')->current(new DateTime())->first();
     $view->appCurrency = Currency::getCurrent();
     $view->geo = App::make('GeoLocation');
+    $view->contactUs = App::make('Website\ContactUs');
 });
 
 View::composer('partials.static.header', function($view)

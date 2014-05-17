@@ -15,6 +15,18 @@ class Brand extends \BaseModel {
      */
     public $timestamps = false;
 
+
+    public function scopeByCategory($query, Category $category)
+    {
+        return $query->join('products', function($query)
+        {
+            $query->on('products.brand_id', '=', 'brands.id');
+        })
+        ->groupBy('brands.id')
+        ->where('products.category_id', '=', $category->id)
+        ->select('brands.*');
+    }
+
     /**
      * @param $query
      * @return mixed

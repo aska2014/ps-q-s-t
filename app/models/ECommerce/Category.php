@@ -23,6 +23,14 @@ class Category extends \BaseModel {
     }
 
     /**
+     * @return mixed
+     */
+    public function getBrandsAttribute()
+    {
+        return \App::make('Ecommerce\Brand')->byCategory($this)->get();
+    }
+
+    /**
      * @param $query
      * @return mixed
      */

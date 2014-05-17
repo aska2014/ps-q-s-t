@@ -1,5 +1,7 @@
 <?php
 
+use ECommerce\Brand;
+use ECommerce\Category;
 use ECommerce\Product;
 use Website\Carousel;
 
@@ -7,10 +9,14 @@ class HomeController extends BaseController {
 
     /**
      * @param Product $products
+     * @param Brand $brands
+     * @param Category $categories
      */
-    public function __construct(Product $products)
+    public function __construct(Product $products, Brand $brands, Category $categories)
     {
         $this->products = $products;
+        $this->brands = $brands;
+        $this->categories = $categories;
     }
 
     /**
@@ -24,9 +30,11 @@ class HomeController extends BaseController {
             return $this->index();
         }
 
+        $categories = $this->categories->all();
+
         $products = $this->products->topSales()->unique()->take(6)->get();
 
-        return View::make('pages.welcome', compact('products'));
+        return View::make('pages.welcome', compact('products', 'categories'));
     }
 
     /**

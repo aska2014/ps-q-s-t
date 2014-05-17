@@ -35,6 +35,7 @@ Route::get('/checkout.html', array('as' => 'checkout', 'uses' => 'ShoppingCartCo
 Route::get('{category_name}/{brand_name}/{title}.html', array('as' => 'product', 'uses' => 'ProductsController@product'));
 Route::get('brand/{brand_name}', array('as' => 'brand', 'uses' => 'ProductsController@brand'));
 Route::get('category/{category_name}', array('as' => 'category', 'uses' => 'ProductsController@category'));
+Route::get('category/{category_name}/{brand_name}', array('as' => 'category-brand', 'uses' => 'ProductsController@categoryBrand'));
 
 Route::get('/choose-your-gifts.html', array('as' => 'choose-gifts', 'uses' => 'ProductsController@chooseGifts'));
 

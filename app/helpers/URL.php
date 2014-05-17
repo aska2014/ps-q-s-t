@@ -31,6 +31,19 @@ class URL extends LaravelURL {
 
     /**
      * @param Category $category
+     * @param Brand $brand
+     * @return mixed
+     */
+    public static function categoryAndBrand(Category $category, Brand $brand)
+    {
+        return static::route('category-brand', array(
+            'category_name' => static::encode($category->name),
+            'brand_name'    => static::encode($brand->name)
+        ));
+    }
+
+    /**
+     * @param Category $category
      * @return mixed
      */
     public static function category(Category $category)

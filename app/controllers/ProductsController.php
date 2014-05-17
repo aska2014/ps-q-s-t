@@ -80,6 +80,22 @@ class ProductsController extends BaseController {
     }
 
     /**
+     * @param $category
+     * @param $brand
+     */
+    public function categoryBrand($category, $brand)
+    {
+        $brand = $this->convertSlugs($brand);
+        $category = $this->convertSlugs($category);
+
+        $products = $this->products->orderByDate()->byBrandName($brand)->byCategoryName($category)->unique()->paginate(static::PRODUCTS_PER_PAGE);
+
+        $carousel = $this->getCarousel();
+
+        return View::make('pages.products', compact('brand', 'products', 'carousel'));
+    }
+
+    /**
      * @return \Website\Carousel
      * @todo
      */
