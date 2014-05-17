@@ -17,3 +17,4 @@ vendor/*
 !vendor/autoload.php
 !vendor/facebook
 !vendor/jenssegers
+!vendor/mobiledetect

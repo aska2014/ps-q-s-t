@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09236894-3e4c-4d0d-a6ca-f0330fc20f20" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/start/production.php" afterPath="$PROJECT_DIR$/app/start/production.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="new_www.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,10 +35,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="production.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="production.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/start/production.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="0" selection-start="1183" selection-end="1183" vertical-scroll-proportion="0.29347825" vertical-offset="518" max-vertical-offset="1156">
+            <state line="48" column="1" selection-start="1465" selection-end="1465" vertical-scroll-proportion="-19.307692" vertical-offset="314" max-vertical-offset="1156">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="20" selection-start="263" selection-end="263" vertical-scroll-proportion="0.5465313" vertical-offset="0" max-vertical-offset="591">
               <folding />
             </state>
           </provider>
@@ -105,8 +115,8 @@
         <option value="$PROJECT_DIR$/public/app/js/controllers.js" />
         <option value="$PROJECT_DIR$/public/app/css/welcome.less" />
         <option value="$PROJECT_DIR$/app/views/pages/welcome.blade.php" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/start/production.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -175,6 +185,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="new_www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -732,13 +756,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="16" selection-start="223" selection-end="223" vertical-scroll-proportion="0.4890017" vertical-offset="0" max-vertical-offset="591">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="23" selection-start="718" selection-end="728" vertical-scroll-proportion="0.5115044" vertical-offset="85" max-vertical-offset="986">
@@ -755,7 +772,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/start/production.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="0" selection-start="1183" selection-end="1183" vertical-scroll-proportion="0.29347825" vertical-offset="518" max-vertical-offset="1156">
+        <state line="48" column="1" selection-start="1465" selection-end="1465" vertical-scroll-proportion="-19.307692" vertical-offset="314" max-vertical-offset="1156">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="20" selection-start="263" selection-end="263" vertical-scroll-proportion="0.5465313" vertical-offset="0" max-vertical-offset="591">
           <folding />
         </state>
       </provider>
