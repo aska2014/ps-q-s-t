@@ -11,8 +11,6 @@
 |
 */
 
-use Website\ContactUs;
-
 ClassLoader::addDirectories(array(
 
 	app_path().'/commands',
@@ -58,7 +56,7 @@ App::error(function(\Cart\CartException $exception)
 {
     App::make('Cart\ItemFactoryInterface')->destroy();
 
-    $contact = new ContactUs();
+    $contact = App::make('Website\ContactUs');
 
     return Redirect::route('message-to-user')->with('title', 'Something went wrong while trying to validate your cart!')
            ->with('body', 'Please try again. If you still have this problem contact us at '. $contact->getEmailAddress());
@@ -105,3 +103,6 @@ require app_path().'/filters.php';
 */
 
 require app_path().'/composers.php';
+
+
+require app_path().'/helpers/functions.php';

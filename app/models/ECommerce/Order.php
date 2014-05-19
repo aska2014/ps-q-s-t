@@ -20,6 +20,50 @@ class Order extends \BaseModel {
      */
     protected $softDelete = true;
 
+    protected $fillable = array('user_info_id', 'location_id', 'price', 'account_id', 'currency', 'unique_identifier');
+
+    /**
+     * @return mixed|void
+     */
+    public function beforeSave()
+    {
+        $this->attributes['unique_identifier'] = $this->generateUniqueIdentifier();
+    }
+
+    /**
+     * Generate new unique identifier
+     */
+    public function generateUniqueIdentifier()
+    {
+        $number_of_loops = 0;
+
+        while(true)
+        {
+            $unique = \random_identifier(4);
+
+            // If unique identifier doesn't exist so break from this loop
+            if(static::byUniqueIdentifier($unique)->count() == 0) break;
+
+            if(($number_of_loops ++) > 500) {
+
+                throw new \Exception("> 500 loop iterations are used to generate a random unique identifier.");
+            }
+        }
+
+
+        return $unique;
+    }
+
+    /**
+     * @param $query
+     * @param $unique
+     * @return mixed
+     */
+    public function scopeByUniqueIdentifier($query, $unique)
+    {
+        return $query->where('unique_identifier', $unique);
+    }
+
     /**
      * @return mixed
      */

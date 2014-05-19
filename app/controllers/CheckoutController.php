@@ -72,7 +72,7 @@ class CheckoutController extends BaseController {
         if(! $this->emptyErrors())
         {
             // Redirect with errors
-            Responser::errors($this->getErrors());
+            return Responser::errors($this->getErrors());
         }
 
         // Destory cart
@@ -85,6 +85,7 @@ class CheckoutController extends BaseController {
              Thank you for choosing QBrando <strong>online shop for luxury in Qatar</strong><br /><br />
             <a href='.URL::route('home').'>Go back home</a>'
         );
+//        return Redirect::route('choose-payment');
     }
 
     /**
@@ -120,6 +121,9 @@ class CheckoutController extends BaseController {
 
             // Save order with the current currency
             $order = $this->orders->createFrom($userInfo, $location, $this->cart, \Units\Currency::getCurrent());
+
+            // Put order unique identifier in the session
+            Session::put('order_unique_identifier', $order->unique_identifier);
 
             return $order;
         }

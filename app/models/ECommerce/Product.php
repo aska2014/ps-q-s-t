@@ -43,7 +43,7 @@ class Product extends \BaseModel {
         $query->select('products.*')
               ->leftJoin('product_order', 'product_order.product_id', '=', 'products.id')
               ->groupBy('product_order.product_id')
-              ->orderBy(DB::raw('SUM(quantity)'), 'DESC');
+              ->orderBy(DB::raw('SUM(quantity)'), 'ASC');
 
         return $query;
     }

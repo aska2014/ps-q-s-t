@@ -34,6 +34,8 @@ class HomeController extends BaseController {
 
         $products = $this->products->topSales()->unique()->take(6)->get();
 
+//        dd($this->products->topSales()->unique()->take(6)->toSql());
+
         return View::make('pages.welcome', compact('products', 'categories'));
     }
 
