@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09236894-3e4c-4d0d-a6ca-f0330fc20f20" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/CheckoutController.php" afterPath="$PROJECT_DIR$/app/controllers/CheckoutController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/HomeController.php" afterPath="$PROJECT_DIR$/app/controllers/HomeController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Migs/MigsGenerator.php" afterPath="$PROJECT_DIR$/app/models/Migs/MigsGenerator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/ECommerce/Order.php" afterPath="$PROJECT_DIR$/app/models/ECommerce/Order.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/ECommerce/Product.php" afterPath="$PROJECT_DIR$/app/models/ECommerce/Product.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/autoload.php" afterPath="$PROJECT_DIR$/vendor/autoload.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/start/global.php" afterPath="$PROJECT_DIR$/app/start/global.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/new_www.iml" afterPath="$PROJECT_DIR$/.idea/new_www.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="new_www.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,7 +37,7 @@
       <file leaf-file-name="HomeController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/HomeController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="0" selection-start="935" selection-end="935" vertical-scroll-proportion="0.57168144" vertical-offset="255" max-vertical-offset="952">
+            <state line="35" column="0" selection-start="863" selection-end="863" vertical-scroll-proportion="0.5115044" vertical-offset="255" max-vertical-offset="918">
               <folding />
             </state>
           </provider>
@@ -732,7 +722,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="0" selection-start="935" selection-end="935" vertical-scroll-proportion="0.57168144" vertical-offset="255" max-vertical-offset="952">
+        <state line="35" column="0" selection-start="863" selection-end="863" vertical-scroll-proportion="0.5115044" vertical-offset="255" max-vertical-offset="918">
           <folding />
         </state>
       </provider>
