@@ -29,7 +29,7 @@ class MigsGenerator {
             'vpc_MerchTxnRef' => $orderUniqueId,
 
             'vpc_Command' => 'pay',
-            'vpc_Locale' => 'ar',
+            'vpc_Locale' => 'en',
             'vpc_Version' => 1,
 
 //            'vpc_SecureHashType' => 'SHA256'
