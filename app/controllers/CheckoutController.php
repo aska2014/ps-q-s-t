@@ -67,19 +67,6 @@ class CheckoutController extends BaseController {
     }
 
     /**
-     *
-     */
-    public function backFromMigs()
-    {
-        return $this->messageToUser(
-            'Thank you! Order has been placed successfully.',
-            'We will contact you soon to confirm time of delivery and shipping address.<br /><br />
-             Thank you for choosing QBrando <strong>online shop for luxury in Qatar</strong><br /><br />
-            <a href='.URL::route('home').'>Go back home</a>'
-        );
-    }
-
-    /**
      * Pay on delivery
      */
     protected function payOnDelivery(Order $order)

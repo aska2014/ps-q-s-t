@@ -74,7 +74,7 @@ class MigsGenerator {
      * @param array $params
      * @return string
      */
-    public function generateSha256SecureSecretHash($secret, array $params)
+    protected function generateSha256SecureSecretHash($secret, array $params)
     {
         $secureHash = "";
 

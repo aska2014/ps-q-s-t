@@ -45,7 +45,7 @@ Route::post('/checkout.html', array('as' => 'checkout.post', 'uses' => 'Checkout
 
 
 // Testing migs payment
-Route::get('/nbe-return.html', array('as' => 'migs.back', 'uses' => 'CheckoutController@backFromMigs'));
+Route::get('/nbe-return.html', array('as' => 'migs.back', 'uses' => 'MigsPaymentController@back'));
 
 // Web services
 Route::controller('product', 'ProductController');

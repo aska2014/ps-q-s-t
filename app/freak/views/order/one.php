@@ -96,6 +96,10 @@
                     <th>Amount</th>
                     <td>{{ payment.currency + ' ' + payment.amount }}</td>
                 </tr>
+                <tr>
+                    <th>Status</th>
+                    <td>{{ payment.status }}</td>
+                </tr>
                 </tbody>
             </table>
         </div>
