@@ -86,6 +86,18 @@
                 </tr>
                 </tbody>
             </table>
+            <table class="table table-striped table-detail-view" ng-repeat="payment in model.migs_payments">
+                <thead>
+                <tr>
+                    <th colspan="2"><li class="icol-emoticon-evilgrin"></li> Bank payment</th>
+                </tr>
+                </thead>
+                <tr>
+                    <th>Amount</th>
+                    <td>{{ payment.currency + ' ' + payment.amount }}</td>
+                </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>
