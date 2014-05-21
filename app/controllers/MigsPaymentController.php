@@ -29,6 +29,8 @@ class MigsPaymentController extends BaseController {
         $orderUniqueIdentifier = Input::get('vpc_MerchTxnRef');
         // Get order from the database by the `$reference` generated random number in the request process
 
+        Cache::forever($orderUniqueIdentifier, $_GET);
+
         if($transaction['status'] == "0" && $transaction['message'] == "Approved") {
 
             $order = $this->orders->byUniqueIdentifier($orderUniqueIdentifier)->first();
