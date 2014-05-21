@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09236894-3e4c-4d0d-a6ca-f0330fc20f20" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/CheckoutController.php" afterPath="$PROJECT_DIR$/app/controllers/CheckoutController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Migs/MigsGenerator.php" afterPath="$PROJECT_DIR$/app/models/Migs/MigsGenerator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Migs/MigsRequest.php" afterPath="$PROJECT_DIR$/app/models/Migs/MigsRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/ECommerce/Order.php" afterPath="$PROJECT_DIR$/app/models/ECommerce/Order.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Units/Price.php" afterPath="$PROJECT_DIR$/app/models/Units/Price.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/ShoppingCartController.php" afterPath="$PROJECT_DIR$/app/controllers/ShoppingCartController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/css/app.css" afterPath="$PROJECT_DIR$/public/app/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/autoload.php" afterPath="$PROJECT_DIR$/vendor/autoload.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pages/checkout.blade.php" afterPath="$PROJECT_DIR$/app/views/pages/checkout.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/css/checkout.less" afterPath="$PROJECT_DIR$/public/app/css/checkout.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/composers.php" afterPath="$PROJECT_DIR$/app/composers.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/js/controllers.js" afterPath="$PROJECT_DIR$/public/app/js/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/new_www.iml" afterPath="$PROJECT_DIR$/.idea/new_www.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes.php" afterPath="$PROJECT_DIR$/app/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="new_www.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,7 +28,7 @@
       <file leaf-file-name="routes.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="101" column="7" selection-start="2944" selection-end="2944" vertical-scroll-proportion="0.7536232" vertical-offset="1250" max-vertical-offset="1802">
+            <state line="91" column="0" selection-start="2694" selection-end="2694" vertical-scroll-proportion="0.8152174" vertical-offset="1046" max-vertical-offset="1598">
               <folding />
             </state>
           </provider>
@@ -704,7 +688,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="7" selection-start="2944" selection-end="2944" vertical-scroll-proportion="0.7536232" vertical-offset="1250" max-vertical-offset="1802">
+        <state line="91" column="0" selection-start="2694" selection-end="2694" vertical-scroll-proportion="0.8152174" vertical-offset="1046" max-vertical-offset="1598">
           <folding />
         </state>
       </provider>

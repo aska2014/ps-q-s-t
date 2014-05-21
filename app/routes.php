@@ -89,15 +89,3 @@ Route::get('/change-currency/{currency}', function($currency)
     // Redirect back or to home page
     try{ return Redirect::back(); } catch(Exception $e) { return Redirect::route('home'); }
 });
-
-
-
-Route::get('/seed-migs-account', function()
-{
-    \Migs\MigsAccount::create(array(
-        'name' => 'qbrando',
-        'access_code' => '2538F2EC',
-        'merchant_id' => 'QBRANDO',
-        'secret' => '253DDEF263C78A8CAF61E925586F1DD1'
-    ));
-});
