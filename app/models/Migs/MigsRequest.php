@@ -22,20 +22,15 @@ class MigsRequest {
         $this->account = $account;
     }
 
-    /**
-     * @return array
-     */
-    public function getRequestData()
-    {
-        return $this->generator->getQueryData($this->account);
-    }
 
     /**
-     * @todo This method should take the order
+     * @param MigsPayment $payment
+     * @param string $returnUrl
+     * @return string
      */
-    public function simplePaymentUrl($returnUrl = '')
+    public function simplePaymentUrl(MigsPayment $payment, $returnUrl = '')
     {
-        $queryData = $this->generator->getQueryData($this->account, $returnUrl);
+        $queryData = $this->generator->getQueryData($this->account, $payment, $returnUrl);
 
         return $this->getUrl($queryData);
     }

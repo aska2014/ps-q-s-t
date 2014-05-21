@@ -6236,6 +6236,26 @@ a:hover {
 .checkout .info {
   color: #666666;
 }
+.checkout .radio-input {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+.checkout .radio-input input {
+  margin-right: 10px;
+}
+.checkout .radio-input label {
+  color: #333;
+  font-weight: normal;
+  cursor: pointer;
+}
+.checkout .payment-offer {
+  margin: 0px 43px;
+  font-size: 14px;
+}
+.checkout .payment-offer strong {
+  font-size: 15px;
+  color: #A64341;
+}
 .textdn {
   background: #EEE !important;
   color: #333 !important;

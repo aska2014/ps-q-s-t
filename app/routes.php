@@ -44,6 +44,9 @@ Route::get('/choose-your-gifts.html', array('as' => 'choose-gifts', 'uses' => 'P
 Route::post('/checkout.html', array('as' => 'checkout.post', 'uses' => 'CheckoutController@postCreateOrder'));
 
 
+// Testing migs payment
+Route::get('/nbe-return.html', array('as' => 'migs.back', 'uses' => 'CheckoutController@backFromMigs'));
+
 // Web services
 Route::controller('product', 'ProductController');
 
@@ -89,42 +92,12 @@ Route::get('/change-currency/{currency}', function($currency)
 
 
 
-Route::group(array('prefix' => 'migs'), function()
+Route::get('/seed-migs-account', function()
 {
-    Route::get('/seed', function()
-    {
-        \Migs\MigsAccount::create(array(
-            'name' => 'test',
-            'secret' => '7E5C2F4D270600C61F5386167ECB8DA6',
-            'merchant_id' => 'TESTEGPTEST',
-            'access_code' => '77426638'
-        ));
-    });
-
-
-    Route::get('/checkout.html', function()
-    {
-        echo '<h2>You are about to make an http request to the migs gateway with the following inputs</h2><pre>';
-
-        print_r(App::make('Migs\MigsRequest')->getRequestData());
-
-        echo '</pre><Br /><hr /><br />';
-        echo '<a href="'.URL::to('migs/checkout').'">Make request</a>';
-    });
-
-    Route::get('/checkout', function()
-    {
-        $url = App::make('Migs\MigsRequest')->simplePaymentUrl(URL::to('/migs/return'));
-
-        return Redirect::to($url);
-    });
-
-    Route::get('/return', function()
-    {
-        echo '<h2>These are the input data returned</h2><pre>';
-
-        print_r($_GET);
-
-        echo '</pre><Br /><hr /><br />';
-    });
+    \Migs\MigsAccount::create(array(
+        'name' => 'qbrando',
+        'access_code' => '2538F2EC',
+        'merchant_id' => 'QBRANDO',
+        'secret' => '253DDEF263C78A8CAF61E925586F1DD1'
+    ));
 });

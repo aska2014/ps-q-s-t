@@ -258,6 +258,10 @@ angular.module('qbrando.controllers', ['qbrando.services']).
 
         $scope.contact = {};
         $scope.location = {};
+
+        $scope.payment = {
+            method: 'credit_card'
+        };
     }])
 
 

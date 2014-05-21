@@ -5,6 +5,7 @@ use Cart\Item;
 use Kareem3d\Membership\Account;
 use Kareem3d\Membership\UserInfo;
 use Location\Location;
+use Migs\MigsPayment;
 use Units\Currency;
 use Units\Price;
 
@@ -168,5 +169,7 @@ class Order extends \BaseModel {
 
     public function gifts(){ return $this->belongsToMany(Product::getClass(), 'gift_order')->withPivot('quantity'); }
     public function products(){ return $this->belongsToMany(Product::getClass(), 'product_order')->withPivot('quantity', 'price'); }
+
+    public function migsPayments(){ return $this->hasMany(MigsPayment::getClass()); }
 
 }

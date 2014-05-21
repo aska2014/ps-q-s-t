@@ -90,18 +90,44 @@
                 </div>
 
             </div>
-            <p class="text-left text-danger price">
+            <div class="step">
+                <div class="form-group">
+                    <label for="location-country">Payment method*</label>
+
+                    <div class="radio-input">
+                        <input type="radio" ng-model="payment.method" name="Payment[method]" id="payment-card" value="credit_card"/><label for="payment-card">Pay with credit card</label>
+                    </div>
+                    <div class="payment-offer" ng-show="payment.method == 'credit_card'">
+                        And get 10% discount on your order. <strong>Your order new price is {{ $NBEPrice['QAR'] }}</strong>
+
+                    </div>
+                    <div class="radio-input">
+                        <input type="radio" ng-model="payment.method" name="Payment[method]" id="payment-delivery" value="delivery"/><label for="payment-delivery">Pay on delivery</label>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-left text-danger price" ng-show="payment.method == 'delivery'">
                 You are about to create an order with <strong ng-bind="cart.totalQuantity() + ' items'"></strong> and total cost:
                 <strong class="price" ng-bind="cart.afterOfferPrice() | currency:currency"></strong>
                 <span ng-show="cart.hasOfferPrice()">instead of
                     <span class="before-price" ng-bind="cart.beforeOfferPrice() | currency:currency"></span>
                 </span>
             </p>
+            <p class="text-left text-warning price" ng-show="payment.method == 'credit_card'">
+                You will be redirected to <b>National Bank of Egypt</b> to pay for an equivalent amount {{ $NBEPrice['EGP'] }}
+            </p>
+
+
 
             <div class="buttons text-right">
     <!--            <button type="submit" class="fancy-yellow-btn"><span class="glyphicon glyphicon-arrow-left"></span> Shopping cart</button>-->
-                <button type="submit" class="fancy-red-btn">
+                <button type="submit" class="fancy-red-btn" ng-show="payment.method == 'delivery'">
                     Send order
+                    <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                </button>
+                <button type="submit" class="fancy-red-btn" ng-show="payment.method == 'credit_card'">
+                    Pay with credit card
                     <span class="glyphicon glyphicon-circle-arrow-right"></span>
                 </button>
             </div>

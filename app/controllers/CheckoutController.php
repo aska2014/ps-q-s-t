@@ -6,49 +6,24 @@ use ECommerce\Order;
 use ECommerce\Product;
 use Kareem3d\Membership\UserInfo;
 use Location\Location;
+use Migs\MigsPayment;
+use Migs\MigsRequest;
+use Units\Price;
 
 class CheckoutController extends BaseController {
-
-    /**
-     * @var Cart\Cart
-     */
-    protected $cart;
-
-    /**
-     * @var ECommerce\Order
-     */
-    protected $orders;
-
-    /**
-     * @var ECommerce\Product
-     */
-    protected $products;
-
-    /**
-     * @var Location\Location
-     */
-    protected $locations;
-
-    /**
-     * @var Kareem3d\Membership\UserInfo
-     */
-    protected $userInfo;
-
-    /**
-     * @var Cart\ItemFactoryInterface
-     */
-    protected $itemFactory;
 
     /**
      * @param Cart $cart
      * @param Order $orders
      * @param Product $products
      * @param Location $locations
+     * @param Migs\MigsRequest $migsRequest
      * @param UserInfo $userInfo
      * @param ItemFactoryInterface $itemFactory
+     * @param MigsPayment $migsPayments
      */
-    public function __construct(Cart $cart, Order $orders, Product $products, Location $locations,
-                                UserInfo $userInfo, ItemFactoryInterface $itemFactory)
+    public function __construct(Cart $cart, Order $orders, Product $products, Location $locations, MigsRequest $migsRequest,
+                                UserInfo $userInfo, ItemFactoryInterface $itemFactory, MigsPayment $migsPayments)
     {
         $this->cart = $cart;
         $this->orders = $orders;
@@ -56,6 +31,8 @@ class CheckoutController extends BaseController {
         $this->locations = $locations;
         $this->userInfo = $userInfo;
         $this->itemFactory = $itemFactory;
+        $this->migsPayments = $migsPayments;
+        $this->migsRequest = $migsRequest;
     }
 
     /**
@@ -78,6 +55,35 @@ class CheckoutController extends BaseController {
         // Destory cart
         $this->itemFactory->destroy();
 
+        // Check payment method
+        if(Input::get('Payment.method') === 'credit_card') {
+
+            return $this->payWithCreditCard($order);
+
+        } else {
+
+            return $this->payOnDelivery($order);
+        }
+    }
+
+    /**
+     *
+     */
+    public function backFromMigs()
+    {
+        return $this->messageToUser(
+            'Thank you! Order has been placed successfully.',
+            'We will contact you soon to confirm time of delivery and shipping address.<br /><br />
+             Thank you for choosing QBrando <strong>online shop for luxury in Qatar</strong><br /><br />
+            <a href='.URL::route('home').'>Go back home</a>'
+        );
+    }
+
+    /**
+     * Pay on delivery
+     */
+    protected function payOnDelivery(Order $order)
+    {
         return $this->messageToUser(
             'Thanks '. ucfirst($order->userInfo->first_name) .'! Order has been placed successfully.',
             'We will contact you soon at <span style="color:#C20676">'.Input::get('Contact.number').'</span>
@@ -85,8 +91,30 @@ class CheckoutController extends BaseController {
              Thank you for choosing QBrando <strong>online shop for luxury in Qatar</strong><br /><br />
             <a href='.URL::route('home').'>Go back home</a>'
         );
-//        return Redirect::route('choose-payment');
     }
+
+    /**
+     * Save that this user wants to make a payment with credit card
+     */
+    protected function payWithCreditCard(Order $order)
+    {
+        $total = Price::make($order->price);
+        $total->setCurrency($order->currency);
+
+        // Discount 10%
+        $total->multiply(0.9);
+
+        // Create new migs payment
+        $migsPayment = $order->migsPayments()->create(array(
+            'amount' => $total->convertTo('EGP')->round(0)->value(),
+            'currency' => 'EGP'
+        ));
+
+        $url = $this->migsRequest->simplePaymentUrl($migsPayment, URL::route('migs.back'));
+
+        return Redirect::to($url);
+    }
+
 
     /**
      * Create user and location

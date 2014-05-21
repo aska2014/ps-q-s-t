@@ -47,7 +47,7 @@ class Price {
 
     /**
      * @param $value
-     * @return mixed
+     * @return Price
      */
     public static function make($value)
     {
@@ -62,6 +62,39 @@ class Price {
     {
         // Convert from default currency to this currency
         $this->value = $this->conversion->convertFromDefault($value, $currency);
+    }
+
+    /**
+     * Calculate value by converting from default currency to the given currency
+     *
+     * @param $currency
+     * @return $this
+     */
+    public function convertTo($currency)
+    {
+        $currency = $this->makeCurrency($currency);
+
+        $this->value = $this->conversion->convertFromDefault($this->value, $currency);
+        $this->currency = $currency;
+
+        return $this;
+    }
+
+    /**
+     * @param $currency
+     */
+    public function setCurrency($currency)
+    {
+        $this->currency = $this->makeCurrency($currency);
+    }
+
+    /**
+     * @param $currency
+     * @return \Units\Currency
+     */
+    protected function makeCurrency($currency)
+    {
+        return $currency instanceof Currency ? $currency : new Currency($currency);
     }
 
     /**

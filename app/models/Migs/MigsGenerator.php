@@ -6,14 +6,16 @@ class MigsGenerator {
      * Get settings
      *
      * @param MigsAccount $account
-     * @param $amount
-     * @param $currency
-     * @param $orderUniqueId
+     * @param MigsPayment $payment
      * @param string $returnUrl
      * @return array
      */
-    public function getQueryData(MigsAccount $account, $amount, $currency, $orderUniqueId, $returnUrl = '')
+    public function getQueryData(MigsAccount $account, MigsPayment $payment, $returnUrl = '')
     {
+        $orderUniqueId = $payment->order->unique_identifier;
+        $amount = $payment->amount;
+        $currency = $payment->currency;
+
         $orderInfo = 'Paying for order #'.$orderUniqueId;
 
         $data = array(

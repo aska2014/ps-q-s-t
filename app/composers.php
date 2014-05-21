@@ -81,5 +81,15 @@ App::bind('Units\ConversionPrice', function()
 
 App::bind('Migs\MigsRequest', function()
 {
-    return new \Migs\MigsRequest(new \Migs\MigsGenerator(), \Migs\MigsAccount::byName('test')->first());
+    // If local environment use test account
+    if(App::Environment() === 'local') {
+
+        $migsAccount = \Migs\MigsAccount::byName('test')->first();
+    }
+    elseif(App::Environment() === 'production') {
+        // Now use production account (qbrando)
+        $migsAccount = \Migs\MigsAccount::byName('qbrando')->first();
+    }
+
+    return new \Migs\MigsRequest(new \Migs\MigsGenerator(), $migsAccount);
 });
