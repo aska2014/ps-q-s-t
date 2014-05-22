@@ -79,17 +79,17 @@ App::bind('Units\ConversionPrice', function()
 });
 
 
-App::bind('Migs\MigsRequest', function()
+App::bind('Migs\MigsManager', function($app)
 {
     // If local environment use test account
     if(App::Environment() === 'local') {
 
-        $migsAccount = \Migs\MigsAccount::byName('test')->first();
+        $account = \Migs\MigsAccount::byName('test')->first();
     }
     elseif(App::Environment() === 'production') {
         // Now use production account (qbrando)
-        $migsAccount = \Migs\MigsAccount::byName('qbrando')->first();
+        $account = \Migs\MigsAccount::byName('qbrando')->first();
     }
 
-    return new \Migs\MigsRequest(new \Migs\MigsGenerator(), $migsAccount);
+    return $app->make('Migs\MigsManager', $account);
 });

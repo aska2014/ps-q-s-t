@@ -1,0 +1,8 @@
+GET /nbe-return.html?vpc_AVSRequestCode=Z&vpc_AVSResultCode=Unsupported&vpc_AcqAVSRespCode=Unsupported&vpc_AcqCSCRespCode=Unsupported&vpc_AcqResponseCode=00&vpc_Amount=167200&vpc_AuthorizeId=581681&vpc_BatchNo=20140520&vpc_CSCResultCode=Unsupported&vpc_Card=VC&vpc_CardNum=xxxxxxxxxxxx0001&vpc_Command=pay&vpc_Currency=EGP&vpc_Locale=en&vpc_MerchTxnRef=I6EH&vpc_Merchant=TESTEGPTEST&vpc_Message=Approved&vpc_OrderInfo=Paying+for+order+%23I6EH&vpc_ReceiptNo=414022581681&vpc_SecureHash=130F57B3C738B911752992A4A066CC70&vpc_TransactionNo=3429&vpc_TxnResponseCode=0&vpc_Version=1 HTTP/1.1
+Host: localhost:8081
+Connection: keep-alive
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.137 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: en-US,en;q=0.8,ar;q=0.6,id;q=0.4
+Cookie: laravel_session=eyJpdiI6IjJ1SUxYVWoxdjAwNU5FeGlhQmE0Wm9cL1RZcUNUZ0VzWkE4RUl3R0t4YXgwPSIsInZhbHVlIjoiOXZpUGIxaHptcklHZkwreERmb0pFOWxUR01nVVlFVVRGN2xEUW1tclJQejlMQStEdHhjU0NoU1o3WlM4SDZna1ZqM2hTOFVxaUVMQjNMdlNRSzYxNEE9PSIsIm1hYyI6IjVmMzdkNjRjNjEyZThjMzMzYTAyMWRiYjFkZWI0YTAxNmY5OTA3MDVmNzUwZmY1NDYzYjU2OGU5ZjZjNmVlZDIifQ%3D%3D

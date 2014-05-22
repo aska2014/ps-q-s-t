@@ -12,7 +12,6 @@ class MigsPayment extends Model {
     const CANCELED = 'canceled';
     const ACCEPTED = 'accepted';
 
-
     /**
      * @var string
      */
@@ -24,10 +23,30 @@ class MigsPayment extends Model {
     protected $fillable = array('currency', 'amount', 'status', 'order_id');
 
     /**
+     * @param $query
+     * @param $uniqueIdentifier
+     * @return mixed
+     */
+    public function scopeByUniqueIdentifier($query, $uniqueIdentifier)
+    {
+        return $query->join('orders', 'orders.id', '=', 'migs_payments.order_id')
+                    ->where('orders.unique_identifier', $uniqueIdentifier)
+                    ->select('orders.*');
+    }
+
+    /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function order()
     {
         return $this->belongsTo(Order::getClass());
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function transaction()
+    {
+        return $this->hasOne(MigsTransaction::getClass());
     }
 }

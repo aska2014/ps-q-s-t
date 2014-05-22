@@ -17,12 +17,12 @@ class CheckoutController extends BaseController {
      * @param Order $orders
      * @param Product $products
      * @param Location $locations
-     * @param Migs\MigsRequest $migsRequest
+     * @param Migs\MigsManager $migsManager
      * @param UserInfo $userInfo
      * @param ItemFactoryInterface $itemFactory
      * @param MigsPayment $migsPayments
      */
-    public function __construct(Cart $cart, Order $orders, Product $products, Location $locations, MigsRequest $migsRequest,
+    public function __construct(Cart $cart, Order $orders, Product $products, Location $locations, \Migs\MigsManager $migsManager,
                                 UserInfo $userInfo, ItemFactoryInterface $itemFactory, MigsPayment $migsPayments)
     {
         $this->cart = $cart;
@@ -32,7 +32,7 @@ class CheckoutController extends BaseController {
         $this->userInfo = $userInfo;
         $this->itemFactory = $itemFactory;
         $this->migsPayments = $migsPayments;
-        $this->migsRequest = $migsRequest;
+        $this->migsManager = $migsManager;
     }
 
     /**
@@ -92,14 +92,12 @@ class CheckoutController extends BaseController {
         $total->multiply(0.9);
 
         // Create new migs payment
-        $migsPayment = $order->migsPayments()->create(array(
+        $migsPayment = $order->migsPayment()->create(array(
             'amount' => $total->convertTo('EGP')->round(0)->value(),
             'currency' => 'EGP'
         ));
 
-        $url = $this->migsRequest->simplePaymentUrl($migsPayment, URL::route('migs.back'));
-
-        return Redirect::to($url);
+        return $this->migsManager->makePaymentRequest($migsPayment, URL::route('migs.back'));
     }
 
 

@@ -18,3 +18,4 @@ vendor/*
 !vendor/facebook
 !vendor/jenssegers
 !vendor/mobiledetect
+!*.txt

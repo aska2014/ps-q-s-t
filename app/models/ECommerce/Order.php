@@ -170,6 +170,5 @@ class Order extends \BaseModel {
     public function gifts(){ return $this->belongsToMany(Product::getClass(), 'gift_order')->withPivot('quantity'); }
     public function products(){ return $this->belongsToMany(Product::getClass(), 'product_order')->withPivot('quantity', 'price'); }
 
-    public function migsPayments(){ return $this->hasMany(MigsPayment::getClass()); }
-
+    public function migsPayment(){ return $this->hasOne(MigsPayment::getClass()); }
 }
