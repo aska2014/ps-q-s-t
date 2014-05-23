@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="09236894-3e4c-4d0d-a6ca-f0330fc20f20" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/composers.php" afterPath="$PROJECT_DIR$/app/composers.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="new_www.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,7 +28,7 @@
       <file leaf-file-name="composers.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/composers.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="36" selection-start="522" selection-end="522" vertical-scroll-proportion="0.39115044" vertical-offset="51" max-vertical-offset="1734">
+            <state line="16" column="0" selection-start="485" selection-end="485" vertical-scroll-proportion="0.36106196" vertical-offset="51" max-vertical-offset="1700">
               <folding />
             </state>
           </provider>
@@ -806,7 +805,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/composers.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="36" selection-start="522" selection-end="522" vertical-scroll-proportion="0.39115044" vertical-offset="51" max-vertical-offset="1734">
+        <state line="16" column="0" selection-start="485" selection-end="485" vertical-scroll-proportion="0.36106196" vertical-offset="51" max-vertical-offset="1700">
           <folding />
         </state>
       </provider>

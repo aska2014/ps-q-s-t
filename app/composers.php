@@ -15,8 +15,6 @@ View::composer(array('templates.angular', 'pages.welcome'), function($view)
     // If no mass offer exists in this time. Create default mass offer
     if($massOfferCount == 0) {
 
-        echo 'mass offer count = 0';
-
         App::make('Offers\MassOffer')->makeDefaultOffer();
     }
 
