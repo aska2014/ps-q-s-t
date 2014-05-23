@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09236894-3e4c-4d0d-a6ca-f0330fc20f20" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Offers/MassOffer.php" afterPath="$PROJECT_DIR$/app/models/Offers/MassOffer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/composers.php" afterPath="$PROJECT_DIR$/app/composers.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="new_www.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,19 +26,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="composers.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="composers.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/composers.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="60" selection-start="612" selection-end="612" vertical-scroll-proportion="-10.461538" vertical-offset="51" max-vertical-offset="1700">
+            <state line="17" column="36" selection-start="522" selection-end="522" vertical-scroll-proportion="0.39115044" vertical-offset="51" max-vertical-offset="1734">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MassOffer.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MassOffer.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/Offers/MassOffer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="64" selection-start="659" selection-end="659" vertical-scroll-proportion="0.6619469" vertical-offset="102" max-vertical-offset="2414">
+            <state line="28" column="5" selection-start="460" selection-end="460" vertical-scroll-proportion="-12.423077" vertical-offset="102" max-vertical-offset="2414">
               <folding />
             </state>
           </provider>
@@ -93,7 +94,6 @@
         <option value="$PROJECT_DIR$/app/models/Migs/MigsSecretException.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/migs_payment_response.txt" />
-        <option value="$PROJECT_DIR$/app/composers.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_05_22_144848_create_migs_transations.php" />
         <option value="$PROJECT_DIR$/app/freak/controllers/FreakOrderController.php" />
         <option value="$PROJECT_DIR$/app/controllers/CheckoutController.php" />
@@ -107,6 +107,7 @@
         <option value="$PROJECT_DIR$/app/controllers/MigsPaymentController.php" />
         <option value="$PROJECT_DIR$/app/models/Migs/MigsManager.php" />
         <option value="$PROJECT_DIR$/app/models/Offers/MassOffer.php" />
+        <option value="$PROJECT_DIR$/app/composers.php" />
       </list>
     </option>
   </component>
@@ -796,16 +797,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/composers.php">
+    <entry file="file://$PROJECT_DIR$/app/models/Offers/MassOffer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="60" selection-start="612" selection-end="612" vertical-scroll-proportion="-10.461538" vertical-offset="51" max-vertical-offset="1700">
+        <state line="28" column="5" selection-start="460" selection-end="460" vertical-scroll-proportion="-12.423077" vertical-offset="102" max-vertical-offset="2414">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Offers/MassOffer.php">
+    <entry file="file://$PROJECT_DIR$/app/composers.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="64" selection-start="659" selection-end="659" vertical-scroll-proportion="0.6619469" vertical-offset="102" max-vertical-offset="2414">
+        <state line="17" column="36" selection-start="522" selection-end="522" vertical-scroll-proportion="0.39115044" vertical-offset="51" max-vertical-offset="1734">
           <folding />
         </state>
       </provider>
