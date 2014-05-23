@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09236894-3e4c-4d0d-a6ca-f0330fc20f20" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2014_05_22_144848_create_migs_transations.php" afterPath="$PROJECT_DIR$/app/database/migrations/2014_05_22_144848_create_migs_transations.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/freak/controllers/FreakOrderController.php" afterPath="$PROJECT_DIR$/app/freak/controllers/FreakOrderController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Migs/MigsManager.php" afterPath="$PROJECT_DIR$/app/models/Migs/MigsManager.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Migs/MigsPayment.php" afterPath="$PROJECT_DIR$/app/models/Migs/MigsPayment.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/MigsPaymentController.php" afterPath="$PROJECT_DIR$/app/controllers/MigsPaymentController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Migs/MigsTransaction.php" afterPath="$PROJECT_DIR$/app/models/Migs/MigsTransaction.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pages/checkout.blade.php" afterPath="$PROJECT_DIR$/app/views/pages/checkout.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/composers.php" afterPath="$PROJECT_DIR$/app/composers.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/js/controllers.js" afterPath="$PROJECT_DIR$/public/app/js/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/freak/views/order/one.php" afterPath="$PROJECT_DIR$/app/freak/views/order/one.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/start/production.php" afterPath="$PROJECT_DIR$/app/start/production.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="new_www.iws" />
@@ -35,7 +26,35 @@
     <favorites_list name="new_www" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="MigsPaymentController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/MigsPaymentController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="42" column="104" selection-start="1517" selection-end="1517" vertical-scroll-proportion="-15.846154" vertical-offset="302" max-vertical-offset="884">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="payment_notification.blade.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/emails/payment_notification.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="77" selection-start="610" selection-end="620" vertical-scroll-proportion="0.7522124" vertical-offset="0" max-vertical-offset="595">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="production.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/start/production.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="19" selection-start="460" selection-end="470" vertical-scroll-proportion="-11.423077" vertical-offset="128" max-vertical-offset="1139">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -48,7 +67,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/config/production/database.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_05_16_012342_create_migs_accounts_table.php" />
         <option value="$PROJECT_DIR$/app/models/Migs/MigsAccount.php" />
         <option value="$PROJECT_DIR$/app/views/templates/empty.blade.php" />
@@ -57,7 +75,6 @@
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/app/config/app.php" />
         <option value="$PROJECT_DIR$/app/views/partials/static/header.blade.php" />
-        <option value="$PROJECT_DIR$/app/start/production.php" />
         <option value="$PROJECT_DIR$/app/models/Offers/MassOffer.php" />
         <option value="$PROJECT_DIR$/public/app/css/welcome.less" />
         <option value="$PROJECT_DIR$/app/models/Website/ContactUs.php" />
@@ -88,7 +105,6 @@
         <option value="$PROJECT_DIR$/app/models/Migs/MigsSecretException.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/migs_payment_response.txt" />
-        <option value="$PROJECT_DIR$/app/controllers/MigsPaymentController.php" />
         <option value="$PROJECT_DIR$/app/composers.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_05_22_144848_create_migs_transations.php" />
         <option value="$PROJECT_DIR$/app/models/Migs/MigsManager.php" />
@@ -99,6 +115,9 @@
         <option value="$PROJECT_DIR$/app/models/Migs/MigsTransaction.php" />
         <option value="$PROJECT_DIR$/app/models/Migs/MigsPayment.php" />
         <option value="$PROJECT_DIR$/app/freak/views/order/one.php" />
+        <option value="$PROJECT_DIR$/app/start/production.php" />
+        <option value="$PROJECT_DIR$/app/views/emails/payment_notification.blade.php" />
+        <option value="$PROJECT_DIR$/app/controllers/MigsPaymentController.php" />
       </list>
     </option>
   </component>
@@ -273,7 +292,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
+              <option name="myItemId" value="emails" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -291,77 +310,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="freak" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="new_www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="new_www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="freak" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="new_www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="new_www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="freak" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="order" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="new_www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="new_www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="freak" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
+              <option name="myItemId" value="start" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -527,14 +476,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32901135" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31118315" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39674798" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2688822" sideWeight="0.27876824" order="2" side_tool="true" content_ui="tabs" x="231" y="86" width="330" height="615" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25981873" sideWeight="0.72123176" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26359516" sideWeight="0.72123176" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.499187" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23414634" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -542,12 +491,12 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284553" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -573,31 +522,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/ProductsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="41" selection-start="2653" selection-end="2653" vertical-scroll-proportion="0.7763636" vertical-offset="1086" max-vertical-offset="1870" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/URL.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="20" selection-start="815" selection-end="815" vertical-scroll-proportion="0.45648313" vertical-offset="270" max-vertical-offset="1564" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/ECommerce/Category.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="7" selection-start="108" selection-end="108" vertical-scroll-proportion="0.1811723" vertical-offset="0" max-vertical-offset="1428" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/ECommerce/Brand.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="31" selection-start="266" selection-end="342" vertical-scroll-proportion="0.42273533" vertical-offset="0" max-vertical-offset="1275" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/partials/static/header.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="56" selection-start="1518" selection-end="1518" vertical-scroll-proportion="0.4909091" vertical-offset="512" max-vertical-offset="1394" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_05_17_142320_add_order_unique_identifier.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="9" selection-start="486" selection-end="486" vertical-scroll-proportion="0.8152753" vertical-offset="0" max-vertical-offset="646" />
@@ -611,11 +535,6 @@
     <entry file="file://$PROJECT_DIR$/vendor/kareem3d/responser/src/Kareem3d/Responser/Response.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="60" column="33" selection-start="1460" selection-end="1460" vertical-scroll-proportion="0.33570158" vertical-offset="763" max-vertical-offset="1887" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/start/global.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="107" column="44" selection-start="3478" selection-end="3478" vertical-scroll-proportion="0.87921846" vertical-offset="1171" max-vertical-offset="1768" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers/functions.php">
@@ -748,16 +667,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="576" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/MigsPaymentController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="271" selection-end="271" vertical-scroll-proportion="0.42273533" vertical-offset="0" max-vertical-offset="646" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="1" selection-start="424" selection-end="424" vertical-scroll-proportion="0.030909091" vertical-offset="323" max-vertical-offset="1581" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/kareem3d/membership/src/Kareem3d/Membership/UserInfo.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="0" selection-start="37" selection-end="37" vertical-scroll-proportion="0.030195381" vertical-offset="0" max-vertical-offset="1275" />
@@ -826,6 +735,62 @@
     <entry file="file://$PROJECT_DIR$/app/models/ECommerce/Order.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="172" column="31" selection-start="4327" selection-end="4327" vertical-scroll-proportion="0.7844203" vertical-offset="2491" max-vertical-offset="3043" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/local/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="35" selection-start="816" selection-end="816" vertical-scroll-proportion="0.4884956" vertical-offset="217" max-vertical-offset="782">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/start/global.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="107" column="44" selection-start="3478" selection-end="3478" vertical-scroll-proportion="-45.26923" vertical-offset="489" max-vertical-offset="1768">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="1" selection-start="424" selection-end="424" vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="1581">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Website/ContactUs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="35" selection-start="487" selection-end="502" vertical-scroll-proportion="0.5185841" vertical-offset="234" max-vertical-offset="799">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/emails/error.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="219" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="374">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/start/production.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="19" selection-start="460" selection-end="470" vertical-scroll-proportion="-11.423077" vertical-offset="128" max-vertical-offset="1139">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/MigsPaymentController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="104" selection-start="1517" selection-end="1517" vertical-scroll-proportion="-15.846154" vertical-offset="302" max-vertical-offset="884">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/emails/payment_notification.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="77" selection-start="610" selection-end="620" vertical-scroll-proportion="0.7522124" vertical-offset="0" max-vertical-offset="595">
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>

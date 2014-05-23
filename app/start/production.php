@@ -31,7 +31,6 @@ $sendMailWithException = function(Exception $exception, $code)
     Mail::send('emails.error', $data, function($message)
     {
         $message->to('kareem3d.a@gmail.com', 'Kareem Mohamed')->subject('Error from qbrando');
-        $message->to('omaraya11@facebook.com', 'Omar')->subject('Error from qbrando');
     });
 };
 
@@ -47,7 +46,7 @@ App::error(function(Exception $e, $code) use($sendMailWithException)
 
 App::error(function(Illuminate\Database\Eloquent\ModelNotFoundException $e, $code)
 {
-    $contactUs = new \Website\ContactUs();
+    $contactUs = App::make('\Website\ContactUs');
 
     return Redirect::route('message-to-user')
         ->with('title', 'We can\'t find this product in our stock :(')
