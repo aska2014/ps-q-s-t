@@ -23,6 +23,11 @@ class MigsPayment extends Model {
     protected $fillable = array('currency', 'amount', 'status', 'order_id');
 
     /**
+     * @var array
+     */
+    protected $with = array('transaction');
+
+    /**
      * @param $query
      * @param $uniqueIdentifier
      * @return mixed
@@ -31,7 +36,7 @@ class MigsPayment extends Model {
     {
         return $query->join('orders', 'orders.id', '=', 'migs_payments.order_id')
                     ->where('orders.unique_identifier', $uniqueIdentifier)
-                    ->select('orders.*');
+                    ->select('migs_payments.*');
     }
 
     /**
@@ -47,6 +52,6 @@ class MigsPayment extends Model {
      */
     public function transaction()
     {
-        return $this->hasOne(MigsTransaction::getClass());
+        return $this->hasOne(MigsTransaction::getClass(), 'payment_id');
     }
 }

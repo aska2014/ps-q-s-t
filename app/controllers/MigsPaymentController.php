@@ -3,47 +3,28 @@
 class MigsPaymentController extends BaseController {
 
     /**
-     * @param \Migs\MigsGenerator $generator
-     * @param \Migs\MigsPayment $payments
+     * @param Migs\MigsManager $manager
      */
-    public function __construct(\Migs\MigsGenerator $generator, \Migs\MigsPayment $payments, \ECommerce\Order $orders)
+    public function __construct(\Migs\MigsManager $manager)
     {
-        $this->generator = $generator;
-        $this->payments = $payments;
-        $this->orders   = $orders;
+        $this->manager = $manager;
     }
 
     /**
      * Back from National bank site..
-     *
-     * @todo
      */
     public function back()
     {
-        // First make sure that the matching secret is correct
+        $transaction = $this->manager->savePaymentResponse(Input::all());
 
-        $transaction['status'] = Input::get('vpc_TxnResponseCode');
-        $transaction['key']    = Input::get('vpc_TransactionNo');
-        $transaction['message'] = Input::get('vpc_Message');
+        $order = $transaction->payment->order;
 
-        $orderUniqueIdentifier = Input::get('vpc_MerchTxnRef');
-        // Get order from the database by the `$reference` generated random number in the request process
-
-        Cache::forever($orderUniqueIdentifier, $_GET);
-
-        if($transaction['status'] == "0" && $transaction['message'] == "Approved") {
-
-            $order = $this->orders->byUniqueIdentifier($orderUniqueIdentifier)->first();
-            $migsPayment = $order->migsPayments()->first();
-
-            $migsPayment->status = \Migs\MigsPayment::ACCEPTED;
-
-            $migsPayment->save();
-        }
+        $contact = $order->userInfo->contacts()->where('type', 'number')->first();
 
         return $this->messageToUser(
-            'Thank you! Order has been placed successfully.',
-            'We will contact you soon to confirm time of delivery and shipping address.<br /><br />
+            'Thanks '. ucfirst($order->userInfo->first_name) .'! Order has been placed successfully.',
+            'We will contact you soon at <span style="color:#C20676">'.$contact->value.'</span>
+            to confirm time of delivery and shipping address.<br /><br />
              Thank you for choosing QBrando <strong>online shop for luxury in Qatar</strong><br /><br />
             <a href='.URL::route('home').'>Go back home</a>'
         );

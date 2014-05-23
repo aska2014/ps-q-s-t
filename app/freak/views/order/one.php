@@ -86,7 +86,7 @@
                 </tr>
                 </tbody>
             </table>
-            <table class="table table-striped table-detail-view" ng-repeat="payment in model.migs_payments">
+            <table class="table table-striped table-detail-view" ng-show="model.migs_payment">
                 <thead>
                 <tr>
                     <th colspan="2"><li class="icol-emoticon-evilgrin"></li> Bank payment</th>
@@ -94,11 +94,19 @@
                 </thead>
                 <tr>
                     <th>Amount</th>
-                    <td>{{ payment.currency + ' ' + payment.amount }}</td>
+                    <td>{{ model.migs_payment.currency + ' ' + model.migs_payment.amount }}</td>
                 </tr>
                 <tr>
                     <th>Status</th>
-                    <td>{{ payment.status }}</td>
+                    <td>{{ model.migs_payment.status }}</td>
+                </tr>
+                <tr ng-show="model.migs_payment.transaction">
+                    <th>Payment transaction information</th>
+                    <td>
+                        <div ng-repeat="(key, prop) in model.migs_payment.transaction track by key">
+                            <strong>{{ key }}:</strong> {{ prop }}<br/>
+                        </div>
+                    </td>
                 </tr>
                 </tbody>
             </table>

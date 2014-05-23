@@ -13,13 +13,13 @@ class MigsTransaction extends Model {
      * @var array
      */
     protected $fillable = array('vpc_Amount', 'vpc_Currency', 'vpc_AuthorizeId', 'vpc_BatchNo',
-                                'vpc_Card', 'vpc_CardNum', 'vpc_ReceiptNo', 'vpc_TransactionNo');
+                                'vpc_Card', 'vpc_CardNum', 'vpc_ReceiptNo', 'vpc_TransactionNo', 'payment_id');
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function payment()
     {
-        return $this->belongsTo(MigsPayment::getClass());
+        return $this->belongsTo(MigsPayment::getClass(), 'payment_id');
     }
 }

@@ -30,7 +30,7 @@ class FreakOrderController extends \Kareem3d\Freak\Core\ElementController {
      */
     public function show($id)
     {
-        return $this->orders->with('products', 'gifts', 'userInfo', 'location', 'migsPayments')->findOrFail($id);
+        return $this->orders->with('products', 'gifts', 'userInfo', 'location', 'migsPayment')->findOrFail($id);
     }
 
     /**

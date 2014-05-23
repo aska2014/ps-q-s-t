@@ -1,6 +1,7 @@
 <?php namespace Migs;
 
 use Illuminate\Routing\Redirector;
+use Illuminate\Support\Facades\Redirect;
 
 class MigsManager {
 
@@ -15,17 +16,27 @@ class MigsManager {
     protected $secretHasher;
 
     /**
+     * @var MigsPayment
+     */
+    protected $payments;
+
+    /**
+     * @var MigsTransaction
+     */
+    protected $transactions;
+
+    /**
      * @param MigsAccount $account
      * @param MigsPayment $payments
-     * @param MigsTransaction $transaction
+     * @param MigsTransaction $transactions
      * @param MigsSecretHasher $secretHasher
      */
-    public function __construct(MigsAccount $account, MigsPayment $payments, MigsTransaction $transaction, MigsSecretHasher $secretHasher)
+    public function __construct(MigsAccount $account, MigsPayment $payments, MigsTransaction $transactions, MigsSecretHasher $secretHasher)
     {
         $this->account = $account;
         $this->payments = $payments;
         $this->secretHasher = $secretHasher;
-        $this->transaction = $transaction;
+        $this->transactions = $transactions;
     }
 
     /**
@@ -60,14 +71,23 @@ class MigsManager {
         // If response not successful
         if(!( $inputs['vpc_TxnResponseCode'] === '0' && $inputs['vpc_Message'] === 'Approved')) {
 
-            throw new MigsTransactionException("Something went wrong while trying to ");
+            throw new MigsTransactionException("Response code is not approved");
         }
 
         // Everything is fine.. Now create a new transaction with the given inputs
-        $payment = $this->payments->byUniqueIdentifier($inputs['vpc_MerchTxnRef'])->first();
+        if(! $payment = $this->payments->byUniqueIdentifier($inputs['vpc_MerchTxnRef'])->first()) {
+
+            throw new MigsTransactionException("Unique identifier is not correct.");
+        }
+
+        // Update payment status
+        $payment->status = $payment::ACCEPTED;
+
+        //
+        $inputs['payment_id'] = $payment->id;
 
         // Create new transaction
-        return $payment->transaction()->create($inputs);
+        return $this->transactions->create($inputs);
     }
 
     /**

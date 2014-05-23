@@ -91,5 +91,6 @@ App::bind('Migs\MigsManager', function($app)
         $account = \Migs\MigsAccount::byName('qbrando')->first();
     }
 
-    return $app->make('Migs\MigsManager', $account);
+    return new \Migs\MigsManager($account, $app->make('Migs\MigsPayment')
+        , $app->make('Migs\MigsTransaction'), $app->make('Migs\MigsSecretHasher'));
 });

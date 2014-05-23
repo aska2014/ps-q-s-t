@@ -262,6 +262,18 @@ angular.module('qbrando.controllers', ['qbrando.services']).
         $scope.payment = {
             method: 'credit_card'
         };
+
+        $scope.$watch('location.country', function(country) {
+
+            if($scope.isDubai()) {
+                $scope.payment.method = 'credit_card';
+            }
+        });
+
+        $scope.isDubai = function()
+        {
+            return $scope.location.country && $scope.location.country.name === 'United Arab Emirates';
+        }
     }])
 
 

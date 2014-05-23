@@ -101,7 +101,7 @@
                         And get 10% discount on your order. <strong>Your order new price is {{ $NBEPrice['QAR'] }}</strong>
 
                     </div>
-                    <div class="radio-input" ng-show="">
+                    <div class="radio-input" ng-show="! isDubai()">
                         <input type="radio" ng-model="payment.method" name="Payment[method]" id="payment-delivery" value="delivery"/><label for="payment-delivery">Pay on delivery</label>
                     </div>
                 </div>

@@ -14,6 +14,7 @@ class CreateMigsTransations extends Migration {
 	{
 		Schema::create('migs_transactions', function(Blueprint $table)
 		{
+            $table->engine = 'InnoDB';
 			$table->increments('id');
 
             $table->string('vpc_Amount');
@@ -24,6 +25,9 @@ class CreateMigsTransations extends Migration {
             $table->string('vpc_CardNum');
             $table->string('vpc_ReceiptNo');
             $table->string('vpc_TransactionNo');
+
+            $table->integer('payment_id')->unsigned();
+            $table->foreign('payment_id')->references('id')->on('migs_payments')->onDelete('CASCADE')->onUpdate('CASCADE');
 
 			$table->timestamps();
 		});
