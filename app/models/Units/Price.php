@@ -74,7 +74,7 @@ class Price {
     {
         $currency = $this->makeCurrency($currency);
 
-        $this->value = $this->conversion->convertFromDefault($this->value, $currency);
+        $this->value = $this->conversion->convert($this->value, $this->currency, $currency);
         $this->currency = $currency;
 
         return $this;
