@@ -82,6 +82,7 @@ class MigsManager {
 
         // Update payment status
         $payment->status = $payment::ACCEPTED;
+        $payment->save();
 
         //
         $inputs['payment_id'] = $payment->id;
