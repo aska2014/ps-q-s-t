@@ -1,0 +1,15 @@
+.footer-menu {
+  height: 20px;
+  margin-bottom: 10px;
+}
+.footer-menu ul {
+  list-style: none;
+  padding: 0px;
+  width: 440px;
+  margin: 0px auto;
+}
+.footer-menu ul li {
+  float: left;
+  margin-right: 30px;
+  color: #333;
+}

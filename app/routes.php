@@ -25,6 +25,16 @@ Route::get('/test-remote-connection', function()
 });
 
 
+Route::get('/refund', array('as' => 'refund', function() {}));
+
+Route::get('/privacy-policy.html', array('as' => 'privacy', function() {
+    return View::make('pages.privacy');
+}));
+Route::get('/contact-us.html', array('as' => 'contact', function() {
+    return View::make('pages.contact');
+}));
+
+
 
 Route::get('/', array('as' => 'welcome', 'uses' => 'HomeController@welcome'));
 Route::get('/home', array('as' => 'home', 'uses' => 'HomeController@index'));

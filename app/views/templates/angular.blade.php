@@ -48,6 +48,25 @@
 
     @yield('head')
 
+
+    <script type="text/javascript">
+        adroll_adv_id = "57JNO52N45DR5E6AO3TK2R";
+        adroll_pix_id = "7GGDMQKFZ5ELHNVGXYQ4GT";
+        (function () {
+            var oldonload = window.onload;
+            window.onload = function(){
+                __adroll_loaded=true;
+                var scr = document.createElement("script");
+                var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+                scr.setAttribute('async', 'true');
+                scr.type = "text/javascript";
+                scr.src = host + "/j/roundtrip.js";
+                ((document.getElementsByTagName('head') || [null])[0] ||
+                    document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+                if(oldonload){oldonload()}};
+        }());
+    </script>
+
 </head>
 <body ng-controller="MainController" ng-init="
 cart.init('{{ $itemCookieKey }}', '{{ $giftCookieKey }}');
