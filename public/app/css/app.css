@@ -5620,12 +5620,12 @@ button.close {
 .modal-footer:after,
 .body-container:before,
 .body-container:after,
-.footer:before,
-.footer:after,
 .header:before,
 .header:after,
 .header .menu ul:before,
 .header .menu ul:after,
+.footer:before,
+.footer:after,
 .checkout:before,
 .checkout:after,
 .grid-products:before,
@@ -5658,9 +5658,9 @@ button.close {
 .panel-body:after,
 .modal-footer:after,
 .body-container:after,
-.footer:after,
 .header:after,
 .header .menu ul:after,
+.footer:after,
 .checkout:after,
 .grid-products:after,
 .carousel-products:after,
@@ -5946,19 +5946,6 @@ a:hover {
   background: url('../img/gradients/black-gradient-2.gif');
   color: #FFF;
 }
-.footer {
-  margin-left: -15px;
-  margin-right: -15px;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  margin-top: 0px;
-  text-align: center;
-  padding: 30px;
-}
-.footer .copyright {
-  font-size: 12px;
-  color: #666;
-}
 .header {
   margin-left: -15px;
   margin-right: -15px;
@@ -6215,6 +6202,19 @@ a:hover {
   font-size: 15px;
   font-weight: bold;
   line-height: 25px;
+}
+.footer {
+  margin-left: -15px;
+  margin-right: -15px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  margin-top: 0px;
+  text-align: center;
+  padding: 30px;
+}
+.footer .copyright {
+  font-size: 12px;
+  color: #666;
 }
 .footer-menu {
   height: 20px;

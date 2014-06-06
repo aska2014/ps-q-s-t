@@ -114,7 +114,11 @@ massOffer.init('{{ $massOffer->getClean('title') }}', '{{ $massOffer->getClean('
             @include('partials.products.grid')
         </div>
 
+
+
     </div>
+
+    @include('partials.static.footer')
 </div>
 
 @if($environment == 'production')
