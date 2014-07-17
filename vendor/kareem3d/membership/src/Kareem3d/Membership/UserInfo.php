@@ -41,6 +41,18 @@ class UserInfo extends Model {
     }
 
     /**
+     * @return string
+     */
+    public function getContactNumberAttribute()
+    {
+        if(isset($this->cache['contact_number'])) return $this->cache['contact_number'];
+
+        $contact = $this->contacts()->where('type', 'number')->first();
+
+        if($contact) $this->cache['contact_number'] = $contact->value;
+    }
+
+    /**
      * @param $name
      */
     public function setNameAttribute($name)

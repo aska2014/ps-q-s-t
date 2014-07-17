@@ -6,6 +6,7 @@ use Kareem3d\Membership\Account;
 use Kareem3d\Membership\UserInfo;
 use Location\Location;
 use Migs\MigsPayment;
+use Paypal\PaypalPayment;
 use Units\Currency;
 use Units\Price;
 
@@ -21,6 +22,9 @@ class Order extends \BaseModel {
      */
     protected $softDelete = true;
 
+    /**
+     * @var array
+     */
     protected $fillable = array('user_info_id', 'location_id', 'price', 'account_id', 'currency', 'unique_identifier');
 
     /**
@@ -171,4 +175,6 @@ class Order extends \BaseModel {
     public function products(){ return $this->belongsToMany(Product::getClass(), 'product_order')->withPivot('quantity', 'price'); }
 
     public function migsPayment(){ return $this->hasOne(MigsPayment::getClass()); }
+
+    public function paypalPayments() { return $this->hasMany(PaypalPayment::getClass()); }
 }

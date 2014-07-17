@@ -20,7 +20,9 @@
 
             "besimple/soap": "0.2.*@dev",
 
-            "jenssegers/agent": "*"
+            "jenssegers/agent": "*",
+
+            "paypal/merchant-sdk-php":"v3.6.106"
 	},
 	"autoload": {
 		"classmap": [

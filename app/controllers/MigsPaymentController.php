@@ -4,10 +4,12 @@ class MigsPaymentController extends BaseController {
 
     /**
      * @param Migs\MigsManager $manager
+     * @param Cart\ItemFactoryInterface $itemFactory
      */
-    public function __construct(\Migs\MigsManager $manager)
+    public function __construct(\Migs\MigsManager $manager, \Cart\ItemFactoryInterface $itemFactory)
     {
         $this->manager = $manager;
+        $this->itemFactory = $itemFactory;
     }
 
     /**
@@ -22,6 +24,9 @@ class MigsPaymentController extends BaseController {
         $contact = $order->userInfo->contacts()->where('type', 'number')->first();
 
         $this->notifyByEmail($transaction);
+
+        // Destory cart. Order has been made successfully
+        $this->itemFactory->destroy();
 
         return $this->messageToUser(
             'Thanks '. ucfirst($order->userInfo->first_name) .'! Order has been placed successfully.',
@@ -40,7 +45,7 @@ class MigsPaymentController extends BaseController {
         Mail::send('emails.payment_notification', compact('transaction'), function($message)
         {
             $message->to('kareem3d.a@gmail.com', 'Kareem Mohamed')->subject('Payment received on QBRANDO');
-            $message->to('ahmed.m.elbahrawy@facebook.com', 'Omar')->subject('Payment received on QBRANDO');
+            $message->to('ahmed.m.elbahrawy@facebook.com', 'Ahmed Mohamed')->subject('Payment received on QBRANDO');
         });
     }
 

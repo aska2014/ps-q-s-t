@@ -86,6 +86,8 @@ class Price {
     public function setCurrency($currency)
     {
         $this->currency = $this->makeCurrency($currency);
+
+        return $this;
     }
 
     /**

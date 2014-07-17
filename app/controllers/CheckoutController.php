@@ -8,6 +8,8 @@ use Kareem3d\Membership\UserInfo;
 use Location\Location;
 use Migs\MigsPayment;
 use Migs\MigsRequest;
+use Paypal\PaypalPayment;
+use Paypal\PaypalProcess;
 use Units\Price;
 
 class CheckoutController extends BaseController {
@@ -21,9 +23,12 @@ class CheckoutController extends BaseController {
      * @param UserInfo $userInfo
      * @param ItemFactoryInterface $itemFactory
      * @param MigsPayment $migsPayments
+     * @param Paypal\PaypalProcess $paypalProcess
+     * @param PaypalPayment $paypalPayments
      */
     public function __construct(Cart $cart, Order $orders, Product $products, Location $locations, \Migs\MigsManager $migsManager,
-                                UserInfo $userInfo, ItemFactoryInterface $itemFactory, MigsPayment $migsPayments)
+                                UserInfo $userInfo, ItemFactoryInterface $itemFactory, MigsPayment $migsPayments, PaypalProcess $paypalProcess,
+                                PaypalPayment $paypalPayments)
     {
         $this->cart = $cart;
         $this->orders = $orders;
@@ -33,6 +38,8 @@ class CheckoutController extends BaseController {
         $this->itemFactory = $itemFactory;
         $this->migsPayments = $migsPayments;
         $this->migsManager = $migsManager;
+        $this->paypalProcess = $paypalProcess;
+        $this->paypalPayments = $paypalPayments;
     }
 
     /**
@@ -52,13 +59,14 @@ class CheckoutController extends BaseController {
             return Responser::errors($this->getErrors());
         }
 
-        // Destory cart
-        $this->itemFactory->destroy();
-
         // Check payment method
         if(Input::get('Payment.method') === 'credit_card') {
 
             return $this->payWithCreditCard($order);
+
+        } elseif(Input::get('Payment.method') === 'paypal') {
+
+            return $this->payWithPaypal($order);
 
         } else {
 
@@ -67,10 +75,38 @@ class CheckoutController extends BaseController {
     }
 
     /**
+     * @param Order $order
+     * @return mixed
+     */
+    protected function payWithPaypal(Order $order)
+    {
+        $total = Price::make($order->price)->setCurrency($order->currency);
+
+        // Discount 10%
+        $total->multiply(0.9);
+
+        $return = $this->paypalProcess->setExpressCheckout($total, URL::route('paypal.succeed'), URL::route('paypal.canceled'));
+
+        // Create new paypal payment with awaiting state and give token
+        $paypalPayment = $this->paypalPayments->newInstance();
+
+        $paypalPayment->token = $return['token'];
+        $paypalPayment->awaiting();
+
+        $order->paypalPayments()->save($paypalPayment);
+
+        // Redirect to paypal to continue payment process
+        return Redirect::to($return['url']);
+    }
+
+    /**
      * Pay on delivery
      */
     protected function payOnDelivery(Order $order)
     {
+        // Destory cart. Order has been made
+        $this->itemFactory->destroy();
+
         return $this->messageToUser(
             'Thanks '. ucfirst($order->userInfo->first_name) .'! Order has been placed successfully.',
             'We will contact you soon at <span style="color:#C20676">'.Input::get('Contact.number').'</span>
