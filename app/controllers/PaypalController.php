@@ -29,16 +29,14 @@ class PaypalController extends BaseController {
         $paypalPayment = $this->paypalPayments->getByToken($token);
         $order = $paypalPayment->order;
 
-        $contact_number = $order->userInfo->contact_number;
-
         $paypal = $this->paypalProcess->getExpressCheckoutDetails($token);
 
         // Add gross amount to the paypal payment
-        $paypalPayment->grossAmount = $paypal['order']['total'];
+        $paypalPayment->gross_amount = $paypal['order']['total'];
         $paypalPayment->currency = $paypal['order']['currency'];
         $paypalPayment->save();
 
-        $data = compact('paypal', 'order', 'token', 'contact_number');
+        $data = compact('paypal', 'order', 'token');
 
         return View::make('pages.paypal.confirm', $data);
     }
@@ -75,7 +73,7 @@ class PaypalController extends BaseController {
         $transaction = $this->paypalProcess->doExpressCheckout($paypalPayment, $payerID);
 
         // Set fee amount for this payment
-        $paypalPayment->feeAmount = $transaction['feeAmount']->value;
+        $paypalPayment->fee_amount = $transaction['feeAmount']->value;
         $paypalPayment->transaction_id = $transaction['transactionID'];
 
         // Mark this payment as received and push it to database
@@ -89,15 +87,15 @@ class PaypalController extends BaseController {
 
         $contact = $order->userInfo->contacts()->where('type', 'number')->first();
 
-        $this->messageToUser(
+        return $this->messageToUser(
             'Thanks '. ucfirst($order->userInfo->first_name) .'! Order has been placed successfully.',
 
-            'We have received '.$paypalPayment->grossAmount->format().' From your Paypal account <br /><br />
+            'We have received '.$paypalPayment->getGrossAmount()->format().' From your Paypal account <br /><br />
 
             We will contact you soon at <span style="color:#C20676">'.$contact->value.'</span>
                 to confirm time of delivery and shipping address.<br /><br />
 
-            Thank you for choosing QBrando <strong>online shop for luxury in Qatar</strong><br />
+            Thank you for choosing QBrando <strong>online shop for luxury in Qatar</strong><br /><br/>
 
                 <a href='.URL::route('home').'>Go back home</a>'
         );

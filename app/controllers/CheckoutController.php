@@ -82,17 +82,16 @@ class CheckoutController extends BaseController {
     {
         $total = Price::make($order->price)->setCurrency($order->currency);
 
-        // Discount 10%
+        // Discount 10% and convert to USD
         $total->multiply(0.9);
+        $total->convertTo('USD');
 
         $return = $this->paypalProcess->setExpressCheckout($total, URL::route('paypal.succeed'), URL::route('paypal.canceled'));
 
-        // Create new paypal payment with awaiting state and give token
+        // Create new paypal payment with token and awaiting state
         $paypalPayment = $this->paypalPayments->newInstance();
-
         $paypalPayment->token = $return['token'];
         $paypalPayment->awaiting();
-
         $order->paypalPayments()->save($paypalPayment);
 
         // Redirect to paypal to continue payment process

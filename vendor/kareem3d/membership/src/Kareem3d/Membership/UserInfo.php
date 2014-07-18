@@ -25,6 +25,11 @@ class UserInfo extends Model {
     protected $appends = array('name');
 
     /**
+     * @var array
+     */
+    protected $cache = array();
+
+    /**
      * @return mixed|void
      */
     public function beforeValidate()
@@ -40,6 +45,16 @@ class UserInfo extends Model {
         return $this->first_name . ' ' . $this->last_name;
     }
 
+
+    public function getContactEmailAttribute()
+    {
+        if(isset($this->cache['contact_email'])) return $this->cache['contact_email'];
+
+        $contact = $this->contacts()->where('type', 'email')->first();
+
+        return $this->cache['contact_email'] = $contact ? $contact->value : '';
+    }
+
     /**
      * @return string
      */
@@ -49,7 +64,7 @@ class UserInfo extends Model {
 
         $contact = $this->contacts()->where('type', 'number')->first();
 
-        if($contact) $this->cache['contact_number'] = $contact->value;
+        return $this->cache['contact_number'] = $contact ? $contact->value : '';
     }
 
     /**

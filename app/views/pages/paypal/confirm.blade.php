@@ -30,76 +30,80 @@
                 Please review the following information carefully. Then confirm order to complete the transaction.
             </p>
 
-            <h2>
-                <a href="#">Order Information</a>
-            </h2>
+            <h4>Order Information</h4>
 
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-sm-3">
                     <strong>Ordered products: </strong>
                 </div>
-                <div class="col-md-9">
+                <div class="col-sm-9">
                     <ul>
                         @foreach($order->products()->get() as $product)
-                        <li>{{ $product->pivot->qty }} of <a href="{{ URL::product($product) }}">{{ $product->title }}</a></li>
+                        <li><strong>{{ $product->pivot->quantity }}</strong> of <a href="{{ URL::product($product) }}" style="color:#EE3D26">{{ $product->title }}</a></li>
                         @endforeach
                     </ul>
                 </div>
             </div>
 
             <div class="row">
-                <div class="key">Total: </div>
-                <div class="value">{{ $paypal['order']['currency'].' '.$paypal['order']['total'] }}</div>
+                <div class="col-sm-3"><strong>Total: </strong></div>
+                <div class="col-sm-9">{{ $paypal['order']['currency'].' '.$paypal['order']['total'] }}</div>
             </div>
 
+            <hr/>
 
+            <h4>Contact Information</h4>
 
-            <div class="title">
-                <a href="#">Contact Information</a>
+            <div class="row">
+                <div class="col-sm-3"><strong>Name: </strong></div>
+                <div class="col-sm-9">{{ $order->userInfo->name }}</div>
             </div>
 
             <div class="row">
-                <div class="key">Name: </div>
-                <div class="value">{{ $order->userInfo->name }}</div>
-            </div>
-
-            <div class="row">
-                <div class="key">Contact number: </div>
-                <div class="value">{{ $contact_number->value }}</div>
+                <div class="col-sm-3"><strong>Contact number: </strong></div>
+                <div class="col-sm-9">{{ $order->userInfo->contact_number }}</div>
             </div>
 
             @if(($email = $order->userInfo->contact_email) || ($email = $paypal['contact']['email']))
             <div class="row">
-                <div class="key">Email: </div>
-                <div class="value">{{ $email }}</div>
+                <div class="col-sm-3"><strong>Email: </strong></div>
+                <div class="col-sm-9">{{ $email }}</div>
             </div>
             @endif
 
-            <div class="title">
-                <a href="#">Shippping address</a>
-            </div>
+            <hr/>
+
+            <h4>Shippping address</h4>
             <div class="row">
-                <div class="key">Map address: </div>
-                <div class="value">
-                    {{ $order->deliveryLocation->google_address }}<br/>
+                <div class="col-sm-3"><strong>Country: </strong></div>
+                <div class="col-sm-9">
+                    {{ $order->location->city->country->name }}
                 </div>
             </div>
-            @if($order->deliveryLocation->extra_information)
             <div class="row">
-                <div class="key">Extra information: </div>
-                <div class="value">
-                    {{ $order->deliveryLocation->extra_information }}<br/>
+                <div class="col-sm-3"><strong>City: </strong></div>
+                <div class="col-sm-9">
+                    {{ $order->location->city->name }}
                 </div>
             </div>
-            @endif
+            <div class="row">
+                <div class="col-sm-3"><strong>Address: </strong></div>
+                <div class="col-sm-9">
+                    {{ $order->location->address }}
+                </div>
+            </div>
 
             <div class="clearfix"></div>
         </div>
 
         <input type="hidden" name="payerID" value="{{ $paypal['payer']['id'] }}" />
-        <input type="hidden" name="token" value="{{ $part->token }}"/>
+        <input type="hidden" name="token" value="{{ $token }}"/>
 
-        <button type="submit" class="confirm-btn"><img src="{{ URL::asset('app/img/security-icon.png'); }}"/> Confirm & Pay</button>
+        <div class="row">
+            <div class="col-sm-12">
+                <button type="submit" class="confirm-btn"><img src="{{ URL::asset('app/img/security-icon.png'); }}"/> Confirm & Pay</button>
+            </div>
+        </div>
     </form>
 </div>
 @stop

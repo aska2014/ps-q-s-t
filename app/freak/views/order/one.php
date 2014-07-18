@@ -110,6 +110,38 @@
                 </tr>
                 </tbody>
             </table>
+            <table class="table table-striped table-detail-view" ng-repeat="paypal_payment in model.paypal_payments">
+                <thead>
+                <tr>
+                    <th colspan="2"><li class="icol-emoticon-evilgrin"></li> Paypal payment</th>
+                </tr>
+                </thead>
+
+                <tr>
+                    <th>Gross amount</th>
+                    <td>
+                        {{ paypal_payment.gross_amount | currency:paypal_payment.currency }}
+                    </td>
+                </tr>
+                <tr ng-show="paypal_payment.fee_amount">
+                    <th>Fee amount</th>
+                    <td>
+                        {{ paypal_payment.fee_amount | currency:paypal_payment.currency }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>Transaction id</th>
+                    <td>{{ paypal_payment.transaction_id }}</td>
+                </tr>
+                <tr>
+                    <th>Payment status</th>
+
+                    <td ng-show="paypal_payment.status=='34216'"><span class="label label-success">RECEIVED</span></td>
+                    <td ng-show="paypal_payment.status=='55552'"><span class="label label-warning">AWAITING</span></td>
+                    <td ng-show="paypal_payment.status=='34113'"><span class="label label-important">CANCELED</span></td>
+                </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>

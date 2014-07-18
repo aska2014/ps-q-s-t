@@ -99,7 +99,12 @@
                     </div>
                     <div class="payment-offer" ng-show="payment.method == 'credit_card'">
                         And get 10% discount on your order. <strong>Your order new price is {{ $NBEPrice['QAR'] }}</strong>
-
+                    </div>
+                    <div class="radio-input">
+                        <input type="radio" ng-model="payment.method" name="Payment[method]" id="payment-paypal" value="paypal"/><label for="payment-paypal">Pay with paypal</label>
+                    </div>
+                    <div class="payment-offer" ng-show="payment.method == 'paypal'">
+                        And get 10% discount on your order. <strong>Your order new price is {{ $paypalPrice['QAR'] }}</strong>
                     </div>
                     <div class="radio-input" ng-show="! isDubai()">
                         <input type="radio" ng-model="payment.method" name="Payment[method]" id="payment-delivery" value="delivery"/><label for="payment-delivery">Pay on delivery</label>
@@ -117,6 +122,9 @@
             <p class="text-left text-warning price" ng-show="payment.method == 'credit_card'">
                 You will be redirected to <b>National Bank of Egypt</b> to pay for an equivalent amount {{ $NBEPrice['EGP'] }}
             </p>
+            <p class="text-left text-warning price" ng-show="payment.method == 'paypal'">
+                You will be redirected to <b>Paypal</b> to pay for an equivalent amount {{ $paypalPrice['USD'] }}
+            </p>
 
 
 
@@ -128,6 +136,10 @@
                 </button>
                 <button type="submit" class="fancy-red-btn" ng-show="payment.method == 'credit_card'">
                     Pay with credit card
+                    <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                </button>
+                <button type="submit" class="fancy-red-btn" ng-show="payment.method == 'paypal'">
+                    Pay with paypal
                     <span class="glyphicon glyphicon-circle-arrow-right"></span>
                 </button>
             </div>

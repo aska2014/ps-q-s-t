@@ -34,11 +34,16 @@ class ShoppingCartController extends BaseController {
     {
         $countries = $this->countries->with('cities')->get();
 
-        $price = $this->cart->getTotalPrice()->multiply(0.9);
+        $price  = clone $this->cart->getTotalPrice();
+        $price2 = clone $price;
 
-        $NBEPrice['QAR'] = $price->round(0)->format();
-        $NBEPrice['EGP'] = $price->convertTo(new \Units\Currency('EGP'))->round(0)->format();
 
-        return View::make('pages.checkout', compact('countries', 'NBEPrice'));
+        $NBEPrice['QAR'] = $price->multiply(0.9)->round(0)->format();
+        $NBEPrice['EGP'] = $price->convertTo('EGP')->round(0)->format();
+
+        $paypalPrice['QAR'] = $price2->multiply(0.9)->round(0)->format();
+        $paypalPrice['USD'] = $price2->convertTo('USD')->round(0)->format();
+
+        return View::make('pages.checkout', compact('countries', 'NBEPrice', 'paypalPrice'));
     }
 }

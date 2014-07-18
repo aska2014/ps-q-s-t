@@ -6018,6 +6018,11 @@ a:hover {
     width: 33.33333333333333%;
   }
 }
+@media (max-width: 992px) {
+  .header .right-header {
+    display: none;
+  }
+}
 .header .right-header .tools {
   float: right;
   background: #FFF;
@@ -7174,6 +7179,23 @@ a:hover {
   top: 1px;
 }
 /* This button was generated using CSSButtonGenerator.com */
+.confirm-btn {
+  background: #EE3D26;
+  color: #FFF;
+  border: 0px;
+  border-radius: 3px;
+  padding: 6px 13px 6px 10px;
+  font-size: 14px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.confirm-btn img {
+  position: relative;
+  bottom: 2px;
+}
+.confirm-btn:hover {
+  background: #ec1e28;
+}
 .cart {
   margin-left: -15px;
   margin-right: -15px;

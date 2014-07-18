@@ -1,6 +1,7 @@
 <?php namespace Units;
 
 use ECommerce\Product;
+use Illuminate\Support\Contracts\JsonableInterface;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Session;
 use Offers\MassOffer;
@@ -78,6 +79,12 @@ class Price {
         $this->currency = $currency;
 
         return $this;
+    }
+
+
+    public function getCurrency()
+    {
+        return $this->currency;
     }
 
     /**

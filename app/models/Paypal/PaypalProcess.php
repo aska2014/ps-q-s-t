@@ -35,7 +35,7 @@ class PaypalProcess {
 
             // Do something to show the order summery
             // total order amount
-            $paymentDetails->OrderTotal = new BasicAmountType(Config::get('paypal.payment.currency'), $totalPrice->value());
+            $paymentDetails->OrderTotal = new BasicAmountType(Config::get('paypal.payment.currency'), $totalPrice->round(2)->value());
 
             $paymentDetails->PaymentAction = Config::get('paypal.payment.action');
 
@@ -56,7 +56,12 @@ class PaypalProcess {
 
         }catch(\Exception $e) {
 
-            throw new PaypalException("In getExpressCheckoutDetails: {$e->getMessage()}");
+
+            $exception = new PaypalException("In getExpressCheckoutDetails: {$e->getMessage()}");
+            if(isset($setECReq)) $exception->setRequest($setECReq);
+            if(isset($setECResponse)) $exception->setRequest($setECResponse);
+
+            throw $exception;
         }
 
         if(isset($setECResponse) && strtoupper($setECResponse->Ack) == 'SUCCESS')
@@ -68,7 +73,11 @@ class PaypalProcess {
             return compact('token', 'url');
         }
 
-        throw new PaypalException("In setExpressCheckout: Response is not success");
+        $exception = new PaypalException("In setExpressCheckout: Response is not success");
+        $exception->setRequest($setECReq);
+        $exception->setResponse($setECResponse);
+
+        throw $exception;
     }
 
 
@@ -94,7 +103,11 @@ class PaypalProcess {
 
         }catch(\Exception $e) {
 
-            throw new PaypalException("In getExpressCheckoutDetails: {$e->getMessage()}");
+            $exception = new PaypalException("In getExpressCheckoutDetails: {$e->getMessage()}");
+            if(isset($getExpressCheckoutReq)) $exception->setRequest($getExpressCheckoutReq);
+            if(isset($getECResponse)) $exception->setResponse($getECResponse);
+
+            throw $exception;
         }
 
         if(isset($getECResponse) && strtoupper($getECResponse->Ack) == 'SUCCESS') {
@@ -102,7 +115,12 @@ class PaypalProcess {
             return $this->extractExpressCheckoutRequiredInfo($getECResponse);
         }
 
-        throw new PaypalException("In getExpressCheckoutDetails: Response is not success");
+
+        $exception = new PaypalException("In getExpressCheckoutDetails: Response is not success");
+        $exception->setRequest($getExpressCheckoutReq);
+        $exception->setResponse($getECResponse);
+
+        throw $exception;
     }
 
 
@@ -155,8 +173,8 @@ class PaypalProcess {
              * When the field is set to 0, purchase-specific fields are ignored.
             */
             $orderTotal = new BasicAmountType();
-            $orderTotal->currencyID = $paypalPayment->grossAmount->currency;
-            $orderTotal->value = $paypalPayment->grossAmount->value;
+            $orderTotal->currencyID = $paypalPayment->getGrossAmount()->getCurrency();
+            $orderTotal->value = $paypalPayment->getGrossAmount()->value();
 
             $paymentDetails= new PaymentDetailsType();
             $paymentDetails->OrderTotal = $orderTotal;
@@ -183,7 +201,12 @@ class PaypalProcess {
 
         }catch(\Exception $e) {
 
-            throw new PaypalException("In doExpressCheckout: {$e->getMessage()}");
+
+            $exception = new PaypalException("In doExpressCheckout: {$e->getMessage()}");
+            if(isset($DoECReq)) $exception->setRequest($DoECReq);
+            if(isset($DoECResponse)) $exception->setResponse($DoECResponse);
+
+            throw $exception;
         }
 
         if(isset($DoECResponse))
@@ -204,7 +227,11 @@ class PaypalProcess {
             }
         }
 
-        throw new PaypalException("In doExpressCheckout: Response is not success");
+        $exception = new PaypalException("In doExpressCheckout: Response is not success");
+        $exception->setRequest($DoECReq);
+        $exception->setResponse($DoECResponse);
+
+        throw $exception;
     }
 
 
@@ -238,7 +265,11 @@ class PaypalProcess {
 
         }catch(\Exception $e) {
 
-            throw new PaypalException("In extractExpressCheckoutRequiredInfo: {$e->getMessage()}");
+
+            $exception = new PaypalException("In extractExpressCheckoutRequiredInfo: {$e->getMessage()}");
+            $exception->setResponse($response);
+
+            throw $exception;
         }
 
         return compact('payer', 'contact', 'location', 'order');

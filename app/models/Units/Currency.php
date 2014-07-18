@@ -8,7 +8,7 @@ class Currency {
     /**
      * @var array
      */
-    protected static $available = array('EGP', 'QAR');
+    protected static $available = array('EGP', 'QAR', 'USD');
 
     /**
      * @var string

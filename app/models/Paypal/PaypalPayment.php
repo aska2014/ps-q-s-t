@@ -30,7 +30,7 @@ class PaypalPayment extends \Kareem3d\Eloquent\Model {
     /**
      * @return Price
      */
-    public function getFeeAmountAttribute()
+    public function getFeeAmount()
     {
         return Price::make($this->attributes['fee_amount'])->setCurrency($this->attributes['currency']);
     }
@@ -38,7 +38,7 @@ class PaypalPayment extends \Kareem3d\Eloquent\Model {
     /**
      * @return Price
      */
-    public function getGrossAmountAttribute()
+    public function getGrossAmount()
     {
         return Price::make($this->attributes['gross_amount'])->setCurrency($this->attributes['currency']);
     }

@@ -16,7 +16,8 @@ class ConversionPrice {
      */
     protected $defaultRates = array(
 
-        'QAR_EGP' => '1.91'
+        'QAR_EGP' => '1.91',
+        'USD_QAR' => '5'
     );
 
     /**
@@ -59,10 +60,11 @@ class ConversionPrice {
     /**
      * @param $from
      * @param $to
+     * @param bool $reverse Whether or not to try the reverse if wasn't successful
      * @throws PriceConversionException
      * @return mixed
      */
-    protected function loadRate($from, $to)
+    protected function loadRate($from, $to, $reverse = true)
     {
         // If this conversion rate was loaded before then return it.
         if($this->hasLoadedRate($from, $to))
@@ -89,11 +91,17 @@ class ConversionPrice {
         }
 
         // Return default conversion rate
-        elseif($rate = $this->getDefaultRate($from, $to))
+        elseif($this->hasDefaultRate($from, $to))
         {
-            $this->setLoadedRate($from, $to, $rate);
+            $rate = $this->getDefaultRate($from, $to);
 
             return $rate;
+        }
+        elseif($reverse)
+        {
+            // Our last choice is try to convert the other way around
+            // which should work as well in most cases
+            return 1/$this->loadRate($to, $from, false);
         }
 
         throw new PriceConversionException("We couldn't convert to this currency");
@@ -125,6 +133,16 @@ class ConversionPrice {
     protected function fromToFormat($from, $to)
     {
         return "{$from}_{$to}";
+    }
+
+    /**
+     * @param $from
+     * @param $to
+     * @return bool
+     */
+    protected function hasDefaultRate($from, $to)
+    {
+        return isset($this->defaultRates[$this->fromToFormat($from, $to)]);
     }
 
     /**
