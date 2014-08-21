@@ -53,7 +53,7 @@
                     <div class="control-group">
                         <label class="control-label" for="input00">Available</label>
                         <div class="controls">
-                            <input type="number" ng-model="model.available" min="0" max="1">
+                            <input type="text" ng-model="model.available">
                         </div>
                     </div>
                     <div class="form-actions">

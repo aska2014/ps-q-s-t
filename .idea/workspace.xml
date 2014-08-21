@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09236894-3e4c-4d0d-a6ca-f0330fc20f20" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/ProductController.php" afterPath="$PROJECT_DIR$/app/controllers/ProductController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/freak/views/product/form.php" afterPath="$PROJECT_DIR$/app/freak/views/product/form.php" />
     </list>
     <ignored path="new_www.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ProductController.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/controllers/ProductController.php">
+      <file leaf-file-name="form.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/freak/views/product/form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="76" column="0" selection-start="1705" selection-end="1705" vertical-scroll-proportion="0.78938055" vertical-offset="846" max-vertical-offset="1428">
+            <state line="55" column="45" selection-start="3184" selection-end="3184" vertical-scroll-proportion="0.4456522" vertical-offset="689" max-vertical-offset="3128">
               <folding />
             </state>
           </provider>
@@ -92,12 +92,12 @@
         <option value="$PROJECT_DIR$/app/models/ECommerce/Order.php" />
         <option value="$PROJECT_DIR$/app/freak/views/order/all.php" />
         <option value="$PROJECT_DIR$/app/freak/views/order/one.php" />
-        <option value="$PROJECT_DIR$/app/freak/views/product/form.php" />
         <option value="$PROJECT_DIR$/app/controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/app/controllers/ProductsController.php" />
         <option value="$PROJECT_DIR$/app/controllers/ShoppingCartController.php" />
         <option value="$PROJECT_DIR$/app/composers.php" />
         <option value="$PROJECT_DIR$/app/controllers/ProductController.php" />
+        <option value="$PROJECT_DIR$/app/freak/views/product/form.php" />
       </list>
     </option>
   </component>
@@ -478,7 +478,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
+              <option name="myItemId" value="freak" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -496,11 +496,37 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
+              <option name="myItemId" value="freak" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="migrations" />
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="product" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="freak" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -982,13 +1008,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/freak/views/product/form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="47" selection-start="3186" selection-end="3186" vertical-scroll-proportion="0.5380435" vertical-offset="638" max-vertical-offset="3128">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="34" column="27" selection-start="815" selection-end="815" vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="918">
@@ -1040,7 +1059,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/ProductController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="0" selection-start="1705" selection-end="1705" vertical-scroll-proportion="0.78938055" vertical-offset="846" max-vertical-offset="1428">
+        <state line="55" column="47" selection-start="1042" selection-end="1042" vertical-scroll-proportion="0.15752213" vertical-offset="846" max-vertical-offset="1428">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/freak/views/product/form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="45" selection-start="3184" selection-end="3184" vertical-scroll-proportion="0.4456522" vertical-offset="689" max-vertical-offset="3128">
           <folding />
         </state>
       </provider>
