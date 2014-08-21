@@ -72,7 +72,8 @@ class ProductController extends BaseController {
             'brand' => $product->brand->name,
             'category' => $product->category->name,
             'model' => $product->model,
-            'price' => $product->getOfferPrice()->value()
+            'price' => $product->getOfferPrice()->value(),
+            'available' => $product->available
         );
     }
 }

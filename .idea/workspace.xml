@@ -2,27 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09236894-3e4c-4d0d-a6ca-f0330fc20f20" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/CheckoutController.php" afterPath="$PROJECT_DIR$/app/controllers/CheckoutController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/HomeController.php" afterPath="$PROJECT_DIR$/app/controllers/HomeController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/MigsPaymentController.php" afterPath="$PROJECT_DIR$/app/controllers/MigsPaymentController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/ECommerce/Order.php" afterPath="$PROJECT_DIR$/app/models/ECommerce/Order.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/PaypalController.php" afterPath="$PROJECT_DIR$/app/controllers/PaypalController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/ECommerce/Product.php" afterPath="$PROJECT_DIR$/app/models/ECommerce/Product.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/ProductsController.php" afterPath="$PROJECT_DIR$/app/controllers/ProductsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/ShoppingCartController.php" afterPath="$PROJECT_DIR$/app/controllers/ShoppingCartController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/freak/views/order/all.php" afterPath="$PROJECT_DIR$/app/freak/views/order/all.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/css/app.css" afterPath="$PROJECT_DIR$/public/app/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/autoload.php" afterPath="$PROJECT_DIR$/vendor/autoload.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pages/checkout.blade.php" afterPath="$PROJECT_DIR$/app/views/pages/checkout.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/composers.php" afterPath="$PROJECT_DIR$/app/composers.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/js/controllers.js" afterPath="$PROJECT_DIR$/public/app/js/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/freak/views/product/form.php" afterPath="$PROJECT_DIR$/app/freak/views/product/form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/freak/views/order/one.php" afterPath="$PROJECT_DIR$/app/freak/views/order/one.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/css/welcome.css" afterPath="$PROJECT_DIR$/public/app/css/welcome.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/ProductController.php" afterPath="$PROJECT_DIR$/app/controllers/ProductController.php" />
     </list>
     <ignored path="new_www.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="composers.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/composers.php">
+      <file leaf-file-name="ProductController.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/ProductController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="17" selection-start="1236" selection-end="1236" vertical-scroll-proportion="0.36413044" vertical-offset="394" max-vertical-offset="1700">
+            <state line="76" column="0" selection-start="1705" selection-end="1705" vertical-scroll-proportion="0.78938055" vertical-offset="846" max-vertical-offset="1428">
               <folding />
             </state>
           </provider>
@@ -67,7 +47,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/models/Migs/MigsPayment.php" />
         <option value="$PROJECT_DIR$/app/views/emails/payment_notification.blade.php" />
         <option value="$PROJECT_DIR$/app/models/Migs/MigsManager.php" />
         <option value="$PROJECT_DIR$/app/models/Offers/MassOffer.php" />
@@ -118,6 +97,7 @@
         <option value="$PROJECT_DIR$/app/controllers/ProductsController.php" />
         <option value="$PROJECT_DIR$/app/controllers/ShoppingCartController.php" />
         <option value="$PROJECT_DIR$/app/composers.php" />
+        <option value="$PROJECT_DIR$/app/controllers/ProductController.php" />
       </list>
     </option>
   </component>
@@ -498,6 +478,46 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="migrations" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -820,18 +840,6 @@
         <state line="13" column="25" selection-start="188" selection-end="188" vertical-scroll-proportion="0.3981982" vertical-offset="0" max-vertical-offset="555" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="0" selection-start="826" selection-end="826" vertical-scroll-proportion="0.24727273" vertical-offset="391" max-vertical-offset="1564" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/ECommerce/Product.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="7" selection-start="366" selection-end="366" vertical-scroll-proportion="0.1539855" vertical-offset="221" max-vertical-offset="5015">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/kareem3d/freak/src/views/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="212" column="90" selection-start="10365" selection-end="10365" vertical-scroll-proportion="1.1884058" vertical-offset="2948" max-vertical-offset="3893">
@@ -925,13 +933,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_08_21_210432_add_avaialble_to_products.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="11" selection-start="347" selection-end="347" vertical-scroll-proportion="0.48141593" vertical-offset="0" max-vertical-offset="646">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_08_21_222019_add_order_delivery_time.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="40" selection-start="366" selection-end="366" vertical-scroll-proportion="0.48141593" vertical-offset="0" max-vertical-offset="680">
@@ -995,13 +996,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/ProductController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="26" selection-start="967" selection-end="967" vertical-scroll-proportion="2.4820936" vertical-offset="0" max-vertical-offset="1411">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/ProductsController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="103" column="50" selection-start="2969" selection-end="2969" vertical-scroll-proportion="0.51428574" vertical-offset="1520" max-vertical-offset="1870">
@@ -1019,6 +1013,34 @@
     <entry file="file://$PROJECT_DIR$/app/composers.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="17" selection-start="1236" selection-end="1236" vertical-scroll-proportion="0.36413044" vertical-offset="394" max-vertical-offset="1700">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/ECommerce/Product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="124" selection-start="576" selection-end="576" vertical-scroll-proportion="0.33876812" vertical-offset="221" max-vertical-offset="5015">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_08_21_210432_add_avaialble_to_products.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="11" selection-start="347" selection-end="347" vertical-scroll-proportion="0.3380531" vertical-offset="81" max-vertical-offset="646">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="92" selection-start="1188" selection-end="1188" vertical-scroll-proportion="0.36413044" vertical-offset="445" max-vertical-offset="1564">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/ProductController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="0" selection-start="1705" selection-end="1705" vertical-scroll-proportion="0.78938055" vertical-offset="846" max-vertical-offset="1428">
           <folding />
         </state>
       </provider>
