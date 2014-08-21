@@ -7,9 +7,12 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'AddAccountToOrder' => $baseDir . '/app/database/migrations/2014_02_23_124327_add_account_to_order.php',
+    'AddAvaialbleToProducts' => $baseDir . '/app/database/migrations/2014_08_21_210432_add_avaialble_to_products.php',
     'AddCurrencyToOrderTable' => $baseDir . '/app/database/migrations/2014_03_18_112505_add_currency_to_order_table.php',
+    'AddOrderDeliveryTime' => $baseDir . '/app/database/migrations/2014_08_21_222019_add_order_delivery_time.php',
     'AddOrderUniqueIdentifier' => $baseDir . '/app/database/migrations/2014_05_17_142320_add_order_unique_identifier.php',
     'AddPaymentMethodToOrder' => $baseDir . '/app/database/migrations/2014_05_20_222847_add_payment_method_to_order.php',
+    'AddStatusToOrder' => $baseDir . '/app/database/migrations/2014_08_21_212722_add_status_to_order.php',
     'AttachLocationToAccounts' => $baseDir . '/app/database/migrations/2014_02_23_180101_attach_location_to_accounts.php',
     'BackupDatabaseCommand' => $baseDir . '/app/commands/BackupDatabaseCommand.php',
     'BaseController' => $baseDir . '/app/controllers/BaseController.php',
@@ -170,7 +173,6 @@ return array(
     'BeSimple\\SoapWsdl\\Dumper\\Version11' => $vendorDir . '/besimple/soap/src/BeSimple/SoapWsdl/Dumper/Version11.php',
     'BeSimple\\SoapWsdl\\Dumper\\Version12' => $vendorDir . '/besimple/soap/src/BeSimple/SoapWsdl/Dumper/Version12.php',
     'BeSimple\\SoapWsdl\\Dumper\\VersionInterface' => $vendorDir . '/besimple/soap/src/BeSimple/SoapWsdl/Dumper/VersionInterface.php',
-    'Blood\\UpdateLocationController' => $baseDir . '/app/controllers/Blood/UpdateLocationController.php',
     'Boris\\Boris' => $vendorDir . '/d11wtq/boris/lib/Boris/Boris.php',
     'Boris\\CLIOptionsHandler' => $vendorDir . '/d11wtq/boris/lib/Boris/CLIOptionsHandler.php',
     'Boris\\ColoredInspector' => $vendorDir . '/d11wtq/boris/lib/Boris/ColoredInspector.php',

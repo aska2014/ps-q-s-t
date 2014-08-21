@@ -263,6 +263,18 @@ angular.module('qbrando.controllers', ['qbrando.services']).
             method: 'credit_card'
         };
 
+        var addDays = function(date, days) {
+            return new Date(date.getTime() + days * 24 * 60 * 60 * 1000).toDateString();
+        }
+        var today = new Date();
+
+        $scope.availableTimes = ['8am to 10am', '10am to 12pm', '12pm to 2pm', '2pm to 4pm', '4pm to 6pm', '6pm to 8pm', '8pm to 10pm'];
+        $scope.availableDays = [addDays(today,1), addDays(today, 2), addDays(today, 3), addDays(today, 4), addDays(today, 5)];
+
+        $scope.daytime = {};
+        $scope.daytime.day = $scope.availableDays[0];
+        $scope.daytime.time = $scope.availableTimes[0];
+
         $scope.$watch('location.country', function(country) {
 
             if($scope.isDubai()) {

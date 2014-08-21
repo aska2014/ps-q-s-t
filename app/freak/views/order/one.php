@@ -86,6 +86,22 @@
                 </tr>
                 </tbody>
             </table>
+            <table class="table table-striped table-detail-view">
+                <thead>
+                <tr>
+                    <th colspan="2"><li class="icol-world"></li> Delivery time and day</th>
+                </tr>
+                </thead>
+                <tr>
+                    <th>Day</th>
+                    <td>{{ model.delivery_day }}</td>
+                </tr>
+                <tr>
+                    <th>Time</th>
+                    <td>{{ model.delivery_time }}</td>
+                </tr>
+                </tbody>
+            </table>
             <table class="table table-striped table-detail-view" ng-show="model.migs_payment">
                 <thead>
                 <tr>

@@ -50,7 +50,7 @@ class CheckoutController extends BaseController {
         $this->cart->hardValidate();
 
         // First create order
-        $order = $this->createOrder(Input::get('Location'), Input::get('UserInfo'), Input::get('Contact'));
+        $order = $this->createOrder(Input::get('Location'), Input::get('UserInfo'), Input::get('Contact'), Input::get('DayTime'));
 
         // If there were errors
         if(! $this->emptyErrors())
@@ -139,7 +139,7 @@ class CheckoutController extends BaseController {
     /**
      * Create user and location
      */
-    protected function createOrder($locationInputs, $userInfoInputs, $contactInputs)
+    protected function createOrder($locationInputs, $userInfoInputs, $contactInputs, $dayTimeInputs)
     {
         $location = $this->locations->newInstance($locationInputs);
 
@@ -168,7 +168,7 @@ class CheckoutController extends BaseController {
             }
 
             // Save order with the current currency
-            $order = $this->orders->createFrom($userInfo, $location, $this->cart, \Units\Currency::getCurrent());
+            $order = $this->orders->createFrom($dayTimeInputs, $userInfo, $location, $this->cart, \Units\Currency::getCurrent());
 
             // Put order unique identifier in the session
             Session::put('order_unique_identifier', $order->unique_identifier);

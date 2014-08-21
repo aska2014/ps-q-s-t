@@ -54,6 +54,33 @@
                 </div>
 
             </div>
+
+            <div class="step">
+                <p class="info">
+                    <span class="glyphicon glyphicon-dashboard"></span>
+                    Please select day and time you want the delivery</p>
+
+                <div class="form-group">
+                    <label for="contact-name">Delivery day*</label>
+                    <select class="form-control"
+                            ng-model="daytime.day"
+                            name="DayTime[day]"
+                            required>
+                        <option ng-repeat="day in availableDays" value="@{{ day }}">@{{ day }}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="contact-name">Delivery time range*</label>
+                    <select class="form-control"
+                            ng-model="daytime.time"
+                            name="DayTime[time]"
+                            required>
+                        <option ng-repeat="time in availableTimes" value="@{{ time }}">@{{ time }}</option>
+                    </select>
+                </div>
+
+            </div>
             <div class="step" ng-init='countries={{ $countries->toJson() }}'>
                 <p class="info">
                     <span class="glyphicon glyphicon-warning-sign"></span>

@@ -32,7 +32,7 @@ class HomeController extends BaseController {
 
         $categories = $this->categories->all();
 
-        $products = $this->products->topSales()->unique()->take(6)->get();
+        $products = $this->products->available()->topSales()->unique()->take(6)->get();
 
         return View::make('pages.welcome', compact('products', 'categories'));
     }
@@ -42,7 +42,7 @@ class HomeController extends BaseController {
      */
     public function index()
 	{
-        $products = $this->products->topSales()->unique()->mix()->take(static::PRODUCTS_PER_CAROUSEL)->get();
+        $products = $this->products->available()->topSales()->unique()->mix()->take(static::PRODUCTS_PER_CAROUSEL)->get();
 
         $carousel = new Carousel('Top sales for this month', $products);
 

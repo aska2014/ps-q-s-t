@@ -1,4 +1,4 @@
-<div class="row-fluid">
+<div class="row-fluid" ng-controller="FEAllOrderController">
     <div class="span12 widget">
         <div class="widget-header">
             <span class="title">All orders</span>
@@ -17,6 +17,7 @@
                     <th>Contact</th>
                     <th>Products</th>
                     <th>Total</th>
+                    <th>Status</th>
                     <th>Tools</th>
                 </tr>
                 </thead>
@@ -42,6 +43,16 @@
                     <td>
                         {{ order.price | currency:order.currency + ' ' }}
                     </td>
+                    <td>
+                        <div class="controls">
+                            <div class="input-append">
+                                <input type="text" id="input14" ng-model="order.status" class="span8">
+                                <button type="button" class="btn" ng-click="saveOrder(order)">
+                                    <i class="icol-connect"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </td>
                     <td class="action-col" width="10%">
                         <fr-data-tools uses="['show', 'destroy']"></fr-data-tools>
                     </td>
@@ -61,3 +72,16 @@
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+
+    function FEAllOrderController($scope)
+    {
+        $scope.saveOrder = function(order) {
+
+            order.$save();
+
+            $scope.alert.success('Order status updated');
+        }
+    }
+</script>

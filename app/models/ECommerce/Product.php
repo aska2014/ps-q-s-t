@@ -26,12 +26,23 @@ class Product extends \BaseModel {
     /**
      * @var array
      */
-    protected $fillable = array('title', 'description', 'model', 'gender', 'category_id', 'brand_id', 'price');
+    protected $fillable = array('title', 'description', 'model', 'gender', 'category_id', 'brand_id', 'price', 'available');
 
     /**
      * @var array
      */
     protected $prices = array();
+
+    /**
+     * @param $query
+     * @return mixed
+     */
+    public function scopeAvailable($query)
+    {
+        $query->where('available', true);
+
+        return $query;
+    }
 
     /**
      * @param $query

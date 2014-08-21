@@ -25,7 +25,7 @@ class Order extends \BaseModel {
     /**
      * @var array
      */
-    protected $fillable = array('user_info_id', 'location_id', 'price', 'account_id', 'currency', 'unique_identifier');
+    protected $fillable = array('user_info_id', 'location_id', 'price', 'account_id', 'currency', 'unique_identifier', 'status', 'delivery_time', 'delivery_day');
 
     /**
      * @return mixed|void
@@ -78,18 +78,21 @@ class Order extends \BaseModel {
     }
 
     /**
+     * @param $dateTimeInputs
      * @param UserInfo $userInfo
      * @param Location $location
      * @param Cart $cart
      * @param Currency $currency
      * @return \Illuminate\Database\Eloquent\Model|static
      */
-    public static function createFrom(UserInfo $userInfo, Location $location, Cart $cart, Currency $currency)
+    public static function createFrom($dateTimeInputs, UserInfo $userInfo, Location $location, Cart $cart, Currency $currency)
     {
         /**
          * @param Order $order
          */
         $order = static::create(array(
+            'delivery_time' => isset($dateTimeInputs['time']) ? $dateTimeInputs['time'] : '',
+            'delivery_day' => isset($dateTimeInputs['day']) ? $dateTimeInputs['day'] : '',
             'user_info_id' => $userInfo->id,
             'location_id' => $location->id,
             // Round to the nearest two values

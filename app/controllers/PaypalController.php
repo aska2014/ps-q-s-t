@@ -1,5 +1,6 @@
 <?php
 
+use ECommerce\Order;
 use Paypal\PaypalPayment;
 use Paypal\PaypalProcess;
 
@@ -87,6 +88,8 @@ class PaypalController extends BaseController {
 
         $contact = $order->userInfo->contacts()->where('type', 'number')->first();
 
+        $this->notifyByEmail($paypalPayment, $paypalPayment->order);
+
         return $this->messageToUser(
             'Thanks '. ucfirst($order->userInfo->first_name) .'! Order has been placed successfully.',
 
@@ -99,5 +102,18 @@ class PaypalController extends BaseController {
 
                 <a href='.URL::route('home').'>Go back home</a>'
         );
+    }
+
+    /**
+     * @param Paypal\PaypalPayment $paypalPayment
+     * @param Order $order
+     */
+    protected function notifyByEmail(PaypalPayment $paypalPayment, Order $order)
+    {
+        Mail::send('emails.paypal_payment_notification', compact('paypalPayment', 'order'), function($message)
+        {
+            $message->to('kareem3d.a@gmail.com', 'Kareem Mohamed')->subject('Paypal payment received on QBRANDO');
+            $message->to('ahmed.m.elbahrawy@facebook.com', 'Ahmed Mohamed')->subject('Paypal payment received on QBRANDO');
+        });
     }
 }

@@ -22,7 +22,7 @@ class ShoppingCartController extends BaseController {
      */
     public function index()
     {
-        $carousel = new \Website\Carousel('Related products', $this->products->random()->take(static::PRODUCTS_PER_CAROUSEL)->get());
+        $carousel = new \Website\Carousel('Related products', $this->products->available()->random()->take(static::PRODUCTS_PER_CAROUSEL)->get());
 
         return View::make('pages.cart', compact('carousel'));
     }

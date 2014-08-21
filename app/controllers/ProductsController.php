@@ -28,7 +28,7 @@ class ProductsController extends BaseController {
     {
         list($category, $brand, $title) = $this->convertSlugs($category, $brand, $title);
 
-        $product = $this->products->orderByDate()->byCategoryName($category)->byBrandName($brand)->byModel($title)->first();
+        $product = $this->products->available()->orderByDate()->byCategoryName($category)->byBrandName($brand)->byModel($title)->first();
 
         // Fail if no product was found
         if(is_null($product)) throw new ModelNotFoundException();
@@ -44,7 +44,7 @@ class ProductsController extends BaseController {
      */
     public function chooseGifts()
     {
-        $products = $this->massOffers->current(new DateTime('now'))->first()->filterGiftsFromCollection($this->products->all());
+        $products = $this->massOffers->current(new DateTime('now'))->first()->filterGiftsFromCollection($this->products->available()->get());
 
         return View::make('pages.choose_gifts', compact('products'));
     }
@@ -57,7 +57,7 @@ class ProductsController extends BaseController {
     {
         $brand = $this->convertSlugs($brand);
 
-        $products = $this->products->orderByDate()->byBrandName($brand)->unique()->paginate(static::PRODUCTS_PER_PAGE);
+        $products = $this->products->available()->orderByDate()->byBrandName($brand)->unique()->paginate(static::PRODUCTS_PER_PAGE);
 
         $carousel = $this->getCarousel();
 
@@ -72,7 +72,7 @@ class ProductsController extends BaseController {
     {
         $category = $this->convertSlugs($category);
 
-        $products = $this->products->orderByDate()->byCategoryName($category)->unique()->paginate(static::PRODUCTS_PER_PAGE);
+        $products = $this->products->available()->orderByDate()->byCategoryName($category)->unique()->paginate(static::PRODUCTS_PER_PAGE);
 
         $carousel = $this->getCarousel();
 
@@ -88,7 +88,7 @@ class ProductsController extends BaseController {
         $brand = $this->convertSlugs($brand);
         $category = $this->convertSlugs($category);
 
-        $products = $this->products->orderByDate()->byBrandName($brand)->byCategoryName($category)->unique()->paginate(static::PRODUCTS_PER_PAGE);
+        $products = $this->products->available()->orderByDate()->byBrandName($brand)->byCategoryName($category)->unique()->paginate(static::PRODUCTS_PER_PAGE);
 
         $carousel = $this->getCarousel();
 
@@ -101,7 +101,7 @@ class ProductsController extends BaseController {
      */
     protected function getCarousel()
     {
-        $products = $this->products->random()->take(static::PRODUCTS_PER_CAROUSEL)->get();
+        $products = $this->products->available()->random()->take(static::PRODUCTS_PER_CAROUSEL)->get();
 
         return new \Website\Carousel('Related products', $products);
     }

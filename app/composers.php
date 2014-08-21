@@ -34,7 +34,7 @@ View::composer('partials.static.header', function($view)
 View::composer('partials.products.offers', function($view)
 {
     $view->offerPositions = App::make('Offers\OfferPosition')->getNotEmpty();
-    $view->middleProducts = App::make('ECommerce\Product')->take(2)->topSales()->unique()->orderByDate()->get();
+    $view->middleProducts = App::make('ECommerce\Product')->available()->take(2)->topSales()->unique()->orderByDate()->get();
 
     App::make('VisibleProductRepository')->add($view->middleProducts);
 });

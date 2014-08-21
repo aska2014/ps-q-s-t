@@ -50,6 +50,12 @@
                             <input type="text" id="input00" class="span2" ng-model="model.price">
                         </div>
                     </div>
+                    <div class="control-group">
+                        <label class="control-label" for="input00">Available</label>
+                        <div class="controls">
+                            <input type="number" ng-model="model.available" min="0" max="1">
+                        </div>
+                    </div>
                     <div class="form-actions">
                         <button type="submit" class="btn btn-primary">Save changes</button>
                         <button type="reset" class="btn" type="reset">Cancel</button>
