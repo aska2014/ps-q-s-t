@@ -53,7 +53,7 @@ App::error(function(Illuminate\Database\Eloquent\ModelNotFoundException $e, $cod
     return Redirect::route('message-to-user')
         ->with('title', 'We can\'t find this product in our stock :(')
 
-        ->with('body', 'Feel free to contact us at <strong>' . $contactUs->getMobileNumber() . '</strong><br />
+        ->with('body', 'Feel free to contact us at <strong>' . $contactUs->getMobileNumber() . '</strong><br /><br/>
         Or Email us: <strong>' . $contactUs->getEmailAddress() . '</strong>');
 });
 

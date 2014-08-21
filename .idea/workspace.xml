@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09236894-3e4c-4d0d-a6ca-f0330fc20f20" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/freak/views/product/form.php" afterPath="$PROJECT_DIR$/app/freak/views/product/form.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/ECommerce/Brand.php" afterPath="$PROJECT_DIR$/app/models/ECommerce/Brand.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/ECommerce/Category.php" afterPath="$PROJECT_DIR$/app/models/ECommerce/Category.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/start/production.php" afterPath="$PROJECT_DIR$/app/start/production.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="new_www.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,10 +28,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="form.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/freak/views/product/form.php">
+      <file leaf-file-name="Category.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/models/ECommerce/Category.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="45" selection-start="3184" selection-end="3184" vertical-scroll-proportion="0.4456522" vertical-offset="689" max-vertical-offset="3128">
+            <state line="26" column="32" selection-start="428" selection-end="428" vertical-scroll-proportion="0.15752213" vertical-offset="353" max-vertical-offset="1462">
               <folding />
             </state>
           </provider>
@@ -47,8 +50,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/emails/payment_notification.blade.php" />
-        <option value="$PROJECT_DIR$/app/models/Migs/MigsManager.php" />
         <option value="$PROJECT_DIR$/app/models/Offers/MassOffer.php" />
         <option value="$PROJECT_DIR$/app/views/templates/angular.blade.php" />
         <option value="$PROJECT_DIR$/app/views/pages/privacy.blade.php" />
@@ -68,7 +69,6 @@
         <option value="$PROJECT_DIR$/vendor/kareem3d/membership/src/Kareem3d/Membership/UserInfo.php" />
         <option value="$PROJECT_DIR$/app/models/Units/Currency.php" />
         <option value="$PROJECT_DIR$/app/models/Paypal/PaypalException.php" />
-        <option value="$PROJECT_DIR$/app/start/production.php" />
         <option value="$PROJECT_DIR$/app/freak/controllers/FreakOrderController.php" />
         <option value="$PROJECT_DIR$/public/app/css/buttons.less" />
         <option value="$PROJECT_DIR$/app/views/partials/static/header.blade.php" />
@@ -79,7 +79,6 @@
         <option value="$PROJECT_DIR$/app/models/Paypal/PaypalProcess.php" />
         <option value="$PROJECT_DIR$/app/models/Units/ConversionPrice.php" />
         <option value="$PROJECT_DIR$/app/config/production/paypal.php" />
-        <option value="$PROJECT_DIR$/app/models/ECommerce/Product.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_08_21_210432_add_avaialble_to_products.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_08_21_212722_add_status_to_order.php" />
         <option value="$PROJECT_DIR$/app/views/emails/paypal_payment_notification.blade.php" />
@@ -92,12 +91,16 @@
         <option value="$PROJECT_DIR$/app/models/ECommerce/Order.php" />
         <option value="$PROJECT_DIR$/app/freak/views/order/all.php" />
         <option value="$PROJECT_DIR$/app/freak/views/order/one.php" />
-        <option value="$PROJECT_DIR$/app/controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/app/controllers/ProductsController.php" />
         <option value="$PROJECT_DIR$/app/controllers/ShoppingCartController.php" />
         <option value="$PROJECT_DIR$/app/composers.php" />
         <option value="$PROJECT_DIR$/app/controllers/ProductController.php" />
         <option value="$PROJECT_DIR$/app/freak/views/product/form.php" />
+        <option value="$PROJECT_DIR$/app/start/production.php" />
+        <option value="$PROJECT_DIR$/app/models/ECommerce/Product.php" />
+        <option value="$PROJECT_DIR$/app/controllers/HomeController.php" />
+        <option value="$PROJECT_DIR$/app/models/ECommerce/Brand.php" />
+        <option value="$PROJECT_DIR$/app/models/ECommerce/Category.php" />
       </list>
     </option>
   </component>
@@ -438,6 +441,54 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="partials" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="partials" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="products" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="pages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -478,55 +529,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="freak" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="new_www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="new_www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="freak" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="product" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="new_www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="new_www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="freak" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="start" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -718,7 +721,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3273906" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2688822" sideWeight="0.27876824" order="2" side_tool="true" content_ui="tabs" x="231" y="86" width="330" height="615" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32175228" sideWeight="0.72123176" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32175228" sideWeight="0.72123176" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.499187" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23414634" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -756,31 +759,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/checkout_routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="82" selection-start="2748" selection-end="2748" vertical-scroll-proportion="0.8768116" vertical-offset="672" max-vertical-offset="1292" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/kareem3d/membership/src/Kareem3d/Membership/UserInfo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="42" selection-start="994" selection-end="994" vertical-scroll-proportion="0.45840707" vertical-offset="659" max-vertical-offset="1734" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_06_210144_create_orders_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="35" selection-start="744" selection-end="744" vertical-scroll-proportion="0.46195653" vertical-offset="153" max-vertical-offset="833" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_05_17_142320_add_order_unique_identifier.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/start/global.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="68" selection-start="993" selection-end="993" vertical-scroll-proportion="-1.5561594" vertical-offset="1216" max-vertical-offset="1768" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/Units/Currency.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="73" column="9" selection-start="1476" selection-end="1476" vertical-scroll-proportion="0.7823009" vertical-offset="782" max-vertical-offset="2210" />
@@ -804,11 +782,6 @@
     <entry file="file://$PROJECT_DIR$/public/app/css/buttons.less">
       <provider selected="true" editor-type-id="text-editor">
         <state line="192" column="17" selection-start="6090" selection-end="6090" vertical-scroll-proportion="0.26750448" vertical-offset="3115" max-vertical-offset="3672" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/start/production.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="86" selection-start="2367" selection-end="2367" vertical-scroll-proportion="0.4834559" vertical-offset="876" max-vertical-offset="1547" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pages/paypal/confirm.blade.php">
@@ -980,13 +953,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/CheckoutController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="0" selection-start="2022" selection-end="2022" vertical-scroll-proportion="0.58514494" vertical-offset="578" max-vertical-offset="3145">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/ECommerce/Order.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="92" column="17" selection-start="2148" selection-end="2148" vertical-scroll-proportion="0.6467391" vertical-offset="1071" max-vertical-offset="3060">
@@ -1004,13 +970,6 @@
     <entry file="file://$PROJECT_DIR$/app/freak/views/order/one.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="102" column="0" selection-start="3977" selection-end="3977" vertical-scroll-proportion="0.5996377" vertical-offset="1403" max-vertical-offset="2856">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="27" selection-start="815" selection-end="815" vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="918">
           <folding />
         </state>
       </provider>
@@ -1036,13 +995,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/ECommerce/Product.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="124" selection-start="576" selection-end="576" vertical-scroll-proportion="0.33876812" vertical-offset="221" max-vertical-offset="5015">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_08_21_210432_add_avaialble_to_products.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="11" selection-start="347" selection-end="347" vertical-scroll-proportion="0.3380531" vertical-offset="81" max-vertical-offset="646">
@@ -1064,9 +1016,72 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/start/production.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="116" selection-start="1693" selection-end="1693" vertical-scroll-proportion="0.6467391" vertical-offset="578" max-vertical-offset="1547">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/start/global.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="0" selection-start="1581" selection-end="1581" vertical-scroll-proportion="0.24637681" vertical-offset="527" max-vertical-offset="1768">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/freak/views/product/form.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="45" selection-start="3184" selection-end="3184" vertical-scroll-proportion="0.4456522" vertical-offset="689" max-vertical-offset="3128">
+        <state line="55" column="72" selection-start="3202" selection-end="3211" vertical-scroll-proportion="0.33269963" vertical-offset="760" max-vertical-offset="3128">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/ECommerce/Product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="35" selection-start="788" selection-end="792" vertical-scroll-proportion="0.35326087" vertical-offset="434" max-vertical-offset="5015">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/CheckoutController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="0" selection-start="2022" selection-end="2022" vertical-scroll-proportion="0.58514494" vertical-offset="578" max-vertical-offset="3145">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pages/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="591">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/products/fancy.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="901">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="122" selection-start="1153" selection-end="1153" vertical-scroll-proportion="0.5996377" vertical-offset="366" max-vertical-offset="918">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/ECommerce/Brand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="0" selection-start="1278" selection-end="1278" vertical-scroll-proportion="0.5185841" vertical-offset="642" max-vertical-offset="1275">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/ECommerce/Category.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="32" selection-start="428" selection-end="428" vertical-scroll-proportion="0.15752213" vertical-offset="353" max-vertical-offset="1462">
           <folding />
         </state>
       </provider>

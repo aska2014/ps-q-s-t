@@ -53,7 +53,7 @@ class Brand extends \BaseModel {
      */
     public function getUniqueProducts($take = 0)
     {
-        $query = Product::byCategory($this)->unique();
+        $query = Product::byCategory($this)->available()->unique();
 
         if($take > 0) return $query->take($take);
 

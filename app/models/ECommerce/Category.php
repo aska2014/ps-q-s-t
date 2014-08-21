@@ -45,6 +45,8 @@ class Category extends \BaseModel {
         {
             $query->from('products');
 
+            $query->where('available', true);
+
             $query->distinct();
             $query->select('category_id');
 
@@ -58,7 +60,7 @@ class Category extends \BaseModel {
      */
     public function getUniqueProducts($take = 0)
     {
-        $query = Product::byCategory($this)->unique();
+        $query = Product::byCategory($this)->available()->unique();
 
         if($take > 0) return $query->take($take)->get();
 
