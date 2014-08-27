@@ -113,7 +113,7 @@ class PaypalController extends BaseController {
         Mail::send('emails.paypal_payment_notification', compact('paypalPayment', 'order'), function($message)
         {
             $message->to('kareem3d.a@gmail.com', 'Kareem Mohamed')->subject('Paypal payment received on QBRANDO');
-            $message->to('ahmed.m.elbahrawy@facebook.com', 'Ahmed Mohamed')->subject('Paypal payment received on QBRANDO');
+            $message->to('ahmed@cgulfc.com', 'Ahmed Mohamed')->subject('Paypal payment received on QBRANDO');
         });
     }
 }
