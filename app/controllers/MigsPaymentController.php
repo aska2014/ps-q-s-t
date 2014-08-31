@@ -1,5 +1,7 @@
 <?php
 
+use ECommerce\Order;
+
 class MigsPaymentController extends BaseController {
 
     /**
@@ -23,7 +25,7 @@ class MigsPaymentController extends BaseController {
 
         $contact = $order->userInfo->contacts()->where('type', 'number')->first();
 
-        $this->notifyByEmail($transaction);
+        $this->notifyByEmail($order, $transaction);
 
         // Destory cart. Order has been made successfully
         $this->itemFactory->destroy();
@@ -40,9 +42,9 @@ class MigsPaymentController extends BaseController {
     /**
      * @param \Migs\MigsTransaction $transaction
      */
-    protected function notifyByEmail(\Migs\MigsTransaction $transaction)
+    protected function notifyByEmail(Order $order, \Migs\MigsTransaction $transaction)
     {
-        Mail::send('emails.payment_notification', compact('transaction'), function($message)
+        Mail::send('emails.payment_notification', compact('order', 'transaction'), function($message)
         {
             $message->to('kareem3d.a@gmail.com', 'Kareem Mohamed')->subject('Bank ahly payment received on QBRANDO');
             $message->to('leaguemen@hotmail.com', 'Ahmed Mohamed')->subject('Bank ahly payment received on QBRANDO');

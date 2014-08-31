@@ -24,6 +24,13 @@
         <br/>
 
         <small><strong>Date of payment: </strong> {{ $transaction->created_at }}</small>
+
+
+        <br/>
+        <br/>
+        <br/>
+
+        <a href="{{ URL::to('admin#/view/element/order/one/'.$order->id) }}">View order</a>
     </p>
 </div>
 </body>

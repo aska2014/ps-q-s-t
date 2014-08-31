@@ -21,7 +21,7 @@
         <br/>
         <br/>
 
-        <a href="{{ URL::to('admin#/view/element/order/one/').$order->id }}">View order</a>
+        <a href="{{ URL::to('admin#/view/element/order/one/'.$order->id) }}">View order</a>
     </p>
 </div>
 </body>
