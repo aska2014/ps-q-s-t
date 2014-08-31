@@ -45,7 +45,7 @@ class MigsPaymentController extends BaseController {
         Mail::send('emails.payment_notification', compact('transaction'), function($message)
         {
             $message->to('kareem3d.a@gmail.com', 'Kareem Mohamed')->subject('Bank ahly payment received on QBRANDO');
-            $message->to('ahmed.m.elbahrawy@facebook.com', 'Ahmed Mohamed')->subject('Bank ahly payment received on QBRANDO');
+            $message->to('leaguemen@hotmail.com', 'Ahmed Mohamed')->subject('Bank ahly payment received on QBRANDO');
         });
     }
 
